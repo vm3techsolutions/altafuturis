@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        blueColor: "#0d6efd",
+        brownColor: "#D4B301",
+        purpleColor: "#6328A6",
+      },
+      
+      fontWeight: {
+        'bold-md': '600',
       },
     },
   },
