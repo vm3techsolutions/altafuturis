@@ -1,5 +1,7 @@
+import AiSolutionCards from "./home/AiSolutionCards";
 import HomeBanner from "./home/HomeBanner";
 import WhoWeAre from "./home/WhoWeAre";
+import WhyChooseUs from "./home/WhyChooseUs";
 
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
 
   <HomeBanner/>
   <WhoWeAre/>
+  <AiSolutionCards/>
+  <WhyChooseUs/>
 </div>
   );
 }

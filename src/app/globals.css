@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: linear-gradient(90deg, rgba(13, 110, 253, 0.1) 30%, rgba(212, 179, 1, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(13, 110, 253, 0.1) 30%, rgba(212, 179, 1, 0.1) 100%);
  
-  --foreground: #171717;
+ 
 }
 
 /* @media (prefers-color-scheme: dark) {

@@ -1,10 +1,14 @@
 export default function CompanyIntro() {
     return (
+<<<<<<< HEAD
       <section className="min-h-screen flex items-center justify-center p-6">
+=======
+      <section className="container min-h-screen flex items-center justify-center py-16">
+>>>>>>> 6551004657f69fd15381c68375194d298d0522a9
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="flex-shrink-0 md:mr-12">
-            <button className="ml-44 mb-44 px-6 py-3 border-2 border-[#D4B301] rounded-full text-black bg-white shadow-sm hover:bg-yellow-100 transition-all duration-300 ease-in-out font-bold">
+            <button className="md:ml-44 md:mb-44 px-6 py-3 border-2 border-brownColor rounded-full text-black bg-white shadow-sm hover:bg-yellow-100 transition-all duration-300 ease-in-out font-bold">
               Who we are
             </button>
           </div>
@@ -23,10 +27,10 @@ export default function CompanyIntro() {
               constantly look for connecting the dots with data.
             </p>
   
-            <a href="/">
-              <button className="px-4 py-2 bg-[#0D6EFD] text-white rounded-2xl shadow-md hover:bg-blue-700 flex items-center transition-all duration-300 ease-in-out">
+            <a href="/" className="">
+              <button className="px-4 py-2  bg-[#0D6EFD] text-white rounded-2xl shadow-md hover:bg-blue-700 flex items-center transition-all duration-300 ease-in-out">
                 Know More
-                <span className="ml-2 bg-[#D4B301] text-white px-2 py-1 rounded-md">
+                <span className="ml-2 bg-brownColor text-white px-2 py-1 rounded-md">
                   &gt;&gt;
                 </span>
               </button>
