@@ -1,6 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Arimo, Nunito } from "next/font/google";
 import "./globals.css";
 import Menu from "@components/Menu"; // Import Menu Component
+
+
+const arimo = Arimo({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-arimo" });
+const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-nunito" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
