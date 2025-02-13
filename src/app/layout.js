@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Arimo, Nunito } from "next/font/google";
 import "./globals.css";
 import Menu from "@components/Menu"; // Import Menu Component
+import Footer from './../components/Footer';
 
 
 const arimo = Arimo({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-arimo" });
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <Menu /> {/* Navbar */}
       <main className="container mx-auto ">{children}</main>
+      <Footer/>
       </body>
     </html>
   );

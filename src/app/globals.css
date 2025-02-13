@@ -8,12 +8,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -33,3 +33,20 @@ h1, h2, h3, h4, h5, h6, a {
     color: #0d6efd; /* Replace with Tailwind color like text-blue-500 */
     margin-right: 8px;
   }
+  
+  .menuBar{
+    background: #fff;
+    position: relative;
+  }
+  
+  .menuBar::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Position overlay on top */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(13, 110, 253, 0.1) 30%, rgba(212, 179, 1, 0.1) 100%); 
+    z-index: -1; /* Ensure the overlay is behind the content */
+  }
+ 

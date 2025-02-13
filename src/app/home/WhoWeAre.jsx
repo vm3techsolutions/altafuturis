@@ -1,6 +1,6 @@
 export default function CompanyIntro() {
     return (
-      <section className="bg-white min-h-screen flex items-center justify-center p-6">
+      <section className="min-h-screen flex items-center justify-center p-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="flex-shrink-0 md:mr-12">
