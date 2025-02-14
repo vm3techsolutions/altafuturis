@@ -1,10 +1,9 @@
 export default function CompanyIntro() {
     return (
-<<<<<<< HEAD
+
       <section className="min-h-screen flex items-center justify-center p-6">
-=======
       <section className="container min-h-screen flex items-center justify-center py-16">
->>>>>>> 6551004657f69fd15381c68375194d298d0522a9
+
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="flex-shrink-0 md:mr-12">
@@ -37,6 +36,7 @@ export default function CompanyIntro() {
             </a>
           </div>
         </div>
+      </section>
       </section>
     );
   }
