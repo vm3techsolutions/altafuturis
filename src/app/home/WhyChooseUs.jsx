@@ -50,6 +50,8 @@ export default function WhyChooseUs() {
                   {item.id}
                 </span>
                 <p className="text-gray-800 text-xl font-bold">{item.text}</p>
+                <hr class=" border-[#D4B301] border"/>
+
               </div>
             ))}
           </div>
