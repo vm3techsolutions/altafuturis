@@ -13,7 +13,7 @@ const PortfolioSection = () => {
           
           <span className="text-white font-bold text-lg">3D</span>
         </div> */}
-        
+
       </div>
 
       
@@ -23,29 +23,39 @@ const PortfolioSection = () => {
                
         {/* Portfolio Items */}
         <div className="space-y-4">
-          <div className="border-b pb-4">
+          <div className=" pb-4">
             <Image src="/assets/Portfolio1.png" width={600} height={150} alt="CloudSense" className="rounded-lg" />
             <h3 className="font-semibold grid ">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
-            <a href="#" className="text-blue-600 text-sm font-semibold">READ MORE &gt;&gt;</a>
+            <a href="#" className="text-purpleColor text-sm font-semibold">READ MORE &gt;&gt;</a>
           </div>
           <hr class=" border-[#D4B301] border"/>
          
-          <section className="flex items-center justify-center   ">
-      <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5">           
-        <Image src="/assets/Portfolio2.png" width={300} height={150} alt="Salesforce Development" className="rounded-lg" />       
-        <h3 className="font-bold text-2xl mb-16">Salesforce Development for Leading K-12 School Chain in USA</h3>
-      </div>      
-      {/* <a href="#" className="text-blue-600 text-sm font-semibold">READ MORE &gt;&gt;</a> */}      
+         
+    <section className="flex items-center justify-center  ">
+      <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5">
+        <Image src="/assets/Portfolio2.png" width={370} height={150} alt="Salesforce Development" className="rounded-lg" />
+
+        <div className='grid grid-cols'>
+        <h3 className="font-bold text-2xl pr-16">Salesforce Development for Leading K-12 School Chain in USA</h3>
+      <button className='flex pt-3'>  
+        <a href="#" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
+      </button>
+      </div>
+      </div>
     </section>
-    <hr class=" border-[#D4B301] border -mt-5"/>
-    
+    <hr class=" border-[#D4B301] border -mt-5"/>    
 
 
     <section className="flex items-center justify-center  ">
       <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5">
-        <Image src="/assets/Portfolio3.png" width={370} height={150} alt="Salesforce Development" className="rounded-lg" />
-        <h3 className="font-bold text-2xl mb-16">Research on Clustering of Devanagari Script Based Documents Containing Img</h3>
-        {/* <a href="#" className="text-blue-600 text-sm font-semibold">READ MORE &gt;&gt;</a> */}
+        <Image src="/assets/Portfolio3.png" width={455} height={150} alt="Salesforce Development" className="rounded-lg" />
+
+        <div className='grid grid-cols'>
+        <h3 className="font-bold text-2xl pr-9">Research on Clustering of Devanagari Script Based Documents Containing Img</h3>
+      <button className='flex pt-3'>  
+        <a href="#" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
+      </button>
+      </div>
       </div>
     </section>
  
