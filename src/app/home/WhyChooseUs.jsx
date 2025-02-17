@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="relative grid items-start gap-2 p-3 rounded-lg"
+              className="relative grid items-start gap-2 p-2 rounded-lg"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               onMouseMove={handleMouseMove}
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
               </motion.span>
               <p className="text-gray-800 text-xl font-bold">{item.text}</p>
               {/* Horizontal Line */}
-              <hr className="border-t-1 border-brownColor" />
+              {index !== 3 && <hr className="border-t-1 border-brownColor" />}
             </motion.div>
           ))}
         </motion.div>
