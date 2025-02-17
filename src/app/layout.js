@@ -3,6 +3,8 @@ import { Arimo, Nunito } from "next/font/google";
 import "./globals.css";
 import Menu from "@components/Menu"; // Import Menu Component
 import Footer from './../components/Footer';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const arimo = Arimo({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-arimo" });
@@ -27,9 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      {/* <Menu />  */}
+      <Menu /> 
       {/* Navbar */}
-      <main className="container mx-auto ">{children}</main>
+      <main className="">{children}</main>
       <Footer/>
       </body>
     </html>

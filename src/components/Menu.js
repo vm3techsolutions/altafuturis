@@ -12,15 +12,15 @@ const Menu = () => {
     <>
       <div className="sticky top-0 z-50">
         {/* Top Bar */}
-        <div className="menuBar text-gray-900 p-2 z-50">
+        <div className="menuBar text-gray-900 z-50">
           <div className="container mx-auto flex justify-between items-center">
             {/* Left side - Logo */}
             <Link href="/">
               <Image
                 src="/altra_logo.png" // Path to logo in public folder
                 alt="MyBrand Logo"
-                width={120} // Adjust width
-                height={20} // Adjust height
+                width={110} // Adjust width
+                height={15} // Adjust height
                 className="object-contain"
               />
             </Link>
@@ -39,9 +39,14 @@ const Menu = () => {
                 <Image src="/us.png" alt="US" width={24} height={16} />
                 <Image src="/in.png" alt="India" width={24} height={16} />
               </span>
-              <button className="flex items-center space-x-2 bg-blueColor text-white px-1 py-2 rounded-xl text-sm hover:bg-yellow-400">
-                Get In Touch  <ChevronDoubleRightIcon className="w-6 h-6 mx-1 bg-brownColor rounded py-1 " />
+              <a href="/" className="flex justify-end mr-11 md:mr-16">
+              <button className="px-4 py-2 bg-blueColor text-white font-bold  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+                Get In Touch
+                <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+                  &gt;&gt;
+                </span>
               </button>
+            </a>
             </div>
 
             {/* Mobile menu button */}

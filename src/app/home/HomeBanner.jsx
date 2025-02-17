@@ -14,21 +14,21 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative container w-full h-[100vh] bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full h-screen bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
       <Image
         src="/assets/HomeBanner.png"
         alt="Home Banner"
-        fill
+        layout="fill"
         className="object-cover object-center"
         priority
       />
 
       {/* Light Effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent to-white opacity-9    0 pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-r from-transparent to-white opacity-90 pointer-events-none"
         style={{
           left: mouseX - 100,
           top: mouseY - 100,

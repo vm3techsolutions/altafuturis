@@ -31,16 +31,20 @@ export default function ServicesSection() {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            whileHover={{ y: -25 }} // Move up on hover
-            transition={{ duration: 0.1 }}
+            whileHover={{ y: -20 }} // Move up on hover
+            transition={{ duration: 0.5 }}
             className="bg-white p-6 rounded-xl shadow-lg text-center flex flex-col items-center hover:shadow-xl transition-all"
           >
             <img src={service.icon} alt={service.title} className="w-16 h-16 mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 text-left">{service.title}</h3>
             <p className="text-gray-600 mt-2 text-sm text-left">{service.description}</p>
-            <button className="mt-8 mr-9 px-4 py-2 font-semibold text-black rounded-xl hover:border-yellow-200 hover:border-2 transition-all ">
-              Know More <span className="bg-[#D4B301] rounded-lg px-1 text-white pb-1 content-center justify-center"> &gt;&gt;</span>
+            <button className="mt-8 mr-12 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
+            Know More 
+            <span className="bg-brownColor group-hover:bg-blueColor rounded-lg px-1 text-white pb-1 mx-2 duration-500">
+            &gt;&gt;
+            </span>
             </button>
+
           </motion.div>
         ))}
 
@@ -59,9 +63,9 @@ export default function ServicesSection() {
       </div>
 
       <a href="/" className="flex justify-end p-5 mr-11 md:mr-16">
-              <button className="px-4 py-2 bg-[#0D6EFD] text-white  rounded-2xl shadow-md hover:bg-blue-700 flex items-center transition-all duration-300 ease-in-out">
+              <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                 Book Call
-                <span className="ml-2 bg-[#D4B301] text-white px-2 py-1 rounded-md">
+                <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
                   &gt;&gt;
                 </span>
               </button>
