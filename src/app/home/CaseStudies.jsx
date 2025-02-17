@@ -25,7 +25,7 @@ const PortfolioSection = () => {
         <div className="space-y-4">
           <div className=" pb-4">
             <Image src="/assets/Portfolio1.png" width={600} height={150} alt="CloudSense" className="rounded-lg" />
-            <h3 className="font-semibold grid ">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
+            <h3 className="font-bold text-2xl grid ">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
             <a href="#" className="text-purpleColor text-sm font-semibold">READ MORE &gt;&gt;</a>
           </div>
           <hr class=" border-[#D4B301] border"/>
