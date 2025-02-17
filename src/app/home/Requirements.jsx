@@ -6,8 +6,8 @@ const QuoteSection = () => {
       {/* Left Section */}
       <div className="lg:w-1/2 text-center lg:text-left ml-10">
         
-      <div className="md:w-1/3 w-[96] flex justify-center md:justify-start mb-16 md:mb-0 ml-16 ">
-          <button className="px-4 py- border-2 border-brownColor rounded-full text-white bg-[#6328A6] shadow-sm transition-all duration-300 ease-in-out font-bold">
+      <div className="md:w-full w-full flex justify-center md:justify-start mb-16 md:mb-0 md:ml-16 ">
+          <button className="px-4 py-1 border-2 border-brownColor rounded-full text-white bg-[#6328A6] shadow-sm transition-all duration-300 ease-in-out font-bold">
           Let's discuss your requirements
           </button>
         </div>

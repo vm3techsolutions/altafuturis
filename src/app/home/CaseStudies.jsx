@@ -9,10 +9,11 @@ const PortfolioSection = () => {
       <div className="md:w-1/3 flex flex-col items-center md:items-start p-4 h-full">
 
 
-        <div className="w-44 h-44 bg-purple-300 rounded-full flex items-center justify-center shadow-lg">
-          {/* Placeholder for the 3D element */}
+        {/* <div className="w-44 h-44 bg-purple-300 rounded-full flex items-center justify-center shadow-lg">
+          
           <span className="text-white font-bold text-lg">3D</span>
-        </div>
+        </div> */}
+        
       </div>
 
       
@@ -47,7 +48,7 @@ const PortfolioSection = () => {
         {/* <a href="#" className="text-blue-600 text-sm font-semibold">READ MORE &gt;&gt;</a> */}
       </div>
     </section>
-    <hr class=" border-[#D4B301] border"/>
+ 
 
         
         </div>

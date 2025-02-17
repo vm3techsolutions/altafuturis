@@ -31,20 +31,24 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <section className="py-12 ">
+    <section className="py-12 pb-32 bg-[#f7f4fb]">
       {/* Section Header */}
-      <div className="flex justify-center items-center py-8 mb-4 px-6">
-        <div className="flex-shrink-0 md:mr-12">
-          <button className="px-3 py-1 border-2 border-brownColor rounded-full text-black shadow-sm  transition-all duration-300 ease-in-out font-bold">
-            Our Team
-          </button>
-        </div>
-        <div>
-          <h2 className="text-start text-2xl lg:text-4xl font-bold text-gray-900 leading-snug">
-            Passionate Minds, <br /> Extraordinary Results!
-          </h2>
-        </div>
-      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center py-8 mb-6 px-4 md:px-8 text-center md:text-left">
+  {/* Button Section */}
+  <div className="mb-4 md:mb-0 md:mr-8">
+    <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black font-semibold shadow-md transition-all duration-300 ">
+      Our Team
+    </button>
+  </div>
+
+  {/* Title Section */}
+  <div>
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+      Passionate Minds, <br className="hidden md:block" /> Extraordinary Results!
+    </h2>
+  </div>
+</div>
+
 
       {/* Team Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">

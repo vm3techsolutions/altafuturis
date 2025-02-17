@@ -8,6 +8,7 @@ import WhoWeAre from "./home/WhoWeAre";
 import WhyChooseUs from "./home/WhyChooseUs";
 import ClientLogo from './home/ClientLogo';
 import OurTeam from './home/OurTeam';
+import Testimonials from "./home/Testimonials";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
   <WhyChooseUs/>
   <ClientLogo/>
   <OurTeam/>
+  <Testimonials/>
   <CaseStudiesbtn/>
   <CaseStudies/>
   <Requirements/>
