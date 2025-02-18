@@ -1,10 +1,16 @@
+import CaseStudyBlogs from "@app/about/CaseStudyBlogs";
+import CaseStudy4btn from "./CaseStudy4btn";
 import CasestudyBanner from "./CasestudyBanner";
+import DiscussRequirement from "./DiscussRequirement";
 
 export default function Home() {
     return (
-  <div>
+  <div className="bg-white"> 
   
     <CasestudyBanner/>
+    <CaseStudy4btn/>
+    <CaseStudyBlogs/>
+    <DiscussRequirement/>
     
   
   </div>
