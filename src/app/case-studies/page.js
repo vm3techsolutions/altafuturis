@@ -1,4 +1,4 @@
-import CaseStudyBlogs from "@app/about/CaseStudyBlogs";
+import CaseStudyBlogs from "@app/case-studies/CaseStudyBlogs";
 import CaseStudy4btn from "./CaseStudy4btn";
 import CasestudyBanner from "./CasestudyBanner";
 import DiscussRequirement from "./DiscussRequirement";

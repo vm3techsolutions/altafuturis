@@ -7,7 +7,7 @@ const BlogLayout = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('/Blogs.json');
+      const res = await fetch('/CaseStudy.json');
       const data = await res.json();
       setBlogs(data);
     };

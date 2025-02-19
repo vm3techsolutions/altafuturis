@@ -104,7 +104,7 @@ const Menu = () => {
                 </Link>
             </li>
             <li className="py-4">
-              <Link href="/blogs" className="hover:text-gray-600">
+              <Link href="/blog" className="hover:text-gray-600">
                 Blogs
                 </Link>
             </li>
