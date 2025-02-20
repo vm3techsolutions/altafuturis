@@ -15,7 +15,7 @@ const Menu = () => {
     <div className="sticky top-0 z-50">
       {/* Top Bar */}
       <div className="menuBar text-gray-900 z-50">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto px-10 flex justify-between items-center">
           {/* Left side - Logo */}
           <Link href="/">
             <Image
@@ -67,54 +67,52 @@ const Menu = () => {
       <nav className="hidden lg:block bg-white sticky top-[42px] z-40 shadow-md">
         <div className="container mx-auto flex justify-center items-center">
           {/* Desktop Menu */}
-          <ul className="menu hidden lg:flex space-x-6 text-sm font-bold-md uppercase">
-            <li className="py-4">
-              <Link href="/" className="hover:text-gray-600">
-                Home
-                </Link>
-            </li>
-            <li className="py-4">
-              <Link href="/about" className="hover:text-gray-600">
-                About Us
-                </Link>
-            </li>
+          <ul className="menu hidden lg:flex space-x-20 text-sm font-bold uppercase">
+            
             <li className="relative py-4"
               onMouseEnter={() => setIsMegaMenuOpen(true)}
               onMouseLeave={() => setIsMegaMenuOpen(false)}>
 
-              <Link href="/services" className="hover:text-gray-600">
+              <Link href="/services" className="hover:text-brownColor">
                 Services
                 </Link>
                 {isMegaMenuOpen && <MegaMenu /> }
             </li>
            
             <li className="py-4">
-              <Link href="/solutions" className="hover:text-gray-600">
+              <Link href="/solutions" className="hover:text-brownColor">
                 Solutions
                 </Link>
             </li>
             <li className="py-4">
-              <Link href="/partnerships" className="hover:text-gray-600">
+              <Link href="/partnerships" className="hover:text-brownColor">
                 Partnerships
                 </Link>
             </li>
             <li className="py-4">
-              <Link href="/case-studies" className="hover:text-gray-600">
+              <Link href="/case-studies" className="hover:text-brownColor">
                 Case Studies
                 </Link>
             </li>
             <li className="py-4">
-              <Link href="/blog" className="hover:text-gray-600">
+              <Link href="/blog" className="hover:text-brownColor">
                 Blogs
                 </Link>
             </li>
+            
             <li className="py-4">
-              <Link href="/career" className="hover:text-gray-600">
+              <Link href="/about" className="hover:text-brownColor">
+                About Us
+                </Link>
+            </li>
+            
+            <li className="py-4">
+              <Link href="/career" className="hover:text-brownColor">
                 Career
                 </Link>
             </li>
             <li className="py-4">
-              <Link href="/contact" className="hover:text-gray-600">
+              <Link href="/contact" className="hover:text-brownColor">
                 Contact Us
                 </Link>
             </li>
@@ -124,47 +122,47 @@ const Menu = () => {
           {isMobileMenuOpen && (
             <ul className="lg:hidden flex flex-col items-center space-y-4 text-sm font-bold-md uppercase mt-4">
               <li>
-                <Link href="/" className="hover:text-gray-600">
+                <Link href="/" className="hover:text-brownColor">
                   Home
                   </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-gray-600">
+                <Link href="/about" className="hover:text-brownColor">
                   About Us
                   </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-gray-600">
+                <Link href="/services" className="hover:text-brownColor">
                   Services
                   </Link>
               </li>
               <li>
-                <Link href="/solutions" className="hover:text-gray-600">
+                <Link href="/solutions" className="hover:text-brownColor">
                   Solutions
                   </Link>
               </li>
               <li>
-                <Link href="/partnerships" className="hover:text-gray-600">
+                <Link href="/partnerships" className="hover:text-brownColor">
                   Partnerships
                   </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="hover:text-gray-600">
+                <Link href="/case-studies" className="hover:text-brownColor">
                   Case Studies
                   </Link>
               </li>
               <li>
-                <Link href="/blogs" className="hover:text-gray-600">
+                <Link href="/blogs" className="hover:text-brownColor">
                   Blogs
                   </Link>
               </li>
               <li>
-                <Link href="/career" className="hover:text-gray-600">
+                <Link href="/career" className="hover:text-brownColor">
                   Career
                   </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-gray-600">
+                <Link href="/contact" className="hover:text-brownColor">
                   Contact Us
                   </Link>
               </li>

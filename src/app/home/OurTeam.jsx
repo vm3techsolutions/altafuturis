@@ -31,20 +31,18 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <section className="py-12 pb-32 bg-[#f7f4fb]">
+    <section className="py-12 pb-40 bg-[#f7f4fb]">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row items-center justify-center py-8 mb-6 px-4 md:px-8 text-center md:text-left">
-  {/* Button Section */}
-  <div className="mb-4 md:mb-0 md:mr-8">
-    <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black font-semibold shadow-md transition-all duration-300 ">
-      Our Team
+      
+<div className="flex flex-col sm:flex-row justify-center items-center py-6 px-6">
+  <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12">
+    <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+    Our Team
     </button>
   </div>
-
-  {/* Title Section */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-      Passionate Minds, <br className="hidden md:block" /> Extraordinary Results!
+  <div className="text-center sm:text-left">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
+    Passionate Minds, <br className="hidden md:block" /> Extraordinary Results!
     </h2>
   </div>
 </div>
