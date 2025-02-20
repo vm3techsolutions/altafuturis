@@ -54,8 +54,8 @@ const PortfolioSection = () => {
           <hr className="border-[#D4B301] border -mt-5"/>    
 
           <section className="flex items-center justify-center">
-            <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5">
-              <Image src="/assets/Portfolio3.png" width={455} height={150} alt="Salesforce Development" className="rounded-lg" />
+            <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5 ">
+              <Image src="/assets/Portfolio3.png" width={455} height={150} alt="Salesforce Development" className="rounded-lg " />
               <div className="grid grid-cols">
                 <h3 className="font-bold text-2xl pr-9">Research on Clustering of Devanagari Script Based Documents Containing Img</h3>
                 <button className="flex pt-3">  
