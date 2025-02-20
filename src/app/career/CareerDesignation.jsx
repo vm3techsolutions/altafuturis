@@ -39,8 +39,8 @@ export default function JobListings() {
                 <p>Location: {job.location}</p>
               </div>
 
-              <a href={job.applyLink} className="text-[#6328A6] font-semibold">
-                APPLY HERE &gt;&gt;
+              <a href={job.applyLink} className="text-[#6328A6] font-bold">
+                Read More &gt;&gt;
               </a>
             </div>
           )}

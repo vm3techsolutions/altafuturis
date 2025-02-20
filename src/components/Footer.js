@@ -3,18 +3,18 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className=" text-gray-900 py-4 px-6">
+      <footer className=" text-gray-900 py-12 px-6">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           
           {/* 1st Column: Logo and Content */}
-          <div className="flex flex-col space-y-4 ml-2">
+          <div className="flex flex-col ml-2">
             <Link href="/">
               <img
                 src="/altra_logo.png"
                 alt="Logo"
                 width={120}
                 height={20}
-                className="object-contain"
+                className="object-contain ml-4"
               />
             </Link>
             <h6 className="text-md">
@@ -26,9 +26,9 @@ const Footer = () => {
           </div>
 
           {/* 2nd Column: Quick Links */}
-          <div className="flex flex-col space-y-4 lg:col-span-1 ml-12">
+          <div className="flex flex-col lg:col-span-1 ml-12">
             <h4 className="text-lg text-purpleColor font-bold">Quick Links</h4>
-            <ul className="space-y-2 ">
+            <ul className="space-y-2 mt-4">
               <li><Link href="/about" className="text-md hover:text-yellow-400">About Us</Link></li>
               <li><Link href="/partnership" className="text-md hover:text-yellow-400">Partnership</Link></li>
               <li><Link href="/blogs" className="text-md hover:text-yellow-400">Blogs</Link></li>
@@ -38,9 +38,9 @@ const Footer = () => {
           </div>
 
           {/* 3rd Column: Service Menu */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col">
             <h4 className="text-lg text-purpleColor font-bold">Our Services</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mt-4">
               <li><Link href="/web-development" className="text-md hover:text-yellow-400">Web Development</Link></li>
               <li><Link href="/app-development" className="text-md hover:text-yellow-400">App Development</Link></li>
               <li><Link href="/consulting" className="text-md hover:text-yellow-400">Consulting</Link></li>
@@ -49,18 +49,18 @@ const Footer = () => {
           </div>
 
           {/* 4th Column: Contact Us */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col">
             <h4 className="text-lg text-purpleColor font-bold">Contact Us</h4>
-            <h6 className="text-md">Email: <a href="mailto:sales@altafuturis.com" className="hover:text-yellow-400">sales@altafuturis.com</a></h6>
-            <h6 className="text-md">Phone: <a href="tel:+919764694844" className="hover:text-yellow-400">+91 97646 94844</a></h6>
-            <h6 className="text-md">Address: 301, Anish, LMD Square, Bavdhan, Pune, Maharashtra 411023 INDIA</h6>
+            <h6 className="text-md mt-4">Email: <a href="mailto:sales@altafuturis.com" className="hover:text-yellow-400">sales@altafuturis.com</a></h6>
+            <h6 className="text-md mt-2">Phone: <a href="tel:+919764694844" className="hover:text-yellow-400">+91 97646 94844</a></h6>
+            <h6 className="text-md mt-2">Address: 301, Anish, LMD Square, Bavdhan, Pune, Maharashtra 411023 INDIA</h6>
           </div>
         </div>
 
         {/* Bottom Bar */}
         
       </footer>
-      <div className="bg-gray-900 text-white py-2 px-2 mt-12">
+      <div className="bg-gray-900 text-white py-2 px-2 ">
           <div className="container mx-auto flex justify-between items-center">
             {/* Left Side: Copyright */}
             <div className="text-sm">

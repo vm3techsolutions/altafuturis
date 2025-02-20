@@ -23,6 +23,8 @@ const PortfolioSection = () => {
           </h2>
         </div>
       </div>
+      
+
     </section>
   );
 };

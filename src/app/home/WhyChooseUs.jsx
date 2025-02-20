@@ -7,15 +7,14 @@ export default function WhyChooseUs() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
-  // Transform values to position blur circle at the tip of the cursor
-  const xTransform = useTransform(mouseX, (x) => x - 10);
-  const yTransform = useTransform(mouseY, (y) => y - 10);
-
+  
   const handleMouseMove = (event) => {
     mouseX.set(event.clientX);
     mouseY.set(event.clientY);
   };
+  
+  const xTransform = useTransform(mouseX, (x) => x);
+  const yTransform = useTransform(mouseY, (y) => y);
 
   return (
     <section className="py-6 px-6 md:px-12 lg:px-24 relative">
@@ -27,7 +26,7 @@ export default function WhyChooseUs() {
         style={{
           x: xTransform,
           y: yTransform,
-          filter: "blur(20px)", // Adjusted for brightness
+          filter: "blur(30px)", // Adjusted for brightness
         }}
       />
 
@@ -68,7 +67,7 @@ export default function WhyChooseUs() {
         <motion.div
           className="mt-0 space-y-10 p-2 relative"
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 80 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
@@ -88,7 +87,7 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.3 }}
             >
               <motion.span
-                className="w-10 text-xl font-bold text-[#6328A6] px-2 py-1 rounded-lg border border-brownColor"
+                className="w-12 text-2xl font-bold text-[#6328A6] px-2 py-2 rounded-lg border border-brownColor"
                 animate={{
                   borderColor: hoveredIndex === index ? "#ff9900" : "#6328A6",
                   boxShadow:
