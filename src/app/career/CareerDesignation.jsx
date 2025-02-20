@@ -1,37 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
-const jobListings = [
-  {
-    title: "AI Engineer",
-    experience: "0-3 years",
-    location: "Remote",
-    applyLink: "/jobs/ai-engineer",
-  },
-  {
-    title: "Data Engineer",
-    experience: "0-3 years",
-    location: "Remote",
-    applyLink: "/jobs/data-engineer",
-  },
-  {
-    title: "Salesforce Developer",
-    experience: "0-3 years",
-    location: "Remote",
-    applyLink: "/jobs/salesforce-developer",
-  },
-  {
-    title: "AI Scientist",
-    experience: "0-3 years",
-    location: "Remote",
-    applyLink: "/jobs/ai-scientist",
-  },
-];
-
 export default function JobListings() {
-  const [expandedJob, setExpandedJob] = useState(null);
+  const [jobs, setJobs] = useState([]);
+  const [expandedJob, setExpandedJob] = useState(0); // First job is expanded by default
+
+  useEffect(() => {
+    fetch("/Career.json") // Fetch the JSON file from the public folder
+      .then((response) => response.json())
+      .then((data) => setJobs(data))
+      .catch((error) => console.error("Error fetching job data:", error));
+  }, []);
 
   const toggleJob = (index) => {
     setExpandedJob(expandedJob === index ? null : index);
@@ -39,12 +20,12 @@ export default function JobListings() {
 
   return (
     <div className="max-w-2xl mx-auto p-4">
-      {jobListings.map((job, index) => (
+      {jobs.map((job, index) => (
         <div key={index} className="border-t border-[#D4B301] py-4">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-semibold">Designation: {job.title}</h2>
             <ChevronDown
-              className={`text-[#D4B301] mb-10 cursor-pointer transition-transform ${
+              className={`text-[#D4B301] cursor-pointer transition-transform ${
                 expandedJob === index ? "rotate-180" : ""
               }`}
               onClick={() => toggleJob(index)}
