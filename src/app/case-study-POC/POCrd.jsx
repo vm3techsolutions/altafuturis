@@ -2,14 +2,14 @@
 
 const recommendations = [
   {
-    title: "Research on Clustering of Devnagari Script Based Documents Containing Img",
-    image: "/assets/CaseStudyInner1.png", // Replace with actual image URL
-    link: "#",
+    title: "Dentistry: NLP (Natural Language Processing) and Deep Learning: New Product Development for client",
+    image: "/assets/Case study 5.png", // Replace with actual image URL
+    link: "/case-study-Dentistry",
   },
   {
-    title: "Salesforce Development for Leading K-12 School Chain in USA",
-    image: "/assets/CaseStudyInner2.png", // Replace with actual image URL
-    link: "#",
+    title: "Research on Clustering of Devnagari Script Based Documents Containing Images.",
+    image: "/assets/Case study2.png", // Replace with actual image URL
+    link: "/case-study-Research",
   },
 ];
 

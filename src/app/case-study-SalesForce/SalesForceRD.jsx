@@ -1,12 +1,12 @@
 "use client"
 
 const recommendations = [
-
   {
-    title: "Salesforce Development for Leading K-12 School Chain in USA",
-    image: "/assets/CaseStudyInner2.png", // Replace with actual image URL
-    link: "/case-study-SalesForce",
+    title: "CloudSense Implementation Consultancy for Leading Media House in USA",
+    image: "/assets/Case study1.png", // Replace with actual image URL
+    link: "/caseStudyInner",
   },
+ 
 ];
 
 const RecommendedSection = () => {

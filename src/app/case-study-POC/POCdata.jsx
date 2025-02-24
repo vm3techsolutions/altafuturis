@@ -1,29 +1,30 @@
 "use client"
 
 const data = {
-  client: "The end client is a large media house based in USA and has outsourced their IT work to one of the large software services companies from India. We are working with India based software services company to help end client for CloudSense implementation.",
+ 
   problemStatement: [
-    "The end Client has implemented CloudSense CPQ & Order Management platform, built on Salesforce. CloudSense is a Salesforce ISV Platinum Partner, and it enables Commerce Cloud users to publish subscription-based services to the product catalog, including bundles, promotions and offers.",
-    "The end client as well as their outsourcing partner realized that there is significant impact of ‘Salesforce Changes Spring and Summer 2023’ on the existing CloudSense solution. The outsourcing partner needed consultancy to resolve these dependencies in line with Salesforce Changes."
+    "In agriculture, the most common issue is to identify diseases and protect plants from the diseases.",
+    "Traditionally, diseases were identified manually and based on experience.",
+    "Plants were protected by using chemicals and fertilizers without analyzing quantity of chemicals, fertilizers or pesticides needed for crops.",
+    "Use of excessive and disproportionate pesticides and fertilizers lead to adverse effects on human health.",
+    "Plant diseases are not only a threat to food security at the global scale but can also have disastrous consequences for smallholder farmers whose livelihoods depend on healthy crops."
   ],
   solution: [
-    "Salesforce announced ‘Salesforce Changes Spring and Summer 2023’ as per their release cycle and end client needs to adopt those major changes into customized CloudSense platform.",
-    "In this release, Salesforce is adopting the ICU Locale Standard, which will be enforced for all the metadata of platform API version 45.0 and above, including all Salesforce standard representations of affected data and this became a critical work for client to make relevant changes in the impacted orgs without any impact on user experience.",
-    "Our Senior Salesforce Technical Architect worked with teams of outsourcing partner, CloudSense and the end client to ensure all changes under Spring and Summer 2023 smoothly without any impact on end user experience of customers of end client."
+    "The training of the models was performed using an openly available database Plant Village, consisting of 54,306 images containing 38 classes",
+    "Using the deep convolutional neural network architecture, we trained a model on images of plant leaves with the goal of classifying both crop species and the presence and identity presence of disease on images that the model had not seen before."
   ],
   benefits: [
-    "100% visibility with impact analysis into implementation of ‘Salesforce Changes Spring and Summer 2023’ for end client.",
-    "High Customer satisfaction for end client as there is no impact for customers of end client while the critical Salesforce Changes implement on CloudSense."
+    "80% accuracy in estimating crop diseases in tomato and potato. o Early indication of stress or disease in crops leads to cost savings related to spoiled crops and can save further damage through appropriate remedy for stress or disease."
   ]
 };
 
 const CloudSenseConsultancy = () => {
   return (
     <div className=" mx-auto py-16 px-16 space-y-9 text-gray-800">
-      <h1 className="text-4xl font-bold text-start">CloudSense Implementation Consultancy for Leading Media House in USA</h1>
+      <h1 className="text-4xl font-bold text-start">POC: Agri-Tech: Plant Disease Identification</h1>
       
       <section className="space-y-5">
-        <h2 className="text-xl font-semibold">Client</h2>
+       
         <p className="text-gray-600 text-lg">{data.client}</p>
       </section>
 
@@ -46,7 +47,7 @@ const CloudSenseConsultancy = () => {
       </section>
 
       <section className="space-y-5">
-        <h2 className="text-xl font-semibold">Benefits</h2>
+        <h2 className="text-xl font-semibold">Business Value</h2>
         <ul className="list-disc pl-5 text-gray-600 text-lg space-y-3">
           {data.benefits.map((item, index) => (
             <li key={index}>{item}</li>

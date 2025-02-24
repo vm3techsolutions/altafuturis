@@ -1,11 +1,15 @@
 "use client"
 
 const recommendations = [
-
   {
-    title: "Salesforce Development for Leading K-12 School Chain in USA",
-    image: "/assets/CaseStudyInner2.png", // Replace with actual image URL
-    link: "/case-study-SalesForce",
+    title: "Research on Clustering of Devnagari Script Based Documents Containing Images.",
+    image: "/assets/Case study2.png", // Replace with actual image URL
+    link: "/case-study-Research",
+  },
+  {
+    title: "POC: Agri-Tech: Plant Disease Identification",
+    image: "/assets/Case study 4.png", // Replace with actual image URL
+    link: "/case-study-POC",
   },
 ];
 
