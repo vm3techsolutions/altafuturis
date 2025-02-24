@@ -1,3 +1,6 @@
+import POCbanner from "./POCbanner";
+import POCdata from "./POCdata";
+import POCrd from "./POCrd";
 
 
 
@@ -5,10 +8,10 @@ export default function Home() {
     return (
   <div className="bg-white"> 
   
-  
-    <CaseStudyInnerBanner/>
-    <CastStudyInnerData/>
-    <CaseStudyInnerRD/>
+  <POCbanner/>
+  <POCdata/>
+  <POCrd/>
+    
   
   
   </div>
