@@ -29,7 +29,7 @@ const Menu = () => {
 
           {/* Right side - Email, Phone, Country Flag, CTA */}
           <div className="flex space-x-6 items-center">
-            <span  className="mr-14 font-semibold hidden lg:flex items-center text-xl  hover:text-gray-700">
+            <span  className="mr-16 font-semibold hidden lg:flex items-center text-lg  hover:text-gray-700">
               <h1> BASED IN TEXAS,
               SERVING GLOBALLY!</h1>
             </span>
