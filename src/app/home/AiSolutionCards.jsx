@@ -31,7 +31,7 @@ export default function ServicesSection() {
           {/* Left Side - Button */}
           <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12 ml-16">
     <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
-      Why choose us?
+      Our Services
     </button>
   </div>
   <div className="text-center sm:text-left">
