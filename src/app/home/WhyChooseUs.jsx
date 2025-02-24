@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
   const yTransform = useTransform(mouseY, (y) => y);
 
   return (
-    <section className="py-6 px-6 md:px-12 lg:px-24 relative">
+    <section className="py- px-6 md:px-12 lg:px-24 relative">
       {/* Glowing Blur Circle (Now at cursor tip) */}
       <motion.div
         className={`absolute w-20 h-20 bg-purple-500 opacity-40 rounded-full pointer-events-none transition-opacity duration-300 ${
@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
 
 <div className="flex flex-col sm:flex-row justify-center items-center py-6 px-6">
   <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12">
-    <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+    <button className="px-4 py-2 border-2 border-brownColor mr-28 rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
       Why choose us?
     </button>
   </div>
@@ -87,7 +87,7 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.3 }}
             >
               <motion.span
-                className="w-12 text-2xl font-bold text-[#6328A6] px-2 py-2 rounded-lg border border-brownColor"
+                className="w-12 text-3xl font-bold text-[#6328A6] px-2 py-2 rounded-lg border border-brownColor"
                 animate={{
                   borderColor: hoveredIndex === index ? "#ff9900" : "#6328A6",
                   boxShadow:

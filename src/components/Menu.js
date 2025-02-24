@@ -29,6 +29,11 @@ const Menu = () => {
 
           {/* Right side - Email, Phone, Country Flag, CTA */}
           <div className="flex space-x-6 items-center">
+            <span  className="mr-14 font-semibold hidden lg:flex items-center text-xl  hover:text-gray-700">
+              <h1> BASED IN TEXAS,
+              SERVING GLOBALLY!</h1>
+            </span>
+
             <span className="hidden lg:flex items-center text-sm hover:text-gray-700">
               <EnvelopeIcon className="w-4 h-4 mr-1 text-blueColor fill-current" /> {/* Email icon */}
               <a href="mailto:sales@altafuturis.com">sales@altafuturis.com</a>

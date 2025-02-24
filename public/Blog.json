@@ -1,4 +1,10 @@
-[
+{
+  "categories": 
+  [
+    {
+      "category_name": "Artificial Intelligence",
+      "caseStudy": 
+       [
     {
       "id": 1,
       "image": "/assets/blogimg1.png",
@@ -12,8 +18,15 @@
       "p2": "These include:",
       "p3": "Process Builder: Process Builder allows you to create an ........"
       
-
+    }
+  ]
     },
+
+    {
+      "category_name": "Data Engineering",
+      "caseStudy": 
+       [
+   
     {
       "id": 2,
       "image": "/assets/blogimg2.png",
@@ -21,7 +34,16 @@
       "title": "Security Concerns While Implementing Data Engineering Solutions",
       "description": "With the advent of APIs that mainly offer state-of-the-art services a click away, setting up a machine learning shop has become more accessible. But with .... ",
       "link": "/blog2"
+    }
+  ]
     },
+
+    
+    {
+      "category_name": "Salesforce",
+      "caseStudy": 
+       [
+    
     {
       "id": 3,
       "image": "/assets/blogimg3.png",
@@ -31,4 +53,8 @@
       "link": "/blog3"
     }
   ]
-  
+    }
+
+  ]
+    
+    }

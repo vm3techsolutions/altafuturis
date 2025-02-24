@@ -8,7 +8,7 @@ export default function Home() {
   <div className="bg-white"> 
   
     <CasestudyBanner/>
-    <CaseStudy4btn/>
+    {/* <CaseStudy4btn/> */}
     <CaseStudyBlogs/>
     <DiscussRequirement/>
     

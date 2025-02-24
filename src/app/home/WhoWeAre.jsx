@@ -1,13 +1,13 @@
 export default function CompanyIntro() {
     return (
 
-      <section className="min-h-screen flex items-center justify-center p-6">
-      <section className="container min-h-screen flex items-center justify-center py-16">
+      <section className="min-h-screen flex items-center justify-center ">
+      <section className="container min-h-screen flex items-center justify-center md:mt-0 -mt-52">
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="flex-shrink-0 md:mr-12">
-            <button className="md:ml-44 md:mb-44 px-3 py-1 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <button className="md:ml-24 md:mb-44 px-3 py-1 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
               Who we are
             </button>
           </div>
@@ -15,7 +15,7 @@ export default function CompanyIntro() {
           {/* Right Side - Content */}
           <div className="max-w-3xl text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
-              Unveiling the essence <br className="hidden md:block" /> of our company
+            Ensuring the enterprise business transformation aligned with <br className="hidden md:block" /> Generative AI agents across streams 
             </h1>
             <p className="py-4 text-gray-900 text-md mb-4 leading-relaxed">
               We aspire to become global leaders in helping businesses adopt

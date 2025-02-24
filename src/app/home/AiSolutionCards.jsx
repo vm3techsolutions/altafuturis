@@ -25,7 +25,24 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className=" py-16 px-20">
+    <section className=" py-5 md:mt-0 -mt-32 px-20 space-y-8">
+
+<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0 ">
+          {/* Left Side - Button */}
+          <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12 ml-16">
+    <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+      Why choose us?
+    </button>
+  </div>
+  <div className="text-center sm:text-left">
+    <h2 className="text-3xl ml-32 sm:text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-snug">
+    Helping Enterprises to utilize our various Service(s) as a Software     in their Business Transformation journey
+    </h2>
+  </div>
+</div>
+
+
+
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Service Cards */}
         {services.map((service, index) => (

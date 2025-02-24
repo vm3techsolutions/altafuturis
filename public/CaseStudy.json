@@ -1,30 +1,52 @@
-[
+{
+  "categories": [
     {
-      "id": 1,
-      "image": "/assets/Case study1.png",
-      "title": "CloudSense Implementation Consultancy for Leading Media House in USA",      
-      "topic": "Client ",
-      "description": "The end client is a large media house based in USA and has outsourced their IT work to one of the large software services companies from India. We are working with India based software services company to help end client for Cloud Sense implementation.",
-      "link": "/caseStudyInner",
-      "topic2": "Problem Statement",
-      "p1": "The end Client has implemented CloudSense CPQ & Order Management platform, built on Salesforce. CloudSense is a Salesforce ISV Platinum Partner, and it enables Commerce Cloud users to publish subscription-based services to the product catalog, including bundles, promotions and offers.",
-      "p2": "The end Client has implemented CloudSense CPQ & Order Management platform, built on Salesforce. CloudSense is a Salesforce ISV Platinum Partner, and it enables Commerce Cloud users to publish subscription-based services to the product catalog, including bundles, promotions and offers."
-      
-
+      "category_name": "Artificial Intelligence",
+      "category_slug": "artificial-intelligence",
+      "caseStudy": [
+        {
+          "id": 1,
+          "title": "Research on Clustering of Devnagari Script Based Documents Containing Img",
+          "image": "/assets/Case study2.png",
+          "description": "USA-based client with an India captive center has a proprietary OCR-based AI platform where they receive a large number of transactional documents from various clients...",
+          "link": "/app/blogInner/"
+         
+        },
+        {
+          "id": 2,
+          "title": "POC: Agri-Tech: Plant Disease Identification",
+          "image": "/assets/Case study 4.png",
+          "description": "In agriculture, the most common issue is to identify diseases and protect ants from the diseases. Traditionally, diseases were identified manually and based on experience.",
+          "link": "/blog3"
+        },
+        {
+          "id": 3,
+          "title": "Dentistry: NLP (Natural Language Processing) and Deep Learning: New Product Development for client",
+          "image": "/assets/Case study 5.png",
+          "description": "USA-based client is developing technology solutions for Dentistry. New product development with AI (Artificial Intelligence) using 2D and 3D images of dental structures of patients..",
+          "link": "/blog3"
+        }
+      ]
     },
     {
-      "id": 2,
-      "title": "Research on Clustering of Devnagari Script Based Documents Containing Img",
-      "image": "/assets/Case study2.png",
-      "description": "USA based client with India captive center has proprietary OCR based AI platform where they receive large number of transactional documents from various clients from different sources, like invoices, ......",
-      "link": "/blog2"
-    },
-    {
-      "id": 3,
-      "title": "Salesforce Development for Leading K-12 School Chain in USA",
-      "image": "/assets//Case study3.png",
-      "description": "Client - The client focuses on preparing students for elementary, middle school and high school education. Its faculty and students are committed to impacting.......",
-      "link": "/blog3"
+      "category_name": "Salesforce",
+      "category_slug": "salesforce",
+      "caseStudy": [
+        {
+          "id": 3,
+          "title": "CloudSense Implementation Consultancy for a Leading Media House in the USA",
+          "image": "/assets/Case study1.png",
+          "description": "The end client is a large media house based in the USA and has outsourced their IT work...",
+          "link": "/caseStudyInner"
+        },
+        {
+          "id": 4,
+          "title": "Salesforce Development for a Leading K-12 School Chain in the USA",
+          "image": "/assets/Case study3.png",
+          "description": "Client - The client focuses on preparing students for elementary, middle school, and high school education...",
+          "link": "/blog3"
+        }
+      ]
     }
   ]
-  
+}

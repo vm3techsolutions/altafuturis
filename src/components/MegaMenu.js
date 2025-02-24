@@ -13,7 +13,7 @@ const MegaMenu = () => {
 
   return (
     <div
-      className="absolute left-0 right-0 top-[52px] w-[85vw] h-[350px] bg-white  border p-6 flex z-50"
+      className="absolute left-0 right-0 top-[52px] w-[92vw] h-[350px] bg-white  border p-6 flex z-50"
     >
       {/* Tabs Section (Left Panel) */}
       <div className="w-1/3 border-r">

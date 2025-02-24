@@ -43,8 +43,8 @@ export default function HomeBanner() {
 
       {/* Text Content */}
       <div className="relative container mx-auto text-white text-center">
-        <h1 className="font-bold text-4xl md:text-5xl max-w-3xl">
-          PROUDLY BASED IN TEXAS, SERVING GLOBALLY!
+        <h1 className="font-bold text-3xl md:text-5xl max-w-3xl">
+        Bringing future automation vision of Enterprises in the current world with AI Agents - Banner
         </h1>
       </div>
     </div>
