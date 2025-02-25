@@ -5,7 +5,7 @@ import { motion } from "framer-motion"; // Import motion for animation
 
 const PortfolioSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center ">
+    <section className="flex flex-col md:flex-row items-center -mt-5">
       {/* Left Section */}
       <div className="md:w-1/3 flex flex-col items-center md:items-start h-full relative">
 

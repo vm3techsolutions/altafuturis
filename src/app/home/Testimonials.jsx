@@ -31,16 +31,17 @@ export default function Testimonials() {
   }, [current]);
 
   return (
-    <div className="relative py-20 px-5 sm:px-10 md:px-20 lg:px-40">
+    <div className="relative py-5  px-5 sm:px-10 md:px-20 lg:px-40">
       <h2 className="text-[7vh] md:text-[35vh] text-purple-200 absolute font-extrabold opacity-50 top-0 left-0 w-full text-center -mt-12 md:-mt-40   sm:-mt-36">Testimonials</h2>
 
-      <div className="flex justify-center mb-8 mt-14">
+      <div className="flex justify-center mb-8 mt-28">
         <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
           Hear from our customers
         </button>
       </div>
 
       <div className="mt-12 text-center">
+      <h1 className="text-6xl font-bold text-gray-800 mb- px-4 "> “</h1>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 mb-4 px-4 sm:px-10">{testimonials[current].text}</p>
         <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#6328A6] opacity-75">{testimonials[current].name}</p>
         <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#6328A6] opacity-75">{testimonials[current].title}</p>

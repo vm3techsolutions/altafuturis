@@ -41,13 +41,13 @@ export default function ServicesSection() {
 
 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0 ">
           {/* Left Side - Button */}
-          <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12 ml-16">
+          <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12 md:ml-24">
     <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
       Our Services
     </button>
   </div>
   <div className="text-center sm:text-left">
-    <h2 className="text-3xl ml-32 sm:text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-snug">
+    <h2 className="text-3xl md:ml-32 sm:text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-snug">
     Helping Enterprises to utilize our various Service(s) as a Software     in their Business Transformation journey
     </h2>
   </div>
@@ -55,7 +55,7 @@ export default function ServicesSection() {
 
 
 
-<div className=" py-5 flex flex-wrap justify- gap-3  ml-3 px-6">
+<div className=" py-9   flex flex-wrap justify- gap-3  ml-3 px-6">
   {/* Service Cards */}
   {services.map((service, index) => (
     <motion.div

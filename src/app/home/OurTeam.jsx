@@ -36,12 +36,12 @@ const OurTeam = () => {
       
 <div className="flex flex-col sm:flex-row justify-center items-center py-6 px-6">
   <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12">
-    <button className="px-4 py-2 border-2 mr-44 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+    <button className="px-4 py-2 border-2 md:mr-44 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
     Our Team
     </button>
   </div>
   <div className="text-center sm:text-left">
-    <h2 className="text-2xl mr-32 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
+    <h2 className="text-2xl md:mr-32 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
     Passionate Minds, <br className="hidden md:block" /> Extraordinary Results!
     </h2>
   </div>
@@ -49,7 +49,7 @@ const OurTeam = () => {
 
 
       {/* Team Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 py-8">
         {teamMembers.map((member, index) => (
           <div
             key={index}
