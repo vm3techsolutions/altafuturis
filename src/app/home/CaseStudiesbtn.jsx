@@ -4,8 +4,8 @@ import React from "react";
 
 const PortfolioSection = () => {
   return (
-    <section className="flex items-center justify-center   md:ml-20 pt-16  ">
-      <div className="max-w-5xl flex flex-col md:flex-row items-center w-full">
+    <section className="container flex items-center justify-between   md:ml-20 pt-16  ">
+      <div className="max-w-7xl flex flex-col justify-between md:flex-row items-center w-full">
         {/* Left Side */}
         
 
@@ -16,9 +16,9 @@ const PortfolioSection = () => {
         </div>
 
         {/* Right Side */}
-        <div className="md:w-2/3 w-full text-center md:text-left">
+        <div className="max-w-4xl w-full text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-black  leading-tight">
-            Our portfolio of <br />
+            Our portfolio of 
             proven solutions!
           </h2>
         </div>

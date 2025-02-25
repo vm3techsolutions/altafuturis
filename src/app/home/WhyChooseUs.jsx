@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
   const yTransform = useTransform(mouseY, (y) => y);
 
   return (
-    <section className="py- px-6 md:px-12 lg:px-24 relative">
+    <section className="container relative">
       {/* Glowing Blur Circle (Now at cursor tip) */}
       <motion.div
         className={`absolute w-20 h-20 bg-purple-500 opacity-40 rounded-full pointer-events-none transition-opacity duration-300 ${
@@ -30,21 +30,21 @@ export default function WhyChooseUs() {
         }}
       />
 
-<div className="flex flex-col sm:flex-row justify-center items-center py-6 px-6">
-  <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12">
+<div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center py-6 ">
+  <div className="max-w-4xl flex-shrink-0 mb-4 sm:mb-0 sm:mr-12">
     <button className="px-4 py-2 border-2 border-brownColor md:mr-28 rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
       Why choose us?
     </button>
   </div>
-  <div className="text-center sm:text-left">
+  <div className="max-w-4xl text-center md:text-left">
     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
-      Accelerate business growth <br /> in emerging technologies
+      Accelerate business growth  in emerging technologies
     </h2>
   </div>
 </div>
 
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center py-6 gap-6">
         {/* Left Section (Image + Button) */}
         <div className="relative flex flex-col items-center">
           <img
