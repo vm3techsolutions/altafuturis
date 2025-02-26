@@ -53,7 +53,6 @@ export default function ServicesSection() {
         </div>
       </div>
 
-<<<<<<< HEAD
 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0 ">
           {/* Left Side - Button */}
           <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-12 ">
@@ -67,7 +66,6 @@ export default function ServicesSection() {
     </h2>
   </div>
 </div>
-=======
       <div className=" py-9   flex flex-wrap justify- gap-3  ml-3 px-6">
         {/* Service Cards */}
         {services.map((service, index) => (
@@ -96,7 +94,6 @@ export default function ServicesSection() {
             </button>
           </motion.div>
         ))}
->>>>>>> b901109579f02c5d5c4354da321d94de3bb0149e
 
         {/* Right-Side Card */}
         {/* Uncomment if needed */}

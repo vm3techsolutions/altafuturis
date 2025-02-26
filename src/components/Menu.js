@@ -12,12 +12,12 @@ const Menu = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-white shadow-md w-full">
         {/* Top Bar */}
-        <div className="menuBar text-gray-900 z-50 border-b">
-          <div className="container flex-container mx-auto px-16 justify-between items-center">
-            {/* Left side - Logo */}
-            <div className="flex flex-row justify-start items-center">
+        <div className="menuBar border-b py-2">
+          <div className="container mx-auto px-4 md:px-8 lg:px-12 flex flex-wrap items-center justify-between">
+            {/* Left Side - Logo & Tagline */}
+            <div className="flex items-center space-x-4">
               <Link href="/">
                 <Image
                   src="/altra_logo.png"
@@ -27,29 +27,29 @@ const Menu = () => {
                   className="object-contain"
                 />
               </Link>
-              <span className="ml-4 hidden lg:flex text-sm font-bold uppercase hover:text-gray-700">
+              <span className="hidden lg:flex text-sm font-bold uppercase hover:text-gray-700">
                 BASED IN TEXAS, SERVING GLOBALLY!
               </span>
             </div>
 
-            {/* Right side - Contact Details */}
+            {/* Right Side - Contact Details */}
             <div className="hidden lg:flex space-x-6 items-center">
               <span className="flex items-center text-sm hover:text-gray-700">
-                <EnvelopeIcon className="w-4 h-4 mr-1 text-blueColor" />
+                <EnvelopeIcon className="w-4 h-4 mr-1 text-blue-500" />
                 <a href="mailto:sales@altafuturis.com">sales@altafuturis.com</a>
               </span>
               <span className="flex items-center text-sm hover:text-gray-700">
-                <PhoneIcon className="w-4 h-4 mr-1 text-blueColor" />
+                <PhoneIcon className="w-4 h-4 mr-1 text-blue-500" />
                 <a href="tel:9764694844">+91 97646 94844</a>
               </span>
-              <span className="flex space-x-2">
+              <div className="flex space-x-2">
                 <Image src="/us.png" alt="US" width={24} height={16} />
                 <Image src="/in.png" alt="India" width={24} height={16} />
-              </span>
+              </div>
               <Link href="/">
-                <button className="px-4 py-2 bg-blueColor text-white font-bold rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300">
+                <button className="px-4 py-2 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-brown-600 flex items-center transition-all duration-300">
                   Get In Touch{" "}
-                  <span className="ml-2 bg-brownColor text-white px-1 rounded-md">
+                  <span className="ml-2 bg-brown-600 text-white px-1 rounded-md">
                     &gt;&gt;
                   </span>
                 </button>
@@ -57,67 +57,65 @@ const Menu = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-blueColor focus:outline-none"
-              >
-                <Bars3Icon className="w-6 h-6" />
-              </button>
-            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden text-blue-500 focus:outline-none"
+            >
+              <Bars3Icon className="w-6 h-6" />
+            </button>
           </div>
         </div>
 
         {/* Navigation Menu */}
         <nav className="hidden lg:block bg-white relative">
-          <div className="flex justify-center">
-            <ul className="menu flex space-x-28 text-sm font-bold uppercase">
+          <div className="container mx-auto px-4">
+            <ul className="flex justify-center space-x-6 md:space-x-10 lg:space-x-24 xl:space-x-20 text-sm font-bold uppercase">
               <li
                 className="relative py-4 group"
                 onMouseEnter={() => setIsMegaMenuOpen(true)}
                 onMouseLeave={() => setIsMegaMenuOpen(false)}
               >
-                <Link href="/services" className="hover:text-brownColor">
+                <Link href="/services" className="hover:text-brown-600">
                   Services
                 </Link>
                 {isMegaMenuOpen && (
-                  <div className="relative left-0 right-0 -top-1 ">
+                  <div className="absolute left-0 right-0">
                     <MegaMenu />
                   </div>
                 )}
               </li>
               <li className="py-4">
-                <Link href="/solutions" className="hover:text-brownColor">
+                <Link href="/solutions" className="hover:text-brown-600">
                   Solutions
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/partnerships" className="hover:text-brownColor">
+                <Link href="/partnerships" className="hover:text-brown-600">
                   Partnerships
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/case-studies" className="hover:text-brownColor">
+                <Link href="/case-studies" className="hover:text-brown-600">
                   Case Studies
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/blog" className="hover:text-brownColor">
+                <Link href="/blog" className="hover:text-brown-600">
                   Blogs
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/about" className="hover:text-brownColor">
+                <Link href="/about" className="hover:text-brown-600">
                   About Us
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/career" className="hover:text-brownColor">
+                <Link href="/career" className="hover:text-brown-600">
                   Career
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/contact" className="hover:text-brownColor">
+                <Link href="/contact" className="hover:text-brown-600">
                   Contact Us
                 </Link>
               </li>
@@ -127,49 +125,49 @@ const Menu = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <ul className="lg:hidden flex flex-col items-center space-y-4 text-sm font-bold uppercase mt-4">
+          <ul className="lg:hidden flex flex-col items-center space-y-3 bg-white shadow-md w-full py-4">
             <li>
-              <Link href="/" className="hover:text-brownColor">
+              <Link href="/" className="hover:text-brown-600">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-brownColor">
+              <Link href="/about" className="hover:text-brown-600">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-brownColor">
+              <Link href="/services" className="hover:text-brown-600">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/solutions" className="hover:text-brownColor">
+              <Link href="/solutions" className="hover:text-brown-600">
                 Solutions
               </Link>
             </li>
             <li>
-              <Link href="/partnerships" className="hover:text-brownColor">
+              <Link href="/partnerships" className="hover:text-brown-600">
                 Partnerships
               </Link>
             </li>
             <li>
-              <Link href="/case-studies" className="hover:text-brownColor">
+              <Link href="/case-studies" className="hover:text-brown-600">
                 Case Studies
               </Link>
             </li>
             <li>
-              <Link href="/blogs" className="hover:text-brownColor">
+              <Link href="/blogs" className="hover:text-brown-600">
                 Blogs
               </Link>
             </li>
             <li>
-              <Link href="/career" className="hover:text-brownColor">
+              <Link href="/career" className="hover:text-brown-600">
                 Career
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-brownColor">
+              <Link href="/contact" className="hover:text-brown-600">
                 Contact Us
               </Link>
             </li>
