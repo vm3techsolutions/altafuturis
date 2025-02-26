@@ -80,7 +80,7 @@ const Menu = () => {
                   Services
                 </Link>
                 {isMegaMenuOpen && (
-                  <div className="absolute  left-0 right-0">
+                  <div className="absolute normal-case left-0 right-0">
                     <MegaMenu />
                   </div>
                 )}
