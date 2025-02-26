@@ -4,14 +4,16 @@
 
 :root {
   background: linear-gradient(90deg, rgba(13, 110, 253, 0.1) 20%, rgba(212, 179, 1, 0.1) 70%);
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
  
 html, body {
   overflow-x: hidden;
@@ -30,12 +32,16 @@ h1, h2, h3, h4, h5, h6, a {
     font-family: "Nunito", sans-serif;
   }
 
-  /* .menu li:not(:first-child)::before {
-    content: "•"; 
-    color: #0d6efd; 
-    margin-right: 8px;
-    
-  } */
+  .section {
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+  }
+
+  .flex-container {
+    display: flex;
+    gap: 1.5rem; /* Consistent spacing between items */
+    flex-wrap: wrap;
+  }
   
   .menuBar{
     background: #fff;
@@ -56,4 +62,10 @@ h1, h2, h3, h4, h5, h6, a {
   .Testomonial
   {
     font-family: Arimo;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
   }

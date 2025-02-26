@@ -15,7 +15,7 @@ const Menu = () => {
       <div className="sticky top-0 z-50 bg-white shadow-md">
         {/* Top Bar */}
         <div className="menuBar text-gray-900 z-50 border-b">
-          <div className="container mx-auto px-16 flex justify-between items-center">
+          <div className="container flex-container mx-auto px-16 justify-between items-center">
             {/* Left side - Logo */}
             <div className="flex flex-row justify-start items-center">
               <Link href="/">
