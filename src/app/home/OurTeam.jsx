@@ -68,7 +68,7 @@ const OurTeam = () => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blueColor text-2xl p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300"
+                className="text-white text-3xl p-3 bg-blue-600 rounded-full"
               >
                 <FaLinkedin />
               </a>
