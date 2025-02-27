@@ -14,7 +14,7 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full h-[30vh] md:h-[70vh] lg:h-screen bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
@@ -43,7 +43,7 @@ export default function HomeBanner() {
 
       {/* Text Content */}
       <div className="relative container mx-auto text-white text-center ">
-        <h1 className="font-bold text-3xl md:text-5xl max-w-3xl w-[130vh] ml-5">
+        <h1 className="font-bold md:text-4xl lg:text-5xl max-w-3xl w-[30vh] md:w-[70vh] lg:w-[100vh] ml-5 md:ml-0">
         Bringing future automation vision of Enterprises in the current world with AI Agents 
         </h1>
       </div>

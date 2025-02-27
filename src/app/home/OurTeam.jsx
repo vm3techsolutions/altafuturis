@@ -31,25 +31,35 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <section className="container py-12 pb-40 bg-[#f7f4fb]">
-      {/* Section Header */}
+  <>
+    {/* Section Header */}
+    <section className="relative flex items-center justify-center bg-[#f7f4fb] pt-8">
+      <section className="container flex items-center justify-center md:mt-0">
 
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center py-6">
-        <div className="max-w-4xl flex-shrink-0 mb-4 sm:mb-0 sm:mr-12">
-          <button className="px-4 py-2 border-2 md:mr-44 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
+          {/* Left Side - Button */}
+          <div className="max-w-4xl flex-shrink-0 md:mr-12">
+            <button className=" px-4 py-2 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Team
-          </button>
+            </button>
+          </div>
+  
+          {/* Right Side - Content */}
+          <div className="max-w-4xl text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
+            Passionate Minds, Extraordinary Results!            </h1>
+            
+          </div>
         </div>
-        <div className="max-w-4xl text-center sm:text-left">
-          <h2 className="text-2xl md:mr-32 sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
-            Passionate Minds, Extraordinary
-            Results!
-          </h2>
-        </div>
-      </div>
+      </section>
+      </section>
 
-      {/* Team Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 py-8">
+
+
+        {/* Team Grid */}
+        <section className="relative flex items-center justify-center bg-[#f7f4fb] ">
+    <section className="container flex items-center justify-center md:mt-0  py-12 pb-40 ">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 px-6 md:px-2 py-8">
         {teamMembers.map((member, index) => (
           <div
             key={index}
@@ -82,7 +92,10 @@ const OurTeam = () => {
           </div>
         ))}
       </div>
+      </section>
+
     </section>
+    </>
   );
 };
 

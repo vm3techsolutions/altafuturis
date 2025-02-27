@@ -37,22 +37,36 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="container py-5 md:mt-0 -mt-32 space-y-8">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
-        {/* Left Side - Button */}
-        <div className="max-w-4xl flex-shrink-0 sm:mr-12">
-          <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+  <>
+  {/* Heading Section */}
+  <section className="flex items-center justify-center ">
+  <section className="container flex items-center justify-center md:mt-0 -mt-52">
+
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
+          {/* Left Side - Button */}
+          <div className="max-w-4xl flex-shrink-0 md:mr-12">
+            <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Services
-          </button>
-        </div>
-        <div className="max-w-4xl text-center md:text-left">
-          <h2 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-snug">
+            </button>
+          </div>
+  
+          {/* Right Side - Content */}
+          <div className="max-w-4xl text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
             Helping Enterprises to utilize our various Service(s) as a Software
             in their Business Transformation journey
-          </h2>
-        </div>
-      </div>
+            </h1>
+            
+          </div>
+    </div>
+  </section>
+  </section>
 
+      {/* Card Section */}
+      <section className="flex items-center justify-center ">
+
+    <section className="  py-5 md:mt-0 -mt-32 space-y-8">
+      
       <div className=" py-9 flex flex-wrap justify-center gap-4 px-4">
         {/* Service Cards */}
         {services.map((service, index) => (
@@ -108,5 +122,7 @@ export default function ServicesSection() {
         </button>
       </a>
     </section>
+    </section>
+    </>
   );
 }
