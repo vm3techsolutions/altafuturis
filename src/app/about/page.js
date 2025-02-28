@@ -1,10 +1,18 @@
 // app/about/page.js
+import Expertise from './Expertise';
+import PageTitle from './PageTitle';
+import Team from './Team';
+import VisionMission from './VisionMission';
+import WhoAreWe from './WhoAreWe';
 
 export default function AboutPage() {
     return (
       <div>
-        <h1>About Us</h1>
-        <p>This page gives information about our company.</p>
+        <PageTitle/>
+        <WhoAreWe/>
+        <VisionMission/>
+        <Team/>
+        <Expertise/>
       </div>
     );
   }

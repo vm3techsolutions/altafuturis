@@ -29,11 +29,11 @@ const teamMembers = [
   },
 ];
 
-const OurTeam = () => {
+const Team = () => {
   return (
   <>
     {/* Section Header */}
-    <section className="relative flex items-center justify-center bg-[#f7f4fb] pt-8">
+    <section className="relative flex items-center justify-center pt-12">
       <section className="container flex items-center justify-center md:mt-0">
 
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
@@ -57,7 +57,7 @@ const OurTeam = () => {
 
 
         {/* Team Grid */}
-        <section className="relative flex items-center justify-center bg-[#f7f4fb] ">
+        <section className="relative flex items-center justify-center pb-12">
     <section className="container flex items-center justify-center md:mt-0  py-12 pb-40 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-16 px-6 md:px-2 py-8">
         {teamMembers.map((member, index) => (
@@ -99,4 +99,4 @@ const OurTeam = () => {
   );
 };
 
-export default OurTeam;
+export default Team;
