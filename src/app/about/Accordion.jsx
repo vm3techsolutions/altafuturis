@@ -1,8 +1,8 @@
 "use client";
-import {useState} from 'react'
+import {useRef, useState} from 'react'
 import { FaAnglesUp } from "react-icons/fa6";
 import { FaAnglesDown } from "react-icons/fa6";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const Accordion = () =>{
     const accordionData = [
@@ -230,23 +230,27 @@ const Accordion = () =>{
         }
     ]
 
-    const [activeIndex, setActiveIndex] = useState(accordionData[0]);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? null : index)
     }
 
+    const ref = useRef(null);
+    const isInView = useInView(ref, {once: true, margin: "-100px"});
+
 return (
     <>
       {/* Accordion Section */}
-      <div className='max-w-6xl py-6'>
+      <div ref={ref} className='max-w-6xl py-6'>
         {accordionData.map((item, index) => (
             <div className='border-b border-gray-300 p-2'>
                 {/* Tab Title */}
             <motion.div
+            
             key={index}
             initial={{opacity: 0, x: -50}}
-            animate={{opacity: 1, x: 0}}
+            animate={isInView ? {opacity: 1, x: 0} : {}}
             viewport={{once: true, amount: 0.3}}
             transition={{duration: 0.6}}
             >
