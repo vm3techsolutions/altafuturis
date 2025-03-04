@@ -5,6 +5,7 @@ import Menu from "@components/Menu"; // Import Menu Component
 import Footer from './../components/Footer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ScrollToTop from "./scrollToTop";
 
 
 const arimo = Arimo({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-arimo" });

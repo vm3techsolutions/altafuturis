@@ -49,8 +49,8 @@ const Sidebar = () => {
         </li>
 
         <li className={`px-4 py-2 rounded-xl hover:shadow-md hover:text-white hover:bg-brownColor border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group ${pathname === "/services/data-loss-prevention" ? "bg-blueColor text-white hover:bg-brownColor shadow-md" : "bg-transparent text-black hover:bg-blueColor"}`}>
-          <Link href="/services/data-loss-prevention">
-            Generative AI Agents for Data Loss <br/> Prevention (DLP) in Cybersecurity
+          <Link href="/services">
+            Generative AI Agents for Data Loss Prevention (DLP) in Cybersecurity
           </Link>
           <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
             &gt;&gt;
