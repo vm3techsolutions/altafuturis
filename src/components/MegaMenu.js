@@ -45,7 +45,7 @@ const MegaMenu = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id); // Default to first tab
 
   return (
-    <div className="absolute -left-44 top-full w-[100vw] bg-white shadow-lg p-20 flex z-50">
+    <div className="absolute -left-44 top-full w-[100vw] bg-white shadow-lg p-20 flex z-50 ml-32">
       {/* Tabs Section (Left Panel) */}
       <div className="w-1/3 border-r">
         {tabs.map((tab) => (
