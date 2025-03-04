@@ -7,7 +7,7 @@ const PortfolioSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center -mt-5">
       {/* Left Section */}
-      <div className="md:w-1/3 flex flex-col items-center md:items-start h-full relative">
+      <div className="md:w-1/5 lg:w-1/4 flex flex-col items-center md:items-start h-full relative">
 
         {/* Animated Circular Image */}
         <motion.div
@@ -35,7 +35,7 @@ const PortfolioSection = () => {
         <div className="space-y-4">
           <div className="pb-4">
             <Image src="/assets/Portfolio1.png" width={600} height={150} alt="CloudSense" className="rounded-lg" />
-            <h3 className="font-bold text-2xl grid">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
+            <h3 className="font-bold text-2xl md:text-xl pt-4 grid">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
             <a href="#" className="text-purpleColor text-sm font-semibold">READ MORE &gt;&gt;</a>
           </div>
           <hr className="border-[#D4B301] border" />
@@ -44,7 +44,7 @@ const PortfolioSection = () => {
             <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5">
               <Image src="/assets/Portfolio2.png" width={370} height={150} alt="Salesforce Development" className="rounded-lg" />
               <div className="grid grid-cols">
-                <h3 className="font-bold text-2xl pr-16">Salesforce Development for Leading K-12 School Chain in USA</h3>
+                <h3 className="font-bold text-2xl md:text-xl pr-16">Salesforce Development for Leading K-12 School Chain in USA</h3>
                 <button className="flex pt-3">
                   <a href="#" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
                 </button>
@@ -57,7 +57,7 @@ const PortfolioSection = () => {
             <div className="max-w-5xl flex flex-col md:flex-row items-center w-full gap-5 ">
               <Image src="/assets/Portfolio3.png" width={455} height={150} alt="Salesforce Development" className="rounded-lg " />
               <div className="grid grid-cols">
-                <h3 className="font-bold text-2xl pr-9">Research on Clustering of Devanagari Script Based Documents Containing Img</h3>
+                <h3 className="font-bold text-2xl md:text-xl pr-9">Research on Clustering of Devanagari Script Based Documents Containing Img</h3>
                 <button className="flex pt-3">
                   <a href="#" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
                 </button>
