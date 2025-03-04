@@ -76,7 +76,7 @@ const Menu = () => {
                 onMouseEnter={() => setIsMegaMenuOpen(true)}
                 onMouseLeave={() => setIsMegaMenuOpen(false)}
               >
-                <Link href="/services" className="hover:text-brown-600">
+                <Link href="" className="hover:text-brown-600">
                   Services
                 </Link>
                 {isMegaMenuOpen && (
