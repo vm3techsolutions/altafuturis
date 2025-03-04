@@ -64,7 +64,7 @@ export default function ServicesSection() {
   </section>
 
       {/* Card Section */}
-      <section className="flex items-center justify-center ">
+      <section className="flex items-center justify-center mt-24  md:mt-0">
 
     <section className="  py-5 md:mt-0 -mt-32 space-y-8">
       
@@ -115,7 +115,7 @@ export default function ServicesSection() {
 </div>
 
 
-      <a href="/" className="flex justify-center p-5 mr-11 md:mr-16">
+      <a href="/" className="flex justify-center p-5  md:mr-16">
         <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
           Talk to Expert
           <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

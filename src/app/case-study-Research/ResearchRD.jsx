@@ -26,9 +26,9 @@ const RecommendedSection = () => {
       </div>
 
       {/* Right side - 40% */}
-      <div className="w-3/5 px-6">
+      <div className="md:w-3/5 px-6 -ml-60 mt-32 md:-ml-0 md:mt-0">
         
-        <div className="space-y-8">
+        <div className="space-y-8 ">
           {recommendations.map((item, index) => (
             <div key={index} className="flex items-center space-x-6">
               <img src={item.image} alt={item.title} className="w-48 h-32 rounded-xl border border-yellow-500" />

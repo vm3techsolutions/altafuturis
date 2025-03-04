@@ -22,7 +22,7 @@ const RecommendedSection = () => {
       </div>
 
       {/* Right side - 40% */}
-      <div className="w-3/5 px-6">
+      <div className="md:w-3/5 px-6 -ml-60 mt-32 md:-ml-0 md:mt-0">
         
         <div className="space-y-8">
           {recommendations.map((item, index) => (
