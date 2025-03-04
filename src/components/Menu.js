@@ -70,7 +70,7 @@ const Menu = () => {
         {/* Navigation Menu */}
         <nav className="hidden lg:block border-b bg-white relative">
           <div className="container mx-auto px-4">
-            <ul className="flex justify-center space-x-6 md:space-x-10 lg:space-x-24 xl:space-x-20 text-sm font-bold uppercase">
+            <ul className="flex justify-around text-sm font-bold uppercase">
               <li
                 className="relative py-4 group"
                 onMouseEnter={() => setIsMegaMenuOpen(true)}
@@ -80,7 +80,7 @@ const Menu = () => {
                   Services
                 </Link>
                 {isMegaMenuOpen && (
-                  <div className="absolute normal-case left-0 right-0">
+                  <div className=" normal-case bg-white left-0 right-0">
                     <MegaMenu />
                   </div>
                 )}
