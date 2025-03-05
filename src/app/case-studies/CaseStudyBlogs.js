@@ -1,11 +1,16 @@
 'use client';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect, useState } from 'react';
 import CaseStudy4btn from './CaseStudy4btn';
 
 
 
 const BlogLayout = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with duration
+  }, []);
+
   const [blogs, setBlogs] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState(null);
 
@@ -41,9 +46,11 @@ const BlogLayout = () => {
         {/* Left side blog (60%) */}
         <div className="w-full md:w-3/5 p-4 space-y-10">
           {displayedBlogs.slice(0, 1).map((blog) => (
-            <div key={blog.id} className="overflow-hidden md:p-5">
+            <div key={blog.id} className="overflow-hidden md:p-5" >
               <img className="w-full h-80 object-cover rounded-lg" src={blog.image} alt={blog.title} />
               <div className="p-4 space-y-5 border-l-2 border-[#D4B301] -mt-2">
+              <h2 className="text-xs mb-2">
+              <span className="mr-2">📅</span>{blog.p}</h2>
                 <h2 className="text-xl font-semibold">{blog.title}</h2>
                 <p className="text-gray-600 mt-2">{blog.description}</p>
 
@@ -63,9 +70,11 @@ const BlogLayout = () => {
         {/* Right side blogs (40%) */}
         <div className="w-full md:w-2/5 p-4">
           {displayedBlogs.slice(1).map((blog) => (
-            <div key={blog.id} className="mb-4 overflow-hidden md:p-5">
+            <div key={blog.id} className="mb-4 overflow-hidden md:p-5" data-aos="flip-right">
               <img className="w-full h-48 object-cover rounded-lg border-l-2 border-[#D4B301]" src={blog.image} alt={blog.title} />
               <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
+              <h2 className="text-xs mb-2">
+              <span className="mr-2">📅</span>{blog.p}</h2>
                 <h3 className="text-lg font-semibold">{blog.title}</h3>
                 <p className="text-gray-600 mt-2">{blog.description}</p>
                 <a href={blog.link} className="text-[#6328A6] mt-4 inline-block font-semibold">

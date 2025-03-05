@@ -19,7 +19,7 @@ export default function HomeBanner() {
     >
       {/* Background Image */}
       <Image
-        src="/assets/BloginnerBanner.png"
+        src="/assets/blogimg2.png"
         alt="Home Banner"
         layout="fill"
         className="object-cover object-center"
@@ -40,8 +40,6 @@ export default function HomeBanner() {
         animate={{ x: mouseX - 100, y: mouseY - 100 }}
         transition={{ type: "spring", stiffness: 100, damping: 10 }}
       />
-
-
 
      
     </div>

@@ -19,6 +19,12 @@ const data = {
   image: [
     "/assets/DentistrySolution.jpg"
   ],
+  date: [
+    "May 23, 2023"
+],
+Categories: [
+    "Artificial Intelligence"
+]
 
  
 };
@@ -26,9 +32,23 @@ const data = {
 const CloudSenseConsultancy = () => {
   return (
     <div className=" mx-auto py-16 px-16 space-y-9 text-gray-800">
+      <h2 className="text-md mb-2  flex items-center">
+        <span className="mr-2 ">📅</span>
+        {data.date.map((date, index) => (
+          <span key={index} className="mr-4">
+            {date}
+          </span>
+        ))}
+        <span className="font-semibold ml-10">📂</span>
+        {data.Categories.map((category, index) => (
+          <span key={index} className="ml-2">
+            {category}
+          </span>
+        ))}
+      </h2>
+
       <h1 className="text-4xl font-bold text-start">Dentistry: NLP (Natural Language Processing) and Deep Learning: New Product Development for clientDocuments Containing Images.</h1>
-      
-      
+           
       <section className="space-y-5">
         <h2 className="text-xl font-semibold">Problem Statement</h2>
         <ul className="list-disc pl-5 text-gray-600 text-lg space-y-3">

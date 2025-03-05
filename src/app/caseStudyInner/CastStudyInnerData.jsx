@@ -14,12 +14,33 @@ const data = {
   benefits: [
     "100% visibility with impact analysis into implementation of ‘Salesforce Changes Spring and Summer 2023’ for end client.",
     "High Customer satisfaction for end client as there is no impact for customers of end client while the critical Salesforce Changes implement on CloudSense."
-  ]
+  ],
+  date: [
+    "May 23, 2023"
+],
+Categories: [
+    "Salesforce "
+]
 };
 
 const CloudSenseConsultancy = () => {
   return (
     <div className=" mx-auto py-16 px-16 space-y-9 text-gray-800">
+ <h2 className="text-md mb-2  flex items-center">
+        <span className="mr-2 ">📅</span>
+        {data.date.map((date, index) => (
+          <span key={index} className="mr-4">
+            {date}
+          </span>
+        ))}
+        <span className="font-semibold ml-10">📂</span>
+        {data.Categories.map((category, index) => (
+          <span key={index} className="ml-2">
+            {category}
+          </span>
+        ))}
+      </h2>
+
       <h1 className="text-4xl font-bold text-start">CloudSense Implementation Consultancy for Leading Media House in USA</h1>
       
       <section className="space-y-5">

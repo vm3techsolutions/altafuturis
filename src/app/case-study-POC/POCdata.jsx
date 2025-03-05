@@ -15,12 +15,33 @@ const data = {
   ],
   benefits: [
     "80% accuracy in estimating crop diseases in tomato and potato. o Early indication of stress or disease in crops leads to cost savings related to spoiled crops and can save further damage through appropriate remedy for stress or disease."
-  ]
+  ],
+  date: [
+    "May 23, 2023"
+],
+Categories: [
+    "Artificial Intelligence"
+]
 };
 
 const CloudSenseConsultancy = () => {
   return (
     <div className=" mx-auto py-16 px-16 space-y-9 text-gray-800">
+      <h2 className="text-md mb-2  flex items-center">
+        <span className="mr-2 ">📅</span>
+        {data.date.map((date, index) => (
+          <span key={index} className="mr-4">
+            {date}
+          </span>
+        ))}
+        <span className="font-semibold ml-10">📂</span>
+        {data.Categories.map((category, index) => (
+          <span key={index} className="ml-2">
+            {category}
+          </span>
+        ))}
+      </h2>
+      
       <h1 className="text-4xl font-bold text-start">POC: Agri-Tech: Plant Disease Identification</h1>
       
       <section className="space-y-5">

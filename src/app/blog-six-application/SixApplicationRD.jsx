@@ -2,14 +2,14 @@
 
 const recommendations = [
   {
-    title: "Security Concerns While Implementing Data Engineering Solutions",
-    image: "/assets/BlogInnerImg1.png", // Replace with actual image URL
-    link: "/blog-security",
+    title: "Workflow Automation in Salesforce – Excellent Value for Businesses",
+    image: "/assets/BloginnerBanner.png", // Replace with actual image URL
+    link: "/blogInner",
   },
   {
-    title: "Six applications that Deep Learning is transforming rapidly in business world",
-    image: "/assets/BlogInnerImg2.png", // Replace with actual image URL
-    link: " /blog-six-application",
+    title: "Security Concerns While Implementing Data Engineering Solutions",
+    image: "/assets/blogimg2.png", // Replace with actual image URL
+    link: "/blog-security",
   },
 ];
 

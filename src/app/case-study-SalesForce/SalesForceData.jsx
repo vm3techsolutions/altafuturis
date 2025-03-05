@@ -17,12 +17,33 @@ const data = {
   benefits: [
     "100 % visibility into the marketing and enrollment process.",
     "80% effectiveness of marketing dollars of school at eleven campuses."
-  ]
+  ],
+  date: [
+    "May 23, 2023"
+],
+Categories: [
+    "Salesforce "
+]
 };
 
 const CloudSenseConsultancy = () => {
   return (
     <div className=" mx-auto py-16 px-16 space-y-9 text-gray-800">
+      <h2 className="text-md mb-2  flex items-center">
+        <span className="mr-2 ">📅</span>
+        {data.date.map((date, index) => (
+          <span key={index} className="mr-4">
+            {date}
+          </span>
+        ))}
+        <span className="font-semibold ml-10">📂</span>
+        {data.Categories.map((category, index) => (
+          <span key={index} className="ml-2">
+            {category}
+          </span>
+        ))}
+      </h2>
+      
       <h1 className="text-4xl font-bold text-start">Salesforce Development for Leading K-12 School Chain in USA</h1>
       
       <section className="space-y-5">
