@@ -47,7 +47,7 @@ const Team = () => {
           {/* Right Side - Content */}
           <div className="max-w-4xl text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
-            Passionate Minds, Extraordinary Results!            </h1>
+            Passionate Minds, Extraordinary Results!</h1>
             
           </div>
         </div>

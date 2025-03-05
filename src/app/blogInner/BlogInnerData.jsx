@@ -27,7 +27,7 @@ const data = {
     "As you can see, the possibilities of what you can automate with workflows in Salesforce are endless. By setting up workflows, you can save time, reduce errors, and optimize your internal processes. Certified Salesforce Architects and developers from Alta-Futuris , essentially consider the specific needs and requirements of the client organization while designing workflow rules and to test the rules thoroughly to ensure they are functioning as intended."
   ],
   p6: [ 
-    " For Alta-Futuris team, it’s crucial to remember the various limits and best practices associated with workflow rules, such as the number of workflow rules and actions that can be created and the order in which they are executed. Such best practices contribute to build robust automation solution that client assist organizations in streamlining their business processes and increasing productivity"
+    "For Alta-Futuris team, it’s crucial to remember the various limits and best practices associated with workflow rules, such as the number of workflow rules and actions that can be created and the order in which they are executed. Such best practices contribute to build robust automation solution that client assist organizations in streamlining their business processes and increasing productivity"
   ]
 };
 
