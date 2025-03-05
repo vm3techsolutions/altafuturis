@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-      <footer className=" text-gray-900 py-12 px-2 md:px-2 lg:px-16">
-        <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2  gap-4">
+      <footer className=" text-gray-900 py-12 px-2 md:px-2 lg:px-16 shadow-[0px_-4px_6px_rgba(0,0,0,0.1)]">
+        <div className="container mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-4">
           {/* 1st Column: Logo and Content */}
           <div className="flex flex-col ml-2 md:ml-0">
             <Link href="/">
@@ -43,7 +44,15 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blogs" className="text-md hover:text-yellow-400">
+                <Link
+                  href="/case-studies"
+                  className="text-md hover:text-yellow-400"
+                >
+                  Case Study
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-md hover:text-yellow-400">
                   Blogs
                 </Link>
               </li>
@@ -61,34 +70,42 @@ const Footer = () => {
             <ul className="space-y-2 mt-4">
               <li>
                 <Link
-                  href="/web-development"
+                  href="/services/ai-app-dev"
                   className="text-md hover:text-yellow-400"
                 >
-                  Web Development
+                  Generative AI Application Development
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/app-development"
+                  href="/services/salesforce-agentforce-consulting"
                   className="text-md hover:text-yellow-400"
                 >
-                  App Development
+                  Salesforce Agentforce Consulting
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/consulting"
+                  href="/services/salesforce-consulting"
                   className="text-md hover:text-yellow-400"
                 >
-                  Consulting
+                  Salesforce Consulting
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/digital-marketing"
+                  href="/services/data-loss-prevention"
                   className="text-md hover:text-yellow-400"
                 >
-                  Digital Marketing
+                  DLP in Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/ai-agent-developement-in-blockchain"
+                  className="text-md hover:text-yellow-400"
+                >
+                  AI Agent Development in Blockchain
                 </Link>
               </li>
             </ul>
@@ -119,12 +136,43 @@ const Footer = () => {
               <MapPin className="w-12 h-12 lg:w-7 lg:h-7 md:w-6 md:h-6 text-purpleColor mr-2" />
               301, Anish, LMD Square, Bavdhan, Pune, Maharashtra 411023 INDIA
             </h6>
+
+            <div className="flex flex-row justify-start items-start space-x-4 mt-4 ">
+              <Link
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook className="text-blue-600 text-xl hover:text-blue-800 transition duration-300" />
+              </Link>
+              <Link
+                href="https://twitter.com/AltaFuturis"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter className="text-blue-400 text-xl hover:text-blue-600 transition duration-300" />
+              </Link>
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className="text-pink-500 text-xl hover:text-pink-700 transition duration-300" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/altafuturis/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="text-blue-700 text-xl hover:text-blue-900 transition duration-300" />
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
       </footer>
-      <div className="bg-gray-900 text-white py-2 px-2 ">
+      <div className="bg-gray-900 text-white py-2 px-2 md:px-2 lg:px-16">
         <div className="container mx-auto flex justify-between items-center">
           {/* Left Side: Copyright */}
           <div className="text-sm">
