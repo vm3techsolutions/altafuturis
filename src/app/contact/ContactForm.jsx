@@ -51,8 +51,8 @@ export default function Form() {
   return (
     <div id="ReserveForm" className="flex flex-col md:flex-row items-center justify-center min-h-screen  py-20 md:px-16 px-5 gap-5">
       {/* Left Side - Contact Info */}
-      <div className="md:w-2/5 w-full  md:px-5 ">
-        <div className="text-center md:text-left space-y-5 md:pr-20">
+      {/* <div className="md:w-2/5 w-full  md:px-5 ">
+        <div className="text-center md:text-left space-y-5 md:pr-20 ">
 
           <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2">
             <Phone className="text-brownColor m-auto" />
@@ -64,24 +64,24 @@ export default function Form() {
             <p>sales@altafuturis.com</p>
           </div>
           
-          <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2">
-          <MapPin className="text-brownColor m-auto"/>
+          <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2 gap-8">
+          <MapPin className="text-brownColor m-auto "/>
 
-          <div className="mt-6 border-2 border-#D9D9D9DD text-center rounded-xl">
+          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">Texas</p>            
-            <p className="text-black font-medium">1 Elizabeth ln, West Bridgewater, MA 02379, USA</p>
+            <p className="text-black font-medium">1 Elizabeth ln, West Bridgewater, <br/>MA 02379, USA</p>
           </div>
           </div>
 
-          <div className="mt-6 border-2 border-#D9D9D9DD text-center rounded-xl">
+          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">Pune</p>            
             <p className="text-black font-medium">Sr. No. 19/12/B/1, 3rd Floor Anish, Bavdhan Pune, Maharashtra, India</p>
           </div>
           </div>
 
-          <div className="mt-6 border-2 border-#D9D9D9DD text-center rounded-xl">
+          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">Kolhapur</p>            
             <p className="text-black font-medium">Plot No 32, Survey 1076/1 Infront of Deshmukh Highschool, Road no.4, Indraprastha Colony, Saneguruji Vasahat, Kolhapur, Maharashtra, India</p>
@@ -90,11 +90,11 @@ export default function Form() {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Right Side - Form */}
-      <div className="md:w-3/5 w-full shadow-lg rounded-lg p-6 bg-white border-brownColor border-2 ">
-        <form onSubmit={handleSubmit} className="md:grid md:grid-cols-1 md:py-2 gap-4">
+      <div className="md:w-3/5 w-full shadow-lg rounded-lg p-6 bg-white border-brownColor border-2 ml-44">
+        <form onSubmit={handleSubmit} className="md:grid md:grid-cols-1 md:py-3 gap-8">
           <div>
             <label className="block text-black font-semibold text-lg">Full Name :</label>
             <input type="text" name="fullname" value={formData.fullname} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required />
