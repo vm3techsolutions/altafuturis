@@ -9,7 +9,7 @@ const BlogLayout = ({ selectedCategory }) => {
    useEffect(() => {
       AOS.init({ duration: 1000 }); // Initialize AOS with duration
     }, []);
-    
+  
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("/Blog.json");
@@ -38,7 +38,7 @@ const BlogLayout = ({ selectedCategory }) => {
               <h2 className="text-xs mb-2">
               <span className="mr-2">📅</span>{blogs[0].p}</h2>
               <h2 className="text-xl font-semibold">{blogs[0].title}</h2>
-              <p className="text-gray-600 mt-2">{blogs[0].description}</p>
+              <p className="text-gray-600 mt-2 text-md">{blogs[0].description}</p>
               <a href={blogs[0].link} className="text-[#6328A6] mt-4 inline-block">READ MORE &raquo;</a>
             </div>
           </div>
@@ -53,8 +53,8 @@ const BlogLayout = ({ selectedCategory }) => {
             <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
               <h2 className="text-xs mb-2">
               <span className="mr-2">📅</span>{blog.p}</h2>
-              <h3 className="text-lg font-semibold">{blog.title}</h3>
-              <p className="text-gray-600 mt-2">{blog.description}</p>
+              <h3 className="text-xl font-semibold">{blog.title}</h3>
+              <p className="text-gray-600 mt-2 text-md">{blog.description}</p>
               <a href={blog.link} className="text-[#6328A6] mt-4 inline-block font-semibold">READ MORE &raquo;</a>
             </div>
           </div>

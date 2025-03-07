@@ -11,15 +11,14 @@ const PortfolioSection = () => {
 
         <div className="md:w-1/3 w-full flex justify-center md:justify-start mb-4 md:mb-0">
           <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
-            Case Studies
+            Reach Out
           </button>
         </div>
 
         {/* Right Side */}
-        <div className="max-w-4xl w-full text-center md:text-left">
+        <div className="max-w-4xl w-full text-center md:text-left md:px-20">
           <h2 className="text-3xl md:text-5xl font-bold text-black  leading-tight">
-            Our portfolio of 
-            proven solutions!
+          Any queries regarding services we offer
           </h2>
         </div>
       </div>

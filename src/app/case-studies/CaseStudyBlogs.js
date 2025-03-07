@@ -52,13 +52,9 @@ const BlogLayout = () => {
               <h2 className="text-xs mb-2">
               <span className="mr-2">📅</span>{blog.p}</h2>
                 <h2 className="text-xl font-semibold">{blog.title}</h2>
-                <p className="text-gray-600 mt-2">{blog.description}</p>
+                <p className="text-gray-600 mt-2 text-md">{blog.description}</p>
 
-                {/* <h3 className="text-gray-600 mt-2 text-lg font-semibold">{blogs[0]?.topic2}</h3>
-                <ul className="space-y-8 list-inside">
-  <li className="text-gray-600 list-disc ">{blogs[0]?.p1}</li>
-  <li className="text-gray-600 list-disc ">{blogs[0]?.p2}</li>
-</ul> */}
+                
                 <a href={blog.link} className="text-[#6328A6] mt-4 inline-block font-semibold">
                   READ MORE <span className="text-3xl p-1">&raquo;</span>
                 </a>
@@ -75,8 +71,8 @@ const BlogLayout = () => {
               <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
               <h2 className="text-xs mb-2">
               <span className="mr-2">📅</span>{blog.p}</h2>
-                <h3 className="text-lg font-semibold">{blog.title}</h3>
-                <p className="text-gray-600 mt-2">{blog.description}</p>
+                <h2 className="text-xl font-semibold">{blog.title}</h2>
+                <p className="text-gray-600 mt-2 text-md">{blog.description}</p>
                 <a href={blog.link} className="text-[#6328A6] mt-4 inline-block font-semibold">
                   READ MORE <span className="text-3xl p-1">&raquo;</span>
                 </a>

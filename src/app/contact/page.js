@@ -1,10 +1,15 @@
-// app/about/page.js
+import ContactBanner from "./ContactBanner";
+import ContactForm from "./ContactForm";
+import ReachOut from "./ReachOut";
+
 
 export default function ContactPage() {
     return (
       <div>
-        <h1>Contact Us</h1>
-        <p>This page gives information about our company.</p>
+        
+        <ContactBanner/>
+        <ReachOut/>
+        <ContactForm/>
       </div>
     );
   }

@@ -17,8 +17,8 @@ export default function CategoryButtons() {
   }, [router]);
 
   return (
-    <div className="flex flex-col items-start space-y-4 p-4 sm:p-6 md:p-8 lg:p-10">
-      <div className="flex flex-wrap items-center justify-start space-x-12 gap-y-4">
+    <div className="flex flex-wrap items-center justify-center  py-14">
+      <div className="flex flex-wrap items-center justify-start space-x-4 gap-y-4">
         <button
           className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 flex items-center justify-center w-full sm:w-auto"
           onClick={() => router.push("/categories")}

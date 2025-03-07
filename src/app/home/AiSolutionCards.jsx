@@ -68,7 +68,7 @@ export default function ServicesSection() {
 
     <section className="  py-5 md:mt-0 -mt-32 space-y-8">
       
-      <div className=" py-9 flex flex-wrap justify-center gap-4 px-4">
+      <div className=" py-9 flex flex-wrap justify-center gap-4 px-4 md:gap-3 md:px-2">
         {/* Service Cards */}
         {services.map((service, index) => (
   <motion.div
@@ -82,10 +82,10 @@ export default function ServicesSection() {
       alt={service.title}
       className="w-16 h-16 mb-4"
     />
-    <h3 className="text-xl font-bold text-gray-900 text-left">
+    <h3 className="font-bold text-2xl md:text-xl text-left">
       {service.title}
     </h3>
-    <p className="text-gray-600 mt-2 text-sm text-left flex-grow">
+    <p className="text-gray-900 text-md mt-2 text-left flex-grow">
       {service.description}
     </p>
     <div className="mt-auto">

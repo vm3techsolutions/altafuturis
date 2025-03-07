@@ -43,14 +43,13 @@ const data = {
       ]     
     }
   ],
-<<<<<<< HEAD
+
   date: [
     "May 23, 2023"
 ],
 Categories: [
     "Data Engineering"
-]
-=======
+],
   p2: ["The Difference Between Process Builder and Workflow Rules in Salesforce Workflow Rules and Process Builders may, briefly, seem like very similar processes. However, there are some distinct differences in their structure and scope of use."],
   p3: ["A Workflow Rule is a point-and-click version of an “if/then” statement with limited statements in each category. It functions on the record triggering it, or in some cases, the child of this record (it cannot go upstream)."],
   p4: ["On the other hand, a Process Builder is a simplified flow with multiple “if/then” statements that can be kicked off from different sources. For instance, it can start from changes to records (create or update), from receiving Platform Event Messages, and from other process builders or flows. In many instances, Process Builder can do much of what Workflow Rules do but can take it a step further. For example, Process Builder can update any field on any record, whereas Workflow can only update some fields on a parent record within their flow."],
@@ -65,7 +64,7 @@ Categories: [
   p6: [ 
     "For Alta-Futuris team, it’s crucial to remember the various limits and best practices associated with workflow rules, such as the number of workflow rules and actions that can be created and the order in which they are executed. Such best practices contribute to build robust automation solution that client assist organizations in streamlining their business processes and increasing productivity"
   ]
->>>>>>> 68a4feece1da9fb5d940a910a421114d3e973135
+
 };
 
 const CloudSenseConsultancy = () => {

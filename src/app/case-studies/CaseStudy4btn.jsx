@@ -16,7 +16,7 @@ export default function CategoryButtons({ setFilteredBlogs }) {
   }, []);
 
   return (
-    <div className="flex flex-wrap items-center justify-center space-x-4 gap-y-4 p-4 sm:p-6">
+    <div className="flex flex-wrap items-center justify-center space-x-4 gap-y-4 py-10">
       <button
         className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700"
         onClick={() => setFilteredBlogs(null)}

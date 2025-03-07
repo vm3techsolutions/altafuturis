@@ -14,7 +14,7 @@ export default function CategoryButtons() {
 
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-center space-x-4 p-4">
+      <div className="flex flex-wrap items-center justify-center space-x-4 gap-y-4 py-14">
         {categories.map((category) => (
           <button
             key={category}
