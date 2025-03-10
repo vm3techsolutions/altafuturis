@@ -145,7 +145,7 @@ As businesses move towards decentralized models, the synergy between<strong> AI 
 
          {/* Call-to-Action */}
          <div className="benefits my-6">
-          <h3 className="text-2xl font-bold"> Call-to-Action</h3>
+        
           <h3 className="text-xl font-bold"> Ready to integrate AI Agents into your Blockchain?
           </h3>
           <p> Our team of AI and Blockchain engineers is ready to develop and deploy autonomous AI agents tailored to your business needs.
