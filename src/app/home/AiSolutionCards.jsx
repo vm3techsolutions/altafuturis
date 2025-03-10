@@ -13,13 +13,13 @@ const services = [
     title: "Salesforce Agentforce Consulting",
     description:
       "We provides expert consulting to customize Agentforce, helping you achieve your unique business goals by leveraging our AI expertise.",
-    icon: "/assets/Salesforce-Agentforce2.png",
+    icon: "/assets/Salesforce-Agentforce3.png",
   },
   {
     title: "Salesforce Consulting",
     description:
       "Salesforce CRM technical experts at Alta-Futuris are extremely skilled and can help you in analysing your business needs and identifying potential areas for improvement in performance and productivity. ",
-    icon: "/assets/Salesforce-Consulting2.png",
+    icon: "/assets/Salesforce-Consulting3.png",
   },
   {
     title:
