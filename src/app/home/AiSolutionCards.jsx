@@ -117,7 +117,7 @@ export default function ServicesSection() {
 
       <a href="/" className="flex justify-center p-5  md:mr-16">
         <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to Expert
+          Talk to an Expert
           <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
             &gt;&gt;
           </span>
