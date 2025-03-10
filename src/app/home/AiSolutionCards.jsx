@@ -51,7 +51,7 @@ export default function ServicesSection() {
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="max-w-4xl flex-shrink-0 md:mr-12">
-            <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <button className="px-5 py-3 md:mb-20 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Services
             </button>
           </div>
@@ -108,15 +108,6 @@ export default function ServicesSection() {
 
 </div>
 
-
-<a href={services.link} className="mt-auto">
-  <button className="mt-8 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
-    Know More
-    <span className="bg-brownColor group-hover:bg-blueColor rounded-lg px-1 text-white pb-1 mx-2 duration-500">
-      &gt;&gt;
-    </span>
-  </button>
-</a>
     </section>
     </section>
     </>

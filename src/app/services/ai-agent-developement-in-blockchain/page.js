@@ -19,12 +19,7 @@ const AiAppDev = () => {
 
 
           </h4>
-        <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </button>
+        
       
         </div>
 
@@ -143,21 +138,6 @@ As businesses move towards decentralized models, the synergy between<strong> AI 
          </div>    
 
 
-         {/* Call-to-Action */}
-         <div className="benefits my-6">
-        
-          <h3 className="text-xl font-bold"> Ready to integrate AI Agents into your Blockchain?
-          </h3>
-          <p> Our team of AI and Blockchain engineers is ready to develop and deploy autonomous AI agents tailored to your business needs.
-          </p>
-         
-          <button className="mt-8 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </button>
-         </div>    
 
         
       </div>
