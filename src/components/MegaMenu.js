@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const MegaMenu = () => {
+  const Chooses = ["Partnering with client", "Research Driven", "Highly focused on delivering outcome on daily basis", "Providing highest quality output and high level of business satisfaction."];
+
   const tabs = [
     { 
       id: 1, 
@@ -85,6 +87,12 @@ const MegaMenu = () => {
         <p className="text-sm mt-2">
           Industry experts with 10+ years of experience in tech solutions.
         </p>
+
+         <ul className="list-disc pl-4 mt-4 space-y-4 text-lg font-semibold">
+      {Chooses.map((Choose, index) => (
+        <li key={index}>{Choose}</li>
+      ))}
+    </ul>
       </div>
     </div>
   );

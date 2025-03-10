@@ -8,18 +8,21 @@ const services = [
     description:
       "We firmly believe that the cloud serves as the business enabler, data acts as the business driver – & Generative AI will become the ultimate business differentiator.",
     icon: "/assets/Generative-AI.png",
+    link: "/services/ai-app-dev",
   },
   {
     title: "Salesforce Agentforce Consulting",
     description:
       "We provides expert consulting to customize Agentforce, helping you achieve your unique business goals by leveraging our AI expertise.",
     icon: "/assets/Salesforce-Agentforce3.png",
+    link: "/services/salesforce-agentforce-consulting",
   },
   {
     title: "Salesforce Consulting",
     description:
       "Salesforce CRM technical experts at Alta-Futuris are extremely skilled and can help you in analysing your business needs and identifying potential areas for improvement in performance and productivity. ",
     icon: "/assets/Salesforce-Consulting3.png",
+    link: "/services/salesforce-consulting",
   },
   {
     title:
@@ -27,12 +30,14 @@ const services = [
     description:
       "We helps organizations comply with regulations & maintain the security of their data. ",
     icon: "/assets/Cybersecuirity.png",
+    link: "/services/data-loss-prevention",
   },
   {
     title: "AI Agent development in Blockchain",
     description:
       "The integration of AI with blockchain opens up a new world of possibilities, allowing blockchain systems to become more efficient, scalable, and intelligent.",
     icon: "/assets/AI-Agents.png",
+    link: "/services/ai-agent-developement-in-blockchain",
   },
 ];
 
@@ -89,40 +94,29 @@ export default function ServicesSection() {
       {service.description}
     </p>
     <div className="mt-auto">
-      <button className="mt-8 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
-        Know More
-        <span className="bg-brownColor group-hover:bg-blueColor rounded-lg px-1 text-white pb-1 mx-2 duration-500">
-          &gt;&gt;
-        </span>
-      </button>
-    </div>
-  </motion.div>
-))}
-
-
-  {/* Right-Side Card */}
-  {/* Uncomment if needed */}
-  {/* 
-  <motion.div
-    whileHover={{ y: -25 }}
-    transition={{ duration: 0.1 }}
-    className="bg-[#D4B301] p-6 rounded-xl text-center flex flex-col items-center text-black shadow-lg hover:shadow-xl transition-all w-full md:w-[48%] lg:w-[19%]"
-  >
-    <h3 className="text-2xl text-start font-bold">Need Advice? <h3 className="mt-2 font-bold">Book a call-back!</h3></h3>
-    <img src="/assets/h1c4.png" alt="Consultant" className="w-44 h-44 my-9" />
-  </motion.div>
-  */}
-</div>
-
-
-      <a href="/" className="flex justify-center p-5  md:mr-16">
-        <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+      <a href={service.link} className="mt-auto">
+        <button className="mt-8 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
+          Know More
+          <span className="bg-brownColor group-hover:bg-blueColor rounded-lg px-1 text-white pb-1 mx-2 duration-500">
             &gt;&gt;
           </span>
         </button>
       </a>
+    </div>
+  </motion.div>
+))}
+
+</div>
+
+
+<a href={services.link} className="mt-auto">
+  <button className="mt-8 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
+    Know More
+    <span className="bg-brownColor group-hover:bg-blueColor rounded-lg px-1 text-white pb-1 mx-2 duration-500">
+      &gt;&gt;
+    </span>
+  </button>
+</a>
     </section>
     </section>
     </>
