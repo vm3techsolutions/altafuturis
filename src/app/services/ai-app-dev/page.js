@@ -51,7 +51,7 @@ const AiAppDev = () => {
         <div className="content my-6">
           <h3 className="text-2xl font-bold">Introduction :</h3>
           <p>
-            Using the power of Generative AI (Gen AI) is no longer an option; it's a business necessity. Our Generative AI consulting services empower organizations to harness AI's potential while ensuring governance, security, and ethical implementation.
+            Using the power of Generative AI (Gen AI) is no longer an option; it&apos;s a business necessity. Our Generative AI consulting services empower organizations to harness AI&apos;s potential while ensuring governance, security, and ethical implementation.
           </p>
           <p>
             At <span className="font-semibold">Alta-Futuris Solutions</span>, we believe that <span className="font-semibold">cloud enables businesses, data drives growth, and Generative AI </span> becomes the ultimate differentiator. Together, they unlock smarter decision-making, transformative growth, and scalability.
