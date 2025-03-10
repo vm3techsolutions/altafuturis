@@ -1,15 +1,12 @@
 'use client';
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { useEffect, useState } from 'react';
 import CaseStudy4btn from './CaseStudy4btn';
 
 
 
 const BlogLayout = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS with duration
-  }, []);
+ 
 
   const [blogs, setBlogs] = useState([]);
   const [filteredBlogs, setFilteredBlogs] = useState(null);
@@ -66,7 +63,7 @@ const BlogLayout = () => {
         {/* Right side blogs (40%) */}
         <div className="w-full md:w-2/5 p-4">
           {displayedBlogs.slice(1).map((blog) => (
-            <div key={blog.id} className="mb-4 overflow-hidden md:p-5" data-aos="flip-right">
+            <div key={blog.id} className="mb-4 overflow-hidden md:p-5" >
               <img className="w-full h-48 object-cover rounded-lg border-l-2 border-[#D4B301]" src={blog.image} alt={blog.title} />
               <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
               <h2 className="text-xs mb-2">
