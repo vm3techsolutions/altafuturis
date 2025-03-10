@@ -136,7 +136,6 @@ const AiAppDev = () => {
 
          {/* Call-to-Action */}
          <div className="benefits my-6">
-          <h3 className="text-2xl font-bold"> Call-to-Action</h3>
           <h3 className="text-xl font-bold">Ready to transform your business with Salesforce Agentforce?
 
           </h3>
