@@ -151,12 +151,12 @@ const AiAppDev = () => {
             </button>
           ))}
         </div>
-            <div className="mt-6 p-4 border rounded-lg shadow-lg bg-white text-center">
+            <div className="p-4 border rounded-lg shadow-lg bg-white text-center">
             <p className="text-gray-700 mt-2">{aiAgentServices[activeTab].content}</p>
             </div>
           </div>
          
-         <p classname="my-6">If you want to stay ahead in the AI arms race, our experts will guide you through the roadmap to adopting AI Agents successfully.</p>
+         <p className="mt-6">If you want to stay ahead in the AI arms race, our experts will guide you through the roadmap to adopting AI Agents successfully.</p>
         </div>
 
       </div>
