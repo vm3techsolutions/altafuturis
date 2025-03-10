@@ -137,86 +137,76 @@ const Menu = () => {
             ×
           </button>
 
-          <ul className="flex flex-col items-start space-y-3   p-6">
-            <li>
-              <Link href="/" className="hover:text-brown-600 ">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-brown-600">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <button
-                onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
-                className="hover:text-brown-600 w-full text-left "
-              >
-                Services {isServicesMenuOpen ? "▲" : "▼"}
-              </button>
-              {isServicesMenuOpen && (
-                <ul className="bg-gray-100 text-left py-0 rounded-md ml-4">
-                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-                    <Link href="/services/web-development">
-                      Generative AI Application Development
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-                    <Link href="/services/app-development">
-                      Salesforce Agentforce Consulting
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-                    <Link href="/services/digital-marketing">
-                      Salesforce Consulting
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-                    <Link href="/services/seo">
-                      Generative AI Agents for data loss prevention (DLP) in
-                      Cybersecurity
-                    </Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-200">
-                    <Link href="/services/ui-ux-design">
-                      AI Agent development in Blockchain
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <Link href="/solutions" className="hover:text-brown-600">
-                Solutions
-              </Link>
-            </li>
-            <li>
-              <Link href="/partnerships" className="hover:text-brown-600">
-                Partnerships
-              </Link>
-            </li>
-            <li>
-              <Link href="/case-studies" className="hover:text-brown-600">
-                Case Studies
-              </Link>
-            </li>
-            <li>
-              <Link href="/blogs" className="hover:text-brown-600">
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link href="/career" className="hover:text-brown-600">
-                Career
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-brown-600">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
+          <ul className="flex flex-col items-start space-y-3 p-6">
+  <li>
+    <Link href="/" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link href="/about" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      About Us
+    </Link>
+  </li>
+  <li>
+    <button
+      onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
+      className="hover:text-brown-600 w-full text-left"
+    >
+      Services {isServicesMenuOpen ? "▲" : "▼"}
+    </button>
+    {isServicesMenuOpen && (
+      <ul className="bg-gray-100 text-left py-0 rounded-md ml-4">
+        <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+          <Link href="/services/web-development" onClick={() => setIsMobileMenuOpen(false)}>
+            Generative AI Application Development
+          </Link>
+        </li>
+        <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+          <Link href="/services/app-development" onClick={() => setIsMobileMenuOpen(false)}>
+            Salesforce Agentforce Consulting
+          </Link>
+        </li>
+        <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+          <Link href="/services/digital-marketing" onClick={() => setIsMobileMenuOpen(false)}>
+            Salesforce Consulting
+          </Link>
+        </li>
+      </ul>
+    )}
+  </li>
+  <li>
+    <Link href="/solutions" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Solutions
+    </Link>
+  </li>
+  <li>
+    <Link href="/partnerships" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Partnerships
+    </Link>
+  </li>
+  <li>
+    <Link href="/case-studies" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Case Studies
+    </Link>
+  </li>
+  <li>
+    <Link href="/blog" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Blogs
+    </Link>
+  </li>
+  <li>
+    <Link href="/career" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Career
+    </Link>
+  </li>
+  <li>
+    <Link href="/contact" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+      Contact Us
+    </Link>
+  </li>
+</ul>
+
         </div>
 
         {/* Overlay to Close Menu */}

@@ -7,32 +7,32 @@ const services = [
     title: "Generative AI Application Development",
     description:
       "We firmly believe that the cloud serves as the business enabler, data acts as the business driver – & Generative AI will become the ultimate business differentiator.",
-    icon: "/assets/h1c1.png",
+    icon: "/assets/Generative-AI.png",
   },
   {
     title: "Salesforce Agentforce Consulting",
     description:
       "We provides expert consulting to customize Agentforce, helping you achieve your unique business goals by leveraging our AI expertise.",
-    icon: "/assets/h1c1.png",
+    icon: "/assets/Salesforce-Agentforce2.png",
   },
   {
     title: "Salesforce Consulting",
     description:
       "Salesforce CRM technical experts at Alta-Futuris are extremely skilled and can help you in analysing your business needs and identifying potential areas for improvement in performance and productivity. ",
-    icon: "/assets/h1c1.png",
+    icon: "/assets/Salesforce-Consulting2.png",
   },
   {
     title:
       "Generative AI Agents for data loss prevention (DLP) in Cybersecurity ",
     description:
       "We helps organizations comply with regulations & maintain the security of their data. ",
-    icon: "/assets/h1c2.png",
+    icon: "/assets/Cybersecuirity.png",
   },
   {
     title: "AI Agent development in Blockchain",
     description:
       "The integration of AI with blockchain opens up a new world of possibilities, allowing blockchain systems to become more efficient, scalable, and intelligent.",
-    icon: "/assets/h1c3.png",
+    icon: "/assets/AI-Agents.png",
   },
 ];
 

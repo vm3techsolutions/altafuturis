@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
         />
 
         <section className="flex items-center justify-center ">
-          <section className="container flex items-center justify-center md:mt-0 -mt-52">
+          <section className="container flex items-center justify-center md:mt-0 ">
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-6  gap-6 ">
               {/* Left Section (Image + Button) */}
               <div className="relative flex flex-col items-center">

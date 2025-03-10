@@ -4,20 +4,23 @@ import { useState, useEffect } from 'react';
 
 const testimonials = [
   {
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is ",
-    name: "Lorem Ipsum",
-    title: "CEO - ABC"
+    heading: "Exceptional Commitment to Salesforce Custom Development",
+    text: "Navigating through complex technical development challenges can be tough, but the Salesforce Consulting Team at Alta-Futuris Solutions has consistently delivered top-notch contributions. Their relentless effort and dedication have made a remarkable impact on our long-term project. Hats off to the team for their outstanding performance!",
+    
+    title: "Director, Spring Education Group, California, USA"
   },
   {
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is ",
-    name: "John Doe",
-    title: "Founder - XYZ"
+    heading: "Outstanding NLP Development Support for Healthcare",
+    text: "We are highly impressed with the NLP (Natural Language Processing) development support provided by Alta-Futuris Solutions. Their expertise significantly contributed to our research and development segment, especially in the Healthcare sector for Dentistry. Given the complex compliance and privacy constraints, the team did an excellent job in designing and defining AI algorithms that adhere to all necessary regulations. This level of precision and expertise added immense value to our project. Thank you for your incredible support!",
+   
+    title: " Program Head, Dental Association of a Midwest State, USA"
   },
-  {
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is ",
-    name: "Jane Smith",
-    title: "Manager - DEF"
-  }
+  // {
+  //   heading: "Exceptional Commitment to Salesforce Custom Development",
+  //   text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is ",
+  //   name: "",
+  //   title: "Manager - DEF"
+  // }
 ];
 
 export default function Testimonials() {
@@ -42,8 +45,9 @@ export default function Testimonials() {
 
       <div className="mt-12 text-center">
       <h1 className="text-8xl font-bold text-gray-800 mb- px-4 "> “</h1>
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 mb-4 px-4 sm:px-10">{testimonials[current].text}</p>
-        <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#6328A6] opacity-75">{testimonials[current].name}</p>
+      <p className="text-xl sm:text-2xl md:text-3xl font-bold text-black opacity-75">{testimonials[current].heading}</p>
+        <p className="text-lg sm:text-xl md:text-xl lg:text-2xl font-medium text-gray-800 mb-4 px-4 sm:px-10 mt-5">{testimonials[current].text}</p>
+        
         <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#6328A6] opacity-75">{testimonials[current].title}</p>
       </div>
 

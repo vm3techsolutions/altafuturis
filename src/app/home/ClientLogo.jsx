@@ -46,7 +46,7 @@ const ClientLogo = () => {
   return (
       <>
       <div className="bg-white py-20">
-    <div className="border-2 border-gray-300 rounded-xl p-4  max-w-6xl md:max-w-4xl mx-auto">
+    <div className=" p-4  max-w-6xl md:max-w-9xl mx-auto">
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center items-center p-2">
