@@ -63,7 +63,7 @@ const AiAppDev = () => {
           <h3 className="text-2xl font-bold">Challenges & Solutions :</h3>
           <p> Successful Generative AI application development demands: </p>
           
-          <ul className="my-2">
+          <ul className="my-2 list-disc pl-6">
             <li>
             <span className="font-bold">Strong Data Governance:</span> To ensure data privacy and security.
             </li>
@@ -82,7 +82,7 @@ const AiAppDev = () => {
         <div className="serviceInclude my-6">
           <h3 className="text-2xl font-bold">Our Services Include:</h3>
           
-          <ol className="my-2">
+          <ol className="my-2 list-decimal pl-6">
             <li>
             <span className="font-bold">Use Cases Definition: </span> We help you determine how Gen AI fits into your business strategy and drives value.
             </li>
@@ -108,7 +108,7 @@ const AiAppDev = () => {
         <div className="benefits my-6">
           <h3 className="text-2xl font-bold">Benefits of Choosing Us:</h3>
          
-          <ul className="my-2">
+          <ul className="my-2 list-disc pl-6">
             <li>
             <span className="font-bold">Faster Decision-Making: </span> Gen AI provides real-time insights, driving informed business decisions.
             </li>
@@ -158,6 +158,23 @@ const AiAppDev = () => {
          
          <p className="mt-6">If you want to stay ahead in the AI arms race, our experts will guide you through the roadmap to adopting AI Agents successfully.</p>
         </div>
+
+
+        {/* Call-to-Action */}
+        <div className="benefits my-6">
+          <h3 className="text-2xl font-bold"> Call-to-Action</h3>
+          <h3 className="text-xl font-bold"> Ready to transform your business with Generative AI?
+          </h3>
+          <p>Connect with our experts today and let us build a future-proof AI strategy for you.
+          </p>
+         
+          <button className="mt-8 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+          Talk to an Expert
+          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+            &gt;&gt;
+          </span>
+        </button>
+         </div>    
 
       </div>
     </>

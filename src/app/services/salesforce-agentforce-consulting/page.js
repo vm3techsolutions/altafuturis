@@ -1,10 +1,162 @@
+"use client"
 
-const SalesforceAgentforceConsulting = () => {
-    return (
-      <>
-        <h1>service 2</h1>
-      </>
-    )
-  }
-  
-  export default SalesforceAgentforceConsulting;
+
+
+const AiAppDev = () => {
+ 
+
+  return (
+    <>
+      <div className="relative py-3 px-2">
+        {/* Heading */}
+        <div className="heading">
+          <h2 className="text-4xl font-bold">
+          Salesforce Agentforce Consulting
+          </h2>
+          <h4 className="text-xl font-semibold my-4">
+          Gain Your Business Edge in Salesforce Agentforce with Alta-Futuris Solutions
+          </h4>
+        <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+          Talk to an Expert
+          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+            &gt;&gt;
+          </span>
+        </button>
+      
+        </div>
+
+        {/* Intriduction */}
+        <div className="content my-6">
+          <h3 className="text-2xl font-bold">Introduction :</h3>
+          <p>
+          Salesforce Agentforce is revolutionizing how businesses optimize workflows, enhance productivity, and improve customer service using autonomous AI agents. However, gaining a competitive edge with Agentforce requires deep expertise and strategic implementation.
+
+          </p>
+          <p>
+          At Alta-Futuris Solutions, our AI and Salesforce consulting expertise empowers businesses to maximize the potential of Agentforce. Whether it's customizing AI agents, integrating with third-party platforms, or ensuring seamless CRM connectivity — we help you achieve transformative business outcomes.
+
+           </p>
+        </div>
+
+        {/* Challenges Section */}
+        <div className="content my-6">
+          <h3 className="text-2xl font-bold">Challenges & Solutions :</h3>
+          <p> Common Challenges with Agentforce : </p>
+          
+          <ul className="my-2 list-disc pl-6">
+            <li>
+            <span className="font-bold">Limited Customization:</span> Out-of-the-box Agentforce solutions offer basic functionality, limiting their potential.
+
+            </li>           
+            <li>
+            <span className="font-bold">Integration Barriers:</span>  Connecting Agentforce with other AI technologies or CRM platforms is complex.
+                </li>
+            <li>
+            <span className="font-bold">Scalability Issues: </span>  Without professional guidance, businesses struggle to scale Agentforce for enterprise-wide automation.
+
+            </li>
+          </ul>
+
+          <h3 className="text-2xl font-bold mt-5">Our Solution:  </h3>
+
+          <p> We help businesses customize, integrate, and scale <strong>Salesforce Agentforce </strong>to maximize automation, productivity, and customer engagement while maintaining brand consistency.
+          </p>
+        </div>
+
+        {/* Service Include */}
+        <div className="serviceInclude my-6">
+          <h3 className="text-2xl font-bold">Our Services Include:</h3>
+          
+          <ol className="my-2 list-decimal pl-6">
+            <li>
+            <span className="font-bold">Agentforce Customization: </span>We go beyond drag-and-drop tools, customizing AI agents to perform complex business tasks aligned with your goals.
+            </li>
+            <li>
+            <span className="font-bold">Third-Party Integration: </span> Our experts integrate Agentforce with external AI tools, enabling streamlined processes and maximum output.
+
+            </li>
+            <li>
+            <span className="font-bold">Salesforce Integration:  </span> We ensure seamless connectivity between Agentforce, Salesforce Data Cloud, Einstein, and your existing CRM tools.
+            </li>
+            <li>
+            <span className="font-bold">Use Case Development:  </span> Our team identifies high-value business use cases and maps AI agents to streamline processes and boost productivity.
+            </li>
+            <li>
+            <span className="font-bold">Autonomous Action Planning:   </span>We configure Agentforce agents to proactively perform tasks, reducing human dependency.
+            </li>
+            
+          </ol>
+        </div>
+
+        {/* Benefits */}
+        <div className="benefits my-6">
+          <h3 className="text-2xl font-bold">Benefits of Choosing Us:</h3>
+         
+          <ul className="my-2 list-disc pl-6">
+            <li>
+            <span className="font-bold">Maximized Efficiency: </span>Automate repetitive tasks, saving time and resources.
+            </li>
+            <li>
+            <span className="font-bold">Better Customer Experience: </span> Enable AI agents to handle queries, bookings, and customer service, ensuring 24/7 support.
+            </li>
+            <li>
+            <span className="font-bold">Faster Decision-Making:</span>  Use integrated data from Salesforce to make faster, data-driven business decisions. 
+            </li>
+            <li>
+            <span className="font-bold">Seamless Scalability:  </span>Easily scale Agentforce solutions as your business grows.
+            </li>
+          </ul>
+
+         </div>
+
+
+         {/* Use Case */}
+         <div className="benefits my-6">
+          <h3 className="text-2xl font-bold">Use Case Examples:
+          </h3>
+         
+          <ul className="my-2 list-disc pl-6">
+            <li>
+            <span className="font-bold">Order & Shipping Management: </span> Automate order status, tracking, and modifications to save operational time.
+            </li>
+            <li>
+            <span className="font-bold">Financial Services Automation: </span>  Streamline data analysis, fraud detection, and customer relationship management.
+            </li>
+            <li>
+            <span className="font-bold">Lead Generation & Qualification:</span> Optimize marketing by qualifying leads and identifying high-value opportunities.
+            </li>
+            <li>
+            <span className="font-bold">Healthcare Appointment Management:  </span> Enable patients to book, reschedule, or cancel appointments without human intervention.
+
+            </li>
+          </ul>
+
+        </div>
+
+
+         {/* Call-to-Action */}
+         <div className="benefits my-6">
+          <h3 className="text-2xl font-bold"> Call-to-Action</h3>
+          <h3 className="text-xl font-bold">Ready to transform your business with Salesforce Agentforce?
+
+          </h3>
+          <p> Our certified Salesforce consultants can help you maximize the potential of   </p>
+          <p><strong>Agentforce.</strong> Contact us today for a personalized consultation.
+          </p>
+         
+          <button className="mt-8 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+          Talk to an Expert
+          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+            &gt;&gt;
+          </span>
+        </button>
+         </div>    
+
+
+        
+      </div>
+    </>
+  );
+};
+
+export default AiAppDev;
