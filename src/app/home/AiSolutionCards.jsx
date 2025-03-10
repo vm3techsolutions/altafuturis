@@ -73,7 +73,7 @@ export default function ServicesSection() {
 
     <section className="  py-5 md:mt-0 -mt-32 space-y-8">
       
-      <div className=" py-9 flex flex-wrap justify-center gap-4 px-4 md:gap-3 md:px-2">
+      <div className=" py-4 flex flex-wrap justify-center gap-4 px-4 md:gap-3 md:px-2">
         {/* Service Cards */}
         {services.map((service, index) => (
   <motion.div
@@ -93,7 +93,7 @@ export default function ServicesSection() {
     <p className="text-gray-900 text-md mt-2 text-left flex-grow">
       {service.description}
     </p>
-    <div className="mt-auto">
+    <div className="mt-auto ">
       <a href={service.link} className="mt-auto">
         <button className="mt-8 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
           Know More
@@ -109,14 +109,15 @@ export default function ServicesSection() {
 </div>
 
 
-<a href={services.link} className="mt-auto">
-  <button className="mt-8 py-2 font-semibold text-black rounded-xl hover:text-brownColor transition-all group">
-    Know More
-    <span className="bg-brownColor group-hover:bg-blueColor rounded-lg px-1 text-white pb-1 mx-2 duration-500">
-      &gt;&gt;
-    </span>
-  </button>
+<a href={services.link} className="flex justify-center mb-4">
+<button className="mt-8 mb-4 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+          Talk to an Expert
+          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+            &gt;&gt;
+          </span>
+        </button>
 </a>
+
     </section>
     </section>
     </>
