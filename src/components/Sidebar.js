@@ -1,100 +1,88 @@
-"use client"; // ✅ Important for client-side hooks
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // ✅ Use this instead of useRouter()
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
-  const pathname = usePathname(); // ✅ Get the current path
+  const pathname = usePathname();
+  const services = [
+    {
+      slug: "ai-app-dev",
+      title: "Generative AI Application Development",
+    },
+    {
+      slug: "salesforce-agentforce-consulting",
+      title: "Salesforce Agentforce Consulting",
+    },
+    {
+      slug: "salesforce-consulting",
+      title: "Salesforce Consulting",
+    },
+    {
+      slug: "data-loss-prevention",
+      title:
+        "Generative AI Agents for Data Loss Prevention (DLP) in Cybersecurity",
+    },
+    {
+      slug: "ai-agent-developement-in-blockchain",
+      title: "AI Agent Development in Blockchain",
+    },
+  ];
 
   return (
     <div className="py-10">
-    <div className="sidebar bg-white p-4 rounded-xl">
-      <ul>
-        <li
-          className={`px-4 py-2 rounded-xl hover:shadow-md hover:text-white hover:bg-brownColor border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group 
-        ${
-          pathname === "/services/ai-app-dev"
-            ? "bg-blueColor text-white shadow-md"
-            : "bg-transparent text-black hover:bg-blueColor"
-        }`}
-        >
-          <Link href="/services/ai-app-dev/">
-            Generative AI Application Development
-          </Link>
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </li>
+      {/* Sidebar Service Menu */}
+      <div className="sidebar bg-white p-4 rounded-xl">
+        <ul>
+          {services.map((service) => (
+            <li
+              key={service.slug}
+              className={`px-4 py-2 rounded-xl border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group
+                ${
+                  pathname === `/services/${service.slug}`
+                    ? "bg-blueColor text-white shadow-md"
+                    : "bg-transparent text-black hover:bg-blueColor"
+                }`}
+            >
+              <Link href={`/services/${service.slug}`} className="w-full text-left">
+                {service.title}
+              </Link>
+              <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+                &gt;&gt;
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <li
-          className={`px-4 py-2 rounded-xl hover:shadow-md hover:text-white hover:bg-brownColor border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group ${
-            pathname === "/services/salesforce-agentforce-consulting"
-              ? "bg-blueColor text-white hover:bg-brownColor shadow-md"
-              : "bg-transparent text-black hover:bg-blueColor"
-          }`}
-        >
-          <Link href="/services/salesforce-agentforce-consulting">
-            Salesforce Agentforce Consulting
-          </Link>
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </li>
-
-        <li className={`px-4 py-2 rounded-xl hover:shadow-md hover:text-white hover:bg-brownColor border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group ${pathname === "/services/salesforce-consulting" ? "bg-blueColor text-white hover:bg-brownColor shadow-md" : "bg-transparent text-black hover:bg-blueColor"}`}>
-          <Link href="/services/salesforce-consulting">Salesforce Consulting</Link>
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </li>
-
-        <li className={`px-4 py-2 rounded-xl hover:shadow-md hover:text-white hover:bg-brownColor border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group ${pathname === "/services/data-loss-prevention" ? "bg-blueColor text-white hover:bg-brownColor shadow-md" : "bg-transparent text-black hover:bg-blueColor"}`}>
-          <Link href="/services/data-loss-prevention">
-            Generative AI Agents for Data Loss Prevention (DLP) in Cybersecurity
-          </Link>
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </li>
-
-        <li className={`px-4 py-2 rounded-xl hover:shadow-md hover:text-white hover:bg-brownColor border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group ${pathname === "/services/ai-agent-developement-in-blockchain" ? "bg-blueColor text-white hover:bg-brownColor shadow-md" : "bg-transparent text-black hover:bg-blueColor"}`}>
-          <Link href="/services/ai-agent-developement-in-blockchain">AI Agent Development in Blockchain</Link>
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </li>
-
-      </ul>
-    </div>
-
-    <div className="bg-brownColor my-14 px-6 pt-6 rounded-xl">
-          <h2 className="text-3xl font-extrabold mb-20">Need Advice ?<br/> Book a Call!</h2>
-          <Image
+      {/* Advice / Call to Action Section */}
+      <div className="bg-brownColor my-14 px-6 pt-6 rounded-xl">
+        <h2 className="text-3xl font-extrabold mb-20">
+          Need Advice ?<br /> Book a Call!
+        </h2>
+        <Image
           src="/assets/h1c4.png"
           alt="service-image"
           className="object-center"
           width={400}
           height={400}
           priority
-          >
+        />
+      </div>
 
-          </Image>
-    </div>
-    <div>
-    <a href="/" className="flex justify-center -mt-5 mr-11 md:mr-">
-                  <button className="px-4 py-2 bg-blueColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-                    Know More
-                    <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-                      &gt;&gt;
-                    </span>
-                  </button>
-                </a>
-              
-      
-    </div>
+      {/* "Know More" Button */}
+      <div>
+        <Link href="/" className="flex justify-center -mt-5 mr-11">
+          <button className="px-4 py-2 bg-blueColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+            Know More
+            <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+              &gt;&gt;
+            </span>
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
 
 export default Sidebar;
-

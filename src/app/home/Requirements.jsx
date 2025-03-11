@@ -7,7 +7,7 @@ const QuoteSection = () => {
       <div className="lg:w-1/2 md:w-1/2 w-full text-center lg:text-left">
         
       <div className="md:w-full w-full flex justify-center  md:justify-start mb-16 md:mb-0 ">
-          <button className="px-4 py-1 border-2 border-brownColor rounded-full text-white bg-[#6328A6] shadow-sm transition-all duration-300 ease-in-out font-bold">
+          <button className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-white bg-[#6328A6] shadow-sm transition-all duration-300 ease-in-out font-bold">
           Let's discuss your requirements
           </button>
         </div>

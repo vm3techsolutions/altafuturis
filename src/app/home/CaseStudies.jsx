@@ -32,7 +32,7 @@ const PortfolioSection = () => {
       <div className="md:w-2/3 space-y-6 p-20">
 
         {/* Portfolio Items */}
-        <div className="space-y-4">
+        <div className="space-y-4 md:-ml-6">
           <div className="pb-4">
             <Image src="/assets/Portfolio1.png" width={600} height={150} alt="CloudSense" className="rounded-lg" />
             <h3 className="font-bold text-2xl md:text-xl pt-4 grid">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
