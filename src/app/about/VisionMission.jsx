@@ -8,7 +8,7 @@ const VisionMission = () => {
     <>
       <section className="flex items-center justify-center lg:py-16 md:py-8 py-2">
         <div className="container flex items-center justify-center">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start lg:items-start justify-start w-full space-y-8 md:space-y-0">
+          <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start lg:items-start justify-start w-full space-y-8 md:space-y-0">
             {/* Left Column */}
             <div className="max-w-4xl flex-shrink-0  md:mr-12">
               <div className=" relative w-[54vw] md:w-[18vw] lg:w-[14vw] 2xl:w-[14vw] h-[20vh]  mr-0 lg:mr-36 flex flex-col justify-center text-center  p-4 bg-white rounded-lg">
