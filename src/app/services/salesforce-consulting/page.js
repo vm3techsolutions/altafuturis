@@ -18,12 +18,7 @@ const AiAppDev = () => {
           Empower Your Business with Expert Salesforce Consulting Services
 
           </h4>
-        <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </button>
+       
       
         </div>
 
@@ -103,26 +98,7 @@ const AiAppDev = () => {
 
 
 
-          {/* Call-to-Action */}
-        <div className="benefits my-6">
-          <h3 className="text-xl font-bold">Maximize your business potential with expert Salesforce consulting.
-          </h3>
-          <p>Connect with our team for customized solutions tailored to your business goals.
-          </p>
          
-          <button className="mt-8 mb-4 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </button>
-
-        <p>For detailed information, visit: <a href="https://altafuturis.com/services/salesforce-development-support-and-maintenance/" className="text-blue-600">Salesforce Development, Support and Maintenance</a>
-        </p>
-         </div>    
-
-
-
          
         
       </div>

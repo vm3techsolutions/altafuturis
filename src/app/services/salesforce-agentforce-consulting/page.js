@@ -16,12 +16,7 @@ const AiAppDev = () => {
           <h4 className="text-xl font-semibold my-4">
           Gain Your Business Edge in Salesforce Agentforce with Alta-Futuris Solutions
           </h4>
-        <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </button>
+        
       
         </div>
 
@@ -134,22 +129,7 @@ const AiAppDev = () => {
         </div>
 
 
-         {/* Call-to-Action */}
-         <div className="benefits my-6">
-          <h3 className="text-xl font-bold">Ready to transform your business with Salesforce Agentforce?
-
-          </h3>
-          <p> Our certified Salesforce consultants can help you maximize the potential of   </p>
-          <p><strong>Agentforce.</strong> Contact us today for a personalized consultation.
-          </p>
-         
-          <button className="mt-8 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-          Talk to an Expert
-          <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-            &gt;&gt;
-          </span>
-        </button>
-         </div>    
+        
 
 
         
