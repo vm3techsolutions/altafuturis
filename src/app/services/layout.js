@@ -3,6 +3,8 @@ import { useState } from "react";
 import Sidebar from "@components/Sidebar"; // Ensure the import path is correct
 import PageTitle from "./PageTitle";
 import Subservice1 from "./Subservice1";
+import Subservice3 from "./Subservice3";
+import Subservice4 from "./Subservice4";
 
 export default function ServicesLayout({ children }) {
   const [selectedService, setSelectedService] = useState(null);
@@ -28,6 +30,8 @@ export default function ServicesLayout({ children }) {
 
       {/* Full-Width Section that updates based on the selected service */}
       <Subservice1 service={selectedService} />
+      <Subservice3 service={selectedService} />
+      <Subservice4 service={selectedService}/>
     </>
   );
 }
