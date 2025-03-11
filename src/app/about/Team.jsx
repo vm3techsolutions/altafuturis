@@ -7,25 +7,25 @@ const teamMembers = [
     name: "Ganesh Shevade",
     designation: "Co-Founder & CEO",
     image: "/assets/ceo.png",
-    linkedin: "https://linkedin.com/in/johndoe",
+    linkedin: "https://www.linkedin.com/in/ganeshshevade/",
   },
   {
     name: "Mahesh Mutalik",
     designation: "Co-Founder",
     image: "/assets/coFounder.png",
-    linkedin: "https://linkedin.com/in/janesmith",
+    linkedin: "https://www.linkedin.com/in/mahesh-mutalik-9a06a69/",
   },
   {
-    name: "Rahul Kulhalli",
-    designation: "AI & Data Eng Architect",
-    image: "/assets/architect.png",
-    linkedin: "https://linkedin.com/in/davidlee",
+    name: "Shweta Pawar",
+    designation: "Agents, LLMs & GenAI Expert",
+    image: "/assets/ShwetaPawarimg.jpeg",
+    linkedin: "https://www.linkedin.com/in/aishweta/",
   },
   {
     name: "Pratiksha Shevade",
     designation: "Solution Architect - Salesforce",
     image: "/assets/sales.png",
-    linkedin: "https://linkedin.com/in/sarahbrown",
+    linkedin: "https://www.linkedin.com/in/pratiksha-shevade-2669458/",
   },
 ];
 

@@ -1,6 +1,7 @@
 import Sidebar from "@components/Sidebar"; // Fix the import path
 import Image from "next/image";
 import PageTitle from "./PageTitle";
+import Subservice1 from "./Subservice1";
 
 export default function ServicesLayout({ children }) {
   return (
@@ -18,6 +19,7 @@ export default function ServicesLayout({ children }) {
         {/* Content Section */}
         <div className="flex-grow max-w-4xl p-6 ">{children}</div>
       </div>
+      <Subservice1/>
     </>
   );
 }

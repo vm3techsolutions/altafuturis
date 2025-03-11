@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
             {/* Left Side - Button */}
             <div className="max-w-4xl flex-shrink-0 md:mr-12">
-              <button className="px-5 py-3 md:mb-11 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+              <button className="text-xl px-5 py-3 md:mb-11 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
                 Why choose us?
               </button>
             </div>
@@ -52,17 +52,17 @@ export default function WhyChooseUs() {
         />
 
         <section className="flex items-center justify-center ">
-          <section className="container flex items-center justify-center md:mt-0 ">
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-6  gap-6 ">
+          <section className="container flex items-center justify-center md:mt-0">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-6  gap-6 ml-24 ">
               {/* Left Section (Image + Button) */}
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col">
                 <img
                   src="/assets/WhyChooseUs.png"
                   alt="Team Meeting"
-                  className="rounded-lg shadow-lg md:w-[30vw] w-[100vw] h-[75vh] md:h-[90vh] object-cover"
+                  className="rounded-lg shadow-lg md:w-[35vw] w-[105vw] h-[80vh] md:h-[95vh] object-cover  md:-ml-"
                 />
 
-                <a href="/" className="flex justify-start mt-6 mr-11 md:mr-16">
+                <a href="/" className="flex justify-center mt-6 mr-11 md:mr-32">
                   <button className="px-4 py-2 bg-blueColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                     Know More
                     <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

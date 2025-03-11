@@ -38,7 +38,7 @@ export default function Testimonials() {
       <h2 className="text-[7vh] sm:text-[16vh] md:text-[22vh] lg:text-[34vh] text-purple-200 absolute font-extrabold opacity-50 top-0 left-0 w-full text-center -mt-12 md:-mt-32 lg:-mt-40 sm:-mt-20">Testimonials</h2>
 
       <div className="flex justify-center mb-8 mt-10 sm:mt-20 md:mt-24 lg:mt-26">
-        <button className="px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+        <button className="text-xl px-4 py-2 border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
           Hear from our customers
         </button>
       </div>

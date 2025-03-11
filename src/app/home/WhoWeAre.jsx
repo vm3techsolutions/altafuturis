@@ -7,7 +7,7 @@ export default function CompanyIntro() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="max-w-4xl flex-shrink-0 md:mr-12">
-            <button className=" md:mb-64 px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <button className="text-xl md:mb-64 px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
               Who we are
             </button>
           </div>
@@ -26,7 +26,7 @@ export default function CompanyIntro() {
               constantly look for connecting the dots with data.
             </p>
   
-            <a href="/" className="flex justify-center  md:mr-16">
+            <a href="/" className="flex justify-start  md:mr-16">
               <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                 Know More
                 <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
