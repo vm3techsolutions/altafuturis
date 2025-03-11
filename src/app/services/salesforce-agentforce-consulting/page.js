@@ -113,6 +113,11 @@ const AiAppDev = () => {
         <h2 className="text-4xl font-bold">Salesforce Agentforce Consulting</h2>
         <h4 className="text-xl font-semibold my-4">Gain Your Business Edge in Salesforce Agentforce with Alta-Futuris Solutions</h4>
       </div>
+
+      {/* Image Section */}
+      <div className="my-6 text-center py-2">
+        <img src="/assets/service2.png" alt="Salesforce Agentforce Consulting Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+      </div>
       
       {/* Introduction */}
       <div className="content my-6">
@@ -137,10 +142,7 @@ const AiAppDev = () => {
         ))}
       </div>
 
-      {/* Image Section */}
-      <div className="my-6 text-center py-10">
-        <img src="/assets/service2.png" alt="Salesforce Agentforce Consulting Illustration" className="w-full h-[65vh] max-w-3xl mx-auto rounded-lg"/>
-      </div>
+      
     </div>
   );
 };
