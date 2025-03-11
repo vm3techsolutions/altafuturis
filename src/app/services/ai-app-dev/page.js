@@ -86,6 +86,11 @@ const AiAppDev = () => {
           Generative AI consulting services for strategy, governance, security, development, and implementation.
         </h4>
       </div>
+
+      {/* Image Section */}
+       <div className="my-6 text-center py-2">
+        <img src="/assets/Service1.png" alt="Generative AI Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+      </div> 
       
       {/* Introduction Section */}
       <div className="content my-6">
@@ -115,10 +120,7 @@ const AiAppDev = () => {
       </div>
 
       
- {/* Image Section */}
-      <div className="my-6 text-center py-10">
-        <img src="/assets/Service1.png" alt="Generative AI Illustration" className="w-full h-[65vh] max-w-4xl mx-auto rounded-lg"/>
-      </div>
+ 
 
       
     </div>
