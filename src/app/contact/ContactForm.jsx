@@ -96,27 +96,27 @@ export default function Form() {
       <div className="w-full max-w-2xl mx-auto shadow-lg rounded-lg p-6 bg-white border-2 border-brownColor">
   <form onSubmit={handleSubmit} className="flex flex-col gap-5">
     <div>
-      <label className="block text-black font-semibold text-lg">Full Name :</label>
+      <label className="mb-3 block text-black font-semibold text-lg ">Full Name :</label>
       <input type="text" name="fullname" value={formData.fullname} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required />
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Company Name :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Company Name :</label>
       <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required />
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Email :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Email :</label>
       <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required />
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Phone No :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Phone No :</label>
       <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required />
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Company Revenue :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Company Revenue :</label>
       <select name="companyRevenue" value={formData.companyRevenue} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Choose Revenue</option>
         <option value="Below $1M">Below $1M</option>
@@ -128,7 +128,7 @@ export default function Form() {
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Role :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Role :</label>
       <select name="role" value={formData.role} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Role</option>
         <option value="CEO">CEO</option>
@@ -140,7 +140,7 @@ export default function Form() {
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Relationship with Alta :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Relationship with Alta :</label>
       <select name="relationship" value={formData.relationship} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Relationship</option>
         <option value="Customer">Customer</option>
@@ -152,7 +152,7 @@ export default function Form() {
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Services :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Services :</label>
       <select name="services" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Service</option>
         <option value="Service 1">Service 1</option>
@@ -164,7 +164,7 @@ export default function Form() {
     </div>
 
     <div>
-      <label className="block text-black font-semibold text-lg">Message :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Message :</label>
       <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded"></textarea>
     </div>
 

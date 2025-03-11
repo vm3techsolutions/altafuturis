@@ -91,7 +91,7 @@ const Menu = () => {
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/partnerships" className="hover:text-brown-600">
+                <Link href="/partnership" className="hover:text-brown-600">
                   Partnerships
                 </Link>
               </li>
@@ -181,7 +181,7 @@ const Menu = () => {
     </Link>
   </li>
   <li>
-    <Link href="/partnerships" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+    <Link href="/partnership" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
       Partnerships
     </Link>
   </li>
