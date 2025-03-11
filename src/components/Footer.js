@@ -65,7 +65,8 @@ const Footer = () => {
           </div>
 
           {/* 3rd Column: Service Menu */}
-          <div className="flex flex-col">
+          <div className="flex flex-col 
+          ">
             <h4 className="text-lg text-purpleColor font-bold">Our Services</h4>
             <ul className="space-y-2 mt-4">
               <li>
