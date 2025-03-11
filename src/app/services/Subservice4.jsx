@@ -83,7 +83,7 @@ export default function AIThreatDetection() {
           <>
             <selectedCard.icon className="w-16 h-16 text-yellow-400" />
             <h2 className="text-xl font-bold mt-4">{selectedCard.title}</h2>
-            <p className="mt-2 text-center">{selectedCard.description}</p>
+            <p className="mt-2 text-start">{selectedCard.description}</p>
           </>
         ) : (
           <p className="text-gray-300">Select a card to see details</p>
@@ -97,7 +97,7 @@ export default function AIThreatDetection() {
     return (
       <div
         key={index}
-        className=" h-38 w-60 bg-white text-black p-4  rounded-lg flex flex-col justify-center items-center cursor-pointer transform transition-all hover:scale-110"
+        className=" h-28 w-52 bg-white text-black p-4  rounded-lg flex flex-col justify-center items-center cursor-pointer transform transition-all hover:scale-110"
         onClick={() => setSelectedCard(card)}
          // Adjust width for 3 columns
       >
@@ -111,3 +111,5 @@ export default function AIThreatDetection() {
     </div>
   );
 }
+
+
