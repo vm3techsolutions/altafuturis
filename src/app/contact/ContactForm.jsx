@@ -176,7 +176,7 @@ export default function Form() {
     </div>
 
     <div className="col-span-2 mt-2">
-            <button type="submit" className="px-10 bg-[#6328A6] text-white font-semibold py-2 rounded-xl hover:bg-blue-700">Submit</button>
+            <button type="submit" className="px-10 bg-blueColor text-white font-semibold py-2 rounded-xl hover:bg-brownColor">Submit</button>
           </div>
 
     {responseMessage && <p className="text-center text-green-600 mt-2">{responseMessage}</p>}
