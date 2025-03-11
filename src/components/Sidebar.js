@@ -40,14 +40,14 @@ const Sidebar = () => {
               className={`px-4 py-2 rounded-xl border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group
                 ${
                   pathname === `/services/${service.slug}`
-                    ? "bg-blueColor text-white shadow-md"
-                    : "bg-transparent text-black hover:bg-blueColor"
+                    ? "bg-blueColor text-white hover:text-white shadow-md"
+                    : "bg-transparent hover:text-white text-black hover:bg-blueColor"
                 }`}
             >
               <Link href={`/services/${service.slug}`} className="w-full text-left">
                 {service.title}
               </Link>
-              <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
+              <span className="ml-2 bg-brownColor group-hover:bg-brownColor text-white px-1 rounded-md duration-300">
                 &gt;&gt;
               </span>
             </li>
