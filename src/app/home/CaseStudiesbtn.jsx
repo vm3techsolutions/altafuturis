@@ -4,8 +4,8 @@ import React from "react";
 
 const PortfolioSection = () => {
   return (
-    <section className="container flex items-center justify-between   md:ml- pt-16  ">
-      <div className="max-w-7xl flex flex-col justify-between md:flex-row items-center w-full">
+    <section className="container flex items-center justify-between pt-16  ">
+      <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col justify-between md:flex-row items-center w-full">
         {/* Left Side */}
         
 
