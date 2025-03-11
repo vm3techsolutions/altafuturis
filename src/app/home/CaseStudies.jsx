@@ -7,7 +7,7 @@ const PortfolioSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center -mt-5">
       {/* Left Section */}
-      <div className="md:w-1/5 lg:w-1/4 flex flex-col items-center md:items-start h-full relative">
+      <div className="md:w-1/3 lg:w-1/3 flex flex-col items-center md:items-start h-full relative">
 
         {/* Animated Circular Image */}
         <motion.div
@@ -29,7 +29,7 @@ const PortfolioSection = () => {
       </div>
 
       {/* Right Section */}
-      <div className="md:w-2/3 space-y-6 p-20">
+      <div className="md:w-2/3 space-y-6 py-12 px-6">
 
         {/* Portfolio Items */}
         <div className="space-y-4 md:-ml-6">
