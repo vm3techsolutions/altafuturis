@@ -1,31 +1,16 @@
 "use client";
 import React from "react";
-import { FaLinkedin } from "react-icons/fa";
 
-const teamMembers = [
+const partners = [
   {
-    name: "Ganesh Shevade",
-    designation: "Co-Founder & CEO",
-    image: "/assets/ceo.png",
-    linkedin: "https://www.linkedin.com/in/ganeshshevade/",
+    imgSrc: "/assets/Partnershipcard1.png",
+    description:
+      "We are utilizing various services under Azure Artificial Intelligence and Data Engineering to provide solutions for Microsoft for Startups program.",
   },
   {
-    name: "Mahesh Mutalik",
-    designation: "Co-Founder",
-    image: "/assets/coFounder.png",
-    linkedin: "https://www.linkedin.com/in/mahesh-mutalik-9a06a69/",
-  },
-  {
-    name: "Shweta Pawar",
-    designation: "Agents, LLMs & GenAI Expert",
-    image: "/assets/ShwetaPawarimg.jpeg",
-    linkedin: "https://www.linkedin.com/in/aishweta/",
-  },
-  {
-    name: "Pratiksha Shevade",
-    designation: "Solution Architect - Salesforce",
-    image: "/assets/sales.png",
-    linkedin: "https://www.linkedin.com/in/pratiksha-shevade-2669458/",
+    imgSrc: "/assets/Partnershipcard2.png", 
+    title: "Salesforce Partner",
+    description: "Salesforce Partner",
   },
 ];
 
@@ -53,6 +38,25 @@ const Team = () => {
         </div>
       </section>
       </section>
+
+      <div className="grid grid-col md:grid-row gap-16 justify-center items-center p-6">
+      {partners.map((partner, index) => (
+        <div
+          key={index}
+          className="w-[100vh] h-80  border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-white "
+        >
+          <img
+            src={partner.imgSrc}
+            alt={partner.title}
+            className="w-80 h-40  bg-gray-100 p-10"
+          />
+          <div className="p-4 text-center">
+            <h2 className="text-lg font-semibold">{partner.title}</h2>
+            <p className="text-sm text-gray-600 mt-2">{partner.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
 
 
 
