@@ -23,7 +23,7 @@ const PortfolioSection = () => {
             ease: "linear" // Smooth motion
           }}
         >
-          <Image src="/assets/animateCicle.png" width={446} height={196} alt="Circular Animation" className="-ml-32" />
+          <Image src="/assets/animateCicle.png" width={420} height={180} alt="Circular Animation" className="-ml-32" />
         </motion.div>
 
       </div>
@@ -32,7 +32,7 @@ const PortfolioSection = () => {
       <div className="md:w-2/3 space-y-6 py-12 px-6">
 
         {/* Portfolio Items */}
-        <div className="space-y-4 md:-ml-32">
+        <div className="space-y-4 md:-ml-32 2xl:-ml-5">
           <div className="pb-4">
             <Image src="/assets/Portfolio1.png" width={600} height={150} alt="CloudSense" className="rounded-lg" />
             <h3 className="font-bold text-2xl md:text-xl pt-4 grid">CloudSense Implementation Consultancy for Leading Media House in USA</h3>

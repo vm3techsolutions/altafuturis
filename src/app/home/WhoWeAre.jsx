@@ -26,7 +26,7 @@ export default function CompanyIntro() {
               constantly look for connecting the dots with data.
             </p>
   
-            <a href="/" className="flex justify-start  md:mr-16">
+            <a href="/contact" className="flex justify-start  md:mr-16">
               <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                 Know More
                 <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

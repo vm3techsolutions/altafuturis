@@ -18,7 +18,7 @@ const QuoteSection = () => {
         <p className="text-sm lg:text-base md:text-left mb-6">
           Alta-Futuris follows an approach to come up with innovative solutions in AI, Data Engineering, and Salesforce that includes data research and analysis. Engineering with an understanding of key business processes and workflows and designing solutions with optimized decision points providing value to businesses.
         </p>
-        <a href="/" className="flex justify-center lg:justify-start md:justify-start mt-6 mr-11 md:mr-16">
+        <a href="/contact" className="flex justify-center lg:justify-start md:justify-start mt-6 mr-11 md:mr-16">
             <button className="px-4 py-2 bg-brownColor text-white rounded-xl shadow-md hover:bg-blueColor flex items-center transition-all duration-300 ease-in-out group">
               Know More
               <span className="ml-2 bg-blueColor   group-hover:bg-brownColor text-white px-1 rounded-md duration-300">

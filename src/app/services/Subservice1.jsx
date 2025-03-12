@@ -17,54 +17,88 @@ const aiAgentServices3 = [
 ];
 
 const cards = [
-  { id: 1, title: "AI-Powered Data Discovery and Classification", 
-    icon: ShieldCheck, 
-    description: "AI-Driven Threat Detection" },
-  { id: 2, title: "AI-Powered Data Discovery", 
-    icon: Database, 
-    description: "Automatically classifies and organizes data using AI algorithms." },
-  { id: 3, title: "AI-Enhanced Policy Enforcement", 
-    icon: FileText, 
-    description: "Enhances security policies with AI-driven automation." },
-  { id: 4, title: "AI-Powered User and Entity Behavior Analytics (UEBA)", 
-    icon: ShieldCheck, 
-    description: "Identifies suspicious activities in real-time using AI." },
-  { id: 5, title: "AI-Driven Incident Response", 
-    icon: Database, 
-    description: "Ensures compliance with regulations through AI automation." },
-  { id: 6, title: "AI-Enhanced Data Masking and Redaction", 
-    icon: FileText, 
-    description: "Speeds up cybersecurity incident responses with AI insights." },
-  { id: 7, title: "AI-Powered Compliance and Reporting", 
-    icon: ShieldCheck, 
-    description: "Uses AI to forecast potential security threats before they happen." },
-  { id: 8, title: "AI-Driven Email and Web Protection", 
-    icon: Database, 
-    description: "AI-driven encryption to safeguard sensitive business data." },
-  { id: 9, title: "AI-Enhanced Endpoint Protection", 
-    icon: FileText, 
-    description: "Detects potential insider security threats using AI analytics." },
-  { id: 10, title: "AI-Powered Cloud Data Protection", 
-    icon: ShieldCheck, 
-    description: "Identifies fraudulent activities with machine learning models." },
-  { id: 11, title: "AI-Driven User Training and Awareness", 
-    icon: Database, 
-    description: "Manages user access dynamically based on AI-driven policies." },
-  { id: 12, title: "AI-Enhanced Forensic Analysis", 
-    icon: FileText, 
-    description: "AI-powered security audits to detect vulnerabilities proactively." },
-  { id: 13, title: "AI-Powered Integration with Fortinet Security Fabric", 
-    icon: ShieldCheck, 
-    description: "Utilizes deep learning to recognize evolving cyber threats." },
-  { id: 14, title: "AI-Driven Data Loss Prevention for Generative AI Tools", 
-    icon: Database, 
-    description: "Monitors network traffic for anomalies using AI intelligence." },
-  { id: 15, title: "AI-Powered Data Loss Prevention for Virtual Environments", 
-    icon: FileText, 
-    description: "Identifies and prevents phishing attempts using AI insights." },
-  { id: 16, title: "AI-Enhanced Data Loss Prevention for Mobile Devices", 
-    icon: ShieldCheck, 
-    description: "Automates security processes for faster threat response." },
+  { id: 1, title: "AI-Powered Data Discovery and Classification",
+     icon: ShieldCheck, 
+    description: ["Automated Data Identification : Use AI/ML to automatically identify and classify sensitive data (e.g., PII, PCI, PHI) across structured and unstructured data sources.",
+       "Contextual Analysis : Leverage natural language processing (NLP) to understand the context of data and improve classification accuracy.", 
+       "Generative AI for Data Mapping : Use AI to generate data maps and identify relationships between data sources."] },
+
+  { id: 2, title: "AI-Powered Data Discovery",
+     icon: Database, 
+    description: ["Anomaly Detection : Use machine learning to detect unusual user behavior or data access patterns that may indicate insider threats or data exfiltration.",
+       "Predictive Analytics : Predict potential data loss incidents based on historical data and user behavior trends.", 
+       "Generative AI for Threat Simulation : Simulate advanced data loss scenarios using generative AI to test and improve DLP policies."] },
+
+  { id: 3, title: "AI-Enhanced Policy Enforcement",
+     icon: FileText, 
+    description: ["Dynamic Policy Adjustment : Use AI to dynamically adjust DLP policies based on real-time risk assessments and user behavior.",
+       "Generative AI for Policy Creation : Automatically generate DLP policies using AI based on regulatory requirements and organizational needs."] },
+
+  { id: 4, title: "AI-Powered User and Entity Behavior Analytics (UEBA)",
+     icon: ShieldCheck, 
+    description: ["Behavioral Profiling : Use AI to create behavioral profiles for users and entities, enabling the detection of deviations from normal behavior.",
+       "Risk Scoring : Assign risk scores to users and devices using AI-driven analytics.",
+        "Generative AI for Insider Threat Detection : Simulate insider threat scenarios to improve detection capabilities."] },
+
+  { id: 5, title: "AI-Driven Incident Response",
+     icon: Database, 
+    description: ["Automated Incident Triage : Use AI to prioritize and triage data loss incidents based on severity and potential impact.",
+       "Generative AI for Incident Reports : Automatically generate detailed incident reports using AI, including root cause analysis and recommended actions."] },
+
+  { id: 6, title: "AI-Enhanced Data Masking and Redaction",
+     icon: FileText, 
+    description: ["Context-Aware Redaction : Use AI to identify and redact sensitive information in documents, emails, and other data formats.",
+       "Generative AI for Synthetic Data : Create synthetic data for testing and development purposes while protecting sensitive information."] },
+
+  { id: 7, title: "AI-Powered Compliance and Reporting",
+     icon: ShieldCheck, 
+    description: ["Regulatory Compliance Automation : Use AI to ensure DLP policies align with regulatory requirements (e.g., GDPR, HIPAA, PCI-DSS).",
+       "Generative AI for Compliance Reports : Automatically generate compliance reports and audit trails using AI."] },
+
+  { id: 8, title: "AI-Driven Email and Web Protection",
+     icon: Database, 
+    description: ["Phishing Detection : Use AI to detect and block phishing attempts that may lead to data loss.",
+       "Generative AI for Email Content Analysis : Analyze email content using AI to detect sensitive data and enforce DLP policies."] },
+
+  { id: 9, title: "AI-Enhanced Endpoint Protection",
+     icon: FileText, 
+    description: ["Endpoint Behavior Analysis : Use AI to monitor and analyze endpoint behavior for signs of data exfiltration.",
+       "Generative AI for Endpoint Threat Simulation : Simulate endpoint threats to test and improve endpoint DLP policies."] },
+
+  { id: 10, title: "AI-Powered Cloud Data Protection",
+     icon: ShieldCheck, 
+    description: ["Cloud Data Monitoring : Use AI to monitor data transfers to and from cloud applications and storage.",
+       "Generative AI for Cloud Threat Detection : Simulate cloud-based data loss scenarios to improve detection and response."] },
+
+  { id: 11, title: "AI-Driven User Training and Awareness",
+     icon: Database, 
+    description: ["Personalized Training Programs : Use AI to create personalized data protection training programs for users based on their behavior and risk profile.",
+       "Generative AI for Phishing Simulations : Generate realistic phishing simulations using AI to test and improve user awareness."] },
+
+  { id: 12, title: "AI-Enhanced Forensic Analysis",
+     icon: FileText, 
+    description: ["Automated Forensic Investigations : Use AI to analyze data loss incidents and identify the root cause.",
+       "Generative AI for Incident Reconstruction : Reconstruct data loss incidents using AI to provide a detailed timeline of events."] },
+
+  { id: 13, title: "AI-Powered Integration with Fortinet Security Fabric",
+     icon: ShieldCheck, 
+    description: ["Threat Intelligence Sharing : Use AI to share threat intelligence across the Fortinet Security Fabric for enhanced data protection.",
+       "Generative AI for Security Orchestration : Automate security orchestration and response (SOAR) using AI to improve incident response times."] },
+
+  { id: 14, title: "AI-Driven Data Loss Prevention for Generative AI Tools",
+     icon: Database, 
+    description: ["Monitoring AI Tool Usage : Use FortiDLP to monitor and control data shared with generative AI tools (e.g., ChatGPT, Bard) to prevent sensitive data leakage.",
+       "Policy Enforcement for AI Tools : Enforce DLP policies to block or restrict the use of generative AI tools in handling sensitive data."] },
+
+  { id: 15, title: "AI-Powered Data Loss Prevention for Virtual Environments",
+     icon: FileText, 
+    description: ["Virtual Machine Monitoring : Use AI to monitor data transfers within virtual machines and detect anomalies.",
+       "Generative AI for Virtual Threat Simulation : Simulate data loss scenarios in virtual environments to improve detection and response."] },
+
+  { id: 16, title: "AI-Enhanced Data Loss Prevention for Mobile Devices",
+     icon: ShieldCheck, 
+    description: ["Mobile Device Behavior Analysis : Use AI to monitor and analyze data transfers on mobile devices.",
+       "Generative AI for Mobile Threat Detection : Simulate mobile-based data loss scenarios to improve detection and response."] },
 ];
 
 export default function Subservice1() {
@@ -104,13 +138,17 @@ export default function Subservice1() {
   } else if (slug === "data-loss-prevention") {
     return (
       <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white p-6">
-        <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-center">
+        <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-center space-y-8">
           {selectedCard ? (
             <>
-              <selectedCard.icon className="w-16 h-16 text-yellow-400" />
-              <h2 className="text-xl font-bold mt-4">{selectedCard.title}</h2>
-              <p className="mt-2 text-start">{selectedCard.description}</p>
-            </>
+            <selectedCard.icon className="w-20 h-20 text-yellow-400" />
+            <h2 className="text-2xl font-bold mt-4">{selectedCard.title}</h2>
+            <ul className="mt-2 text-start list-disc  space-y-5">
+              {selectedCard.description.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          </>
           ) : (
             <p className="text-gray-300">Select a card to see details</p>
           )}
@@ -156,6 +194,6 @@ export default function Subservice1() {
       </div>
     );
   } else {
-    return <div className="p-6 text-center text-gray-500">No service found</div>;
+    return <div className="p-6 text-center text-gray-500"></div>;
   }
 }

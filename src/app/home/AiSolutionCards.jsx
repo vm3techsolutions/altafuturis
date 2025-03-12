@@ -109,7 +109,7 @@ export default function ServicesSection() {
 </div>
 
 
-<a href={services.link} className="flex justify-center mb-4-7">
+<a href="/contact" className="flex justify-center mb-4-7">
 <button className="mt-8 mb-4 px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
           Talk to an Expert
           <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

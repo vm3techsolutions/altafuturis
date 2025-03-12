@@ -7,7 +7,7 @@ export default function DiscussRequirement() {
         <h1 className='font-bold text-2xl sm:text-3xl text-center sm:text-left'>
           Let's discuss your requirements
         </h1>
-        <a href="/" className="flex justify-start">
+        <a href="/contact" className="flex justify-start">
           <button className="px-4 py-2 bg-brownColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
             Connect With Us
             <span className="ml-2 bg-purpleColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

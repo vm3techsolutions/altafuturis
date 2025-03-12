@@ -47,7 +47,7 @@ const Menu = () => {
                 <Image src="/us.png" alt="US" width={24} height={16} />
                 <Image src="/in.png" alt="India" width={24} height={16} />
               </div>
-              <Link href="/">
+              <Link href="/contact">
                 <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                   Get In Touch{" "}
                   <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

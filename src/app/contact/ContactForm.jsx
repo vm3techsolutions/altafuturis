@@ -119,11 +119,12 @@ export default function Form() {
       <label className="mb-3 block text-black font-semibold text-lg">Company Revenue :</label>
       <select name="companyRevenue" value={formData.companyRevenue} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Choose Revenue</option>
-        <option value="Below $1M">Below $1M</option>
-        <option value="$1M - $10M">$1M - $10M</option>
-        <option value="$10M - $50M">$10M - $50M</option>
-        <option value="$50M - $100M">$50M - $100M</option>
-        <option value="Above $100M">Above $100M</option>
+        <option value="Below $1M">Less than $50M</option>
+        <option value="$1M - $10M">$51M - $100M</option>
+        <option value="$10M - $50M">$101M - $250M</option>
+        <option value="$50M - $100M">$251M - $5000M</option>
+        <option value="Above $100M">$501 $1b</option>
+        <option value="Above $100M">Greatet than $1b</option>
       </select>
     </div>
 
@@ -131,10 +132,10 @@ export default function Form() {
       <label className="mb-3 block text-black font-semibold text-lg">Role :</label>
       <select name="role" value={formData.role} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Role</option>
-        <option value="CEO">CEO</option>
-        <option value="Manager">Manager</option>
-        <option value="Employee">Employee</option>
-        <option value="Consultant">Consultant</option>
+        <option value="Customer">VP or C-Scuit</option>
+        <option value="Partner">Director or Sr.Director</option>
+        <option value="Supplier">Manager or Sr.Manager</option>
+        <option value="Investor">Practitioner or Contributor</option>
         <option value="Other">Other</option>
       </select>
     </div>
@@ -143,10 +144,12 @@ export default function Form() {
       <label className="mb-3 block text-black font-semibold text-lg">Relationship with Alta :</label>
       <select name="relationship" value={formData.relationship} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Relationship</option>
-        <option value="Customer">Customer</option>
-        <option value="Partner">Partner</option>
-        <option value="Supplier">Supplier</option>
-        <option value="Investor">Investor</option>
+        <option value="Customer">Client - Current or Potential</option>
+        <option value="Partner">Employee - Current or Former</option>
+        <option value="Supplier">Job Seeker</option>
+        <option value="Investor">Partner - Current or Potential</option>
+        <option value="Supplier">Supplier/Vendor - Current or Potential</option>
+        <option value="Supplier">Public Relations or Speaker Requests</option>
         <option value="Other">Other</option>
       </select>
     </div>
@@ -155,11 +158,11 @@ export default function Form() {
       <label className="mb-3 block text-black font-semibold text-lg">Services :</label>
       <select name="services" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Service</option>
-        <option value="Service 1">Service 1</option>
-        <option value="Service 2">Service 2</option>
-        <option value="Service 3">Service 3</option>
-        <option value="Service 4">Service 4</option>
-        <option value="Service 5">Service 5</option>
+        <option value="Service 1">Generative AI Application Development</option>
+        <option value="Service 2">Salesforce Agentforce Consulting</option>
+        <option value="Service 3">Salesforce Consulting</option>
+        <option value="Service 4">Generative AI Agents for Data Loss Prevention (DLP) in Cybersecurity</option>
+        <option value="Service 5">AI Agent Development in Blockchain</option>
       </select>
     </div>
 

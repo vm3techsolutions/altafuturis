@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                   className="rounded-lg shadow-lg md:w-[35vw] w-[105vw] h-[80vh] md:h-[95vh] object-cover  md:-ml-"
                 />
 
-                <a href="/" className="flex justify-center mt-6 mr-11 md:mr-32">
+                <a href="/contact" className="flex justify-center mt-6 mr-11 md:mr-32">
                   <button className="px-4 py-2 bg-blueColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                     Know More
                     <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
