@@ -57,8 +57,8 @@ const Team = () => {
 
 
         {/* Team Grid */}
-        <section className="relative flex items-center justify-center pb-12">
-    <section className="container flex items-center justify-center md:mt-0  py-12 pb-40 ">
+        <section className="relative flex items-center justify-center pb-">
+    <section className="container flex items-center justify-center md:mt-0  py-12 pb- ">
       <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-16 px-6 md:px-2 py-8">
         {teamMembers.map((member, index) => (
           <div

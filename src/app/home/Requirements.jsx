@@ -12,7 +12,7 @@ const QuoteSection = () => {
           </button>
         </div>
 
-        <h2 className="text-3xl lg:text-5xl md:text-left font-bold leading-tight mb-4 mt-5">
+        <h2 className="text-3xl lg:text-5xl md:text-left font-bold leading-tight mb-4 mt-5 ">
           Data and Workflow Solutions for your Digital Success!
         </h2>
         <p className="text-sm lg:text-base md:text-left mb-6">
@@ -29,7 +29,7 @@ const QuoteSection = () => {
       </div>
 
       {/* Right Section - Form */}
-      <div className="bg-white text-black p-8 rounded-lg shadow-lg w-[60vw] lg:w-1/3 md:w-1/2">
+      <div className="bg-white text-black p-8 rounded-lg shadow-lg w-[60vw] lg:w-1/3 md:w-1/2 ">
         <h3 className="text-3xl  text-start font-bold mb-4 text-gray-800">
           Get Your Quote <br/><span className="text-purple-600">Today!</span>
         </h3>

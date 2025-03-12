@@ -5,7 +5,7 @@ const Expertise = () => {
 
   return (
     <>
-    <div className="bg-white py-2 lg:py-12">
+    <div className="bg-white py-2 lg:py-6">
        {/* Section Header */}
     <section className="relative flex items-center justify-center pt-12">
       <section className="container flex items-center justify-center md:mt-0">

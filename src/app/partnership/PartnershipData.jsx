@@ -27,13 +27,8 @@ const Team = () => {
           <div className="max-w-4xl text-center md:text-left">
             <h1 className="md:mr-10 text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
             Highlighting our valued partners</h1>
-            
-          </div>
-        </div>
-      </section>
-      </section>
 
-      <div className="grid grid-col md:grid-row gap-16 justify-center items-center p-6 md:ml-36 2xl:ml-36">
+            <div className="grid grid-col md:grid-row gap-16 justify- items-center py-10 ">
       {partners.map((partner, index) => (
         <div
           key={index}
@@ -63,6 +58,13 @@ const Team = () => {
           </div>
         </div>
     </div>
+            
+          </div>
+        </div>
+      </section>
+      </section>
+
+      
 
 
 

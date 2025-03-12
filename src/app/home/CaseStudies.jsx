@@ -32,11 +32,11 @@ const PortfolioSection = () => {
       <div className="md:w-2/3 space-y-6 py-12 px-6">
 
         {/* Portfolio Items */}
-        <div className="space-y-4 md:-ml-6">
+        <div className="space-y-4 md:-ml-32">
           <div className="pb-4">
             <Image src="/assets/Portfolio1.png" width={600} height={150} alt="CloudSense" className="rounded-lg" />
             <h3 className="font-bold text-2xl md:text-xl pt-4 grid">CloudSense Implementation Consultancy for Leading Media House in USA</h3>
-            <a href="#" className="text-purpleColor text-sm font-semibold">READ MORE &gt;&gt;</a>
+            <a href="/caseStudyInner" className="text-purpleColor text-sm font-semibold">READ MORE &gt;&gt;</a>
           </div>
           <hr className="border-[#D4B301] border" />
 
@@ -46,7 +46,7 @@ const PortfolioSection = () => {
               <div className="grid grid-cols">
                 <h3 className="font-bold text-2xl md:text-xl pr-16">Salesforce Development for Leading K-12 School Chain in USA</h3>
                 <button className="flex pt-3">
-                  <a href="#" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
+                  <a href="/case-study-SalesForce" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
                 </button>
               </div>
             </div>
@@ -59,7 +59,7 @@ const PortfolioSection = () => {
               <div className="grid grid-cols">
                 <h3 className="font-bold text-2xl md:text-xl pr-9">Research on Clustering of Devanagari Script Based Documents Containing Img</h3>
                 <button className="flex pt-3">
-                  <a href="#" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
+                  <a href="/case-study-Research" className="text-purpleColor text-sm font-bold">READ MORE &gt;&gt;</a>
                 </button>
               </div>
             </div>
