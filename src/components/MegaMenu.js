@@ -54,8 +54,8 @@ const MegaMenu = () => {
         {tabs.map((tab) => (
           <Link key={tab.id} href={tab.link}>
             <div
-              className={`p-4 text-lg mb-1 font-normal text-[#002096] cursor-pointer hover:bg-gray-200 flex items-center justify-between ${
-                activeTab === tab.id ? "bg-gray-200 font-bold" : ""
+              className={`p-4 text-lg mb-1 font-normal text-[#002096] cursor-pointer hover:bg-blue-50 flex items-center justify-between ${
+                activeTab === tab.id ? "bg-blue-50 font-bold" : ""
               }`}
               onMouseEnter={() => setActiveTab(tab.id)}
             >
@@ -82,8 +82,8 @@ const MegaMenu = () => {
       </div>
 
       {/* Static Content Section (Right Panel) */}
-      <div className="w-1/3 p-4 bg-gray-100 rounded-md">
-        <h3 className="text-xl">Why Choose Us?</h3>
+      <div className="w-1/3 p-4 bg-blue-50 rounded-md">
+        <h3 className="text-2xl text-[#002096]">Why Choose Us?</h3>
         <p className="text-sm mt-2">
           Industry experts with 10+ years of experience in tech solutions.
         </p>
