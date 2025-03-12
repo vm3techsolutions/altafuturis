@@ -140,9 +140,11 @@ export default function Subservice1() {
       <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white p-6">
         <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-center space-y-8">
           {selectedCard ? (
+
+            // left side 
             <>
-            <selectedCard.icon className="w-20 h-20 text-yellow-400" />
-            <h2 className="text-2xl font-bold mt-4">{selectedCard.title}</h2>
+            <selectedCard.icon className="w-20 h-20 text-yellow-400 " />
+            <h2 className="text-2xl font-bold mt-4 ">{selectedCard.title}</h2>
             <ul className="mt-2 text-start list-disc  space-y-5">
               {selectedCard.description.map((point, index) => (
                 <li key={index}>{point}</li>
@@ -153,6 +155,10 @@ export default function Subservice1() {
             <p className="text-gray-300">Select a card to see details</p>
           )}
         </div>
+
+
+        {/* right side */}
+
         <div className="w-full md:w-2/3 flex flex-wrap gap-4 p-6 justify-center">
           {cards.map((card, index) => (
             <div

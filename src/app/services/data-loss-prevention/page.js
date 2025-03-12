@@ -101,7 +101,7 @@ maintain the security of their data
       </div> 
       
       {/* Introduction Section */}
-      {/* <div className="content my-6">
+      <div className="content my-6">
         <h3 className="text-2xl font-bold">Introduction :</h3>
         <p>
           Using the power of Generative AI (Gen AI) is no longer an option; it's a business necessity. Our Generative AI consulting services empower organizations to harness AI's potential while ensuring governance, security, and ethical implementation.
@@ -109,10 +109,10 @@ maintain the security of their data
         <p>
           At <span className="font-semibold">Alta-Futuris Solutions</span>, we believe that <span className="font-semibold">cloud enables businesses, data drives growth, and Generative AI </span> becomes the ultimate differentiator. Together, they unlock smarter decision-making, transformative growth, and scalability.
         </p>
-      </div> */}
+      </div>
 
       {/* Accordion Sections */}
-      {/* <div className="my-6 space-y-14">
+      <div className="my-6 space-y-14">
         {accordionItems.map((item, index) => (
           <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg ">
             <button
@@ -125,7 +125,7 @@ maintain the security of their data
             {openAccordion === index && <div className="mt-2 text-gray-900">{item.content}</div>}
           </div>
         ))}
-      </div> */}
+      </div>
 
       
  
