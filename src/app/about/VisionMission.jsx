@@ -47,11 +47,11 @@ const VisionMission = () => {
             <p className="-mt-36 lg:-mt-12"><span className="text-8xl text-gray-900 font-bold mr-4 ">“</span></p>
             {activeTab == "vision" && 
               <p className="text-md lg:text-lg">
-              To empower businesses worldwide by integrating cutting-edge technologies, automating processes, and delivering innovative solutions in Artificial Intelligence, Data Engineering, and Salesforce, thereby driving efficiency and growth. </p>
+              To pioneer a future where innovation and human potential converge seamlessly, Alta-Futuris Solutions envisions a world empowered by transformative technologies and sustainable strategies. We strive to be the global catalyst for progress, shaping a tomorrow where businesses, communities, and individuals not only adapt to change but lead it, creating a legacy of resilience, opportunity, and boundless possibility. </p>
               }
 
               {activeTab == "mission" && 
-              <p className="text-md lg:text-lg">To empower businesses worldwide by integrating cutting-edge technologies, automating processes, and delivering innovative solutions in Artificial Intelligence, Data Engineering, and Salesforce, thereby driving efficiency and growth. </p>
+              <p className="text-md lg:text-lg">At Alta-Futuris Solutions, our mission is to empower organizations and individuals to thrive in an ever-evolving world by delivering innovative, forward-thinking solutions that bridge the gap between today's challenges and tomorrow's possibilities. We are committed to leveraging cutting-edge technology, strategic foresight, and sustainable practices to drive transformative growth, foster resilience, and create a future where progress and purpose coexist harmoniously! </p>
               }
               <p className="-mb-56 lg:-mb-32"><span className="text-8xl text-gray-900 font-bold ">”</span></p>
             </div>

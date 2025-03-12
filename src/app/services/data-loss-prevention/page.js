@@ -30,40 +30,62 @@ const accordionItems = [
     title: "Challenges & Solutions",
     content: (
       <>
-        <p>Successful Generative AI application development demands:</p>
+        <p>Common DLP Challenges:    </p>
         <ul className="my-2 list-disc pl-6">
-          <li><span className="font-bold">Strong Data Governance:</span> To ensure data privacy and security.</li>
-          <li><span className="font-bold">Clear Business Use Cases:</span> Defining where and how Gen AI can drive business growth.</li>
-          <li><span className="font-bold">Workforce Adaption:</span> Preparing teams to embrace Gen AI solutions.</li>
+          <li>Data Breaches & Insider Threats: Sensitive data can be exposed through human errors or malicious actors.
+          </li>
+          <li>Regulatory Compliance: Organizations must adhere to HIPAA, GDPR, and other data protection laws.</li>
+          <li>Securing AI-Generated Content: Generative AI can introduce new security risks, requiring advanced threat detection.
+          </li>
         </ul>
-        <p>Our Gen AI professional services address these challenges by providing strategic guidance, robust development frameworks, and seamless implementation models.</p>
+        <p>How AI-Powered DLP Helps:
+        </p>
+        <ul className="my-2 list-disc pl-6">
+          <li>Detects Data Loss: Monitors data in use, at rest, and in motion to identify potential breaches.
+          </li>
+          <li>Prevents Unauthorized Transfers: Blocks sensitive data extraction and illicit transfers.
+          </li>
+          <li>Ensures Compliance: Helps organizations meet data protection regulations.
+          </li>
+          <li>Protects Confidential Information: Safeguards PII, financial data, and intellectual property.
+          </li>
+        </ul>
       </>
     ),
   },
   {
-    title: "Our Services Include",
+    title: "Our AI-Powered Cybersecurity Services",
     content: (
       <>
+      <p>Alta-Futuris Solutions offers:
+      </p>
         <ol className="my-2 list-decimal pl-6">
-          <li><span className="font-bold">Use Cases Definition:</span> We help you determine how Gen AI fits into your business strategy.</li>
-          <li><span className="font-bold">Governance & Oversight:</span> We establish Gen AI and ChatGPT usage policies.</li>
-          <li><span className="font-bold">Data Governance & Security:</span> We apply strong data security measures.</li>
-          <li><span className="font-bold">Custom Gen AI Development:</span> Our team builds tailor-made Gen AI solutions.</li>
-          <li><span className="font-bold">Implementation & Integration:</span> We help integrate Gen AI into your existing technology.</li>
-          <li><span className="font-bold">Center of Excellence (CoE):</span> We help you establish a Gen AI governance model.</li>
+          <li> Consultation & Strategy Development for AI-driven cybersecurity.
+          </li>
+          <li>Deployment & Implementation of FortiDLP and AI-integrated security solutions.
+          </li>
+          <li>Real-time Threat Monitoring and automated responses to potential breaches.
+          </li>
+          <li>Data Flow Insights & Investigations for risk management & compliance.
+          </li>
+         
         </ol>
       </>
     ),
   },
   {
-    title: "Benefits of Choosing Us",
+    title: "Business Benefits of AI-Driven DLP",
     content: (
       <>
         <ul className="my-2 list-disc pl-6">
-          <li><span className="font-bold">Faster Decision-Making:</span> Gen AI provides real-time insights.</li>
-          <li><span className="font-bold">Enhanced Efficiency:</span> Automate complex tasks and optimize workflows.</li>
-          <li><span className="font-bold">Secure Implementation:</span> We ensure data governance and privacy standards.</li>
-          <li><span className="font-bold">Scalable Solutions:</span> Our solutions grow with your business.</li>
+          <li> Prevent Data Leaks through real-time monitoring & automated security.
+          </li>
+          <li> Ensure Regulatory Compliance with HIPAA, GDPR, and other global standards.
+          </li>
+          <li>  Enhance Security & Governance with AI-powered threat intelligence.
+          </li>
+          <li> Protect Intellectual Property & Confidential Data from cyber threats.
+</li>
         </ul>
       </>
     ),
