@@ -102,7 +102,7 @@ const cards = [
 ];
 
 export default function Subservice1() {
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [selectedCard, setSelectedCard] = useState(cards[0]);
   const [activeTab, setActiveTab] = useState(0);
   const pathname = usePathname();
   const slug = pathname.split("/").pop() || null;
@@ -138,40 +138,28 @@ export default function Subservice1() {
   } else if (slug === "data-loss-prevention") {
     return (
       <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white p-6">
-        <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-start space-y-8">
-          {selectedCard ? (
-
-            // left side 
-            <>
-            <selectedCard.icon className="w-20 h-20 mx-auto text-yellow-400 " />
-            <h2 className="text-2xl text-left font-bold mt-4 ">{selectedCard.title}</h2>
-            <ul className="mt-2 text-start list-disc  space-y-5">
-              {selectedCard.description.map((point, index) => (
-                <li key={index}>{point}</li>
-              ))}
-            </ul>
-          </>
-          ) : (
-            <p className="text-gray-300">Select a card to see details</p>
-          )}
-        </div>
-
-
-        {/* right side */}
-
-        <div className="w-full md:w-2/3 flex flex-wrap gap-4 p-6 justify-center">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="h-28 w-52 bg-white text-black p-4 rounded-lg flex flex-col justify-center items-center cursor-pointer transition-transform hover:scale-110"
-              onClick={() => setSelectedCard(card)}
-            >
-              <card.icon className="w-10 h-10 text-yellow-500 transition-transform hover:scale-125" />
-              <p className="mt-2 text-center font-semibold text-sm">{card.title}</p>
-            </div>
+      <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-start space-y-8">
+        <selectedCard.icon className="w-20 h-20 mx-auto text-yellow-400 " />
+        <h2 className="text-2xl text-left font-bold mt-4 ">{selectedCard.title}</h2>
+        <ul className="mt-2 text-start list-disc space-y-5">
+          {selectedCard.description.map((point, index) => (
+            <li key={index}>{point}</li>
           ))}
-        </div>
+        </ul>
       </div>
+      <div className="w-full md:w-2/3 flex flex-wrap gap-4 p-6 justify-center">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="h-28 w-52 bg-white text-black p-4 rounded-lg flex flex-col justify-center items-center cursor-pointer transition-transform hover:scale-110"
+            onClick={() => setSelectedCard(card)}
+          >
+            <card.icon className="w-10 h-10 text-yellow-500 transition-transform hover:scale-125" />
+            <p className="mt-2 text-center font-semibold text-sm">{card.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
     );
   } else if (slug === "salesforce-consulting") {
     return (

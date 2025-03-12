@@ -74,7 +74,7 @@ const Sidebar = () => {
       <div>
         <Link href="/contact" className="flex justify-center -mt-5 mr-11">
           <button className="px-4 py-2 bg-blueColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-            Know More
+            Talk to an Expert
             <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
               &gt;&gt;
             </span>
