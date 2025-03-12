@@ -32,24 +32,63 @@ const accordionItems = [
       <>
         <p>Common DLP Challenges:    </p>
         <ul className="my-2 list-disc pl-6">
-          <li>Data Breaches & Insider Threats: Sensitive data can be exposed through human errors or malicious actors.
+          <li><strong>Data Breaches & Insider Threats:</strong> Sensitive data can be exposed through human errors or malicious actors.
           </li>
-          <li>Regulatory Compliance: Organizations must adhere to HIPAA, GDPR, and other data protection laws.</li>
-          <li>Securing AI-Generated Content: Generative AI can introduce new security risks, requiring advanced threat detection.
+          <li><strong>Regulatory Compliance: </strong>Organizations must adhere to HIPAA, GDPR, and other data protection laws.</li>
+          <li><strong>Securing AI-Generated Content:</strong> Generative AI can introduce new security risks, requiring advanced threat detection.
           </li>
         </ul>
-        <p>How AI-Powered DLP Helps:
+        <p><strong>How AI-Powered DLP Helps:</strong>
         </p>
         <ul className="my-2 list-disc pl-6">
-          <li>Detects Data Loss: Monitors data in use, at rest, and in motion to identify potential breaches.
+          <li><strong>Detects Data Loss:</strong> Monitors data in <strong>use, at rest, and in motion </strong>to identify potential breaches.
           </li>
-          <li>Prevents Unauthorized Transfers: Blocks sensitive data extraction and illicit transfers.
+          <li><strong>Prevents Unauthorized Transfers:</strong> Blocks sensitive data extraction and illicit transfers.
           </li>
-          <li>Ensures Compliance: Helps organizations meet data protection regulations.
+          <li><strong>Ensures Compliance: </strong>Helps organizations meet data protection regulations.
           </li>
-          <li>Protects Confidential Information: Safeguards PII, financial data, and intellectual property.
+          <li><strong>Protects Confidential Information: </strong>Safeguards <strong>PII, financial data, and intellectual property.</strong>
           </li>
         </ul>
+        <p><strong>AI-Powered DLP with Fortinet
+        </strong></p>
+
+        <p>Alta-Futuris Solutions partners with <strong>Fortinet </strong>to secure <strong>Generative AI-based AI Agents </strong>with <strong>FortiAI & FortiDLP.</strong>
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "FortiAI",
+    content: (
+      <>
+      
+        <ol className="my-2 list-decimal pl-6">
+          <li> Uses <strong>AI & Machine Learning</strong> to detect and mitigate threats across networks.
+          </li>
+          <li>Monitors <strong>inputs, outputs, and AI models </strong>for proactive defense.
+          </li>
+          <li>Features<strong> input sanitization, output filtering, model integrity checks, and anomaly detection.</strong>
+          </li>  
+        </ol>
+      </>
+    ),
+  },
+  {
+    title: "FortiDLP",
+    content: (
+      <>
+      <p>Alta-Futuris Solutions offers:
+      </p>
+        <ol className="my-2 list-decimal pl-6">
+          <li> <strong>Cloud-native AI-enhanced endpoint protection</strong> against data leaks and insider threats.
+          </li>
+          <li>Provides<strong> real-time visibility </strong>into business data flows.
+          </li>
+          <li>Detects <strong>high-risk activities</strong> across users, endpoints, and cloud storage.
+          </li>
+                  
+        </ol>
       </>
     ),
   },
@@ -60,13 +99,13 @@ const accordionItems = [
       <p>Alta-Futuris Solutions offers:
       </p>
         <ol className="my-2 list-decimal pl-6">
-          <li> Consultation & Strategy Development for AI-driven cybersecurity.
+          <li><strong> Consultation & Strategy Development </strong>for AI-driven cybersecurity.
           </li>
-          <li>Deployment & Implementation of FortiDLP and AI-integrated security solutions.
+          <li><strong>Deployment & Implementation</strong> of<strong> FortiDLP</strong> and AI-integrated security solutions.
           </li>
-          <li>Real-time Threat Monitoring and automated responses to potential breaches.
+          <li><strong>Real-time Threat Monitoring </strong>and automated responses to potential breaches.
           </li>
-          <li>Data Flow Insights & Investigations for risk management & compliance.
+          <li><strong>Data Flow Insights & Investigations</strong> for<strong> risk management & compliance.</strong>
           </li>
          
         </ol>
@@ -78,13 +117,13 @@ const accordionItems = [
     content: (
       <>
         <ul className="my-2 list-disc pl-6">
-          <li> Prevent Data Leaks through real-time monitoring & automated security.
+          <li><strong> Prevent Data Leaks </strong>through real-time monitoring & automated security.
           </li>
-          <li> Ensure Regulatory Compliance with HIPAA, GDPR, and other global standards.
+          <li><strong> Ensure Regulatory Compliance</strong> with<strong> HIPAA, GDPR, and other global standards.</strong>
           </li>
-          <li>  Enhance Security & Governance with AI-powered threat intelligence.
+          <li><strong>  Enhance Security & Governance</strong> with AI-powered threat intelligence.
           </li>
-          <li> Protect Intellectual Property & Confidential Data from cyber threats.
+          <li> <strong>Protect Intellectual Property & Confidential Data </strong>from cyber threats.
 </li>
         </ul>
       </>

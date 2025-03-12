@@ -10,6 +10,7 @@ const Menu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
@@ -95,16 +96,48 @@ const Menu = () => {
                   Partnerships
                 </Link>
               </li>
-              <li className="py-4">
-                <Link href="/case-studies" className="hover:text-brown-600">
-                  Case Studies
-                </Link>
-              </li>
-              <li className="py-4">
-                <Link href="/blog" className="hover:text-brown-600">
-                  Blogs
-                </Link>
-              </li>
+
+              <li
+      className="relative py-4 group"
+      onMouseEnter={() => setIsMenuOpen(true)}
+      onMouseLeave={() => setIsMenuOpen(false)}
+    >
+      <Link href="#" className="hover:text-brown-600">
+        Insights
+      </Link>
+
+      {isMenuOpen && (
+        <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200">
+          <ul className="py-2">
+            <li>
+              <Link
+                href="/case-studies"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Case Study
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Blogs
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/podcast"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Podcast
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </li>
+              
               <li className="py-4">
                 <Link href="/about" className="hover:text-brown-600">
                   About Us
@@ -185,16 +218,46 @@ const Menu = () => {
       Partnerships
     </Link>
   </li>
-  <li>
-    <Link href="/case-studies" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
-      Case Studies
-    </Link>
-  </li>
-  <li>
-    <Link href="/blog" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
-      Blogs
-    </Link>
-  </li>
+   <li
+      className="relative py-4 group"
+      onMouseEnter={() => setIsMenuOpen(true)}
+      onMouseLeave={() => setIsMenuOpen(false)}
+    >
+      <Link href="#" className="hover:text-brown-600">
+        Insights
+      </Link>
+
+      {isMenuOpen && (
+        <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200">
+          <ul className="py-2">
+            <li>
+              <Link
+                href="/case-studies"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Case Study
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Blogs
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/podcast"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Podcast
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </li>
   <li>
     <Link href="/career" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
       Career
