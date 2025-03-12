@@ -29,8 +29,6 @@ export default function ServicesLayout({ children }) {
 
       {/* Full-Width Section that updates based on the selected service */}
       <Subservice1 service={selectedService} />
-      
-      
     </>
   );
 }
