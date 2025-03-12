@@ -4,13 +4,12 @@ import React from "react";
 const partners = [
   {
     imgSrc: "/assets/Partnershipcard1.png",
-    description:
-      "We are utilizing various services under Azure Artificial Intelligence and Data Engineering to provide solutions for Microsoft for Startups program.",
+    description:"We are utilizing various services under Azure Artificial Intelligence and Data Engineering to provide solutions for our clients under Microsoft for Startups program. Focused to provide solutions in Edge AI, Generative AI and Geo-spatial/ remote sensing AI for our clients.",
   },
   {
     imgSrc: "/assets/Partnershipcard2.png", 
-    title: "Salesforce Partner",
-    description: "Salesforce Partner",
+    title: "Salesforce Partner"
+    
   },
 ];
 
@@ -39,20 +38,22 @@ const Team = () => {
       </section>
       </section>
 
-      <div className="grid grid-col md:grid-row gap-16 justify-center items-center p-6">
+      <div className="grid grid-col md:grid-row gap-16 justify-center items-center p-6 md:ml-36">
       {partners.map((partner, index) => (
         <div
           key={index}
-          className="w-[100vh] h-80  border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-white "
+          className="md:w-[100vh] md:h-80 border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden 
+              bg-gradient-to-b from-white to-blue-500"
         >
           <img
-            src={partner.imgSrc}
-            alt={partner.title}
-            className="w-80 h-40  bg-gray-100 p-10"
-          />
+  src={partner.imgSrc}
+  alt={partner.title}
+  className="w-full h-48 bg-gray-100 p-10 mx-auto flex justify-center items-center "
+/>
+
           <div className="p-4 text-center">
-            <h2 className="text-lg font-semibold">{partner.title}</h2>
-            <p className="text-sm text-gray-600 mt-2">{partner.description}</p>
+            <h2 className="text-xl font-semibold ">{partner.title}</h2>
+            <p className="text-base text-gray-600 mt-2">{partner.description}</p>
           </div>
         </div>
       ))}
