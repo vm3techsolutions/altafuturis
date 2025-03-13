@@ -14,7 +14,7 @@ const Menu = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white shadow-md w-full">
+      <div className=" bg-white shadow-md w-full fixed top-0 z-50">
         {/* Top Bar */}
         <div className="menuBar border-b py-2">
           <div className="container mx-auto px-4 md:px-2 lg:px-12 flex flex-wrap items-center justify-between">
@@ -69,7 +69,7 @@ const Menu = () => {
         </div>
 
         {/* Navigation Menu */}
-        <nav className="hidden lg:block border-b bg-white relative">
+        <nav className="hidden lg:block border-b bg-white relative ">
           <div className="container mx-auto px-4">
             <ul className="flex justify-around text-sm font-bold uppercase">
               <li
