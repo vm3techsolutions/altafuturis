@@ -41,6 +41,7 @@ export default function Form() {
         relationship: "",
         services: "",
         message: "",
+        about:"",
       });
     } catch (error) {
       console.error("Error", error);
@@ -167,12 +168,14 @@ export default function Form() {
     </div>
 
     <div>
-      <label className="mb-3 block text-black font-semibold text-lg">Services :</label>
-      <select name="services" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <label className="mb-3 block text-black font-semibold text-lg">How did you hear about our website?
+      </label>
+      <select name="about" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Service</option>
-        <option value="LinkedIn">LinkedIn</option>
+        <option value="LinkedIn">LinkedIn      </option>
         <option value="Google">Google</option>
-        <option value="X">X</option>
+        <option value="Twitter">X (formerly Twitter)
+        </option>
        
       </select>
     </div>
