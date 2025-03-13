@@ -167,6 +167,17 @@ export default function Form() {
     </div>
 
     <div>
+      <label className="mb-3 block text-black font-semibold text-lg">Services :</label>
+      <select name="services" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+        <option value="">Select Service</option>
+        <option value="LinkedIn">LinkedIn</option>
+        <option value="Google">Google</option>
+        <option value="X">X</option>
+       
+      </select>
+    </div>
+
+    <div>
       <label className="mb-3 block text-black font-semibold text-lg">Message :</label>
       <textarea name="message" rows="4" value={formData.message} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded"></textarea>
     </div>

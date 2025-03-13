@@ -33,7 +33,7 @@ const Team = () => {
         <div
           key={index}
            className="md:w-[100vh] md:h-80 border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden 
-              bg-gradient-to-b from-gray-100 via-gray-100 via-60% to-blue-500"
+              bg-gray-100"
         >
           <img
   src={partner.imgSrc}

@@ -257,7 +257,7 @@ const Menu = () => {
           </ul>
         </div>
       )}
-    </li>
+    </li> 
   <li>
     <Link href="/career" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
       Career
