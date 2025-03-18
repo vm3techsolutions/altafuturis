@@ -1,7 +1,7 @@
 "use client"
-
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const accordionItems = [
   
@@ -115,6 +115,9 @@ const AiAppDev = () => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
 
+  const ref = useRef(null);
+    const isInView = useInView(ref, {once: true, margin: "-100px"});
+
   return (
     <div className="relative py-3 px-2">
       <div className="heading">
@@ -137,9 +140,17 @@ const AiAppDev = () => {
           </p>
         </div>
 
-      <div className="my-6 space-y-14">
+      <div ref={ref} className="my-6 space-y-14">
         {accordionItems.map((item, index) => (
           <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
+            <motion.div
+            
+            key={index}
+            initial={{opacity: 0, x: -50}}
+            animate={isInView ? {opacity: 1, x: 0} : {}}
+            viewport={{once: true, amount: 0.3}}
+            transition={{duration: 0.6}}
+            >
             <button
               className="w-full text-left flex justify-between items-center font-bold text-xl"
               onClick={() => toggleAccordion(index)}
@@ -147,7 +158,25 @@ const AiAppDev = () => {
               {item.title}
               {openAccordion === index ? <FaMinus /> : <FaPlus />}
             </button>
-            {openAccordion === index && <div className="mt-2 text-gray-900">{item.content}</div>}
+
+            {/* Tab Content */}
+            <AnimatePresence>
+            {openAccordion === index && (
+            <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="px-6 text-gray-700 overflow-hidden"
+        >
+            <div className="mt-2 text-gray-900">{item.content}</div> 
+            
+            </motion.div>
+            )
+            }
+
+            </AnimatePresence>
+            </motion.div>
           </div>
         ))}
       </div>
