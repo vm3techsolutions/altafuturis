@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Shweta Pawar",
     designation: "Agents, LLMs & GenAI Expert",
-    image: "/assets/ShwetaPawarimg.jpeg",
+    image: "/assets/shwetaPawar.jpg",
     linkedin: "https://www.linkedin.com/in/aishweta/",
   },
   {

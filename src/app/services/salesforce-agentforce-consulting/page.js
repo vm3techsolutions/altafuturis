@@ -123,11 +123,11 @@ const AiAppDev = () => {
       <div className="content my-6">
         <h3 className="text-2xl font-bold">Introduction :</h3>
         <p>Salesforce Agentforce is revolutionizing how businesses optimize workflows, enhance productivity, and improve customer service using autonomous AI agents. However, gaining a competitive edge with Agentforce requires deep expertise and strategic implementation.</p>
-        <p>At Alta-Futuris Solutions, our AI and Salesforce consulting expertise empowers businesses to maximize the potential of Agentforce. Whether it's customizing AI agents, integrating with third-party platforms, or ensuring seamless CRM connectivity — we help you achieve transformative business outcomes.</p>
+        <p>At Alta-Futuris Solutions, our AI and Salesforce consulting expertise empowers businesses to maximize the potential of Agentforce. Whether it&apos;s customizing AI agents, integrating with third-party platforms, or ensuring seamless CRM connectivity — we help you achieve transformative business outcomes.</p>
       </div>
       
       {/* Accordion Sections */}
-      <div className="my-6 space-y-14">
+      <div className=" space-y-14">
         {accordionItems.map((item, index) => (
           <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
             <button
