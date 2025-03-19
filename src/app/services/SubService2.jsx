@@ -29,114 +29,133 @@ const aiDevelopementBlockchain = [
   {
     id: 1,
     title: "Initial Consultation and Requirements Gathering",
+    img: "/assets/blockchainSubServices/InitialConsultationandRequirementsGathering.png",
     content:
       "Needs Assessment: Understanding the client's business goals, challenges, and specific requirements for integrating AI with blockchain. Use Case Identification: Identifying and prioritizing use cases where AI agents can add the most value in a blockchain context. Stakeholder Interviews: Engaging with key stakeholders to gather insights and expectations.",
   },
   {
     id: 2,
     title: "Project Planning and Strategy",
+    img: "/assets/blockchainSubServices/ProjectPlanningandStrategy.png",
     content:
       "Project Scope Definition: Clearly defining the scope, objectives, and deliverables of the AI agent development project. Timeline and Milestones: Establishing a project timeline with key milestones and deadlines. Resource Allocation: Determining the necessary resources, including team members, tools, and technologies.",
   },
   {
     id: 3,
     title: "Blockchain Platform Selection",
+    img: "/assets/blockchainSubServices/BlockchainPlatformSelection.png",
     content:
       "Platform Evaluation: Evaluating different blockchain platforms (ex- Ethereum, Hyperledger, Binance Smart Chain) to determine the best fit for the project. Consensus Mechanism: Choosing an appropriate consensus mechanism (ex- Proof of Work, Proof of Stake) based on the project requirements. Smart Contract Language: Selecting a suitable smart contract programming language (ex- Solidity, Vyper).",
   },
   {
     id: 4,
     title: "AI Agent Design and Architecture",
+    img: "/assets/blockchainSubServices/AIAgentDesignandArchitecture.png",
     content:
       "Agent Architecture Design: Designing the overall architecture of the AI agent, including decision-making frameworks, learning algorithms, and interaction protocols. Smart Contract Integration: Designing smart contracts that will interact with the AI agent for automated decision-making and transactions. Data Flow Design: Mapping out how data will flow between the AI agent, blockchain, and other systems.",
   },
   {
     id: 5,
     title: "Data Management and Integration",
+    img: "/assets/blockchainSubServices/DataManagementandIntegration.png",
     content:
       "Data Requirements: Identifying the types and sources of data needed to train and operate the AI agent. Data Collection: Gathering and compiling relevant datasets from various sources. Data Cleaning and Preprocessing: Cleaning, normalizing, and preprocessing data to ensure it is suitable for training AI models. On-Chain and Off-Chain Data: Managing the integration of on-chain (blockchain) and off-chain data sources.",
   },
   {
     id: 6,
     title: "Model Development and Training",
+    img: "/assets/blockchainSubServices/ModelDevelopmentandTraining.png",
     content:
       "Algorithm Selection: Choosing appropriate machine learning algorithms and models based on the problem domain. Model Training: Training AI models using the prepared datasets, often involving techniques like supervised, unsupervised, or reinforcement learning. Hyperparameter Tuning: Optimizing model parameters to improve performance and accuracy.",
   },
   {
     id: 7,
     title: "Smart Contract Development",
+    img: "/assets/blockchainSubServices/SmartContractDevelopment.png",
     content:
       "Contract Design: Designing smart contracts that will interact with the AI agent for automated decision-making and transactions. Contract Coding: Writing and testing smart contract code using the selected programming language. Security Audits: Conducting security audits to identify and mitigate vulnerabilities in the smart contracts.",
   },
   {
     id: 8,
     title: "Integration with Blockchain",
+    img: "/assets/blockchainSubServices/IntegrationwithBlockchain.png",
     content:
       "API Development: Creating APIs to facilitate communication between the AI agent and the blockchain. System Integration: Ensuring seamless integration with the blockchain network, including nodes, wallets, and other components. Middleware Development: Developing middleware components if needed to bridge gaps between different systems and technologies.",
   },
   {
     id: 9,
     title: "Testing and Validation",
+    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
     content:
       "Unit Testing: Conducting unit tests to validate individual components of the AI agent and smart contracts. Integration Testing: Testing the AI agent within the broader blockchain system to ensure seamless operation and data flow. User Acceptance Testing (UAT): Engaging end-users to test the integrated system and provide feedback. Performance Testing: Evaluating the performance of the integrated system under various conditions and loads.",
   },
   {
     id: 10,
     title: "Deployment",
+    img: "/assets/blockchainSubServices/Deployment.png",
     content:
       "Deployment Planning: Developing a deployment plan that includes roll-out strategies, timelines, and contingency plans. Environment Setup: Setting up the necessary environments (development, testing, production) for deployment. Go-Live Support: Providing support during the initial go-live phase to address any issues that arise.",
   },
   {
     id: 11,
     title: "Monitoring and Maintenance",
+    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
     content:
       "Performance Monitoring: Continuously monitoring the performance of the AI agent and smart contracts on the blockchain. Error Handling: Implementing mechanisms for detecting and handling errors or anomalies. Regular Updates: Providing regular updates and improvements to the AI agent and smart contracts based on user feedback and performance data.",
   },
   {
     id: 12,
     title: "User Training and Documentation",
+    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
     content:
       "Training Programs: Developing and conducting training programs for end-users and administrators. Documentation: Creating comprehensive documentation, including user manuals, technical guides, and API documentation. Knowledge Transfer: Ensuring that the client’s team is equipped with the knowledge and skills to maintain and evolve the AI agent. ",
   },
   {
     id: 13,
     title: "Security and Compliance",
+    img: "/assets/blockchainSubServices/SecurityandCompliance.png",
     content:
       "Data Security: Implementing robust security measures to protect data used by the AI agent and stored on the blockchain. Regulatory Compliance: Ensuring that the AI agent and blockchain solution comply with relevant laws and regulations, such as GDPR, CCPA, or industry-specific standards. Access Control: Setting up access control mechanisms to restrict who can interact with or modify the AI agent and smart contracts. ",
   },
   {
     id: 14,
     title: "Scalability and Future-Proofing",
+    img: "/assets/blockchainSubServices/ScalabilityandFutureProofing .png",
     content:
       "Scalability Planning: Designing the AI agent and blockchain solution to scale with the business, including cloud-based deployment and resource management. Future-Proofing: Ensuring that the AI agent and blockchain solution can adapt to future technological advancements and changing business needs. Modular Design: Using a modular design approach to facilitate easy updates and enhancements. ",
   },
   {
     id: 15,
     title: "Custom Features and Capabilities",
+    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
     content:
       "Natural Language Processing (NLP): Implementing NLP capabilities for tasks like language understanding, sentiment analysis, and text generation. Computer Vision: Adding computer vision capabilities for image and video analysis. Autonomous Decision-Making: Developing algorithms for autonomous decision-making based on real-time data. Personalization: Creating personalized experiences for users based on their preferences and behavior.",
   },
   {
     id: 16,
     title: "Post-Deployment Support",
+    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
     content:
       "Technical Support: Offering ongoing technical support and troubleshooting for the AI agent and blockchain solution. Performance Optimization: Continuously optimizing the AI agent’s performance based on real-world usage data. Feature Enhancements: Adding new features and capabilities based on user feedback and evolving business needs.",
   },
   {
     id: 17,
     title: "Reporting and Analytics",
+    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
     content:
       "Performance Metrics: Defining and tracking key performance indicators (KPIs) for the AI agent and blockchain solution. Analytics Dashboards: Creating dashboards to visualize performance data and insights. Regular Reporting: Providing regular reports on the AI agent’s performance, usage, and impact on business outcomes.",
   },
   {
     id: 18,
     title: "Collaboration and Communication",
+    img: "/assets/blockchainSubServices/CollaborationandCommunication.png",
     content:
       "Regular Updates: Keeping stakeholders informed with regular updates on project progress. Feedback Loops: Establishing feedback loops to gather input from users and stakeholders. Collaborative Development: Working closely with the client’s team throughout the development process.",
   },
   {
     id: 19,
     title: "Cost Management",
+    img: "/assets/blockchainSubServices/CostManagement.png",
     content:
       "Budget Planning: Developing a budget for the AI agent and blockchain development project. Cost Tracking: Monitoring and managing costs throughout the project lifecycle. ROI Analysis: Conducting return on investment (ROI) analysis to evaluate the financial impact of the AI agent and blockchain solution.",
   },
@@ -216,6 +235,7 @@ export default function Subservice2() {
           <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white py-6">
             {/* Left Side - Selected Card Details */}
             <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-center space-y-6">
+            <img src={selectedCard.img} alt={selectedCard.title} className=" w-14 h-14 mx-auto text-yellow-600 " />
         <h2 className="text-2xl text-center font-bold mt-4">
           {selectedCard?.title}
         </h2>
@@ -240,11 +260,11 @@ export default function Subservice2() {
                   }`}
                   onClick={() => setSelectedCard(card)}
                 >
-                  {/* <img
+                  <img
                     src={card.img}
                     alt={card.title}
-                    className="w-10 h-10 transition-transform hover:scale-125"
-                  /> */}
+                    className="w-8 h-8 transition-transform hover:scale-125"
+                  />
                   <p className="mt-2 text-center font-semibold text-sm">
                     {card.title}
                   </p>
