@@ -85,7 +85,7 @@ const aiDevelopementBlockchain = [
   {
     id: 9,
     title: "Testing and Validation",
-    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
+    img: "/assets/blockchainSubServices/TestingandValidation.png",
     content:
       "Unit Testing: Conducting unit tests to validate individual components of the AI agent and smart contracts. Integration Testing: Testing the AI agent within the broader blockchain system to ensure seamless operation and data flow. User Acceptance Testing (UAT): Engaging end-users to test the integrated system and provide feedback. Performance Testing: Evaluating the performance of the integrated system under various conditions and loads.",
   },
@@ -99,14 +99,14 @@ const aiDevelopementBlockchain = [
   {
     id: 11,
     title: "Monitoring and Maintenance",
-    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
+    img: "/assets/blockchainSubServices/MonitoringandMaintenance.png",
     content:
       "Performance Monitoring: Continuously monitoring the performance of the AI agent and smart contracts on the blockchain. Error Handling: Implementing mechanisms for detecting and handling errors or anomalies. Regular Updates: Providing regular updates and improvements to the AI agent and smart contracts based on user feedback and performance data.",
   },
   {
     id: 12,
     title: "User Training and Documentation",
-    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
+    img: "/assets/blockchainSubServices/UserTrainingandDocumentation.png",
     content:
       "Training Programs: Developing and conducting training programs for end-users and administrators. Documentation: Creating comprehensive documentation, including user manuals, technical guides, and API documentation. Knowledge Transfer: Ensuring that the client’s team is equipped with the knowledge and skills to maintain and evolve the AI agent. ",
   },
@@ -127,7 +127,7 @@ const aiDevelopementBlockchain = [
   {
     id: 15,
     title: "Custom Features and Capabilities",
-    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
+    img: "/assets/blockchainSubServices/CustomFeaturesandCapabilities.png",
     content:
       "Natural Language Processing (NLP): Implementing NLP capabilities for tasks like language understanding, sentiment analysis, and text generation. Computer Vision: Adding computer vision capabilities for image and video analysis. Autonomous Decision-Making: Developing algorithms for autonomous decision-making based on real-time data. Personalization: Creating personalized experiences for users based on their preferences and behavior.",
   },
@@ -141,7 +141,7 @@ const aiDevelopementBlockchain = [
   {
     id: 17,
     title: "Reporting and Analytics",
-    img: "/assets/blockchainSubServices/PostDeploymentSupport.png",
+    img: "/assets/blockchainSubServices/ReportingandAnalytics.png",
     content:
       "Performance Metrics: Defining and tracking key performance indicators (KPIs) for the AI agent and blockchain solution. Analytics Dashboards: Creating dashboards to visualize performance data and insights. Regular Reporting: Providing regular reports on the AI agent’s performance, usage, and impact on business outcomes.",
   },
