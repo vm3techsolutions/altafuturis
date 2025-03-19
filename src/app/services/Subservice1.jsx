@@ -117,7 +117,7 @@ export default function Subservice1() {
 
   if (slug === "ai-app-dev") {
     return (
-      <div className="p-6 md:p-10">
+      <div className="px-6 md:p-10">
         <div className="text-center">
           <h3 className="text-2xl font-bold">AI’s Next Disruptor: AI Agents</h3>
           <p>AI Agents can take business roles, make strategic decisions, and drive productivity at scale.</p>
@@ -127,14 +127,14 @@ export default function Subservice1() {
               {aiAgentServices.map((item, index) => (
                 <button
                   key={index}
-                  className={`py-3 px-4 text-left w-full font-semibold transition-all border-l-4 ${activeTab === index ? "border-blue-500 text-blue-600 bg-gray-100" : "border-transparent text-gray-900 hover:bg-gray-100"}`}
+                  className={`py-4 my-2 text-lg px-4 text-left w-full font-semibold transition-all border-l-4 ${activeTab === index ? "border-blue-500 text-blue-600 bg-gray-100" : "border-transparent text-gray-900 hover:bg-gray-100"}`}
                   onClick={() => setActiveTab(index)}
                 >
                   {item.title}
                 </button>
               ))}
             </div>
-            <div className="p-4 border rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
+            <div className="py-14 px-8 border text-lg rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
               <p>{aiAgentServices[activeTab].content}</p>
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function Subservice1() {
     );
   } else if (slug === "salesforce-consulting") {
     return (
-      <div className="p-6 md:p-10">
+      <div className="px-6 md:p-10">
         <div className="text-center">
           <h3 className="text-2xl font-bold">Salesforce Development, Support, and Maintenance</h3>
           <p>Optimize your Salesforce experience with expert solutions.</p>
@@ -179,14 +179,14 @@ export default function Subservice1() {
               {salesforceConsulting.map((item, index) => (
                 <button
                   key={index}
-                  className={`py-3 px-4 text-left w-full font-semibold transition-all border-l-4 ${activeTab === index ? "border-blue-500 text-blue-600 bg-gray-100" : "border-transparent text-gray-900 hover:bg-gray-100"}`}
+                  className={`py-4 my-2 px-4 text-left text-lg w-full font-semibold transition-all border-l-4 ${activeTab === index ? "border-blue-500 text-blue-600 bg-gray-100" : "border-transparent text-gray-900 hover:bg-gray-100"}`}
                   onClick={() => setActiveTab(index)}
                 >
                   {item.title}
                 </button>
               ))}
             </div>
-            <div className="p-4 border rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
+            <div className="py-14 px-8 border rounded-lg shadow-lg text-lg bg-[#6328A6] text-white text-left w-full">
               <p>{salesforceConsulting[activeTab].content}</p>
             </div>
           </div>

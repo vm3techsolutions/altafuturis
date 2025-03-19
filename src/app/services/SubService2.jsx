@@ -178,7 +178,7 @@ export default function Subservice2() {
         {agentforceSubServices.map((item, index) => (
           <button
             key={index}
-            className={`py-4 my-2 px-4 text-left w-full font-semibold transition-all border-l-4 ${
+            className={`py-4 my-2 px-4 text-left text-lg w-full font-semibold transition-all border-l-4 ${
               activeTab === index
                 ? "border-blue-500 text-blue-600 bg-gray-100"
                 : "border-transparent text-gray-900 hover:bg-gray-100"
@@ -191,7 +191,7 @@ export default function Subservice2() {
       </div>
 
       <div className="py-14 px-8 border rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
-        <ul className="list-none space-y-2">
+        <ul className="list-none text-lg space-y-2">
           {agentforceSubServices[activeTab].content
             .split(".")
             .filter((sentence) => sentence.trim() !== "") // Remove empty entries
