@@ -14,7 +14,7 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full h-[30vh] md:h-[95vh] lg:h-[95vh] bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}

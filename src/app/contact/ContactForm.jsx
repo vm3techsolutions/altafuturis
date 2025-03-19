@@ -125,7 +125,7 @@ export default function Form() {
 
     <div>
       <label className="mb-3 block text-black font-semibold text-lg">Company Revenue :</label>
-      <select name="companyRevenue" value={formData.companyRevenue} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <select name="companyRevenue" value={formData.companyRevenue} onChange={handleChange} className="w-full p-[9px] border border-gray-400 rounded" required>
         <option value="">Choose Revenue</option>
         <option value="Below $1M">Less than $50M</option>
         <option value="$1M - $10M">$51M - $100M</option>
@@ -138,7 +138,7 @@ export default function Form() {
 
     <div>
       <label className="mb-3 block text-black font-semibold text-lg">Role :</label>
-      <select name="role" value={formData.role} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <select name="role" value={formData.role} onChange={handleChange} className="w-full p-[9px] border border-gray-400 rounded" required>
         <option value="">Select Role</option>
         <option value="Customer">VP or C-Scuit</option>
         <option value="Partner">Director or Sr.Director</option>
@@ -150,7 +150,7 @@ export default function Form() {
 
     <div>
       <label className="mb-3 block text-black font-semibold text-lg">Relationship with Alta :</label>
-      <select name="relationship" value={formData.relationship} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <select name="relationship" value={formData.relationship} onChange={handleChange} className="w-full p-[9px] border border-gray-400 rounded" required>
         <option value="">Select Relationship</option>
         <option value="Customer">Client - Current or Potential</option>
         <option value="Partner">Employee - Current or Former</option>
@@ -164,7 +164,7 @@ export default function Form() {
 
     <div>
       <label className="mb-3 block text-black font-semibold text-lg">Services :</label>
-      <select name="services" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <select name="services" value={formData.services} onChange={handleChange} className="w-full p-[9px] border border-gray-400 rounded" required>
         <option value="">Select Service</option>
         <option value="Service 1">Generative AI Application Development</option>
         <option value="Service 2">Salesforce Agentforce Consulting</option>
@@ -177,7 +177,7 @@ export default function Form() {
     <div>
       <label className="mb-3 block text-black font-semibold text-lg">How did you hear about our website?
       </label>
-      <select name="about" value={formData.about} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <select name="about" value={formData.about} onChange={handleChange} className="w-full p-[9px] border  border-gray-400 rounded" required>
         <option value="">Select Service</option>
         <option value="LinkedIn">LinkedIn      </option>
         <option value="Google">Google</option>
@@ -200,7 +200,7 @@ export default function Form() {
     </div>
 
     <div className="col-span-2 mt-2">
-            <button type="submit" className="px-10 bg-blueColor text-white font-semibold py-2 rounded-xl hover:bg-brownColor">Submit</button>
+            <button type="submit" className="px-10 bg-blueColor text-white font-semibold py-2  rounded-xl hover:bg-brownColor">Submit</button>
           </div>
 
     {responseMessage && <p className="text-center text-green-600 mt-2">{responseMessage}</p>}
