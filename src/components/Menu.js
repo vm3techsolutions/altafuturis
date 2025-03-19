@@ -77,7 +77,7 @@ const Menu = () => {
                 onMouseEnter={() => setIsMegaMenuOpen(true)}
                 onMouseLeave={() => setIsMegaMenuOpen(false)}
               >
-                <Link href="" className="hover:text-brown-600">
+                <Link href="" className="hover:text-blueColor">
                   Services
                 </Link>
                 {isMegaMenuOpen && (
@@ -87,12 +87,12 @@ const Menu = () => {
                 )}
               </li>
               <li className="py-4">
-                <Link href="/solutions" className="hover:text-brown-600">
+                <Link href="/solutions" className="hover:text-blueColor">
                   Solutions
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/partnership" className="hover:text-brown-600">
+                <Link href="/partnership" className="hover:text-blueColor">
                   Partnerships
                 </Link>
               </li>
@@ -102,7 +102,7 @@ const Menu = () => {
       onMouseEnter={() => setIsMenuOpen(true)}
       onMouseLeave={() => setIsMenuOpen(false)}
     >
-      <Link href="#" className="hover:text-brown-600">
+      <Link href="#" className="hover:text-blueColor">
         Insights
       </Link>
 
@@ -112,7 +112,7 @@ const Menu = () => {
             <li>
               <Link
                 href="/case-studies"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
               >
                 Case Study
               </Link>
@@ -120,7 +120,7 @@ const Menu = () => {
             <li>
               <Link
                 href="/blog"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
               >
                 Blogs
               </Link>
@@ -128,7 +128,7 @@ const Menu = () => {
             <li>
               <Link
                 href="/podcast"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
               >
                 Podcast
               </Link>
@@ -139,17 +139,17 @@ const Menu = () => {
     </li>
               
               <li className="py-4">
-                <Link href="/about" className="hover:text-brown-600">
+                <Link href="/about" className="hover:text-blueColor">
                   About Us
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/career" className="hover:text-brown-600">
+                <Link href="/career" className="hover:text-blueColor">
                   Career
                 </Link>
               </li>
               <li className="py-4">
-                <Link href="/contact" className="hover:text-brown-600">
+                <Link href="/contact" className="hover:text-blueColor">
                   Contact Us
                 </Link>
               </li>
@@ -172,19 +172,19 @@ const Menu = () => {
 
           <ul className="flex flex-col items-start space-y-3 p-6">
   <li>
-    <Link href="/" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+    <Link href="/" className="hover:text-blueColor" onClick={() => setIsMobileMenuOpen(false)}>
       Home
     </Link>
   </li>
   <li>
-    <Link href="/about" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
+    <Link href="/about" className="hover:text-blueColor" onClick={() => setIsMobileMenuOpen(false)}>
       About Us
     </Link>
   </li>
   <li>
     <button
       onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
-      className="hover:text-brown-600 w-full text-left"
+      className="hover:text-blueColor w-full text-left"
     >
       Services {isServicesMenuOpen ? "▲" : "▼"}
     </button>

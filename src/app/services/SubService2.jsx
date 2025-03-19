@@ -153,48 +153,51 @@ export default function Subservice2() {
   if (slug === "salesforce-agentforce-consulting") {
     return (
       <div className="px-6 md:p-10">
-        <div className="text-left">
-          <div className="flex flex-col md:flex-row gap-6 mt-6">
-            <div className="w-full md:w-1/2 border-r border-gray-300">
-              {agentforceSubServices.map((item, index) => (
-                <button
-                  key={index}
-                  className={`py-3 px-4 text-left w-full font-semibold transition-all border-l-4 ${
-                    activeTab === index
-                      ? "border-blue-500 text-blue-600 bg-gray-100"
-                      : "border-transparent text-gray-900 hover:bg-gray-100"
-                  }`}
-                  onClick={() => setActiveTab(index)}
-                >
-                  {item.title}
-                </button>
-              ))}
-            </div>
-            {/* <div className="p-4 border rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
-              <p>{agentforceSubServices[activeTab].content}</p>
-            </div> */}
-
-            <div className="p-4 border rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
-              {agentforceSubServices[activeTab].content
-                .split(".")
-                .filter((sentence) => sentence.trim() !== "") // Remove empty entries
-                .map((sentence, index) => {
-                  const parts = sentence.split(":"); // Split at colon
-                  return (
-                    <p key={index}>
-                      {parts.length > 1 ? (
-                        <strong>{parts[0]}:</strong>
-                      ) : (
-                        parts[0]
-                      )}
-                      {parts.length > 1 && parts[1]}
-                    </p>
-                  );
-                })}
-            </div>
-          </div>
-        </div>
+  <div className="text-left">
+    <div className="flex flex-col md:flex-row items-start justify-start gap-6 mt-6">
+      <div className="w-full md:w-1/2 border-r border-gray-300">
+        {agentforceSubServices.map((item, index) => (
+          <button
+            key={index}
+            className={`py-4 my-2 px-4 text-left w-full font-semibold transition-all border-l-4 ${
+              activeTab === index
+                ? "border-blue-500 text-blue-600 bg-gray-100"
+                : "border-transparent text-gray-900 hover:bg-gray-100"
+            }`}
+            onClick={() => setActiveTab(index)}
+          >
+            {item.title}
+          </button>
+        ))}
       </div>
+
+      <div className="py-14 px-8 border rounded-lg shadow-lg bg-[#6328A6] text-white text-left w-full">
+        <ul className="list-none space-y-2">
+          {agentforceSubServices[activeTab].content
+            .split(".")
+            .filter((sentence) => sentence.trim() !== "") // Remove empty entries
+            .map((sentence, index) => {
+              const parts = sentence.split(":"); // Split at colon
+              return (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-white inline-block mt-2"></span>
+                  <span>
+                    {parts.length > 1 ? (
+                      <strong>{parts[0]}:</strong>
+                    ) : (
+                      parts[0]
+                    )}
+                    {parts.length > 1 && parts[1]}
+                  </span>
+                </li>
+              );
+            })}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
     );
   } else if (slug === "ai-agent-developement-in-blockchain") {
     return (
