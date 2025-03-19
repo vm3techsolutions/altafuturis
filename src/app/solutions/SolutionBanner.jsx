@@ -19,7 +19,7 @@ export default function HomeBanner() {
     >
       {/* Background Image */}
       <Image
-        src="/assets/PartnershipBanner.png"
+        src="/assets/SolutionBanner.png"
         alt="Home Banner"
         layout="fill"
         className="object-cover object-center "
