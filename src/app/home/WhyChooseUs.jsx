@@ -18,8 +18,8 @@ export default function WhyChooseUs() {
 
   return (
     <>
-      <section className="flex items-center justify-center mt-48 md:mt-0">
-        <section className="container flex items-center justify-center md:mt-0 -mt-52">
+      <section className="flex items-center justify-start mt-28 pt-14 md:mt-0">
+        <section className="container flex items-center justify-center md:mt-0 ">
           <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
             {/* Left Side - Button */}
             <div className="max-w-4xl flex-shrink-0 md:mr-12">
@@ -51,15 +51,15 @@ export default function WhyChooseUs() {
           }}
         />
 
-        <section className="flex items-center justify-center ">
-          <section className="container flex items-center justify-center md:mt-0 ml-5">
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-6  gap-6  -ml-1 ">
+        <section className="flex items-center justify-center mb-14">
+          <section className="container flex items-center justify-center md:mt-0">
+            <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center py-6  gap-6 ">
               {/* Left Section (Image + Button) */}
               <div className="relative flex flex-col">
                 <img
                   src="/assets/WhyChooseUs.png"
                   alt="Team Meeting"
-                  className="rounded-lg shadow-lg md:w-[35vw] w-[105vw] h-[80vh] md:h-[95vh] object-cover  md:-ml-"
+                  className="rounded-lg shadow-lg md:w-[45vw] w-[105vw] h-[80vh] md:h-[95vh] object-cover"
                 />
 
                 <a href="/contact" className="flex justify-center mt-6 mr-11 md:mr-32">

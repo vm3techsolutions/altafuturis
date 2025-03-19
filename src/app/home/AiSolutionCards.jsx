@@ -45,13 +45,13 @@ export default function ServicesSection() {
   return (
   <>
   {/* Heading Section */}
-  <section className="flex items-center justify-center ">
+  <section className="flex items-center justify-center pt-12">
   <section className="container flex items-center justify-center md:mt-0 -mt-52">
 
-    <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
+    <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="max-w-4xl flex-shrink-0 md:mr-12">
-            <button className="px-5 py-3 text-xl md:mb-20 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <button className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Services
             </button>
           </div>

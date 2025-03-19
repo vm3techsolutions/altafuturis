@@ -5,6 +5,10 @@ const partners = [
   {
     imgSrc: "/assets/Partnershipcard1.png",
     description:"We are utilizing various services under Azure Artificial Intelligence and Data Engineering to provide solutions for our clients under Microsoft for Startups program. Focused to provide solutions in Edge AI, Generative AI and Geo-spatial/ remote sensing AI for our clients.",
+  },
+  {
+    imgSrc: "/assets/fotinetPartner.png",
+    description:"As a Fortinet partner, we are fully-qualified to take care of your various data security use cases, including preventing data loss from exfiltration and accidental loss, monitoring for insider threats, securing data in SaaS applications, and educating users on proper data handling with the help from FortiDLP.  With FortiDLP, we can support and proactively monitor the integrity of your network constantly checking for potential threats and taking appropriate action to keep your network safe.",
   }
 ];
 
@@ -32,7 +36,7 @@ const Team = () => {
       {partners.map((partner, index) => (
         <div
           key={index}
-           className="md:w-[100vh] md:h-80 border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden 
+           className="md:w-[100vh] md:h-90 border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden 
               bg-gray-100"
         >
           <img

@@ -13,6 +13,7 @@ export default function Form() {
     relationship: "",
     services: "",
     message: "",
+    about:"",
   });
 
   const [responseMessage, setResponseMessage] = useState("");
@@ -24,12 +25,18 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/submit-form", {
+      const response = await fetch("http://localhost:5000/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      const data = await response.json();
+      const text = await response.text(); // Get the response as text
+      let data;
+      try {
+        data = JSON.parse(text); // Try parsing as JSON
+      } catch {
+        throw new Error("Invalid JSON response: " + text); // If not JSON, show error
+      }
       setResponseMessage(data.message);
       setFormData({
         fullname: "",
@@ -170,7 +177,7 @@ export default function Form() {
     <div>
       <label className="mb-3 block text-black font-semibold text-lg">How did you hear about our website?
       </label>
-      <select name="about" value={formData.services} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
+      <select name="about" value={formData.about} onChange={handleChange} className="w-full p-2 border border-gray-400 rounded" required>
         <option value="">Select Service</option>
         <option value="LinkedIn">LinkedIn      </option>
         <option value="Google">Google</option>
