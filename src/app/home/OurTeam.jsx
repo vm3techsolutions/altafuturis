@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Shweta Pawar",
     designation: "Agents, LLMs & GenAI Expert",
-    image: "/assets/ShwetaPawarimg.jpeg",
+    image: "/assets/shwetaPawar.jpg",
     linkedin: "https://www.linkedin.com/in/aishweta/",
   },
   {
@@ -33,7 +33,7 @@ const OurTeam = () => {
   return (
   <>
     {/* Section Header */}
-    <section className="relative flex items-center justify-center bg-[#f7f4fb] pt-8">
+    <section className="relative flex items-center justify-center bg-[#f7f4fb] pt-14">
       <section className="container flex items-center justify-center md:mt-0">
 
         <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
