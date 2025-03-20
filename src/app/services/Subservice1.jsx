@@ -12,9 +12,36 @@ const aiAgentServices = [
 
 const salesforceConsulting = [
   { title: "Salesforce Data Cloud", content: "Bring all your data together on Salesforce Data Cloud & initiate new AI conversations Make your Digital Transformation journey future proof with Salesforce’s hyperscale data engine that unifies structured and unstructured data to create a 360-degree view of your customers and is the foundation of the Einstein 1 Platform." },
+
   { title: "Salesforce Sales and Service Cloud", content: "Unlock the full potential of your Salesforce CRM with our certified and trained implementation experts. Our experts streamline your CRM, automate workflows, and optimize customer experiences to drive growth. Whether you’re scaling operations or improving engagement, our experts ensure an efficient and seamless transition. Convert opportunities into revenue with our Salesforce Implementation Services." },
+
   { title: "Salesforce Integration", content: "Salesforce Integration Consultants from Alta-Futuris Solutions with many years’ experience, identify solutions to siloed system issues for their customers. These Salesforce Integration solutions always prove to be enabled high interoperability, intuitive in design and user-friendly. Our Salesforce Integration Services are cost-effective and can incorporate a solution across all applications including Microsoft, Oracle, Abode, SAP etc., data management and the organisation’s business processes." },
+
   { title: "Salesforce Experience Cloud", content: " Choose Alta-Futuris Solutions as a Salesforce experience cloud partner and the Implementation will include basic configuration, role mapping, customization as applicable, integration with external social media and internal systems of record, security model set up and role-based dashboards for enhanced reporting. Migration of content from existing knowledge management systems and configuration in Salesforce Experience Cloud Implementation success measurement through pre-defined metrics Smooth transition of existing Salesforce Customers and Partner Portal users to Salesforce Experience Cloud Effective user and technical support for Salesforce Experience Cloud" },
+];
+
+const DLP = [
+  { title: "Preventing Data Exfiltration", content: "FortiDLP helps organizations prevent sensitive data from leaving their control, whether intentionally or accidentally. " },
+
+  { title: "Protecting Data at Rest and in Motion", content: "It secures data both when it's stored (at rest) and when it's being used or transmitted (in motion). " },
+
+  { title: "SaaS Data Security", content: "FortiDLP can be used to secure data within SaaS applications, such as Office 365 and Teams, by monitoring and controlling access to sensitive data. " },
+  
+  { title: "Endpoint Security", content: "FortiDLP can be deployed on endpoints to prevent data from being copied or transferred to unmanaged devices. " },
+
+  { title: "Monitoring User Activity", content: "FortiDLP provides visibility into user activities, data access, and systems, helping to identify and address potential insider threats. "},
+
+  { title: "Behavioral Analytics", content: "It uses behavioral analytics to detect anomalous activities that could indicate an insider threat."},
+
+  { title: "Meeting Compliance Standards", content: "FortiDLP helps organizations meet key compliance requirements, such as PCI DSS, HIPAA, ISO 27001, NIST, and others."},
+
+  { title: "Privacy Protection", content: "It prioritizes privacy, leveraging built-in data minimization techniques to detect and mitigate threats while safeguarding employee confidentiality."},
+
+  { title: "GDPR and CCPA Compliance", content: "FortiDLP can help organizations comply with regulations like GDPR and CCPA by providing tools for data minimization and localized forensics storage. "},
+
+  { title: "Shadow AI Usage Identification", content: "FortiDLP can help identify and stop the upload of sensitive data to shadow AI applications."},
+
+  { title: "Automated Threat Mapping", content: "It automatically maps detections to MITRE Engenuity™ Insider Threat TTP Knowledge Base. "}
 ];
 
 const cards = [
@@ -143,6 +170,7 @@ export default function Subservice1() {
     );
   } else if (slug === "data-loss-prevention") {
     return (
+      <>
       <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white p-6">
       <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-start space-y-8">
         <img src={selectedCard.img} alt={selectedCard.title} className=" w-20 h-20 mx-auto text-yellow-600 " />
@@ -166,6 +194,34 @@ export default function Subservice1() {
         ))}
       </div>
     </div>
+
+
+<div className="px-6 md:p-10">
+        <div className="text-center">
+          <h3 className="text-2xl font-bold">Salesforce Development, Support, and Maintenance</h3>
+          <p>Optimize your Salesforce experience with expert solutions.</p>
+          <h4 className="font-bold mt-4">Our specialized Salesforce services include:</h4>
+          <div className="flex flex-col md:flex-row gap-6 mt-6">
+            <div className="w-full md:w-1/3 border-r border-gray-300">
+              {DLP.map((item, index) => (
+                <button
+                  key={index}
+                  className={`py- my-2 px-4 text-left text-sm w-full font-semibold transition-all border-l-4 ${activeTab === index ? "border-blue-500 text-blue-600 bg-gray-100" : "border-transparent text-gray-900 hover:bg-gray-100"}`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  {item.title}
+                </button>
+              ))}
+            </div>
+            <div className="py-14 px-8 border rounded-lg shadow-lg text-lg bg-[#6328A6] text-white text-left w-full">
+              <p>{DLP[activeTab].content}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </>
+    
     );
   } else if (slug === "salesforce-consulting") {
     return (
@@ -193,7 +249,8 @@ export default function Subservice1() {
         </div>
       </div>
     );
-  } else {
+  } 
+ else {
     return <div className="p-6 text-center text-gray-500"></div>;
   }
 }
