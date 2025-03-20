@@ -273,13 +273,7 @@ export default function Subservice2() {
             </div>
           </div>
 
-          <h4 className="text-2xl font-bold mt-14">
-          Conclusion
-          </h4>
-          <p className="text-lg mb-8 px-14">
-        
-          AI Agent development services in the blockchain context involve a comprehensive approach that covers everything from initial consultation and design to deployment, monitoring, and ongoing support. The goal is to create AI agents that leverage the unique capabilities of blockchain technology to drive innovation, improve efficiency, and deliver significant business value while ensuring ethical and responsible use of AI and blockchain technologies.
-          </p>
+          
           
         </div>
       </div>
