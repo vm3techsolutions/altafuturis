@@ -4,6 +4,7 @@ import Sidebar from "@components/Sidebar"; // Ensure the import path is correct
 import PageTitle from "./PageTitle";
 import Subservice1 from "./Subservice1";
 import Subservice2 from './SubService2';
+import Subservice3 from "./Subservice3";
 
 
 export default function ServicesLayout({ children }) {
@@ -31,6 +32,7 @@ export default function ServicesLayout({ children }) {
       {/* Full-Width Section that updates based on the selected service */}
       <Subservice1 service={selectedService} />
       <Subservice2 service={selectedService} />
+      <Subservice3 service={selectedService} />
     </>
   );
 }
