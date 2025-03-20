@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -18,12 +17,11 @@ export default function HomeBanner() {
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
-      <Image
+      <img
         src="/assets/Blogbanner.png"
         alt="Home Banner"
-        layout="fill"
-        className="object-cover object-center"
-        priority
+        className="w-full h-full object-cover object-center"
+        loading="lazy"
       />
 
       {/* Light Effect */}
