@@ -1,6 +1,5 @@
 'use client';
-
-import Image from 'next/image';
+import Image from "next/image";
 import { motion } from "framer-motion"; // Import motion for animation
 
 const PortfolioSection = () => {
@@ -23,7 +22,7 @@ const PortfolioSection = () => {
             ease: "linear" // Smooth motion
           }}
         >
-          <Image src="/assets/animateCicle.png" width={420} height={180} alt="Circular Animation" className="-ml-32" />
+          <img src="/assets/animateCicle.png" width={420} height={180} alt="Circular Animation" className="-ml-32" />
         </motion.div>
 
       </div>

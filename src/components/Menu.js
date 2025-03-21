@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { EnvelopeIcon, PhoneIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import MegaMenu from "./MegaMenu";
 import  InsightMegaMenu from "./InsightMegaMenu"
@@ -20,11 +20,11 @@ const Menu = () => {
       <div className=" bg-white shadow-md w-full fixed top-0 z-50">
         {/* Top Bar */}
         <div className="menuBar border-b py-2">
-          <div className="container mx-auto px-4 md:px-2 lg:px-12 flex flex-wrap items-center justify-between">
+          <div className=" mx-auto px-4 md:px-2 lg:px-12 flex flex-wrap items-center justify-between">
             {/* Left Side - Logo & Tagline */}
             <div className="flex items-center space-x-7">
               <Link href="/">
-                <Image
+                <img
                   src="/altra_logo.png"
                   alt="MyBrand Logo"
                   width={110}
@@ -48,8 +48,8 @@ const Menu = () => {
                 <a href="tel:9764694844">+91 97646 94844</a>
               </span>
               <div className="flex space-x-2">
-                <Image src="/us.png" alt="US" width={24} height={16} />
-                <Image src="/in.png" alt="India" width={24} height={16} />
+                <img src="/us.png" alt="US" width={24} height={16} />
+                <img src="/in.png" alt="India" width={24} height={16} />
               </div>
               <Link href="/contact">
                 <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">

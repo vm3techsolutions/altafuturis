@@ -1,19 +1,18 @@
-import Image from "next/image";
+"use client";
 
 function PageTitle() {
   return (
     <>
-        <div className="relative w-full h-[30vh] md:h-[95vh] lg:h-[95vh] bg-cover bg-center flex items-center overflow-hidden">
-        <Image
-            src="/assets/aboutTitle.jpg"
-            alt="about_pageTitle"
-            layout="fill"
-            className='object-cover object-center'
-            priority
+      <div className="relative w-full h-[30vh] md:h-[95vh] lg:h-[95vh] bg-cover bg-center flex items-center overflow-hidden">
+        <img
+          src="/assets/aboutTitle.jpg"
+          alt="About Page Title"
+          className="w-full h-full object-cover object-center"
+          loading="lazy"
         />
-        </div>
+      </div>
     </>
-  )
+  );
 }
 
 export default PageTitle;
