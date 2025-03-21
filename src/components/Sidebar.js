@@ -7,6 +7,10 @@ const Sidebar = () => {
   const pathname = usePathname();
   const services = [
     {
+      slug: "ai-coe-consulting",
+      title: " AI COE consulting and development services",
+    },
+    {
       slug: "ai-app-dev",
       title: "Generative AI Application Development",
     },

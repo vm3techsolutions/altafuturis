@@ -57,9 +57,9 @@ export default function Form() {
   };
 
   return (
-    <div id="ReserveForm" className="flex flex-col md:flex-row items-center justify-center min-h-screen  py-20 md:px-16 px-5 gap-5">
+    <div id="ReserveForm" className="flex flex-col md:flex-row items- justify-center min-h-screen  py-20 md:px-16 px-5 gap-5">
       {/* Left Side - Contact Info */}
-      {/* <div className="md:w-2/5 w-full  md:px-5 ">
+      <div className="md:w-2/5 w-full  md:px-5 ">
         <div className="text-center md:text-left space-y-5 md:pr-20 ">
 
           <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2">
@@ -75,33 +75,33 @@ export default function Form() {
           <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2 gap-8">
           <MapPin className="text-brownColor m-auto "/>
 
-          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
+          <div className="mt- border border-#D9D9D9DD text-center rounded-xl">
             <div className="grid items-center gap-2   ">
-              <p className="font-bold text-xl text-black">Texas</p>            
+              <p className="font-bold text-xl text-black">USA</p>            
             <p className="text-black font-medium">1 Elizabeth ln, West Bridgewater, <br/>MA 02379, USA</p>
           </div>
           </div>
 
-          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
+          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl mb-5">
             <div className="grid items-center gap-2   ">
-              <p className="font-bold text-xl text-black">Pune</p>            
+              <p className="font-bold text-xl text-black">India</p>            
             <p className="text-black font-medium">Sr. No. 19/12/B/1, 3rd Floor Anish, Bavdhan Pune, Maharashtra, India</p>
           </div>
           </div>
 
-          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
+          {/* <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">Kolhapur</p>            
             <p className="text-black font-medium">Plot No 32, Survey 1076/1 Infront of Deshmukh Highschool, Road no.4, Indraprastha Colony, Saneguruji Vasahat, Kolhapur, Maharashtra, India</p>
           </div>
-          </div>
+          </div> */}
 
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Right Side - Form */}
-      <div className="w-full max-w-2xl mx-auto shadow-lg rounded-lg p-6 bg-white border-2 border-brownColor">
+      <div className="md:w-3/5 w-full max-w-2xl mx-auto shadow-lg rounded-lg p-6 bg-white border-2 border-brownColor">
   <form onSubmit={handleSubmit} className="flex flex-col gap-5">
     <div>
       <label className="mb-3 block text-black font-semibold text-lg ">Full Name :</label>

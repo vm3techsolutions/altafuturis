@@ -5,12 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { EnvelopeIcon, PhoneIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import MegaMenu from "./MegaMenu";
+import  InsightMegaMenu from "./InsightMegaMenu"
 
 const Menu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen1, setIsMobileMenuOpen1] = useState(false);
+  const [isMegaMenuOpen1, setIsMegaMenuOpen1] = useState(false);
 
   return (
     <>
@@ -19,7 +22,7 @@ const Menu = () => {
         <div className="menuBar border-b py-2">
           <div className="container mx-auto px-4 md:px-2 lg:px-12 flex flex-wrap items-center justify-between">
             {/* Left Side - Logo & Tagline */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-7">
               <Link href="/">
                 <Image
                   src="/altra_logo.png"
@@ -29,7 +32,7 @@ const Menu = () => {
                   className="object-contain"
                 />
               </Link>
-              <span className="hidden lg:flex text-sm font-bold uppercase hover:text-gray-700">
+              <span className="hidden lg:flex  text-sm font-bold uppercase hover:text-gray-700">
                 BASED IN TEXAS, SERVING GLOBALLY!
               </span>
             </div>
@@ -97,7 +100,7 @@ const Menu = () => {
                 </Link>
               </li>
 
-              <li
+              {/* <li
       className="relative py-4 group"
       onMouseEnter={() => setIsMenuOpen(true)}
       onMouseLeave={() => setIsMenuOpen(false)}
@@ -136,7 +139,22 @@ const Menu = () => {
           </ul>
         </div>
       )}
-    </li>
+    </li> */}
+
+<li
+                className="relative py-4 group"
+                onMouseEnter={() => setIsMegaMenuOpen1(true)}
+                onMouseLeave={() => setIsMegaMenuOpen1(false)}
+              >
+                <Link href="" className="hover:text-blueColor">
+                 Insights
+                </Link>
+                {isMegaMenuOpen1 && (
+                  <div className=" normal-case bg-white left-0 right-0">
+                    <InsightMegaMenu />
+                  </div>
+                )}
+              </li>
               
               <li className="py-4">
                 <Link href="/about" className="hover:text-blueColor">
@@ -218,7 +236,7 @@ const Menu = () => {
       Partnerships
     </Link>
   </li>
-   <li
+   {/* <li
       className="relative py-4 group"
       onMouseEnter={() => setIsMenuOpen(true)}
       onMouseLeave={() => setIsMenuOpen(false)}
@@ -257,7 +275,23 @@ const Menu = () => {
           </ul>
         </div>
       )}
-    </li> 
+    </li>  */}
+
+<li
+                className="relative py-4 group"
+                onMouseEnter={() => setIsMegaMenuOpen1(true)}
+                onMouseLeave={() => setIsMegaMenuOpen1(false)}
+              >
+                <Link href="" className="hover:text-blueColor">
+                 Insights
+                </Link>
+                {isMegaMenuOpen1 && (
+                  <div className=" normal-case bg-white left-0 right-0">
+                    <InsightMegaMenu />
+                  </div>
+                )}
+              </li>
+
   <li>
     <Link href="/career" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
       Career
