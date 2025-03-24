@@ -57,32 +57,32 @@ export default function Form() {
   };
 
   return (
-    <div id="ReserveForm" className="flex flex-col md:flex-row items- justify-center min-h-screen  py-20 md:px-16 px-5 gap-5">
+    <div id="ReserveForm" className="flex flex-col md:flex-row justify-center py-20 md:px-16 px-5 gap-2">
       {/* Left Side - Contact Info */}
-      <div className="md:w-2/5 w-full  md:px-5 ">
-        <div className="text-center md:text-left space-y-5 md:pr-20 ">
+      <div className="md:w-1/3 w-full  md:px-5 ">
+        <div className="text-center md:text-left space-y-5  ">
 
-          <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2">
-            <Phone className="text-brownColor m-auto" />
+          <div className="grid items-center justify-center   text-lg font-bold text-black rounded-xl px-2 py-2">
+            <Phone className="text-brownColor mb-2 m-auto" />
             <p>+91 97646 94844</p>
           </div>
 
-          <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2">
-            <Mail className="text-brownColor m-auto"/>
+          <div className="grid items-center justify-center text-lg font-bold text-black  px-2 py-2">
+            <Mail className="text-brownColor mb-2 m-auto"/>
             <p>sales@altafuturis.com</p>
           </div>
           
-          <div className="grid items-center justify-center   text-lg font-bold text-black border-brownColor border-2 rounded-xl bg-white  px-2 py-2 gap-8">
+          <div className="grid items-center justify-center   text-lg font-bold text-black px-2 py-2 gap-8">
           <MapPin className="text-brownColor m-auto "/>
 
-          <div className="mt- border border-#D9D9D9DD text-center rounded-xl">
+          <div className="text-center rounded-xl">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">USA</p>            
             <p className="text-black font-medium">1 Elizabeth ln, West Bridgewater, <br/>MA 02379, USA</p>
           </div>
           </div>
 
-          <div className="mt-6 border border-#D9D9D9DD text-center rounded-xl mb-5">
+          <div className="mt-6 text-center rounded-xl mb-5">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">India</p>            
             <p className="text-black font-medium">Sr. No. 19/12/B/1, 3rd Floor Anish, Bavdhan Pune, Maharashtra, India</p>
@@ -101,7 +101,7 @@ export default function Form() {
       </div>
 
       {/* Right Side - Form */}
-      <div className="md:w-3/5 w-full max-w-2xl mx-auto shadow-lg rounded-lg p-6 bg-white border-2 border-brownColor">
+      <div className="md:w-2/3 w-full max-w-2xl mx-auto shadow-lg rounded-lg p-6 ">
   <form onSubmit={handleSubmit} className="flex flex-col gap-5">
     <div>
       <label className="mb-3 block text-black font-semibold text-lg ">Full Name :</label>

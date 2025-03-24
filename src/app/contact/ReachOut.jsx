@@ -16,7 +16,7 @@ const PortfolioSection = () => {
         </div>
 
         {/* Right Side */}
-        <div className="max-w-6xl w-full text-center md:text-left ">
+        <div className="max-w-3xl w-full text-center md:text-left ">
           <h2 className="text-3xl md:text-5xl font-bold text-black  leading-tight">
           Any queries regarding services we offer
           </h2>

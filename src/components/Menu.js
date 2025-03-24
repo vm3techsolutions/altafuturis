@@ -166,8 +166,8 @@ const Menu = () => {
                   Career
                 </Link>
               </li>
-              <li className="py-4">
-                <Link href="/contact" className="hover:text-blueColor">
+              <li className="py-4 ">
+                <Link href="/contact" className="text-white px-3 py-3 bg-blueColor rounded-xl hover:bg-brownColor">
                   Contact Us
                 </Link>
               </li>
