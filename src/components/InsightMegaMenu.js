@@ -34,7 +34,7 @@
       const [activeTab, setActiveTab] = useState(tabs[0].id); // Default to first tab
     
       return (
-        <div className="absolute inset-x-0 top-full w-screen bg-white shadow-lg px-20 py-10 flex z-50 md:-ml-[115vh] lg:-ml-[115vh] xl:-ml-[125vh] 2xl:-ml-[185vh] ">
+        <div className="absolute inset-x-0 top-full w-screen bg-white shadow-lg px-20 py-10 flex z-50 md:-ml-[540px] lg:-ml-[540px] xl:-ml-[740px] 2xl:-ml-[740px]">
     
           {/* Tabs Section (Left Panel) */}
           <div className="w-1/3 border-r">
