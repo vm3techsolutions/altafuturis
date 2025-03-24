@@ -11,20 +11,20 @@
         { 
           id: 1, 
           title: "Case Study", 
-          content: "Organizations looking to integrate and benefit from AI technology successfully need a structural body to provide organizational guidance and governance along the adoption journey. This body is a Center of Excellence (COE), which will drive and champion AI innovation across your organization.", 
+          content: "Case Study Details", 
           link: "/case-studies"
         },
         { 
           id: 2, 
           title: "Blogs", 
-          content: "Using the power of Generative artificial intelligence (GEN AI) is no longer a choice; it’s a necessity. Our Generative artificial intelligence consulting services guide leaders through this disruptive landscape to adopt or enhance GEN AI while prioritizing governance and security.", 
+          content: "Blog Details", 
           link: "/blog"
         },
     
         { 
           id: 3, 
           title: "Podcast", 
-          content: "Salesforce Agentforce is transforming how businesses leverage autonomous AI agents to optimize workflows, productivity, and customer service. But as your rivals adopt the platform, gaining a competitive edge is challenging without expert support.", 
+          content: "Podcast Details", 
           link: "/podcast"
         },
     
@@ -34,7 +34,7 @@
       const [activeTab, setActiveTab] = useState(tabs[0].id); // Default to first tab
     
       return (
-        <div className="absolute inset-x-0 top-full w-screen bg-white shadow-lg px-20 py-10 flex z-50 md:-ml-[540px] lg:-ml-[540px] xl:-ml-[740px] 2xl:-ml-[740px]">
+        <div className="absolute inset-x-0 top-full w-screen bg-white shadow-lg px-20 py-10 flex z-50 md:-ml-[610px] lg:-ml-[610px] xl:-ml-[610px] 2xl:-ml-[740px]">
     
           {/* Tabs Section (Left Panel) */}
           <div className="w-1/3 border-r">

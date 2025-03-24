@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import MegaMenu from "./MegaMenu";
-import  InsightMegaMenu from "./InsightMegaMenu"
+import InsightMegaMenu from "./InsightMegaMenu";
 
 const Menu = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -141,13 +141,13 @@ const Menu = () => {
       )}
     </li> */}
 
-<li
+              <li
                 className="relative py-4 group"
                 onMouseEnter={() => setIsMegaMenuOpen1(true)}
                 onMouseLeave={() => setIsMegaMenuOpen1(false)}
               >
                 <Link href="" className="hover:text-blueColor">
-                 Insights
+                  Insights
                 </Link>
                 {isMegaMenuOpen1 && (
                   <div className=" normal-case bg-white left-0 right-0">
@@ -155,7 +155,7 @@ const Menu = () => {
                   </div>
                 )}
               </li>
-              
+
               <li className="py-4">
                 <Link href="/about" className="hover:text-blueColor">
                   About Us
@@ -167,7 +167,10 @@ const Menu = () => {
                 </Link>
               </li>
               <li className="py-4 ">
-                <Link href="/contact" className="text-white px-3 py-3 bg-blueColor rounded-xl hover:bg-brownColor">
+                <Link
+                  href="/contact"
+                  className="text-white px-3 py-3 bg-blueColor rounded-xl hover:bg-brownColor"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -189,121 +192,162 @@ const Menu = () => {
           </button>
 
           <ul className="flex flex-col items-start space-y-3 p-6">
-  <li>
-    <Link href="/" className="hover:text-blueColor" onClick={() => setIsMobileMenuOpen(false)}>
-      Home
-    </Link>
-  </li>
-  <li>
-    <Link href="/about" className="hover:text-blueColor" onClick={() => setIsMobileMenuOpen(false)}>
-      About Us
-    </Link>
-  </li>
-  <li>
-    <button
-      onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
-      className="hover:text-blueColor w-full text-left"
-    >
-      Services {isServicesMenuOpen ? "▲" : "▼"}
-    </button>
-    {isServicesMenuOpen && (
-      <ul className="bg-gray-100 text-left py-0 rounded-md ml-4">
-        <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-          <Link href="/services/web-development" onClick={() => setIsMobileMenuOpen(false)}>
-            Generative AI Application Development
-          </Link>
-        </li>
-        <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-          <Link href="/services/app-development" onClick={() => setIsMobileMenuOpen(false)}>
-            Salesforce Agentforce Consulting
-          </Link>
-        </li>
-        <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
-          <Link href="/services/digital-marketing" onClick={() => setIsMobileMenuOpen(false)}>
-            Salesforce Consulting
-          </Link>
-        </li>
-      </ul>
-    )}
-  </li>
-  <li>
-    <Link href="/solutions" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
-      Solutions
-    </Link>
-  </li>
-  <li>
-    <Link href="/partnership" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
-      Partnerships
-    </Link>
-  </li>
-   {/* <li
-      className="relative py-4 group"
-      onMouseEnter={() => setIsMenuOpen(true)}
-      onMouseLeave={() => setIsMenuOpen(false)}
-    >
-      <Link href="#" className="hover:text-brown-600">
-        Insights
-      </Link>
+            <li>
+              <Link
+                href="/"
+                className="hover:text-blueColor"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="hover:text-blueColor"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+            </li>
 
-      {isMenuOpen && (
-        <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200">
-          <ul className="py-2">
+            <li>
+              <button
+                onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
+                className="hover:text-blueColor w-full text-left"
+              >
+                Services {isServicesMenuOpen ? "▲" : "▼"}
+              </button>
+              {isServicesMenuOpen && (
+                <ul className="bg-gray-100 text-left py-0 rounded-md ml-4">
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/services/ai-coe-consulting"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI COE consulting and development services
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/services/ai-app-dev"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Generative AI Application Development
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/services/salesforce-agentforce-consulting"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Salesforce Agentforce Consulting
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/services/salesforce-consulting"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Salesforce Consulting
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/services/data-loss-prevention"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Generative AI Agents for Data Loss Prevention (DLP) in
+                      Cybersecurity
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/services/ai-agent-developement-in-blockchain"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI Agent Development in Blockchain
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
             <li>
               <Link
-                href="/case-studies"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/solutions"
+                className="hover:text-brown-600"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Case Study
+                Solutions
               </Link>
             </li>
             <li>
               <Link
-                href="/blog"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/partnership"
+                className="hover:text-brown-600"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Blogs
+                Partnerships
+              </Link>
+            </li>
+
+           <li>
+              <button
+                onClick={() => setIsMobileMenuOpen1(!isMobileMenuOpen1)}
+                className="hover:text-blueColor w-full text-left"
+              >
+                Insights {isMobileMenuOpen1 ? "▲" : "▼"}
+              </button>
+              {isMobileMenuOpen1 && (
+                <ul className="bg-gray-100 text-left py-0 rounded-md ml-4">
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/case-studies"
+                      onClick={() => setIsMobileMenuOpen1(false)}
+                    >
+                     Case Study
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/blog"
+                      onClick={() => setIsMobileMenuOpen1(false)}
+                    >
+                     Blogs
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
+                    <Link
+                      href="/podcast"
+                      onClick={() => setIsMobileMenuOpen1(false)}
+                    >
+                      Podcast
+                    </Link>
+                  </li>
+                  
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <Link
+                href="/career"
+                className="hover:text-brown-600"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Career
               </Link>
             </li>
             <li>
               <Link
-                href="/podcast"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                href="/contact"
+                className="hover:text-brown-600"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Podcast
+                Contact Us
               </Link>
             </li>
           </ul>
-        </div>
-      )}
-    </li>  */}
-
-<li
-                className="relative py-4 group"
-                onMouseEnter={() => setIsMegaMenuOpen1(true)}
-                onMouseLeave={() => setIsMegaMenuOpen1(false)}
-              >
-                <Link href="" className="hover:text-blueColor">
-                 Insights
-                </Link>
-                {isMegaMenuOpen1 && (
-                  <div className=" normal-case bg-white left-0 right-0">
-                    <InsightMegaMenu />
-                  </div>
-                )}
-              </li>
-
-  <li>
-    <Link href="/career" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
-      Career
-    </Link>
-  </li>
-  <li>
-    <Link href="/contact" className="hover:text-brown-600" onClick={() => setIsMobileMenuOpen(false)}>
-      Contact Us
-    </Link>
-  </li>
-</ul>
-
         </div>
 
         {/* Overlay to Close Menu */}
