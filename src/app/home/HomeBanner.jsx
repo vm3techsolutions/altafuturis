@@ -18,7 +18,7 @@ export default function HomeBanner() {
     >
       {/* Background Image */}
       <img
-        src="/assets/HomeBanner.png"
+        src="/assets/HomeBanner2.png"
         alt="Home Banner"
         className="absolute inset-0 w-full h-full object-cover object-center"
         loading="lazy"
