@@ -28,7 +28,7 @@ const Menu = () => {
     <>
       <div
         className={`fixed menuBar shadow-md w-full top-0 z-50 bg-white transition-all duration-300 ease-in-out ${
-          isScrolled ? "h-16 shadow-lg" : "h-20"
+          isScrolled ? "h-20 shadow-lg" : "h-20"
         }`}
       >
         {/* Top Bar */}
@@ -64,14 +64,14 @@ const Menu = () => {
                 <img src="/us.png" alt="US" width={24} height={16} />
                 <img src="/in.png" alt="India" width={24} height={16} />
               </div>
-              <Link href="/contact">
+              {/* <Link href="/contact">
                 <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                   Get In Touch{" "}
                   <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
                     &gt;&gt;
                   </span>
                 </button>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile Menu Button */}

@@ -89,7 +89,7 @@ const AiAppDev = () => {
 
       {/* Image Section */}
       <div className="my-6 text-center py-2">
-        <img src="/assets/service3.png" alt="Salesforce Consulting Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+        <img src="/assets/service-3.png" alt="Salesforce Consulting Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
       </div>
 
       {/* Introduction */}

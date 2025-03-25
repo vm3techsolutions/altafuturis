@@ -126,7 +126,7 @@ const AiAppDev = () => {
       </div>
 
       <div className="my-6 text-center py-2">
-        <img src="/assets/service5.png" alt="AI Agent Development in Blockchain Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+        <img src="/assets/service-5.png" alt="AI Agent Development in Blockchain Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
       </div>
 
         {/* Introduction */}

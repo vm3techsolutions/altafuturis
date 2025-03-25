@@ -46,6 +46,11 @@ h1, h2, h3, h4, h5, h6, a {
   .menuBar{
     background: #fff;
     position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50; /* Ensure it's above other elements */
   }
   
   .menuBar::before {

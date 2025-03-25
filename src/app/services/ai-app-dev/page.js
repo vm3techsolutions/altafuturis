@@ -93,7 +93,7 @@ const AiAppDev = () => {
 
       {/* Image Section */}
        <div className="my-6 text-center py-2">
-        <img src="/assets/Service1.png" alt="Generative AI Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+        <img src="/assets/Service-1.png" alt="Generative AI Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
       </div> 
       
       {/* Introduction Section */}
