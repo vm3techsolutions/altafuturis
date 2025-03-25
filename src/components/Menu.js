@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import MegaMenu from "./MegaMenu";
@@ -14,12 +14,25 @@ const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen1, setIsMobileMenuOpen1] = useState(false);
   const [isMegaMenuOpen1, setIsMegaMenuOpen1] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <div className=" bg-white shadow-md w-full fixed top-0 z-50">
+      <div
+        className={`fixed menuBar shadow-md w-full top-0 z-50 bg-white transition-all duration-300 ease-in-out ${
+          isScrolled ? "h-16 shadow-lg" : "h-20"
+        }`}
+      >
         {/* Top Bar */}
-        <div className="menuBar border-b py-2">
+        <div className=" border-b py-2">
           <div className=" mx-auto px-4 md:px-2 lg:px-12 flex flex-wrap items-center justify-between">
             {/* Left Side - Logo & Tagline */}
             <div className="flex items-center space-x-7">
@@ -291,7 +304,7 @@ const Menu = () => {
               </Link>
             </li>
 
-           <li>
+            <li>
               <button
                 onClick={() => setIsMobileMenuOpen1(!isMobileMenuOpen1)}
                 className="hover:text-blueColor w-full text-left"
@@ -305,7 +318,7 @@ const Menu = () => {
                       href="/case-studies"
                       onClick={() => setIsMobileMenuOpen1(false)}
                     >
-                     Case Study
+                      Case Study
                     </Link>
                   </li>
                   <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
@@ -313,7 +326,7 @@ const Menu = () => {
                       href="/blog"
                       onClick={() => setIsMobileMenuOpen1(false)}
                     >
-                     Blogs
+                      Blogs
                     </Link>
                   </li>
                   <li className="px-4 py-2 border-b border-gray-800 hover:bg-gray-200">
@@ -324,7 +337,6 @@ const Menu = () => {
                       Podcast
                     </Link>
                   </li>
-                  
                 </ul>
               )}
             </li>
