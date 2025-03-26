@@ -8,10 +8,14 @@ const BlogLayout = () => {
   const [categories, setCategories] = useState([]);
   const [filteredCategory, setFilteredCategory] = useState(null);
 
+  const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
+
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("http://localhost/resources/wp-json/wp/v2/posts?_embed&per_page=100");
+        const response = await fetch(
+          `${WORDPRESS_API}/posts?_embed&per_page=100`
+        );
         const data = await response.json();
 
         const formattedBlogs = data.map((blog) => ({
@@ -19,7 +23,9 @@ const BlogLayout = () => {
           title: blog.title.rendered,
           slug: blog.slug,
           link: `/blog/${blog.slug}`,
-          image: blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/assets/placeholder.png",
+          image:
+            blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+            "/assets/placeholder.png",
           category: blog.categories?.[0] || "uncategorized",
           date: new Date(blog.date).toLocaleDateString(),
           description: blog.excerpt.rendered.replace(/<[^>]+>/g, ""),
@@ -37,7 +43,7 @@ const BlogLayout = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost/resources/wp-json/wp/v2/categories");
+        const response = await fetch(`${WORDPRESS_API}/categories`);
         const data = await response.json();
 
         const assignedCategoryIds = new Set(blogs.map((blog) => blog.category));
@@ -67,15 +73,30 @@ const BlogLayout = () => {
   if (!blogs.length) return <p className="text-center mt-10">Loading...</p>;
 
   return (
-    <div className="max-w-6xl mx-auto mt-12 p-4">
+    <div className="max-w-full mx-auto mt-12 p-4">
       {/* Category Filter Buttons */}
       <div className="w-full flex justify-center mb-6">
         <div className="flex space-x-4">
-          <button onClick={() => handleCategoryFilter(null)} className="px-4 py-2 border rounded-xl">
+          <button
+            onClick={() => handleCategoryFilter(null)}
+            className={`px-4 py-2 border rounded-xl ${
+              filteredCategory === null
+                ? "bg-blueColor text-white"
+                : "border-gray-300 hover:bg-brownColor hover:text-white"
+            }`}
+          >
             All Categories
           </button>
           {categories.map((category) => (
-            <button key={category.id} onClick={() => handleCategoryFilter(category.id)} className="px-4 py-2 border rounded-xl">
+            <button
+              key={category.id}
+              onClick={() => handleCategoryFilter(category.id)}
+              className={`px-4 py-2 border rounded-xl transition-colors duration-300 ${
+                filteredCategory === category.id
+                  ? "bg-blueColor text-white"
+                  : "border-gray-300 hover:bg-brownColor hover:text-white"
+              }`}
+            >
               {category.name}
             </button>
           ))}
@@ -84,28 +105,51 @@ const BlogLayout = () => {
 
       {/* Blog Display */}
       <div className="flex flex-wrap py-4">
+        {/* Left Side - Case Study Content */}
         <div className="w-full md:w-3/5 p-4 space-y-10">
           {displayedBlogs.slice(0, 1).map((blog) => (
             <div key={blog.id} className="overflow-hidden md:p-5">
-              <img className="w-full h-80 object-cover rounded-lg" src={blog.image} alt={blog.title} />
+              <img
+                className="w-full h-80 object-cover rounded-lg"
+                src={blog.image}
+                alt={blog.title}
+              />
               <div className="p-4 space-y-5 border-l-2 border-[#D4B301] -mt-2">
                 <h2 className="text-xs mb-2">📅 {blog.date}</h2>
-                <h2 className="text-xl font-semibold">{blog.title}</h2>
-                <p className="text-gray-600 mt-2 text-md">{blog.description}</p>
-                <Link href={blog.link}>READ MORE &raquo;</Link>
+                <h2 className="text-3xl font-semibold">{blog.title}</h2>
+                <p className="text-gray-600 mt-2 text-lg">
+                  {blog.description.split(" ").slice(0, 300).join(" ")}...
+                </p>
+                <Link
+                  href={blog.link}
+                  className="text-[#6328A6] mt-4 inline-block font-semibold"
+                >
+                  READ MORE &raquo;
+                </Link>
               </div>
             </div>
           ))}
         </div>
-        <div className="w-full md:w-2/5 p-4">
+
+        {/* Right Side - Vertical Scroll with Short Text */}
+        <div className="w-full md:w-2/5 p-4 h-[800px] overflow-y-auto">
           {displayedBlogs.slice(1).map((blog) => (
             <div key={blog.id} className="mb-4 overflow-hidden md:p-5">
-              <img className="w-full h-48 object-cover rounded-lg border-l-2 border-[#D4B301]" src={blog.image} alt={blog.title} />
+              <img
+                className="w-full h-48 object-cover rounded-lg border-l-2 border-[#D4B301]"
+                src={blog.image}
+                alt={blog.title}
+              />
               <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
                 <h2 className="text-xs mb-2">📅 {blog.date}</h2>
-                <h3 className="text-xl font-semibold">{blog.title}</h3>
-                <p className="text-gray-600 mt-2 text-md">{blog.description}</p>
-                <Link href={blog.link} className="text-[#6328A6] mt-4 inline-block font-semibold">
+                <h3 className="text-lg font-semibold">{blog.title}</h3>
+                <p className="text-gray-600 mt-2 text-sm">
+                  {blog.description.split(" ").slice(0, 12).join(" ")}...
+                </p>
+                <Link
+                  href={blog.link}
+                  className="text-[#6328A6] text-sm inline-block font-semibold"
+                >
                   READ MORE &raquo;
                 </Link>
               </div>

@@ -3,11 +3,13 @@ import Image from "next/image";
 import axios from "axios";
 import { Calendar, Tag } from "lucide-react";
 
+const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
+
 // ✅ Fetch all case study slugs for static generation
 export async function generateStaticParams() {
   try {
     const response = await axios.get(
-      "http://localhost/resources/wp-json/wp/v2/case_study?_embed=true&per_page=100"
+      `${WORDPRESS_API}/case_study?_embed=true&per_page=100`
     );
 
     const data = response.data;
@@ -33,7 +35,7 @@ const CaseStudyDetails = async ({ params }) => {
   try {
     // ✅ Fetch case study details by slug
     const response = await axios.get(
-      `http://localhost/resources/wp-json/wp/v2/case_study?slug=${slug}&_embed=true`
+      `${WORDPRESS_API}/case_study?slug=${slug}&_embed=true`
     );
 
     if (!response.data || response.data.length === 0) {
@@ -53,7 +55,7 @@ const CaseStudyDetails = async ({ params }) => {
 
     // ✅ Fetch related case studies
     const relatedResponse = await axios.get(
-      "http://localhost/resources/wp-json/wp/v2/case_study?_embed=true&per_page=10"
+      `${WORDPRESS_API}/case_study?_embed=true&per_page=10`
     );
 
     let relatedCaseStudies = relatedResponse.data.filter((item) => item.slug !== slug);
