@@ -37,6 +37,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  href="/solutions"
+                  className="text-md hover:text-yellow-400"
+                >
+                  Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/partnership"
                   className="text-md hover:text-yellow-400"
                 >
@@ -61,6 +69,10 @@ const Footer = () => {
                   Career
                 </Link>
               </li>
+
+              
+              
+              
             </ul>
           </div>
 
@@ -68,6 +80,14 @@ const Footer = () => {
           <div className="flex flex-col md:-ml-16">
             <h4 className="text-lg text-purpleColor font-bold">Our Services</h4>
             <ul className="space-y-2 mt-4">
+            <li>
+                <Link
+                  href="/services/ai-coe-consulting"
+                  className="text-md hover:text-yellow-400"
+                >
+                 AI COE consulting and development services
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/services/ai-app-dev"

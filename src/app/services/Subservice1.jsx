@@ -32,7 +32,7 @@ export default function Subservice1() {
   if (slug === "ai-app-dev") {
     return (
       <div className="px-6 md:p-10">
-        <div className="text-center">
+        <div className="text-start">
           <h3 className="text-2xl font-bold">AI’s Next Disruptor: AI Agents</h3>
           <p>AI Agents can take business roles, make strategic decisions, and drive productivity at scale.</p>
           <h4 className="font-bold mt-4">Our specialized AI Agent services include:</h4>
@@ -58,7 +58,7 @@ export default function Subservice1() {
   }else if (slug === "salesforce-consulting") {
     return (
       <div className="px-6 md:p-10">
-        <div className="text-center">
+        <div className="text-start">
           <h3 className="text-2xl font-bold">Salesforce Development, Support, and Maintenance</h3>
           <p>Optimize your Salesforce experience with expert solutions.</p>
           <h4 className="font-bold mt-4">Our specialized Salesforce services include:</h4>
