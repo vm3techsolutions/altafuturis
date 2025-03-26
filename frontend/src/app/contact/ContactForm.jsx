@@ -166,6 +166,7 @@ export default function Form() {
       <label className="mb-3 block text-black font-semibold text-lg">Services :</label>
       <select name="services" value={formData.services} onChange={handleChange} className="w-full p-[9px] border border-gray-400 rounded" required>
         <option value="">Select Service</option>
+        <option value="Service 6">AI COE consulting and development services</option>
         <option value="Service 1">Generative AI Application Development</option>
         <option value="Service 2">Salesforce Agentforce Consulting</option>
         <option value="Service 3">Salesforce Consulting</option>

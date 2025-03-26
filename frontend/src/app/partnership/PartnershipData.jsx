@@ -65,7 +65,7 @@ const Team = () => {
           <div className="border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-gray-100 p-5">
             <div className="flex justify-center items-center">
               <img
-                src="/assets/Partnershipcard2.png"
+                src="/assets/Partnershipcard-2.png"
                 className="w-auto h-64 bg-gray-100 p-5"
               />
             </div>
