@@ -8,11 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export"
-
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "aos": "^2.3.4",
+    "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^12.4.3",
     "lucide-react": "^0.475.0",
