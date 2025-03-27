@@ -13,12 +13,12 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full  md:mt-32 lg:mt-32 h-[30vh] md:h-[75vh] lg:h-[75vh] bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full  md:mt-32 lg:mt-32 mt-20 h-[13vh] md:h-[65vh] lg:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
       <img
-        src="/assets/HomeBanner2.png"
+        src="/assets/HomeBanner3.png"
         alt="Home Banner"
         className="absolute inset-0 w-full h-full object-cover object-center"
         loading="lazy"
@@ -42,10 +42,10 @@ export default function HomeBanner() {
 
       {/* Text Content (Centered Over Image) */}
       <div className="absolute inset-0 flex items-center justify-start text-white text-center px-5">
-        <h1 className="font-bold md:text-4xl lg:text-5xl max-w-3xl">
+        {/* <h1 className="font-bold md:text-4xl lg:text-5xl max-w-3xl">
           Bringing future automation vision of Enterprises in the current world
           with AI Agents
-        </h1>
+        </h1> */}
       </div>
     </div>
   );
