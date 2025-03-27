@@ -154,8 +154,14 @@ const Footer = () => {
 
             <h6 className="text-md mt-2 flex items-center">
               <MapPin className="w-12 h-12 lg:w-7 lg:h-7 md:w-6 md:h-6 text-purpleColor mr-2" />
+              1 Elizabeth ln, West Bridgewater,MA 02379, USA
+            </h6>
+
+            <h6 className="text-md mt-2 flex items-center">
+              <MapPin className="w-16 h-16 lg:w-9 lg:h-9 md:w-9 md:h-9 text-purpleColor mr-2" />
               301, Anish, LMD Square, Bavdhan, Pune, Maharashtra 411023 INDIA
             </h6>
+         
 
             <div className="flex flex-row justify-start items-start space-x-4 mt-4 ">
               <Link
