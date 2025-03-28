@@ -22,10 +22,12 @@ export default function Form() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/submit", {
+      const response = await fetch(`${API_URL}/submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
