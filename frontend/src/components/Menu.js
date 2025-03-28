@@ -64,7 +64,6 @@ const Menu = () => {
                 <img src="/us.png" alt="US" width={24} height={16} />
                 <img src="/in.png" alt="India" width={24} height={16} />
               </div>
-             
             </div>
 
             {/* Mobile Menu Button */}
@@ -93,7 +92,6 @@ const Menu = () => {
                   <div className=" normal-case bg-white left-0 right-0">
                     {/* <MegaMenu /> */}
                     <MegaMenu closeMegaMenu={() => setIsMegaMenuOpen(false)} />
-
                   </div>
                 )}
               </li>
@@ -108,8 +106,6 @@ const Menu = () => {
                 </Link>
               </li>
 
-            
-
               <li
                 className="relative py-4 group"
                 onMouseEnter={() => setIsMegaMenuOpen1(true)}
@@ -120,7 +116,9 @@ const Menu = () => {
                 </Link>
                 {isMegaMenuOpen1 && (
                   <div className=" normal-case bg-white left-0 right-0">
-                    <InsightMegaMenu  closeMegaMenu={() => setIsMegaMenuOpen(false)}/>
+                    <InsightMegaMenu
+                      closeInsight={() => setIsMegaMenuOpen1(false)}
+                    />{" "}
                   </div>
                 )}
               </li>
