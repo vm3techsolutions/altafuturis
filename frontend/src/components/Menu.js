@@ -64,14 +64,7 @@ const Menu = () => {
                 <img src="/us.png" alt="US" width={24} height={16} />
                 <img src="/in.png" alt="India" width={24} height={16} />
               </div>
-              {/* <Link href="/contact">
-                <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
-                  Get In Touch{" "}
-                  <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
-                    &gt;&gt;
-                  </span>
-                </button>
-              </Link> */}
+             
             </div>
 
             {/* Mobile Menu Button */}
@@ -113,46 +106,7 @@ const Menu = () => {
                 </Link>
               </li>
 
-              {/* <li
-      className="relative py-4 group"
-      onMouseEnter={() => setIsMenuOpen(true)}
-      onMouseLeave={() => setIsMenuOpen(false)}
-    >
-      <Link href="#" className="hover:text-blueColor">
-        Insights
-      </Link>
-
-      {isMenuOpen && (
-        <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200">
-          <ul className="py-2">
-            <li>
-              <Link
-                href="/case-studies"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-              >
-                Case Study
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-              >
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/podcast"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-              >
-                Podcast
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
-    </li> */}
+            
 
               <li
                 className="relative py-4 group"

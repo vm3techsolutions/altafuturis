@@ -1,4 +1,5 @@
 // app/about/page.js
+import Accordion from './Accordion';
 import Expertise from './Expertise';
 import PageTitle from './PageTitle';
 import Team from './Team';
@@ -13,6 +14,7 @@ export default function AboutPage() {
         <VisionMission/>
         <Team/>
         <Expertise/>
+        <Accordion/>
       </div>
     );
   }
