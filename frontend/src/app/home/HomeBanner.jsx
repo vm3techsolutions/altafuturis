@@ -20,7 +20,7 @@ export default function HomeBanner() {
       <img
         src="/assets/HomeBanner3.png"
         alt="Home Banner"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-auto object-center"
         loading="lazy"
       />
 
