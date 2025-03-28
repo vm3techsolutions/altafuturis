@@ -13,7 +13,7 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full  md:mt-32 lg:mt-32 mt-20 h-[13vh] md:h-[65vh] lg:h-[65vh] xl:h-[65vh] 2xl:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full  md:mt-32 lg:mt-32 mt-20 h-[13vh] md:h-[30vh] lg:h-[40vh] xl:h-[55vh] 2xl:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
