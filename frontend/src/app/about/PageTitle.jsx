@@ -7,7 +7,7 @@ function PageTitle() {
         <img
           src="/assets/aboutBanner2.png"
           alt="About Page Title"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-auto object-center"
           loading="lazy"
         />
       </div>

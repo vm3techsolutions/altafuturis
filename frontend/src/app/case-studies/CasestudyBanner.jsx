@@ -20,7 +20,7 @@ export default function HomeBanner() {
       <img
         src="/assets/casestudyBanner2.png"
         alt="Home Banner"
-        className="w-full h-full object-cover object-center"
+        className="w-full h-full object-auto object-center"
         loading="lazy"
       />
 
