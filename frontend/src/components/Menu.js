@@ -91,7 +91,9 @@ const Menu = () => {
                 </Link>
                 {isMegaMenuOpen && (
                   <div className=" normal-case bg-white left-0 right-0">
-                    <MegaMenu />
+                    {/* <MegaMenu /> */}
+                    <MegaMenu closeMegaMenu={() => setIsMegaMenuOpen(false)} />
+
                   </div>
                 )}
               </li>
@@ -118,7 +120,7 @@ const Menu = () => {
                 </Link>
                 {isMegaMenuOpen1 && (
                   <div className=" normal-case bg-white left-0 right-0">
-                    <InsightMegaMenu />
+                    <InsightMegaMenu  closeMegaMenu={() => setIsMegaMenuOpen(false)}/>
                   </div>
                 )}
               </li>

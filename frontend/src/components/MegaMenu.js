@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
-const MegaMenu = () => {
+const MegaMenu = ({closeMegaMenu}) => {
   const Chooses = ["Partnering with client", "Research Driven", "Highly focused on delivering outcome on daily basis", "Providing highest quality output and high level of business satisfaction."];
 
   const tabs = [
@@ -58,7 +58,7 @@ const MegaMenu = () => {
       {/* Tabs Section (Left Panel) */}
       <div className="w-1/3 border-r">
         {tabs.map((tab) => (
-          <Link key={tab.id} href={tab.link}>
+          <Link key={tab.id} href={tab.link} onClick={closeMegaMenu}>
             <div
               className={`px-4 py-2 text-lg mb- font-normal text-[#002096] cursor-pointer hover:bg-blue-50 flex items-center justify-between ${
                 activeTab === tab.id ? "bg-blue-50 font-bold" : ""
@@ -81,7 +81,7 @@ const MegaMenu = () => {
           {tabs.find((tab) => tab.id === activeTab)?.content}
         </p>
         <Link href={tabs.find((tab) => tab.id === activeTab)?.link || "#"}>
-          <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
+          <button onClick={closeMegaMenu} className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
             Learn More
           </button>
         </Link>
