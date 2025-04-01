@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -80,25 +80,25 @@ const AiAppDev = () => {
   };
 
   const ref = useRef(null);
-    const isInView = useInView(ref, {once: true, margin: "-100px"});
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <div className="relative py-4 px-2">
-      <div className="heading">
-        <h2 className="text-4xl font-bold">Generative AI Application Development</h2>
-        <h4 className="text-xl font-semibold my-4">
+      <div className="heading text-center md:text-left">
+        <h2 className="text-3xl md:text-4xl font-bold">Generative AI Application Development</h2>
+        <h4 className="text-lg md:text-xl font-semibold my-4">
           Generative AI consulting services for strategy, governance, security, development, and implementation.
         </h4>
       </div>
 
       {/* Image Section */}
-       <div className="my-6 text-center py-2">
-        <img src="/assets/Service-1.png" alt="Generative AI Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
-      </div> 
-      
+      <div className="my-6 text-center py-2">
+        <img src="/assets/Service-1.png" alt="Generative AI Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg" />
+      </div>
+
       {/* Introduction Section */}
       <div className="content my-6">
-        <h3 className="text-2xl font-bold">Introduction :</h3>
+        <h3 className="text-xl md:text-2xl font-bold">Introduction :</h3>
         <p>
           Using the power of Generative AI (Gen AI) is no longer an option; it&apos;s a business necessity. Our Generative AI consulting services empower organizations to harness AI&apos;s potential while ensuring governance, security, and ethical implementation.
         </p>
@@ -108,50 +108,42 @@ const AiAppDev = () => {
       </div>
 
       {/* Accordion Sections */}
-      <div ref={ref} className="my-6 space-y-14">
+      <div ref={ref} className="my-6 space-y-10">
         {accordionItems.map((item, index) => (
-          <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg ">
+          <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
             <motion.div
-            
-            key={index}
-            initial={{opacity: 0, x: -50}}
-            animate={isInView ? {opacity: 1, x: 0} : {}}
-            viewport={{once: true, amount: 0.3}}
-            transition={{duration: 0.6}}
+              key={index}
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
             >
-            <button
-              className="w-full text-left flex justify-between items-center font-bold text-xl"
-              onClick={() => toggleAccordion(index)}
-            >
-              {item.title}
-              {openAccordion === index ? <FaMinus /> : <FaPlus />}
-            </button>
+              <button
+                className="w-full text-left flex justify-between items-center font-bold text-lg md:text-xl"
+                onClick={() => toggleAccordion(index)}
+              >
+                {item.title}
+                {openAccordion === index ? <FaMinus /> : <FaPlus />}
+              </button>
 
-            {/* Tab Content */}
-
-            <AnimatePresence>
-            {openAccordion === index && (
-            <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="px-6 text-gray-700 overflow-hidden"
-        >
-            <div className="mt-2 text-gray-900">{item.content}</div> 
-            
-            </motion.div>
-            )}
-            </AnimatePresence>
+              {/* Tab Content */}
+              <AnimatePresence>
+                {openAccordion === index && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="px-6 text-gray-700 overflow-hidden"
+                  >
+                    <div className="mt-2 text-gray-900">{item.content}</div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           </div>
         ))}
       </div>
-
-      
- 
-
-      
     </div>
   );
 };

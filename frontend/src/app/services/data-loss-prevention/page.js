@@ -194,7 +194,7 @@ const AiAppDev = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="relative py-4 px-2">
+    <div className="relative py-4 px-2 text-center md:text-start">
       <div className="heading">
         <h2 className="text-4xl font-bold">
           Generative AI based AI Agents for data loss prevention (DLP) in

@@ -119,7 +119,7 @@ const AiAppDev = () => {
     const isInView = useInView(ref, {once: true, margin: "-100px"});
 
   return (
-    <div className="relative py-3 px-2">
+    <div className="relative py-3 px-2 text-center md:text-start">
       <div className="heading">
         <h2 className="text-4xl font-bold">AI Agent Development in Blockchain</h2>
         <h4 className="text-xl font-semibold my-4">Reshape Blockchain Ecosystems with AI Agents</h4>

@@ -1,12 +1,12 @@
 export default function CompanyIntro() {
     return (
 
-      <section className="flex items-center justify-center py-24">
+      <section className="flex items-center justify-center pb-24 pt-10">
       <section className="container flex items-center justify-center md:mt-0 ">
 
         <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
-          <div className="max-w-4xl flex-shrink-0 md:mr-12">
+          <div className="max-w-4xl flex-shrink-0 md:mr-12  ml-28 md:ml-0 ">
             <button className="text-xl  px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
               Who we are
             </button>
@@ -26,7 +26,7 @@ export default function CompanyIntro() {
               constantly look for connecting the dots with data.
             </p>
   
-            <a href="/contact" className="flex justify-start  md:mr-16">
+            <a href="/contact" className="flex md:justify-start justify-center md:mr-16">
               <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                 Know More
                 <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">

@@ -25,7 +25,7 @@ const WhoAreWe = () => {
                
 
                 <img src="/assets/SolutionSalesforceIMG.jpg"
-                className="py-5 h-96"
+                className="py-5 h-96 ml-5 md:ml-0"
                 />
 
                 <h1 className="text-xl md:text-3xl font-bold text-black py-4 pt-5 leading-tight">

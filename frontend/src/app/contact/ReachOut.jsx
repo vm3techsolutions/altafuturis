@@ -9,7 +9,7 @@ const PortfolioSection = () => {
         {/* Left Side */}
         
 
-        <div className="md:w-1/3 w-full flex justify-center md:justify-start mb-4 md:mb-0">
+        <div className="md:w-1/3 w-full flex justify-center md:justify-start mb-4 md:mb-0 mt-10 md:mt-0">
           <button className="text-xl px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Reach Out
           </button>

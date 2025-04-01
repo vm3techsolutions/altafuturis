@@ -80,7 +80,7 @@ const AiAppDev = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="relative py-3 px-2">
+    <div className="relative py-3 px-2 text-center md:text-start">
       {/* Heading */}
       <div className="heading">
         <h2 className="text-4xl font-bold">Salesforce Consulting Services</h2>

@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
 
   return (
     <>
-      <section className="flex items-center justify-start mt-28 pt-14 md:mt-0">
+      <section className="flex items-center justify-start  pt-4 md:mt-0">
         <section className="container flex items-center justify-center md:mt-0 ">
           <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
             {/* Left Side - Button */}

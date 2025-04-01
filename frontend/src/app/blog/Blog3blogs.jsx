@@ -76,31 +76,32 @@ const BlogLayout = () => {
     <div className="max-w-full mx-auto mt-12 p-4">
       {/* Category Filter Buttons */}
       <div className="w-full flex justify-center mb-6">
-        <div className="flex space-x-4">
-          <button
-            onClick={() => handleCategoryFilter(null)}
-            className={`px-4 py-2 border rounded-xl ${
-              filteredCategory === null
-                ? "bg-blueColor text-white"
-                : "border-gray-300 hover:bg-brownColor hover:text-white"
-            }`}
-          >
-            All Categories
-          </button>
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => handleCategoryFilter(category.id)}
-              className={`px-4 py-2 border rounded-xl transition-colors duration-300 ${
-                filteredCategory === category.id
-                  ? "bg-blueColor text-white"
-                  : "border-gray-300 hover:bg-brownColor hover:text-white"
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+      <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:space-x-4 overflow-x-auto p-2">
+  <button
+    onClick={() => handleCategoryFilter(null)}
+    className={`w-full sm:w-auto px-4 py-2 border rounded-xl whitespace-nowrap ${
+      filteredCategory === null
+        ? "bg-blueColor text-white"
+        : "border-gray-300 hover:bg-brownColor hover:text-white"
+    }`}
+  >
+    All Categories
+  </button>
+  {categories.map((category) => (
+    <button
+      key={category.id}
+      onClick={() => handleCategoryFilter(category.id)}
+      className={`w-full sm:w-auto px-4 py-2 border rounded-xl transition-colors duration-300 whitespace-nowrap ${
+        filteredCategory === category.id
+          ? "bg-blueColor text-white"
+          : "border-gray-300 hover:bg-brownColor hover:text-white"
+      }`}
+    >
+      {category.name}
+    </button>
+  ))}
+</div>
+
       </div>
 
       {/* Blog Display */}

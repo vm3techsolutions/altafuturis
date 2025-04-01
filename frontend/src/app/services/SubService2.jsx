@@ -232,7 +232,7 @@ export default function Subservice2() {
             details and components typically involved in AI Agent development
             services for blockchain:
           </p>
-          <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white py-6">
+          <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white py-6 ">
             {/* Left Side - Selected Card Details */}
             <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-center space-y-6">
             <img src={selectedCard.img} alt={selectedCard.title} className=" w-14 h-14 mx-auto text-yellow-600 " />
