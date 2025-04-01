@@ -48,7 +48,7 @@ function formatDateToAMPM(date) {
   }).format(date).replace(',', '');
 }
 
-// Handle form submission
+// Handle contact form submission
 app.post('/submit', async (req, res) => {
   const { fullname, phone, email, companyName, companyRevenue, role, relationship, services, message, about } = req.body;
   const formattedDate = formatDateToAMPM(new Date());
@@ -63,7 +63,7 @@ app.post('/submit', async (req, res) => {
     await sheets.spreadsheets.values.append({
       auth: authClient,
       spreadsheetId: SPREADSHEET_ID,
-      range: 'Sheet1!A:J', // Sheet name and column range
+      range: 'ContactEnquiry!A:J', // Sheet name and column range
       valueInputOption: 'RAW',
       resource: {
         values: [
@@ -78,6 +78,38 @@ app.post('/submit', async (req, res) => {
     res.status(500).send('Error adding data to Google Sheets');
   }
 });
+
+// Handle Quote Section form submission
+app.post('/submit-quote', async (req, res) => {
+  const { fullname, phone, email, requirement } = req.body;
+  const formattedDate = formatDateToAMPM(new Date());
+
+  if (!fullname || !phone || !email || !requirement) {
+    return res.status(400).send('Required fields are missing');
+  }
+
+  try {
+    const authClient = await getAuthClient();
+
+    await sheets.spreadsheets.values.append({
+      auth: authClient,
+      spreadsheetId: SPREADSHEET_ID,
+      range: 'QuoteEnquiry!A:E', // Quote Section form data in Sheet2
+      valueInputOption: 'RAW',
+      resource: {
+        values: [
+          [fullname, phone, email, requirement, formattedDate],
+        ],
+      },
+    });
+
+    res.json({ message: "Quote request submitted successfully" });
+  } catch (error) {
+    console.error('Error adding data to Google Sheets:', error);
+    res.status(500).send('Error adding data to Google Sheets');
+  }
+});
+
 
 // Start server
 app.listen(port, '0.0.0.0', () => {
