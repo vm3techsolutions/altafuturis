@@ -55,7 +55,7 @@ const QuoteSection = () => {
           Alta-Futuris follows an approach to come up with innovative solutions in AI, Data Engineering, and Salesforce that includes data research and analysis.
         </p>
         <a href="/contact" className="flex justify-center lg:justify-start mt-6">
-          <button className="px-4 py-2 bg-brownColor text-white rounded-xl shadow-md hover:bg-blueColor flex items-center">
+          <button className="px-4 py-2 bg-brownColor text-white rounded-xl shadow-md hover:bg-blueColor flex items-center group">
             Know More
             <span className="ml-2 bg-blueColor group-hover:bg-brownColor text-white px-1 rounded-md">
               &gt;&gt;
@@ -73,7 +73,7 @@ const QuoteSection = () => {
           <input type="text" name="phone" placeholder="Mobile*" value={formData.phone} onChange={handleChange} className="p-3 border rounded-lg w-full" required />
           <input type="email" name="email" placeholder="Email*" value={formData.email} onChange={handleChange} className="p-3 border rounded-lg w-full" required />
           <textarea name="requirement" placeholder="Requirement*" value={formData.requirement} onChange={handleChange} className="p-3 border rounded-lg w-full h-24" required></textarea>
-          <button type="submit" className="bg-[#6328A6] text-white py-3 rounded-lg hover:bg-purple-700">
+          <button type="submit" className="bg-[#6328A6] text-white py-3 rounded-lg hover:bg-brownColor">
             Send Message
           </button>
           {responseMessage && <p className="text-center text-green-600 mt-2">{responseMessage}</p>}

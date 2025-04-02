@@ -12,7 +12,6 @@ const PortfolioSection = () => {
   useEffect(() => {
     const fetchCaseStudies = async () => {
       try {
-        // const response = await axios.get("http://localhost/resources/wp-json/wp/v2/case_study?_embed");
         const response = await axios.get(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/case_study?_embed`);
         const data = response.data.slice(0, 3).map((study) => ({
           slug: study.slug, // Use slug instead of id
@@ -61,7 +60,7 @@ const PortfolioSection = () => {
                   <h3 className="font-bold text-xl md:text-3xl pt-4 text-left" dangerouslySetInnerHTML={{ __html: study.title }} />
                   <button
                     onClick={() => router.push(`/case-studies/${study.slug}`)}
-                    className="text-purpleColor text-sm font-semibold block text-left"
+                    className="text-purpleColor text-sm font-semibold block text-left hover:text-brownColor"
                   >
                     READ MORE &gt;&gt;
                   </button>
@@ -75,7 +74,7 @@ const PortfolioSection = () => {
                     <h3 className="font-bold text-2xl md:text-3xl" dangerouslySetInnerHTML={{ __html: study.title }} />
                     <button
                       onClick={() => router.push(`/case-studies/${study.slug}`)}
-                      className="text-purpleColor text-sm font-semibold"
+                      className="text-purpleColor text-sm font-semibold hover:text-brownColor"
                     >
                       READ MORE &gt;&gt;
                     </button>
