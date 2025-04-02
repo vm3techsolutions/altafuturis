@@ -2,7 +2,7 @@
 import PartnershipBanner from "./PartnershipBanner";
 import PartnershipData from "./PartnershipData";
 import PartnershipRequirements from "./PartnershipRequirements";
-
+import Requirements from "@app/home/Requirements";
 
 
 export default function ContactPage() {
@@ -11,7 +11,8 @@ export default function ContactPage() {
         
         <PartnershipBanner/>
         <PartnershipData/>
-        <PartnershipRequirements/>
+        {/* <PartnershipRequirements/> */}
+        <Requirements/>
         
       </div>
     );
