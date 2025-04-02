@@ -11,9 +11,8 @@ export default function ContactPage() {
         
         <PartnershipBanner/>
         <PartnershipData/>
-        {/* <PartnershipRequirements/> */}
         <Requirements/>
-        
+        {/* <PartnershipRequirements/> */}        
       </div>
     );
   }

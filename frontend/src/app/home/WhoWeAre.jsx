@@ -23,14 +23,14 @@ export default function CompanyIntro() {
               the client’s business end-to-end and identify the sectors and
               processes that can be automated. With our endless innovative mindset,
               we believe in becoming an essential part of the client’s team and
-              constantly look for connecting the dots with data.
-            </p>
+              constantly look for connecting the dots with data.            </p>
   
             <a href="/contact" className="flex md:justify-start justify-center md:mr-16">
               <button className="px-4 py-2 bg-blueColor text-white  rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
                 Know More
                 <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
                   &gt;&gt;
+                  
                 </span>
               </button>
             </a>
