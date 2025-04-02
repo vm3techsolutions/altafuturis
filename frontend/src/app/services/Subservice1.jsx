@@ -31,7 +31,7 @@ export default function Subservice1() {
 
   if (slug === "ai-app-dev") {
     return (
-      <div className="px-6 md:p-10">
+      <div className="px-14 md:p-10">
         <div className="text-start">
           <h3 className="text-2xl font-bold">AI’s Next Disruptor: AI Agents</h3>
           <p>AI Agents can take business roles, make strategic decisions, and drive productivity at scale.</p>

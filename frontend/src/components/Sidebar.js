@@ -34,9 +34,9 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="py-10">
+    <div className="py-10 w-[40vh] sm:w-[70vh] md:w-full">
       {/* Sidebar Service Menu */}
-      <div className="sidebar bg-white p-4 rounded-xl">
+      <div className="sidebar bg-white p-4 rounded-xl ">
         <ul>
           {services.map((service) => (
             <li

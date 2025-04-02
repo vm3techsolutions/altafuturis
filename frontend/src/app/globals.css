@@ -69,38 +69,8 @@ h1, h2, h3, h4, h5, h6, a {
     font-family: Arimo;
   }
 
-  @media (max-width: 768px) {
-    .container {
-      padding: 1rem;
-    }
-  }
+ 
 
-  @media (max-width: 768px) {
-  .flex-wrap {
-    flex-direction: column;
-  }
-
-  .border-r {
-    border-right: none;
-  }
-
-  .md\:w-1\/3 {
-    width: 100%;
-  }
-
-  .md\:p-10 {
-    padding: 1rem;
-  }
-}
-
-button:focus {
-  outline: 2px solid #002096;
-  outline-offset: 2px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
 
 .group:hover, .group:focus {
   transform: translate-x-1;
