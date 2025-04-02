@@ -47,9 +47,7 @@ const CaseStudyDetails = async ({ params }) => {
       title: data.title?.rendered || "Untitled",
       date: new Date(data.date).toLocaleDateString(),
       category: data._embedded?.["wp:term"]?.[0]?.[0]?.name || "Uncategorized",
-      image:
-        data._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.full?.source_url ||
-        "/assets/placeholder.png",
+      image: data._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/assets/placeholder.png",
       content: data.content?.rendered || "<p>No content available.</p>",
     };
 
