@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: "Ganesh Shevade",
     designation: "Co-Founder & CEO",
-    image: "/assets/ceo.png",
+    image: "/assets/ceo.jpg",
     linkedin: "https://www.linkedin.com/in/ganeshshevade/",
   },
   {
@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: "Pratiksha Shevade",
     designation: "Solution Architect - Salesforce",
-    image: "/assets/sales.png",
+    image: "/assets/sales.jpg",
     linkedin: "https://www.linkedin.com/in/pratiksha-shevade-2669458/",
   },
 ];
