@@ -135,7 +135,7 @@ const CaseStudyDetails = async ({ params }) => {
             
             {/* ✅ Image */}
             <div className="w-full md:w-1/3">
-              <Image
+              <img
                 className="w-full h-40 object-cover border-brownColor border-2 rounded-md"
                 src={study.image}
                 width={300}
