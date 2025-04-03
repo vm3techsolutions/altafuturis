@@ -9,7 +9,7 @@ export default function CompanyIntro() {
           <div className="max-w-4xl flex-shrink-0 md:mr-12  ml-32 md:ml-0 ">
             <button className="text-xl  px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
               Who we are
-            </button>
+            </button> 
           </div>
   
           {/* Right Side - Content */}
@@ -30,7 +30,7 @@ export default function CompanyIntro() {
                 Know More
                 <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
                   &gt;&gt;
-                  
+
                 </span>
               </button>
             </a>
