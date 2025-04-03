@@ -71,7 +71,7 @@ const BlogPostDetails = async ({ params }) => {
     return (
       <div className="mt-12 bg-white">
         {/* ✅ Banner Image */}
-        <div className="w-full h-[500px] relative">
+        <div className="w-full h-[30vh] md:h-[75vh] lg:h-[75vh] 2xl:h-[75vh] relative">
           <Image
             className="w-full h-full object-cover"
             src={blogPost.image}
@@ -115,26 +115,26 @@ const BlogPostDetails = async ({ params }) => {
 
         {/* ✅ Related Blog Posts */}
         <div className="mt-12 px-12 py-8">
-          <div className="flex justify-start items-start gap-4">
+          <div className="flex flex-col md:flex-row items-start gap-6">
             {/* Column 1: Read More Button */}
-            <div className="w-1/5">
-              <button className="px-5 py-3 text-md border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
+            <div className="w-full md:w-1/5 px-24 md:px-2">
+              <button className="w-full md:w-auto px-5 py-3 text-md border-2 border-brownColor rounded-full text-black shadow-sm transition-all duration-300 ease-in-out font-bold">
                 Read More
               </button>
             </div>
 
             {/* Column 2: Heading */}
-            <div className="w-1/5 text-left">
+            <div className="w-full md:w-1/5 text-center md:text-left">
               <h2 className="text-3xl font-bold text-gray-800">You May Also Like</h2>
             </div>
 
             {/* Column 3: Related Blog Posts */}
-            <div className="w-3/5 flex flex-col space-y-6">
+            <div className="w-full md:w-3/5 flex flex-col space-y-6">
               {relatedPosts.length > 0 ? (
                 relatedPosts.map((post) => (
-                  <div key={post.slug} className="bg-white p-4 rounded-lg flex">
+                  <div key={post.slug} className="bg-white p-4 rounded-lg flex flex-col md:flex-row">
                     {/* ✅ Image */}
-                    <div className="w-1/3">
+                    <div className="w-full md:w-1/3">
                       <Image
                         className="w-full h-40 object-cover border-brownColor border-2 rounded-md"
                         src={post.image}
@@ -145,11 +145,11 @@ const BlogPostDetails = async ({ params }) => {
                     </div>
 
                     {/* ✅ Text Content */}
-                    <div className="w-2/3 pl-4">
+                    <div className="w-full md:w-2/3 pl-4 mt-2">
                       <h3 className="text-xl font-semibold">{post.title}</h3>
                       <a
                         href={`/blog/${post.slug}`}
-                        className="text-blue-600 mt-2 inline-block hover:underline"
+                        className="text-blue-600 mt-2 inline-block hover:text-brownColor"
                       >
                         Read More
                       </a>

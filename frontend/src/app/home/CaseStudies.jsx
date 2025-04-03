@@ -12,12 +12,11 @@ const PortfolioSection = () => {
   useEffect(() => {
     const fetchCaseStudies = async () => {
       try {
-        // const response = await axios.get("http://localhost/resources/wp-json/wp/v2/case_study?_embed");
         const response = await axios.get(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/case_study?_embed`);
         const data = response.data.slice(0, 3).map((study) => ({
           slug: study.slug, // Use slug instead of id
           title: study.title.rendered,
-          image_url: study._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/assets/placeholder.png",
+          image: study._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/assets/placeholder.png",
         }));
         setCaseStudies(data);
       } catch (error) {
@@ -57,11 +56,11 @@ const PortfolioSection = () => {
               {index === 0 ? (
                 <>
                   {/* First case study - Title below image */}
-                  <Image src={study.image_url} width={1000} height={120} alt="Case Study Image" className="rounded-lg" />
+                  <Image src={study.image} width={1000} height={120} alt="Case Study Image" className="rounded-lg" />
                   <h3 className="font-bold text-xl md:text-3xl pt-4 text-left" dangerouslySetInnerHTML={{ __html: study.title }} />
                   <button
                     onClick={() => router.push(`/case-studies/${study.slug}`)}
-                    className="text-purpleColor text-sm font-semibold block text-left"
+                    className="text-purpleColor text-sm font-semibold block text-left hover:text-brownColor"
                   >
                     READ MORE &gt;&gt;
                   </button>
@@ -69,13 +68,13 @@ const PortfolioSection = () => {
               ) : (
                 <div className="flex items-center space-x-6">
                   {/* Image */}
-                  <Image src={study.image_url} width={500} height={150} alt="Case Study Image" className="rounded-lg" />
+                  <Image src={study.image} width={500} height={150} alt="Case Study Image" className="rounded-lg" />
                   {/* Title & Read More beside the image */}
                   <div>
                     <h3 className="font-bold text-2xl md:text-3xl" dangerouslySetInnerHTML={{ __html: study.title }} />
                     <button
                       onClick={() => router.push(`/case-studies/${study.slug}`)}
-                      className="text-purpleColor text-sm font-semibold"
+                      className="text-purpleColor text-sm font-semibold hover:text-brownColor"
                     >
                       READ MORE &gt;&gt;
                     </button>

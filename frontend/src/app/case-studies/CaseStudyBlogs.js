@@ -106,7 +106,7 @@ const CaseStudyLayout = () => {
                 <h2 className="text-xs mb-2">📅 {study.date}</h2>
                 <h2 className="text-3xl font-semibold">{study.title}</h2>
                 <p className="text-gray-600 mt-2 text-lg">{study.description}</p>
-                <Link href={`/case-studies/${study.slug}`} className="text-[#6328A6] mt-4 inline-block font-semibold">
+                <Link href={`/case-studies/${study.slug}`} className="text-[#6328A6] mt-4 inline-block font-semibold hover:text-brownColor">
                   READ MORE <span className="text-3xl p-1">&raquo;</span>
                 </Link>
               </div>
@@ -122,7 +122,7 @@ const CaseStudyLayout = () => {
                 <h2 className="text-xs mb-2">📅 {study.date}</h2>
                 <h2 className="text-md font-semibold">{study.title}</h2>
                 <p className="text-gray-600 mt-2 text-sm">{study.description.split(" ").slice(0, 12).join(" ") + "..."}</p>
-                <Link href={`/case-studies/${study.slug}`} className="text-[#6328A6] text-sm inline-block font-semibold">
+                <Link href={`/case-studies/${study.slug}`} className="text-[#6328A6] text-sm inline-block font-semibold hover:text-brownColor">
                   READ MORE <span className="text-3xl p-1">&raquo;</span>
                 </Link>
               </div>
