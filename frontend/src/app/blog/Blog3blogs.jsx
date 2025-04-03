@@ -123,7 +123,7 @@ const BlogLayout = () => {
                 </p>
                 <Link
                   href={blog.link}
-                  className="text-[#6328A6] mt-4 inline-block font-semibold"
+                  className="text-[#6328A6] mt-4 inline-block font-semibold hover:text-brownColor"
                 >
                   READ MORE &raquo;
                 </Link>
