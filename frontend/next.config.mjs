@@ -4,13 +4,14 @@ const nextConfig = {
     // loader: 'imgix',
     // path: '', // required for imgix
     // domains: ['https://blog.altafuturis.com/, https://altafuturis.com/'], // allowlist domain
-    unoptimized: true 
+    unoptimized: false, 
+  },
+   // Enable React Strict Mode (recommended)
+   reactStrictMode: true,
 
-  },
-  experimental: {
-    // appDir: true, // Enable Next.js App Router
-  },
-  // output: 'export'
+  // experimental: {
+  //   appDir: true, // Enable Next.js App Router
+  // },
 };
 
 export default nextConfig;
