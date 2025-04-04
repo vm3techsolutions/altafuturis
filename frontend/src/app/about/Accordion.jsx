@@ -397,7 +397,7 @@ export default function TabInfo() {
           <ul className="mt-8 space-y-6">
             {filteredTabs[activeTab].description.map((desc, i) => (
               <li key={i} className="text-lg">
-                <strong className="text-xl">{desc.subTitle}: </strong>
+                <strong className="text-xl">{desc.subTitle} </strong>
                 {desc.content}
               </li>
             ))}
