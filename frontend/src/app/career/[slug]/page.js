@@ -39,7 +39,7 @@ const CareerDetails = async ({ params }) => {
       location: job.acf?.location || 'Not specified',
       experience: job.acf?.experience || 'Not specified',
       qualification: job.acf?.qualification || 'Not specified',
-      salary: job.acf?.salary || 'Not specified',
+      salary: job.acf?.salary || 'As per industry standards',
       jobType: job.acf?.job_type || 'Not specified',
       applyLink: job.acf?.apply_link || '#',
     };
