@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Fullscreen } from "lucide-react";
+// import Image from "next/image";
 import { useState } from "react";
 
 export default function HomeBanner() {
@@ -23,6 +24,7 @@ export default function HomeBanner() {
         alt="Home Banner"
         className="w-full h-full object-auto object-center"
         loading="lazy"
+        
       />
 
       {/* Light Effect */}
