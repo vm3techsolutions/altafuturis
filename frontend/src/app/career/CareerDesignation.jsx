@@ -14,7 +14,7 @@ export default function JobListings() {
 
   // ✅ Fetch career categories (custom taxonomy)
   useEffect(() => {
-    fetch(`${WORDPRESS_API}/career_category`)
+    fetch(`${WORDPRESS_API}/categories`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((cat) => cat.count > 0);
