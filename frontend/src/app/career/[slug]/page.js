@@ -6,14 +6,16 @@ const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
 
 // ✅ Fetch all career post slugs for static generation
 export async function generateStaticParams() {
-  try {
-    const response = await axios.get(`${WORDPRESS_API}/career?per_page=100`);
-    return response.data.map((job) => ({ slug: job.slug }));
-  } catch (error) {
-    console.error('Error fetching career slugs:', error);
-    return [];
+    try {
+      const response = await axios.get(`${WORDPRESS_API}/career?per_page=100`);
+      const slugs = response.data.map((job) => ({ slug: job.slug }));
+      console.log("Generated career slugs:", slugs); // ⬅️ Debug output
+      return slugs;
+    } catch (error) {
+      console.error('Error fetching career slugs:', error);
+      return [];
+    }
   }
-}
 
 const CareerDetails = async ({ params }) => {
   const { slug } = params;
