@@ -4,18 +4,16 @@ import { Calendar, MapPin, Briefcase, BadgeDollarSign } from 'lucide-react';
 
 const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
 
-// ✅ Fetch all career post slugs for static generation
 export async function generateStaticParams() {
-    try {
-      const response = await axios.get(`${WORDPRESS_API}/career?per_page=100`);
-      const slugs = response.data.map((job) => ({ slug: job.slug }));
-      console.log("Generated career slugs:", slugs); // ⬅️ Debug output
-      return slugs;
-    } catch (error) {
-      console.error('Error fetching career slugs:', error);
-      return [];
-    }
+  try {
+    const response = await axios.get(`${WORDPRESS_API}/career?per_page=100`);
+    const slugs = response.data.map((job) => ({ slug: job.slug }));
+    return slugs;
+  } catch (error) {
+    console.error('Error fetching career slugs:', error);
+    return [];
   }
+}
 
 const CareerDetails = async ({ params }) => {
   const { slug } = params;
@@ -37,7 +35,7 @@ const CareerDetails = async ({ params }) => {
       image:
         job._embedded?.['wp:featuredmedia']?.[0]?.media_details?.sizes?.full?.source_url ||
         '/assets/placeholder.png',
-      content: job.acf?.job_description || '<p>No description available.</p>',
+      content: job.content?.rendered || '<p>No description available.</p>',
       location: job.acf?.location || 'Not specified',
       experience: job.acf?.experience || 'Not specified',
       qualification: job.acf?.qualification || 'Not specified',
@@ -48,7 +46,7 @@ const CareerDetails = async ({ params }) => {
 
     return (
       <div className="py-12 bg-white">
-        {/* ✅ Banner Image */}
+        {/* Banner Image (optional) */}
         {/* <div className="w-full h-[35vh] md:h-[65vh] relative">
           <Image
             className="w-full h-full object-cover"
@@ -59,8 +57,8 @@ const CareerDetails = async ({ params }) => {
           />
         </div> */}
 
-        <div className=" mt-20 px-6 md:px-12 py-6">
-          {/* ✅ Date & Meta */}
+        <div className="mt-20 px-6 md:px-12 py-6">
+          {/* Meta Info */}
           <div className="mt-4 text-md text-gray-500 flex flex-wrap gap-6 items-center">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
@@ -80,11 +78,11 @@ const CareerDetails = async ({ params }) => {
             </div>
           </div>
 
-          {/* ✅ Job Title */}
+          {/* Title & Job Title */}
           <h1 className="text-3xl md:text-4xl font-bold mt-4">{jobDetails.title}</h1>
           <p className="text-lg text-gray-700 mt-1 italic">{jobDetails.jobTitle}</p>
 
-          {/* ✅ Details */}
+          {/* Details */}
           <div className="mt-4 space-y-2 text-lg text-gray-700">
             <p>
               <strong>Experience:</strong> {jobDetails.experience}
@@ -100,13 +98,12 @@ const CareerDetails = async ({ params }) => {
             </p>
           </div>
 
-          {/* ✅ Description */}
-          <div
-            className="mt-6 text-lg text-gray-700 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: jobDetails.content }}
-          />
+          {/* Description with Typography */}
+          <div className="mt-8 prose prose-lg prose-blue max-w-none">
+            <div dangerouslySetInnerHTML={{ __html: jobDetails.content }} />
+          </div>
 
-          {/* ✅ Apply Button */}
+          {/* Apply Button */}
           <div className="mt-10 text-left">
             <a
               href="mailto:career@altafuturis.com"
