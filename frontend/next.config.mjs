@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // Disables Next.js automatic image optimization
+    loader: 'imgix',
+    path: '', // required for imgix
+    domains: ['https://blog.altafuturis.com/, https://altafuturis.com/'], // allowlist domain
   },
   experimental: {
     // appDir: true, // Enable Next.js App Router
