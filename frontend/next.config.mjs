@@ -9,9 +9,9 @@ const nextConfig = {
    // Enable React Strict Mode (recommended)
    reactStrictMode: true,
 
-  // experimental: {
-  //   appDir: true, // Enable Next.js App Router
-  // },
+  experimental: {
+    appDir: true, // Enable Next.js App Router
+  },
 };
 
 export default nextConfig;
