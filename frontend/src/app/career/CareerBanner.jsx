@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function HomeBanner() {
@@ -17,7 +18,7 @@ export default function HomeBanner() {
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
-      <img
+      <Image
         src="/assets/CareerBanner2.png"
         alt="Home Banner"
         className="w-full h-full object-auto object-center"
