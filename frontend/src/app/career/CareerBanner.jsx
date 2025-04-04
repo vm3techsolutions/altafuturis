@@ -18,7 +18,7 @@ export default function HomeBanner() {
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
-      <Image
+      <img
         src="/assets/CareerBanner2.png"
         alt="Home Banner"
         className="w-full h-full object-auto object-center"

@@ -51,9 +51,9 @@ export default function ServicesSection() {
     <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="max-w-4xl flex-shrink-0 md:mr-12 ml-32 md:ml-0 mt-28 md:mt-0">
-            <button className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <heading className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Services
-            </button>
+            </heading>
           </div>
   
           {/* Right Side - Content */}

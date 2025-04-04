@@ -44,9 +44,9 @@ const QuoteSection = () => {
     <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between bg-[#6328A6] text-white p-10 lg:p-20 gap-10">
       <div className="lg:w-1/2 md:w-1/2 w-full text-center lg:text-left">
         <div className="md:w-full w-full flex justify-center md:justify-start mb-16 md:mb-0">
-          <button className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-white bg-[#6328A6] shadow-sm font-bold">
+          <heading className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-white bg-[#6328A6] shadow-sm font-bold">
             Let's discuss your requirements
-          </button>
+          </heading>
         </div>
         <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-4 mt-5">
           Data and Workflow Solutions for your Digital Success!

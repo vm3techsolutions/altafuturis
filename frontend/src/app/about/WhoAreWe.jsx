@@ -6,9 +6,9 @@ const WhoAreWe = () => {
           <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start lg:items-start justify-between w-full space-y-8 md:space-y-0">
             {/* Left Side - Button */}
             <div className="max-w-4xl flex-shrink-0 md:mr-12">
-              <button className="text-xl md:mb-44 px-5 py-3  border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+              <heading className="text-xl md:mb-44 px-5 py-3  border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
                 Who we are
-              </button>
+              </heading>
             </div>
 
             {/* Right Side - Content */}

@@ -64,7 +64,7 @@ const Sidebar = () => {
         <h2 className="text-3xl font-extrabold mb-20">
           Need Advice ?<br /> Book a Call!
         </h2>
-        <Image
+        <img
           src="/assets/h1c4.png"
           alt="service-image"
           className="object-center"
@@ -83,7 +83,7 @@ const Sidebar = () => {
               &gt;&gt;
             </span>
           </button>
-        </Link>
+        </Link> 
       </div>
     </div>
   );

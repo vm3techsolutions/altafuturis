@@ -69,9 +69,6 @@ h1, h2, h3, h4, h5, h6, a {
     font-family: Arimo;
   }
 
- 
-
-
 .group:hover, .group:focus {
   transform: translate-x-1;
 }
