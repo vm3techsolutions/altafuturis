@@ -12,21 +12,21 @@ export default function JobListings() {
 
   const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
 
-  // Fetch categories
+  // ✅ Fetch career categories (custom taxonomy)
   useEffect(() => {
-    fetch(`${WORDPRESS_API}/categories`)
+    fetch(`${WORDPRESS_API}/career_category`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((cat) => cat.count > 0);
         setCategories(filtered);
       })
-      .catch((err) => console.error('Category fetch error:', err));
+      .catch((err) => console.error('Career category fetch error:', err));
   }, []);
 
-  // Fetch jobs
+  // ✅ Fetch jobs (CPT: career) with optional category filter
   useEffect(() => {
     const categoryQuery = selectedCategoryId
-      ? `&categories=${selectedCategoryId}`
+      ? `&career_category=${selectedCategoryId}`
       : '';
 
     fetch(`${WORDPRESS_API}/career?_embed&acf_format=standard${categoryQuery}`)
@@ -51,7 +51,7 @@ export default function JobListings() {
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      {/* Category Buttons */}
+      {/* Category Filters */}
       <div className="flex flex-wrap justify-center py-6 gap-4">
         <button
           onClick={() => setSelectedCategoryId(null)}
@@ -61,7 +61,7 @@ export default function JobListings() {
               : 'bg-blue-600 text-white'
           } px-4 py-2 rounded-lg font-semibold hover:bg-blue-700`}
         >
-          All Categories{' '}
+          All Categories
           <span className="bg-[#D4B301] py-1 px-2 rounded ml-2">&raquo;</span>
         </button>
         {categories.map((cat) => (
@@ -77,7 +77,7 @@ export default function JobListings() {
         ))}
       </div>
 
-      {/* Job Listings */}
+      {/* Job List */}
       {jobs.map((job, index) => (
         <div key={index} className="border-t border-[#D4B301] py-4">
           <div className="flex justify-between items-center">
