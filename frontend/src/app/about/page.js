@@ -6,6 +6,12 @@ import Team from './Team';
 import VisionMission from './VisionMission';
 import WhoAreWe from './WhoAreWe';
 
+export const metadata = {
+  title: "Altafuturis - About US",
+  description: "Based in Texus, Serving globally!"
+}
+
+
 export default function AboutPage() {
     return (
       <div>

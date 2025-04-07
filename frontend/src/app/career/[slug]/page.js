@@ -4,6 +4,16 @@ import { Calendar, MapPin, Briefcase, BadgeDollarSign } from 'lucide-react';
 
 const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
 
+export async function generateMetadata({params})  {
+  const slug = params.slug;
+  const res = await fetch(`${WORDPRESS_API}/career?slug=${slug}&_embed=true`);
+  const career = (await res.json())[0];
+  return {
+    title: career?.title?.rendered || "Job Post", 
+    description: career?.excerpt?.rendered?.replace(/<[^>]+>/g, "") || "Job Post Description",
+  };
+}
+
 export async function generateStaticParams() {
   try {
     const response = await axios.get(`${WORDPRESS_API}/career?per_page=100`);

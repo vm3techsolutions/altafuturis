@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // loader: 'imgix',
-    // path: '', // required for imgix
-    // domains: ['https://blog.altafuturis.com/, https://altafuturis.com/'], // allowlist domain
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: '**',
+        port: '',
+        pathname: '/resources/**',
+      },
+    ],
     unoptimized: false, 
   },
    // Enable React Strict Mode (recommended)

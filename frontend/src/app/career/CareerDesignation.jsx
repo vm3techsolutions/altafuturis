@@ -12,21 +12,20 @@ export default function JobListings() {
 
   const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
 
-  // ✅ Fetch career categories (custom taxonomy)
+  // ✅ Fetch categories
   useEffect(() => {
     fetch(`${WORDPRESS_API}/categories`)
       .then((res) => res.json())
       .then((data) => {
-        const filtered = data.filter((cat) => cat.count > 0);
-        setCategories(filtered);
+        setCategories(data); // removed count filter if causing issues
       })
-      .catch((err) => console.error('Career category fetch error:', err));
+      .catch((err) => console.error('Category fetch error:', err));
   }, []);
 
-  // ✅ Fetch jobs (CPT: career) with optional category filter
+  // ✅ Fetch jobs with optional category filter
   useEffect(() => {
     const categoryQuery = selectedCategoryId
-      ? `&career_category=${selectedCategoryId}`
+      ? `&categories=${selectedCategoryId}`
       : '';
 
     fetch(`${WORDPRESS_API}/career?_embed&acf_format=standard${categoryQuery}`)
@@ -64,6 +63,7 @@ export default function JobListings() {
           All Categories
           <span className="bg-[#D4B301] py-1 px-2 rounded ml-2">&raquo;</span>
         </button>
+
         {categories.map((cat) => (
           <button
             key={cat.id}
@@ -81,9 +81,7 @@ export default function JobListings() {
       {jobs.map((job, index) => (
         <div key={index} className="border-t border-[#D4B301] py-4">
           <div className="flex justify-between items-center">
-            <h2 className="text-xl font-semibold">
-              Designation: {job.title}
-            </h2>
+            <h2 className="text-xl font-semibold">Designation: {job.title}</h2>
             <ChevronDown
               className={`text-[#D4B301] cursor-pointer transition-transform ${
                 expandedJob === index ? 'rotate-180' : ''
@@ -105,8 +103,6 @@ export default function JobListings() {
           )}
         </div>
       ))}
-
-      <div className="border-t border-yellow-500"></div>
     </div>
   );
 }
