@@ -18,5 +18,5 @@ const nextConfig = {
     appDir: true, // Enable Next.js App Router
   },
 };
-
+  
 export default nextConfig;

@@ -17,7 +17,11 @@ export default function JobListings() {
     fetch(`${WORDPRESS_API}/categories`)
       .then((res) => res.json())
       .then((data) => {
-        setCategories(data); // removed count filter if causing issues
+        // Filter out "Uncategorized" by name or by ID (commonly ID = 1)
+        const filtered = data.filter(
+          (cat) => cat.name.toLowerCase() !== 'uncategorized' && cat.id !== 1
+        );
+        setCategories(filtered);
       })
       .catch((err) => console.error('Category fetch error:', err));
   }, []);
@@ -56,20 +60,19 @@ export default function JobListings() {
           onClick={() => setSelectedCategoryId(null)}
           className={`${
             selectedCategoryId === null
-              ? 'bg-blue-700 text-white'
-              : 'bg-blue-600 text-white'
-          } px-4 py-2 rounded-lg font-semibold hover:bg-blue-700`}
+              ? 'bg-blueColor text-white'
+              : 'border hover:bg-brownColor hover:text-white text-gray-900'
+          } px-4 py-2 rounded-lg`}
         >
           All Categories
-          <span className="bg-[#D4B301] py-1 px-2 rounded ml-2">&raquo;</span>
         </button>
 
         {categories.map((cat) => (
           <button
             key={cat.id}
             onClick={() => setSelectedCategoryId(cat.id)}
-            className={`border border-yellow-500 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-100 ${
-              selectedCategoryId === cat.id ? 'bg-yellow-100' : 'text-black'
+            className={`border px-4 py-2 rounded-lg hover:text-white hover:bg-brownColor ${
+              selectedCategoryId === cat.id ? 'bg-blueColor text-white' : 'text-black'
             }`}
           >
             {cat.name}
