@@ -2,34 +2,6 @@
   import React from "react";
   import { FaLinkedin } from "react-icons/fa";
 
-<<<<<<< HEAD
-  const teamMembers = [
-    {
-      name: "Ganesh Shevade",
-      designation: "Co-Founder & CEO",
-      image: "/assets/ceo.jpg",
-      linkedin: "https://www.linkedin.com/in/ganeshshevade/",
-    },
-    {
-      name: "Mahesh Mutalik",
-      designation: "Co-Founder",
-      image: "/assets/coFounder.png",
-      linkedin: "https://www.linkedin.com/in/mahesh-mutalik-9a06a69/",
-    },
-    {
-      name: "Shweta Pawar",
-      designation: "Agents, LLMs & GenAI Expert",
-      image: "/assets/shwetaPawar.jpg",
-      linkedin: "https://www.linkedin.com/in/aishweta/",
-    },
-    {
-      name: "Pratiksha Shevade",
-      designation: "Solution Architect - Salesforce",
-      image: "/assets/sales.jpg",
-      linkedin: "https://www.linkedin.com/in/pratiksha-shevade-2669458/",
-    },
-  ];
-=======
 const teamMembers = [
   {
     name: "Ganesh Shevade",
@@ -56,7 +28,6 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/pratiksha-shevade-2669458/",
   },
 ];
->>>>>>> b81013ae138caacd0ed30bb355c647211689a190
 
   const Team = () => {
     return (
