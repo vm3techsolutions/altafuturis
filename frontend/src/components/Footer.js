@@ -71,6 +71,11 @@ We provide innovative spectrum of Applied Artificial Intelligence, Data Engineer
                   Career
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy-policy" className="text-md hover:text-yellow-400">
+                  Privacy Policy
+                </Link>
+              </li>
 
               
               
