@@ -1,3 +1,4 @@
+import CommingSoon from "./CommingSoon";
 import PodcastBanner from "./PodcastBanner";
 
 export const metadata = {
@@ -10,6 +11,7 @@ export default function ContactPage() {
       <div>
         
         <PodcastBanner/>
+        <CommingSoon/>
         
       </div>
     );
