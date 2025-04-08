@@ -3,8 +3,19 @@ import Image from "next/image";
 import axios from "axios";
 import { Calendar, Tag } from "lucide-react";
 
-
 const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
+
+export async function generateMetadata({params})  {
+  const slug = params.slug;
+  const res = await fetch(`${WORDPRESS_API}/posts?slug=${slug}&_embed=true`);
+  const post = (await res.json())[0];
+  return {
+    title: post?.title?.rendered || "Blog Post", 
+    description: post?.excerpt?.rendered?.replace(/<[^>]+>/g, "") || "Blog Post Description",
+  };
+}
+
+
 // ✅ Fetch all blog post slugs for static generation
 export async function generateStaticParams() {
   try {

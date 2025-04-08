@@ -1,16 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // loader: 'imgix',
-    // path: '', // required for imgix
-    // domains: ['https://blog.altafuturis.com/, https://altafuturis.com/'], // allowlist domain
-    unoptimized: true 
-
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: '**',
+        port: '',
+        pathname: '/resources/**',
+      },
+    ],
+    unoptimized: false, 
   },
+   // Enable React Strict Mode (recommended)
+   reactStrictMode: true,
+
   experimental: {
-    // appDir: true, // Enable Next.js App Router
+    appDir: true, // Enable Next.js App Router
   },
-  // output: 'export'
 };
-
+  
 export default nextConfig;

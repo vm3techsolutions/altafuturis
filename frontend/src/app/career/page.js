@@ -1,7 +1,11 @@
-import Career4btn from "./Career4btn";
 import CareerBanner from "./CareerBanner";
 import CareerDesignation from "./CareerDesignation";
 import CareerFooter from "./CareerFooter";
+
+export const metadata = {
+  title: "Altafuturis - Job Openings",
+  description: "Based in Texus, Serving globally!"
+}
 
 
 export default function Home() {
@@ -9,7 +13,6 @@ export default function Home() {
   <div className="bg-white"> 
   
     <CareerBanner/>
-    <Career4btn/>
     <CareerDesignation/>
     <CareerFooter/>
     

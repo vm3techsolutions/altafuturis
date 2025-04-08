@@ -11,6 +11,10 @@ import OurTeam from './home/OurTeam';
 import Testimonials from "./home/Testimonials";
 import Whowearebtn from "./home/Whowearebtn";
 
+export const metadata = {
+  title: "Altafuturis",
+  description: "Based in Texus, Serving globally!"
+}
 
 export default function Home() {
   return (

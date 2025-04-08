@@ -5,6 +5,16 @@ import { Calendar, Tag } from "lucide-react";
 
 const WORDPRESS_API = process.env.NEXT_PUBLIC_WORDPRESS_API;
 
+export async function generateMetadata({params})  {
+  const slug = params.slug;
+  const res = await fetch(`${WORDPRESS_API}/case_study?slug=${slug}&_embed=true`);
+  const case_study = (await res.json())[0];
+  return {
+    title: case_study?.title?.rendered || "Case Study Post", 
+    description: case_study?.excerpt?.rendered?.replace(/<[^>]+>/g, "") || "Case Study Post Description",
+  };
+}
+
 // ✅ Fetch all case study slugs for static generation
 export async function generateStaticParams() {
   try {

@@ -3,6 +3,11 @@ import CaseStudy4btn from "./CaseStudy4btn";
 import CasestudyBanner from "./CasestudyBanner";
 import DiscussRequirement from "./DiscussRequirement";
 
+export const metadata = {
+  title: "Altafuturis - Case Studies",
+  description: "Based in Texus, Serving globally!"
+}
+
 export default function Home() {
     return (
   <div className="bg-white"> 
