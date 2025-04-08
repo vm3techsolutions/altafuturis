@@ -177,7 +177,7 @@ We provide innovative spectrum of Applied Artificial Intelligence, Data Engineer
                 rel="noopener noreferrer"
               >
                
-                <FaXTwitter className="text-blue-400 text-xl hover:text-blue-600 transition duration-300" />
+                <FaXTwitter className="text-dark-900 text-xl transition duration-300" />
               </Link>
               <Link
                 href="https://instagram.com"
