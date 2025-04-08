@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {  FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -20,9 +22,9 @@ const Footer = () => {
               />
             </Link>
             <h6 className="text-md mt-2">
-              We provide innovative spectrum of Applied Artificial Intelligence,
-              Data Engineering and Salesforce Development services across the
-              industry.
+             
+We provide innovative spectrum of Applied Artificial Intelligence, Data Engineering, Salesforce Development, Agentforce implementation, Blockchain Application Development, Data Loss Prevention using AI in Cybersurity services across the industry.
+
             </h6>
           </div>
 
@@ -163,33 +165,21 @@ const Footer = () => {
             </h6>
          
 
-            <div className="flex flex-row justify-start items-start space-x-4 mt-4 ">
+            <div className="flex flex-row justify- ml-5 items-start space-x-4 mt-4 ">
               <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebook className="text-blue-600 text-xl hover:text-blue-800 transition duration-300" />
-              </Link>
-              <Link
-                href="https://twitter.com/AltaFuturis"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter className="text-blue-400 text-xl hover:text-blue-600 transition duration-300" />
+               
+                <FaXTwitter className="text-blue-400 text-xl hover:text-blue-600 transition duration-300" />
               </Link>
               <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram className="text-pink-500 text-xl hover:text-pink-700 transition duration-300" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/altafuturis/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+               
                 <FaLinkedin className="text-blue-700 text-xl hover:text-blue-900 transition duration-300" />
               </Link>
             </div>

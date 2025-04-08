@@ -18,7 +18,7 @@ export default function HomeBanner() {
     >
       {/* Background Image */}
       <img
-        src="/assets/Podcastbanner2.png"
+        src="/assets/PodcastBanner2.png"
         alt="Home Banner"
         className="w-full h-full object-cover object-center"
         loading="lazy"

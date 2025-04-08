@@ -61,33 +61,32 @@ const OurTeam = () => {
     <section className="container flex items-center justify-center md:mt-0  py-12 pb-40 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-16 px-6 md:px-2 py-8">
         {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="relative group border-[.2rem] border-brownColor rounded-2xl transform transition-transform duration-300 hover:translate-y-[-20px]"
-          >
-            {/* Team Member Image */}
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-[40vh] object-cover rounded-xl shadow-lg"
-            />
-
-            {/* Overlay on Hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/50 via-[#FAF7E6] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-lg flex flex-col justify-center items-center">
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white text-3xl p-3 bg-blue-600 rounded-full"
-              >
-                <FaLinkedin />
-              </a>
+          <div key={index} className="flex flex-col items-center">
+            {/* Card with image and overlay */}
+            <div className="relative group border-[.2rem] border-brownColor rounded-2xl transform transition-transform duration-300 hover:translate-y-[-20px] overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-[40vh] lg:h-[40vh] h-[30vh] object-cover rounded-xl shadow-lg"
+              />
+        
+              {/* Hover overlay with LinkedIn */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-500/50 via-[#FAF7E6] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl flex justify-center items-center">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white text-3xl p-3 bg-blue-600 rounded-full"
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
             </div>
-
-            {/* Name & Designation */}
-            <div className="absolute bottom-0 left-0 w-full text-white text-center py-2 rounded-b-lg ">
-              <h3 className="text-lg font-bold">{member.name}</h3>
-              <p className="text-sm">{member.designation}</p>
+        
+            {/* Name and Designation BELOW the bordered card */}
+            <div className="mt-2 text-center">
+              <h3 className="text-sm lg:text-lg font-semibold text-gray-800">{member.name}</h3>
+              <p className="text-xs lg:text-sm text-gray-500">{member.designation}</p>
             </div>
           </div>
         ))}

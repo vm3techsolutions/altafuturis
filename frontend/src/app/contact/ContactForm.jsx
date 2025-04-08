@@ -151,7 +151,7 @@ export default function Form() {
     </div>
 
     <div>
-      <label className="mb-3 block text-black font-semibold text-lg">Relationship with Alta :</label>
+      <label className="mb-3 block text-black font-semibold text-lg">Relationship with Alta Futuris:</label>
       <select name="relationship" value={formData.relationship} onChange={handleChange} className="w-full p-[9px] border border-gray-400 rounded" required>
         <option value="">Select Relationship</option>
         <option value="Customer">Client - Current or Potential</option>
