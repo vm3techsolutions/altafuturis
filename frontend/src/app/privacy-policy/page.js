@@ -2,7 +2,7 @@
 export default function PrivacyPolicy() {
   return (
     <>
-    <div className="mt-36 px-24 py-6 ">
+    <div className="mt-24 md:mt-36 px-6 md:px-24 py-6 ">
       <h1>Privacy Policy</h1>
       <p>Last updated: April 08, 2025</p>
       <p>
