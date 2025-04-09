@@ -13,14 +13,30 @@ const credentials = require('./gsheet-for-alta.json');
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID; // Replace with actual Google Sheets ID
 
 // CORS Configuration
-const corsOptions = {
-  origin: [`${process.env.FRONTEND_URL}`],
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
-};
+// const corsOptions = {
+//   origin: [`${process.env.FRONTEND_URL}`],
+//   methods: ['GET', 'POST'],
+//   allowedHeaders: ['Content-Type'],
+// };
+
+
+// CORS Configuration for www.
+const allowedOrigins = process.env.FRONTEND_URL.split(',');
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
+
 
 // Middleware
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Authenticate Google API
