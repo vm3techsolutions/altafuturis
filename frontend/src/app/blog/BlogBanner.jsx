@@ -21,6 +21,8 @@ export default function HomeBanner() {
       <Image
         src="/assets/Blogbanner2.png"
         alt="Home Banner"
+        width={1400}
+        height={500}
         className="w-full h-full object-auto object-center"
         loading="lazy"
       />
