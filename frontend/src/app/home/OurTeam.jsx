@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -39,9 +40,9 @@ const OurTeam = () => {
         <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="max-w-4xl flex-shrink-0 md:mr-12">
-            <heading className="text-xl px-5 py-3 md:mb-10 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <h4 className="text-xl px-5 py-3 md:mb-10 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Team
-            </heading>
+            </h4>
           </div>
   
           {/* Right Side - Content */}
@@ -64,10 +65,12 @@ const OurTeam = () => {
           <div key={index} className="flex flex-col items-center">
             {/* Card with image and overlay */}
             <div className="relative group border-[.2rem] border-brownColor rounded-2xl transform transition-transform duration-300 hover:translate-y-[-20px] overflow-hidden">
-              <img
+              <Image
                 src={member.image}
                 alt={member.name}
-                className="w-[40vh] lg:h-[40vh] h-[30vh] object-cover rounded-xl shadow-lg"
+                width={250}
+                height={130}
+                className="lg:h-[40vh] h-[30vh] object-cover rounded-xl shadow-lg"
               />
         
               {/* Hover overlay with LinkedIn */}

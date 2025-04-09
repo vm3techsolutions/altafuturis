@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function HomeBanner() {
@@ -13,13 +14,15 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full  md:mt-32 lg:mt-32 mt-20 h-[13vh] md:h-[30vh] lg:h-[40vh] xl:h-[55vh] 2xl:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full mt-20 h-[50vh] md:mt-32 lg:mt-32 md:h-[30vh] lg:h-[40vh] xl:h-[55vh] 2xl:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
-      <img
+      <Image
         src="/assets/HomeBanner3.png"
         alt="Home Banner"
+        width={1400}
+        height={500}
         className="absolute inset-0 w-full h-full object-auto object-center"
         loading="lazy"
       />

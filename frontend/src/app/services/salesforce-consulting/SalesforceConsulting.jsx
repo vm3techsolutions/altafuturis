@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
 
 const accordionItems = [
   {
@@ -80,26 +81,26 @@ const SalesforceConsulting = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="relative py-3 px-2 text-center md:text-start">
+    <div className="relative py-3 px-2 text-left md:text-start">
       {/* Heading */}
       <div className="heading">
-        <h2 className="text-4xl font-bold">Salesforce Consulting Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Salesforce Consulting Services</h2>
         <h4 className="text-xl font-semibold my-4">Empower Your Business with Expert Salesforce Consulting Services</h4>
       </div>
 
       {/* Image Section */}
       <div className="my-6 text-center py-2">
-        <img src="/assets/service-3.png" alt="Salesforce Consulting Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+        <Image src="/assets/service-3.png" alt="Salesforce Consulting Illustration" width={800} height={500} className="h-[25vh] md:h-[45vh] mx-auto rounded-lg"/>
       </div>
 
       {/* Introduction */}
       <div className="content my-6">
         <h3 className="text-2xl font-bold">Introduction :</h3>
-        <p>As a registered Salesforce Consulting Partner, Alta-Futuris Solutions specializes in helping businesses maximize the potential of Salesforce CRM. Whether it&apos;s boosting productivity, integrating platforms, or improving performance, our certified Salesforce experts deliver end-to-end services with guaranteed customer satisfaction.</p>
+        <p className="text-sm md:text-md">As a registered Salesforce Consulting Partner, Alta-Futuris Solutions specializes in helping businesses maximize the potential of Salesforce CRM. Whether it&apos;s boosting productivity, integrating platforms, or improving performance, our certified Salesforce experts deliver end-to-end services with guaranteed customer satisfaction.</p>
       </div>
 
       {/* Accordion Sections */}
-      <div ref={ref} className="my-6 space-y-14">
+      <div ref={ref} className="my-6 space-y-4 md:space-y-8">
         {accordionItems.map((item, index) => (
           <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
             <motion.div
@@ -111,7 +112,7 @@ const SalesforceConsulting = () => {
             transition={{duration: 0.6}}
             >
             <button
-              className="w-full text-left flex justify-between items-center font-bold text-xl"
+              className="w-full text-left flex justify-between items-center font-bold text-md md:text-xl"
               onClick={() => toggleAccordion(index)}
             >
               {item.title}

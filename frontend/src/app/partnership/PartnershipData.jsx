@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 const partners = [
@@ -23,9 +24,9 @@ const Team = () => {
           <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start lg:items-start justify-between w-full space-y-8 md:space-y-0">
             {/* Left Side - Button */}
             <div className="max-w-3xl flex-shrink-0 md:mr-12">
-              <heading className="text-xl px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+              <h4 className="text-xl px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
                 Partnership
-              </heading>
+              </h4>
             </div>
 
             {/* Right Side - Content */}
@@ -46,10 +47,12 @@ const Team = () => {
               className="border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-gray-100 p-5"
             >
               <div className="flex justify-center items-center">
-                <img
+                <Image
                   src={partner.imgSrc}
                   alt={partner.title}
-                  className="w-auto h-48 bg-gray-100 p-5"
+                  width={400}
+                  height={290}
+                  className="bg-gray-100 p-5"
                 />
               </div>
               <div className="px-5 -mt-5 text-center pb-5">
@@ -64,9 +67,11 @@ const Team = () => {
           {/* Salesforce Partner Card */}
           <div className="border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-gray-100 p-5">
             <div className="flex justify-center items-center">
-              <img
+              <Image
                 src="/assets/PartnershipSalesforceIMG.jpg"
-                className="w-[70vh] h-64 bg-gray-100 p-5"
+                width={350}
+                height={90}
+                className="bg-gray-100 p-5"
               />
             </div>
             <div className="text-center p-5">

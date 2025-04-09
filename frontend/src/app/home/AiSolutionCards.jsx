@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 
 const services = [
@@ -51,9 +52,9 @@ export default function ServicesSection() {
     <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between w-full space-y-8 md:space-y-0">
           {/* Left Side - Button */}
           <div className="max-w-4xl flex-shrink-0 md:mr-12 ml-32 md:ml-0 mt-28 md:mt-0">
-            <heading className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+            <p className="px-5 py-3 text-xl border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Our Services
-            </heading>
+            </p>
           </div>
   
           {/* Right Side - Content */}
@@ -82,10 +83,12 @@ export default function ServicesSection() {
     transition={{ duration: 0.5 }}
     className="bg-white p-5 rounded-xl shadow-lg flex flex-col items-start hover:shadow-xl transition-all w-full md:w-[48%] lg:w-[19%] min-h-[300px]"
   >
-    <img
+    <Image
       src={service.icon}
       alt={service.title}
-      className="w-16 h-16 mb-4"
+      width={60}
+        height={60}
+      className="mb-4"
     />
     <h3 className="font-bold text-2xl md:text-xl text-left">
       {service.title}

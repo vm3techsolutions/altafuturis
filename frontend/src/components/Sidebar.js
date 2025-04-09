@@ -34,14 +34,14 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="py-10 w-[40vh] sm:w-[70vh] md:w-full">
+    <div className="py-10 w-[40vw] sm:w-[70vh] md:w-full">
       {/* Sidebar Service Menu */}
       <div className="sidebar bg-white p-4 rounded-xl ">
         <ul>
           {services.map((service) => (
             <li
               key={service.slug}
-              className={`px-4 py-2 rounded-xl border-b my-4 text-lg flex justify-between items-center transition-all duration-300 ease-in-out group
+              className={`px-1 md:px-4 py-1 md:py-2 rounded-xl border-b my-4 text-sm md:text-lg flex justify-between items-center transition-all duration-300 ease-in-out group
                 ${
                   pathname === `/services/${service.slug}`
                     ? "bg-blueColor text-white hover:text-white shadow-md"
@@ -64,12 +64,12 @@ const Sidebar = () => {
         <h2 className="text-3xl font-extrabold mb-20">
           Need Advice ?<br /> Book a Call!
         </h2>
-        <img
+        <Image
           src="/assets/h1c4.png"
           alt="service-image"
           className="object-center"
-          width={400}
-          height={400}
+          width={600}
+          height={600}
           priority
         />
       </div>
@@ -77,7 +77,7 @@ const Sidebar = () => {
       {/* "Know More" Button */}
       <div>
         <Link href="/contact" className="flex justify-center -mt-5 mr-11">
-          <button className="px-4 py-2 bg-blueColor text-white rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
+          <button className="px-4 py-2 bg-blueColor text-white text-sm md:text-lg rounded-xl shadow-md hover:bg-brownColor flex items-center transition-all duration-300 ease-in-out group">
             Talk to an Expert
             <span className="ml-2 bg-brownColor group-hover:bg-blueColor text-white px-1 rounded-md duration-300">
               &gt;&gt;

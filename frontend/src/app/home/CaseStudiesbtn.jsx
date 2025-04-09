@@ -10,9 +10,9 @@ const PortfolioSection = () => {
         
 
         <div className="md:w-1/3 w-full flex justify-center md:justify-start mb-4 md:mb-0">
-          <heading className="text-xl px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
+          <p className="text-xl px-5 py-3 border-2 border-brownColor rounded-full text-black  shadow-sm  transition-all duration-300 ease-in-out font-bold">
             Case Studies
-          </heading>
+          </p>
         </div>
 
         {/* Right Side */}

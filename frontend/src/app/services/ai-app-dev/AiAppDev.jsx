@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
 
 const aiAgentServices = [
   {
@@ -72,7 +73,6 @@ const accordionItems = [
 ];
 
 const AiAppDev = () => {
-  const [activeTab, setActiveTab] = useState(0);
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -83,8 +83,8 @@ const AiAppDev = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="relative py-4 px-2">
-      <div className="heading text-center md:text-left">
+    <div className="relative py-3 px-2 ">
+      <div className="text-left md:text-start">
         <h2 className="text-3xl md:text-4xl font-bold">Generative AI Application Development</h2>
         <h4 className="text-lg md:text-xl font-semibold my-4">
           Generative AI consulting services for strategy, governance, security, development, and implementation.
@@ -93,22 +93,22 @@ const AiAppDev = () => {
 
       {/* Image Section */}
       <div className="my-6 text-center py-2">
-        <img src="/assets/Service-1.png" alt="Generative AI Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg" />
+        <Image src="/assets/Service-1.png" alt="Generative AI Illustration" width={800} height={500} className="h-[25vh] md:h-[45vh] mx-auto rounded-lg" />
       </div>
 
       {/* Introduction Section */}
       <div className="content my-6">
         <h3 className="text-xl md:text-2xl font-bold">Introduction :</h3>
-        <p>
+        <p className="text-sm md:text-md">
           Using the power of Generative AI (Gen AI) is no longer an option; it&apos;s a business necessity. Our Generative AI consulting services empower organizations to harness AI&apos;s potential while ensuring governance, security, and ethical implementation.
         </p>
-        <p>
+        <p className="text-sm md:text-md">
           At <span className="font-semibold">Alta-Futuris Solutions</span>, we believe that <span className="font-semibold">cloud enables businesses, data drives growth, and Generative AI </span> becomes the ultimate differentiator. Together, they unlock smarter decision-making, transformative growth, and scalability.
         </p>
       </div>
 
       {/* Accordion Sections */}
-      <div ref={ref} className="my-6 space-y-10">
+      <div ref={ref} className="my-6 space-y-4 md:space-y-8">
         {accordionItems.map((item, index) => (
           <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
             <motion.div
@@ -119,7 +119,7 @@ const AiAppDev = () => {
               transition={{ duration: 0.6 }}
             >
               <button
-                className="w-full text-left flex justify-between items-center font-bold text-lg md:text-xl"
+                className="w-full text-left flex justify-between items-center font-bold text-md md:text-xl"
                 onClick={() => toggleAccordion(index)}
               >
                 {item.title}

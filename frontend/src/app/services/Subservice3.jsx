@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -129,7 +130,7 @@ export default function Subservice1() {
         <>
         <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white p-6">
         <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-start space-y-8">
-          <img src={selectedCard.img} alt={selectedCard.title} className=" w-20 h-20 mx-auto text-yellow-600 " />
+          <Image src={selectedCard.img} alt={selectedCard.title} width={40} height={40} className="md:w-20 md:h-20 mx-auto text-yellow-600 " />
           <h2 className="text-2xl text-left font-bold mt-4 ">{selectedCard.title}</h2>
           <ul className="mt-2 text-start list-disc space-y-5">
             {selectedCard.description.map((point, index) => (
@@ -144,7 +145,7 @@ export default function Subservice1() {
               className="h-28 w-52 bg-white text-black p-4 rounded-lg flex flex-col justify-center items-center cursor-pointer transition-transform hover:scale-110"
               onClick={() => setSelectedCard(card)}
             >
-              <img src={card.img} alt={card.title}  className="w-10 h-10 text-yellow-500 transition-transform hover:scale-125" />
+              <Image src={card.img} alt={card.title} width={40} height={40}  className="w-10 h-10 text-yellow-500 transition-transform hover:scale-125" />
               <p className="mt-2 text-center font-semibold text-sm">{card.title}</p>
             </div>
           ))}

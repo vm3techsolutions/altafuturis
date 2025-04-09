@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Fullscreen } from "lucide-react";
+import Image from "next/image";
 // import Image from "next/image";
 import { useState } from "react";
 
@@ -15,13 +16,15 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full  md:mt-32 lg:mt-32 h-[30vh] md:h-[75vh] lg:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full mt-20 h-[50vh] md:mt-32 lg:mt-32 md:h-[75vh] lg:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
-      <img
+      <Image
         src="/assets/CareerBanner2.png"
-        alt="Home Banner"
+        alt="career Banner"
+        width={1400}
+        height={500}
         className="w-full h-full object-auto object-center"
         loading="lazy"
         

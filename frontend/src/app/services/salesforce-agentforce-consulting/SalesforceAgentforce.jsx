@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
 
 const accordionItems = [
   {
@@ -110,27 +111,27 @@ const SalesforceAgentforce = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="relative py-3 px-2 text-center md:text-start">
+    <div className="relative py-3 px-2 text-left md:text-start">
       {/* Heading */}
       <div className="heading ">
-        <h2 className="text-4xl font-bold ">Salesforce Agentforce Consulting</h2>
+        <h2 className="text-3xl md:text-4xl font-bold ">Salesforce Agentforce Consulting</h2>
         <h4 className="text-xl font-semibold my-4">Gain Your Business Edge in Salesforce Agentforce with Alta-Futuris Solutions</h4>
       </div>
 
       {/* Image Section */}
       <div className="my-6 text-center py-2">
-        <img src="/assets/service-2.png" alt="Salesforce Agentforce Consulting Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+        <Image src="/assets/service-2.png" alt="Salesforce Agentforce Consulting Illustration" width={800} height={500} className="h-[25vh] md:h-[45vh] mx-auto rounded-lg"/>
       </div>
       
       {/* Introduction */}
       <div className="content my-6">
         <h3 className="text-2xl font-bold">Introduction :</h3>
-        <p>Salesforce Agentforce is revolutionizing how businesses optimize workflows, enhance productivity, and improve customer service using autonomous AI agents. However, gaining a competitive edge with Agentforce requires deep expertise and strategic implementation.</p>
-        <p>At Alta-Futuris Solutions, our AI and Salesforce consulting expertise empowers businesses to maximize the potential of Agentforce. Whether it&apos;s customizing AI agents, integrating with third-party platforms, or ensuring seamless CRM connectivity — we help you achieve transformative business outcomes.</p>
+        <p className="text-sm md:text-md">Salesforce Agentforce is revolutionizing how businesses optimize workflows, enhance productivity, and improve customer service using autonomous AI agents. However, gaining a competitive edge with Agentforce requires deep expertise and strategic implementation.</p>
+        <p className="text-sm md:text-md">At Alta-Futuris Solutions, our AI and Salesforce consulting expertise empowers businesses to maximize the potential of Agentforce. Whether it&apos;s customizing AI agents, integrating with third-party platforms, or ensuring seamless CRM connectivity — we help you achieve transformative business outcomes.</p>
       </div>
       
       {/* Accordion Sections */}
-      <div ref={ref} className=" space-y-14">
+      <div ref={ref} className=" space-y-4 md:space-y-8">
         {accordionItems.map((item, index) => (
           <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
             <motion.div
@@ -142,7 +143,7 @@ const SalesforceAgentforce = () => {
             transition={{duration: 0.6}}
             >
             <button
-              className="w-full text-left flex justify-between items-center font-bold text-xl"
+              className="w-full text-left flex justify-between items-center font-bold text-md md:text-xl"
               onClick={() => toggleAccordion(index)}
             >
               {item.title}

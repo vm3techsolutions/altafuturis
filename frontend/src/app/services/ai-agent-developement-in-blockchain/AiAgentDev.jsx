@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
 
 const accordionItems = [
   {
@@ -118,30 +119,30 @@ const AiAgentDev = () => {
     const isInView = useInView(ref, {once: true, margin: "-100px"});
 
   return (
-    <div className="relative py-3 px-2 text-center md:text-start">
-      <div className="heading">
-        <h2 className="text-4xl font-bold">AI Agent Development in Blockchain</h2>
+    <div className="relative py-3 px-2 ">
+      <div className="text-left md:text-start">
+        <h2 className="text-3xl md:text-4xl font-bold">AI Agent Development in Blockchain</h2>
         <h4 className="text-xl font-semibold my-4">Reshape Blockchain Ecosystems with AI Agents</h4>
       </div>
 
       <div className="my-6 text-center py-2">
-        <img src="/assets/service-5.png" alt="AI Agent Development in Blockchain Illustration" className="w-full h-[50vh] max-w-4xl mx-auto rounded-lg"/>
+        <Image src="/assets/service-5.png" alt="AI Agent Development in Blockchain Illustration" width={800} height={500} className="h-[25vh] md:h-[45vh] mx-auto rounded-lg"/>
       </div>
 
         {/* Introduction */}
         <div className="content my-6">
           <h3 className="text-2xl font-bold">Introduction :</h3>
-          <p>
+          <p className="text-sm md:text-md">
             AI Agents are revolutionizing blockchain by enabling autonomous, intelligent decision-making without human intervention. At <strong>Alta-Futuris Solutions,</strong> we combine <strong>AI and Blockchain</strong> expertise to build intelligent AI agents that enhance <strong>security, optimize consensus mechanisms, and streamline smart contract execution</strong> in blockchain networks.
           </p>
-          <p>
+          <p className="text-sm md:text-md">
             As businesses move towards decentralized models, the synergy between <strong>AI and Blockchain</strong> will drive innovation, transforming industries like <strong>DeFi, Supply Chain, and Identity Verification.</strong> Our solutions ensure scalability, automation, and secure data processing in blockchain environments.
           </p>
         </div>
 
-      <div ref={ref} className="my-6 space-y-14">
+      <div ref={ref} className="my-6 space-y-4 md:space-y-8">
         {accordionItems.map((item, index) => (
-          <div key={index} className="bg-gray-100 mb-4 p-4 rounded-lg shadow-lg">
+          <div key={index} className="bg-gray-100 md:mb-4 p-4 rounded-lg shadow-lg">
             <motion.div
             
             key={index}
@@ -151,7 +152,7 @@ const AiAgentDev = () => {
             transition={{duration: 0.6}}
             >
             <button
-              className="w-full text-left flex justify-between items-center font-bold text-xl"
+              className="w-full text-left flex justify-between items-center font-bold text-md md:text-xl"
               onClick={() => toggleAccordion(index)}
             >
               {item.title}
@@ -168,7 +169,7 @@ const AiAgentDev = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="px-6 text-gray-700 overflow-hidden"
         >
-            <div className="mt-2 text-gray-900">{item.content}</div> 
+            <div className="md:mt-2 text-gray-900">{item.content}</div> 
             
             </motion.div>
             )

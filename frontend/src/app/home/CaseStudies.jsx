@@ -44,7 +44,7 @@ const PortfolioSection = () => {
             ease: "linear",
           }}
         >
-          <img src="/assets/animateCicle.png" width={420} height={180} alt="Circular Animation" className="-ml-32" />
+          <Image src="/assets/animateCicle.png" width={420} height={180} alt="Circular Animation" className="-ml-32" />
         </motion.div>
       </div>
 
@@ -56,7 +56,7 @@ const PortfolioSection = () => {
               {index === 0 ? (
                 <>
                   {/* First case study - Title below image */}
-                  <img src={study.image} width={1000} height={120} alt="Case Study Image" className="rounded-lg" />
+                  <Image src={study.image} width={1000} height={120} alt="Case Study Image" className="rounded-lg" />
                   <h3 className="font-bold text-xl md:text-3xl pt-4 text-left" dangerouslySetInnerHTML={{ __html: study.title }} />
                   <button
                     onClick={() => router.push(`/case-studies/${study.slug}`)}
@@ -68,7 +68,7 @@ const PortfolioSection = () => {
               ) : (
                 <div className="flex items-center space-x-6">
                   {/* Image */}
-                  <img src={study.image} width={500} height={150} alt="Case Study Image" className="rounded-lg" />
+                  <Image src={study.image} width={500} height={150} alt="Case Study Image" className="rounded-lg" />
                   {/* Title & Read More beside the image */}
                   <div>
                     <h3 className="font-bold text-2xl md:text-3xl" dangerouslySetInnerHTML={{ __html: study.title }} />

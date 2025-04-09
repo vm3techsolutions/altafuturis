@@ -14,7 +14,7 @@ export default function ServicesLayout({ children }) {
     <>
       <PageTitle />
 
-      <div className="flex flex-col md:flex-row justify-center items-start min-h-screen p-6">
+      <div className="flex flex-row md:flex-row justify-center items-start min-h-screen p-6">
         {/* Sidebar Section */}
         <div className="w-60 md:w-72">
           <Sidebar

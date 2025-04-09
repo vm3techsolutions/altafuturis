@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const CaseStudyLayout = () => {
   const [caseStudies, setCaseStudies] = useState([]);
@@ -113,10 +114,12 @@ const CaseStudyLayout = () => {
         <div className="w-full md:w-3/5 p-4 space-y-10">
           {selectedStudy && (
             <div key={selectedStudy.id} className="overflow-hidden md:p-5">
-              <img
+              <Image
                 className="w-full h-80 object-cover rounded-lg"
                 src={selectedStudy.image}
                 alt={selectedStudy.title}
+                width={700}
+                height={500}
               />
               <div className="p-4 space-y-5 border-l-2 border-[#D4B301] -mt-2">
                 <h2 className="text-xs mb-2">📅 {selectedStudy.date}</h2>
@@ -141,10 +144,12 @@ const CaseStudyLayout = () => {
               onClick={() => setSelectedStudy(study)}
               className="mb-4 overflow-hidden md:p-5 cursor-pointer hover:bg-gray-50 transition"
             >
-              <img
+              <Image
                 className="w-full h-30 object-cover rounded-lg border-l-2 border-[#D4B301]"
                 src={study.image}
                 alt={study.title}
+                width={300}
+                height={200}
               />
               <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
                 <h2 className="text-xs mb-2">📅 {study.date}</h2>

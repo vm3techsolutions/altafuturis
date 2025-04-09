@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -220,9 +221,9 @@ export default function Subservice2() {
     );
   } else if (slug === "ai-agent-developement-in-blockchain") {
     return (
-      <div className=" md:py-10 ">
+      <div className=" py-0 md:py-10 ">
         <div className="text-center">
-          <p className="px-12 text-lg mb-4">
+          <p className="px-8 md:px-12 text-md md:text-md mb-4">
             AI Agent development services in the context of blockchain involve
             creating intelligent agents that leverage the unique capabilities of
             blockchain technology, such as decentralization, transparency, and
@@ -232,24 +233,24 @@ export default function Subservice2() {
             details and components typically involved in AI Agent development
             services for blockchain:
           </p>
-          <div className="flex flex-col md:flex-row h-full bg-purple-800 text-white py-6 ">
+          <div className="flex flex-row md:flex-row h-full bg-purple-800 text-white py-2 md:py-6 ">
             {/* Left Side - Selected Card Details */}
-            <div className="w-full md:w-1/3 p-6 rounded-xl flex flex-col items-center space-y-6">
-            <img src={selectedCard.img} alt={selectedCard.title} className=" w-14 h-14 mx-auto text-yellow-600 " />
-        <h2 className="text-2xl text-center font-bold mt-4">
+            <div className="w-1/2 md:w-1/3 p-6 rounded-xl flex flex-col items-center space-y-6">
+            <Image src={selectedCard.img} alt={selectedCard.title} width={40} height={40} className="md:w-14 md:h-14 mx-auto text-yellow-600 " />
+        <h2 className="text-md md:text-2xl text-center font-bold mt-4">
           {selectedCard?.title}
         </h2>
-        <ul className="mt-2 text-start space-y-3 list-disc pl-5">
+        <ul className="mt-2 text-start text-sm md:text-md space-y-3 list-disc pl-5">
           {selectedCard?.content
             ? selectedCard.content.split(". ").map((point, index) =>
                 point ? <li key={index}>{point}.</li> : null
               )
-            : null}
+            : null} 
         </ul>
       </div>
 
             {/* Right Side - Card Selection */}
-            <div className="w-full md:w-2/3 flex flex-wrap gap-4 p-6 justify-center">
+            <div className="w-1/2 md:w-2/3 flex flex-wrap gap-4 p-6 justify-center">
               {aiDevelopementBlockchain.map((card, index) => (
                 <div
                   key={index}
@@ -260,10 +261,12 @@ export default function Subservice2() {
                   }`}
                   onClick={() => setSelectedCard(card)}
                 >
-                  <img
+                  <Image
                     src={card.img}
                     alt={card.title}
-                    className="w-8 h-8 transition-transform hover:scale-125"
+                    width={40}
+                    height={40}
+                    className="md:w-8 md:h-8 transition-transform hover:scale-125"
                   />
                   <p className="mt-2 text-center font-semibold text-sm">
                     {card.title}

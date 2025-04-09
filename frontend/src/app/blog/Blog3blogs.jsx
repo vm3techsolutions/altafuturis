@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlogLayout = () => {
   const [blogs, setBlogs] = useState([]);
@@ -119,10 +120,12 @@ const BlogLayout = () => {
         <div className="w-full md:w-3/5 p-4 space-y-10">
           {selectedBlog && (
             <div key={selectedBlog.id} className="overflow-hidden md:p-5">
-              <img
+              <Image
                 className="w-full h-80 object-cover rounded-lg"
                 src={selectedBlog.image}
                 alt={selectedBlog.title}
+                width={700}
+                height={500}
               />
               <div className="p-4 space-y-5 border-l-2 border-[#D4B301] -mt-2">
                 <h2 className="text-xs mb-2">📅 {selectedBlog.date}</h2>
@@ -151,10 +154,12 @@ const BlogLayout = () => {
                 className="mb-4 overflow-hidden md:p-5 cursor-pointer"
                 onClick={() => handleBlogClick(blog)}
               >
-                <img
+                <Image
                   className="w-full h-48 object-cover rounded-lg border-l-2 border-[#D4B301]"
                   src={blog.image}
                   alt={blog.title}
+                  width={300}
+                  height={200}
                 />
                 <div className="p-4 border-l-2 border-[#D4B301] -mt-2">
                   <h2 className="text-xs mb-2">📅 {blog.date}</h2>

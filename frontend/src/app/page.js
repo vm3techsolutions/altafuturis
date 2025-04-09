@@ -9,7 +9,6 @@ import WhyChooseUs from "./home/WhyChooseUs";
 import ClientLogo from './home/ClientLogo';
 import OurTeam from './home/OurTeam';
 import Testimonials from "./home/Testimonials";
-import Whowearebtn from "./home/Whowearebtn";
 
 export const metadata = {
   title: "Altafuturis",
@@ -21,7 +20,6 @@ export default function Home() {
 <div>
 
   <HomeBanner/>
-  {/* <Whowearebtn/> */}
   <WhoWeAre/>
   <AiSolutionCards/>
   <WhyChooseUs/>
