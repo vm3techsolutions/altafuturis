@@ -173,7 +173,7 @@ export default function Subservice2() {
   if (slug === "salesforce-agentforce-consulting") {
     return (
       <div className="px-6 md:p-10">
-  <div className="text-left">
+  <div className="text-center">
     <div className="flex flex-col md:flex-row items-start justify-start gap-6 mt-6">
       <div className="w-full md:w-1/2 border-r border-gray-300">
         {agentforceSubServices.map((item, index) => (
