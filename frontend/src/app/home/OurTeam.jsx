@@ -70,7 +70,7 @@ const OurTeam = () => {
                 alt={member.name}
                 width={250}
                 height={130}
-                className="lg:h-[40vh] h-[30vh] object-cover rounded-xl shadow-lg"
+                className="lg:h-[40vh] h-[60vh] object-cover rounded-xl shadow-lg"
               />
         
               {/* Hover overlay with LinkedIn */}
