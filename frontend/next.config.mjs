@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['api.altafuturis.com', 'www.altafuturis.com', 'altafuturis.com'],
     remotePatterns: [
       {
         protocol: 'http',
