@@ -79,7 +79,7 @@ const CaseStudyDetails = async ({ params }) => {
     return (
       <div className="mt-12 bg-white">
         {/* ✅ Banner Image */}
-        <div className="w-full h-[30vh] md:h-[75vh] lg:h-[75vh] 2xl:h-[75vh] relative">
+        <div className="w-full mt-20 h-[30vh] sm:h-[34vh] md:mt-22 lg:mt-32 md:h-[44vh] lg:h-[40vh] xl:h-[55vh] 2xl:h-[65vh] relative">
           <Image
             className="w-full h-full object-cover"
             src={caseStudy.image}

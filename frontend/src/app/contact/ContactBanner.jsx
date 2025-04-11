@@ -14,7 +14,7 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="relative w-full mt-20 h-[50vh] md:mt-32 lg:mt-32 md:h-[75vh] lg:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
+      className="relative w-full mt-20 h-[30vh] sm:h-[34vh] md:mt-22 lg:mt-32 md:h-[44vh] lg:h-[40vh] xl:h-[55vh] 2xl:h-[65vh] bg-cover bg-center flex items-center overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Background Image */}
@@ -23,7 +23,7 @@ export default function HomeBanner() {
         alt="contact Banner"
         width={1400}
         height={500}
-        className="w-full h-full object-auto object-center"
+        className="w-full h-full object-cover object-right"
         loading="lazy"
       />
 
