@@ -161,7 +161,7 @@ We provide innovative spectrum of Applied Artificial Intelligence, Data Engineer
 
             <h6 className="text-md mt-2 flex items-center">
               <MapPin className="w-12 h-12 lg:w-7 lg:h-7 md:w-6 md:h-6 text-purpleColor mr-2" />
-              1 Elizabeth ln, West Bridgewater,MA 02379, USA
+              5900, Balcones Drive STE 100 Austin, TX 78731 USA
             </h6>
 
             <h6 className="text-md mt-2 flex items-center">

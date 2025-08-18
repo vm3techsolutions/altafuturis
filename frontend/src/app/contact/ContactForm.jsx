@@ -80,7 +80,7 @@ export default function Form() {
           <div className="text-center rounded-xl">
             <div className="grid items-center gap-2   ">
               <p className="font-bold text-xl text-black">USA</p>            
-            <p className="text-black font-medium">1 Elizabeth ln, West Bridgewater, <br/>MA 02379, USA</p>
+            <p className="text-black font-medium">5900, Balcones Drive STE 100 Austin, TX 78731 USA</p>
           </div>
           </div>
 

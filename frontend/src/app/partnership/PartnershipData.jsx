@@ -13,6 +13,22 @@ const partners = [
     description:
       "As a Fortinet partner, we are fully-qualified to take care of your various data security use cases, including preventing data loss from exfiltration and accidental loss, monitoring for insider threats, securing data in SaaS applications, and educating users on proper data handling with the help from FortiDLP.  With FortiDLP, we can support and proactively monitor the integrity of your network constantly checking for potential threats and taking appropriate action to keep your network safe.",
   },
+  ,
+  {
+    imgSrc: "/assets/PartnershipSalesforceIMG.jpg",
+    description:
+      "Salesforce Partner",
+  },
+  {
+    imgSrc: "/assets/partnership/druid.jpg",
+    description:
+      "Alta-Futuris Solutions, a Austin TX based Generative AI focussed custom software development company with a global reach is in partnership with DRUID AI, a leading end-to-end platform for building, deploying, and scaling AI-powered agents and Conversational Business Applications (CBA). This collaboration is set to fast-track the deployment of cutting-edge AI-driven automation solutions, transforming business processes and delivering measurable value. This partnership empowers businesses to unlock the transformative potential of AI, revolutionizing processes, enabling smarter decision-making, and delivering tangible impact across a broad spectrum of industries.",
+  },
+  {
+    imgSrc: "/assets/partnership/copado.png",
+    description:
+      "Alta-Futuris Solutions Solutions, a leading Salesforce Solutions provider has partnered with Copado, the leading DevOps platform for Salesforce! This partnership marks a significant milestone in our mission to deliver smarter, faster, and more secure Salesforce transformations for our clients. With Copado’s powerful low-code DevOps tools and automation capabilities, combined with Ata-Futuris teams deep expertise in QA, Test Automation, and Digital Delivery, we are empowering businesses to: ⚙️Cut testing cycles from weeks to hours, ⚙️ Achieve higher test coverage with intelligent automation, ⚙️ Eliminate test maintenance overhead with low-code testing, ⚙️ Accelerate Salesforce deployments with end-to-end CI/CD, ⚙️ Build sustainable, scalable test automation practices, ⚙️ Increase release quality, visibility, and team collaboration. The need for speed and control in software delivery has never been greater. This partnership allows us to provide end-to-end support—from release planning and testing to monitoring and insights—all within the Salesforce ecosystem.",
+  },
 ];
 
 const Team = () => {
@@ -64,20 +80,7 @@ const Team = () => {
             </div>
           ))}
 
-          {/* Salesforce Partner Card */}
-          <div className="border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-gray-100 p-5">
-            <div className="flex justify-center items-center">
-              <Image
-                src="/assets/PartnershipSalesforceIMG.jpg"
-                width={350}
-                height={90}
-                className="bg-gray-100 p-5"
-              />
-            </div>
-            <div className="text-center p-5">
-              <h2 className="text-xl font-semibold">Salesforce Partner</h2>
-            </div>
-          </div>
+          
         </div>
       </section>
     </>
