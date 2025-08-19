@@ -22,36 +22,6 @@ const WhoAreWe = () => {
                 considerations of data privacy, security and compliance.
               </p>
 
-              {/* Salesforce Solution */}
-              <h2 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
-                Salesforce Solutions:{" "}
-              </h2>
-
-              <Image
-                src="/assets/SolutionSalesforceIMG.jpg"
-                width={350}
-                height={500}
-                className="py-5 h-96 mx-auto md:ml-0"
-              />
-
-              <h1 className="text-xl md:text-3xl font-bold text-black py-4 pt-5 leading-tight">
-                KNOW-WOC{" "}
-              </h1>
-
-              <h2 className="text-lg md:text-2xl font-bold text-black py-4 leading-tight">
-                Understand current feedback to bring more value for future
-              </h2>
-
-              <p className="py-4 text-gray-900 text-md mb-4 leading-relaxed">
-                Get to know customer feedback in analytical way is more
-                important in a very dynamic and competitive world. More you get
-                feedback from customer, better you can improve about Sales and
-                product to give more value back to the existing and future
-                customers.
-              </p>
-
-              <hr className="w-full border-3 border-gray-500 my-8" />
-
               {/* Druid */}
               <div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
@@ -91,7 +61,7 @@ const WhoAreWe = () => {
                 <hr className="w-full border-3 border-gray-500 my-8" />
               </div>
 
-              {/* Druid */}
+              {/* Copado Solutions */}
               <div>
                 <h2 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
                   Copado Solutions:
@@ -210,8 +180,37 @@ const WhoAreWe = () => {
                   Copado is trusted by numerous organizations across various industries and is considered a leading DevOps platform for the Salesforce ecosystem
                 </p>
 
-                {/* <hr className="w-full border-3 border-gray-500 my-8" /> */}
+                <hr className="w-full border-3 border-gray-500 my-8" />
               </div>
+
+              {/* Salesforce Solution */}
+              <h2 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
+                Salesforce Solutions:{" "}
+              </h2>
+
+              <Image
+                src="/assets/SolutionSalesforceIMG.jpg"
+                width={350}
+                height={500}
+                className="py-5 h-96 mx-auto md:ml-0"
+              />
+
+              <h1 className="text-xl md:text-3xl font-bold text-black py-4 pt-5 leading-tight">
+                KNOW-WOC{" "}
+              </h1>
+
+              <h2 className="text-lg md:text-2xl font-bold text-black py-4 leading-tight">
+                Understand current feedback to bring more value for future
+              </h2>
+
+              <p className="py-4 text-gray-900 text-md mb-4 leading-relaxed">
+                Get to know customer feedback in analytical way is more
+                important in a very dynamic and competitive world. More you get
+                feedback from customer, better you can improve about Sales and
+                product to give more value back to the existing and future
+                customers.
+              </p>
+              
             </div>
           </div>
         </section>
