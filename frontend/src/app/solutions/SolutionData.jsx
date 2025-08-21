@@ -35,10 +35,13 @@ const WhoAreWe = () => {
                   className="py-5 h-40 mx-auto md:ml-0"
                 />
 
-                <p className="py-4 text-gray-900 text-md mb-4 leading-relaxed">
+                <p className="py-2 text-gray-900 text-md leading-relaxed">
                   DRUID AI is an enterprise AI agent platform that focuses on
                   enhancing employee productivity and the customer experience
-                  through intelligent automation and conversational AI. <br />{" "}
+                  through intelligent automation and conversational AI. 
+                </p>
+                  
+                <p className="py-2 text-gray-900 text-md leading-relaxed">
                   DRUID AI provides a platform for building, deploying, and
                   scaling AI agents and conversational business applications.
                   These agents, powered by Natural Language Processing (NLP) and
@@ -46,17 +49,27 @@ const WhoAreWe = () => {
                   platform includes a knowledge base and an orchestration engine
                   to manage multiple agents efficiently. DRUID also integrates
                   with generative AI and facilitates the creation of interactive
-                  dashboards for real-time data management. <br /> Key benefits
-                  include enhanced productivity and customer experience, cost
+                  dashboards for real-time data management. 
+                </p>
+
+                <p className="py-2 text-gray-900 text-md leading-relaxed">
+                  Key benefits include enhanced productivity and customer experience, cost
                   reduction, tailored solutions for specific industries, and
-                  fast deployment. <br /> DRUID AI solutions can be used in
-                  various areas, such as customer support, HR, banking,
-                  insurance, healthcare, and higher education. <br /> In
-                  conclusion, DRUID AI offers a comprehensive platform for
+                  fast deployment.
+                </p>
+
+                <p className="py-2 text-gray-900 text-md leading-relaxed">
+                  DRUID AI solutions can be used in various areas, such as customer support, HR, banking,
+                  insurance, healthcare, and higher education. 
+                </p>
+                
+                <p className="py-2 text-gray-900 text-md leading-relaxed">
+                  In conclusion, DRUID AI offers a comprehensive platform for
                   businesses looking to use conversational AI and intelligent
                   automation to improve efficiency, personalize interactions,
                   and drive growth.
                 </p>
+
 
                 <hr className="w-full border-3 border-gray-500 my-8" />
               </div>
@@ -176,7 +189,7 @@ const WhoAreWe = () => {
                   </li>
                 </ul>
 
-                <p>
+                <p  className="py-2 text-gray-900 text-md leading-relaxed">
                   Copado is trusted by numerous organizations across various industries and is considered a leading DevOps platform for the Salesforce ecosystem
                 </p>
 
