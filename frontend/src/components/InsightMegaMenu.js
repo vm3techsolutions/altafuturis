@@ -27,6 +27,13 @@
           content: "Podcast Details", 
           link: "/podcast"
         },
+
+         { 
+          id: 4, 
+          title: "Webinar ", 
+          content: "Webinar Details", 
+          link: "/webinar"
+        },
     
        
       ];

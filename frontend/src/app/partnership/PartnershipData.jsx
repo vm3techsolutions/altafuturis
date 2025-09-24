@@ -80,15 +80,20 @@ const partners = [
     description: "Salesforce Partner",
   },
   {
-    imgSrc: "/assets/Partnershipcard1.png",
-    description:
-      "We are utilizing various services under Azure Artificial Intelligence and Data Engineering to provide solutions for our clients under Microsoft for Startups program. Focused to provide solutions in Edge AI, Generative AI and Geo-spatial/ remote sensing AI for our clients.",
-  },
-  {
-    imgSrc: "/assets/fotinetPartner.png",
-    description:
-      "As a Fortinet partner, we are fully-qualified to take care of your various data security use cases, including preventing data loss from exfiltration and accidental loss, monitoring for insider threats, securing data in SaaS applications, and educating users on proper data handling with the help from FortiDLP.  With FortiDLP, we can support and proactively monitor the integrity of your network constantly checking for potential threats and taking appropriate action to keep your network safe.",
-  },
+    imgSrc: "/assets/partnership/ConsultValiant.jpg",
+   description: (
+      <>Alta-Futuris Solutions has established partnership with Consultvaliant FZC (
+        <a
+          href="https://consultvaliant.com/about-comapny"
+          target="_blank"
+          className="text-blue-500 hover:text-blue-700"
+        >
+          https://consultvaliant.com/about-comapny
+        </a>
+       ), a UAE based leading Business and Technical consulting firm. This partnership would help and support business growth of Alta-Futuris Solutions in Middle East and East Africa region. Being local partner in UAE, Consultvaliant would provide necessary and mandatory operational aspects for the region as well as become GTM partner for Alta-Futuris Service offerings and Solutions.
+      </>
+    ),
+  }
 ];
 
 const Team = () => {
@@ -116,30 +121,32 @@ const Team = () => {
       </section>
 
       <section className="flex flex-row items-center justify-center px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-gray-100 p-5"
-            >
-              <div className="flex justify-center items-center">
-                <Image
-                  src={partner.imgSrc}
-                  alt={partner.title}
-                  width={400}
-                  height={290}
-                  className="bg-gray-100 p-5"
-                />
-              </div>
-              <div className="px-5 -mt-5 text-center pb-5">
-                <h2 className="text-xl font-semibold">{partner.title}</h2>
-                <p className="text-base text-gray-600 mt-2">
-                  {partner.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
+  {partners.map((partner, index) => (
+    <div
+      key={index}
+      className={`border-2 border-[#D4B301] rounded-xl shadow-lg overflow-hidden bg-gray-100 p-5
+        ${index === partners.length - 1 ? "md:col-span-1 md:col-start-2" : ""}`}
+    >
+      <div className="flex justify-center items-center">
+        <Image
+          src={partner.imgSrc}
+          alt={partner.title || "Partner"}
+          width={400}
+          height={290}
+          className="bg-gray-100 p-5"
+        />
+      </div>
+      <div className="px-5 -mt-5 text-center pb-5">
+        <h2 className="text-xl font-semibold">{partner.title}</h2>
+        <p className="text-base text-gray-600 mt-2">
+          {partner.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
       </section>
     </>
   );
