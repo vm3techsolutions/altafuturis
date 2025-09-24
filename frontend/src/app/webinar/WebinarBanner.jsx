@@ -19,7 +19,7 @@ export default function HomeBanner() {
     >
       {/* Background Image */}
       <Image
-        src="/assets/WebinarBanner.png"
+        src="/assets/WebinarBanner.jpg"
         alt="Webinar Banner"
         width={1400}
         height={500}

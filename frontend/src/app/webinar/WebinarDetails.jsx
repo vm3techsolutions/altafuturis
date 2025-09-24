@@ -57,7 +57,7 @@ const DEFAULT_DATA = {
 
 export default function WebinarComponent({ data = DEFAULT_DATA }) {
   return (
-    <section className="w-full mx-auto my-8 p-6 lg:py-12 bg-gradient-to-b from-sky-600 to-indigo-700 rounded-2xl shadow-xl text-white">
+    <section className="w-full mx-auto my-8 p-6 lg:py-12 bg-[#6328A6]  shadow-xl text-white">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         {/* Left / Hero Image */}
         <div className="col-span-1 flex justify-center lg:justify-start">
@@ -77,11 +77,11 @@ export default function WebinarComponent({ data = DEFAULT_DATA }) {
           <h2 className="text-2xl lg:text-4xl font-extrabold leading-tight">
             {data.title}
           </h2>
-          <p className="mt-2 text-lg lg:text-xl font-semibold text-orange-400">
+          <p className="mt-2 text-lg lg:text-xl font-semibold text-brownColor">
             {data.subtitle}
           </p>
 
-          <p className="mt-4 text-sm lg:text-base text-white/90">
+          <p className="mt-4 text-sm lg:text-base text-white">
             {data.heroText}
           </p>
 
@@ -90,10 +90,10 @@ export default function WebinarComponent({ data = DEFAULT_DATA }) {
             {data.gains.map((g, idx) => (
               <article
                 key={idx}
-                className="bg-white/10 p-4 rounded-lg border border-white/10 hover:scale-[1.01] transition-transform"
+                className="bg-white/20 p-4 rounded-lg border border-white/10 hover:scale-[1.01] transition-transform"
               >
                 <h4 className="font-semibold text-white">{g.heading}</h4>
-                <p className="mt-1 text-sm text-white/80">{g.description}</p>
+                <p className="mt-1 text-sm text-white">{g.description}</p>
               </article>
             ))}
           </div>
@@ -116,12 +116,16 @@ export default function WebinarComponent({ data = DEFAULT_DATA }) {
           </div>
 
           {/* CTA */}
+          
           <div className="mt-6 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-            <a
-              href={data.cta.href}
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full px-6 py-3 shadow-md"
-            >
-              {data.cta.label}
+            <a href="/contact" className="flex md:justify-start justify-center md:mr-16">
+              <button className="px-4 py-2 bg-brownColor text-white  rounded-xl shadow-md hover:bg-blueColor flex items-center transition-all duration-300 ease-in-out group">
+               Request a Demo Today
+                <span className="ml-2 bg-blueColor group-hover:bg-brownColor text-white px-1 rounded-md duration-300">
+                  &gt;&gt;
+
+                </span>
+              </button>
             </a>
 
             <a
@@ -134,10 +138,7 @@ export default function WebinarComponent({ data = DEFAULT_DATA }) {
         </div>
       </div>
 
-      {/* Footer micro-copy */}
-      <div className="mt-8 text-xs text-white/70 text-center">
-        Built for enterprise leaders — demo & consultation available.
-      </div>
+      
     </section>
   );
 }
