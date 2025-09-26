@@ -60,8 +60,8 @@ export default function WebinarComponent({ data = DEFAULT_DATA }) {
     <section className="w-full mx-auto my-8 p-6 lg:py-12 bg-[#6328A6]  shadow-xl text-white">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         {/* Left / Hero Image */}
-        <div className="col-span-1 flex justify-center lg:justify-start">
-          <div className="w-64 h-64 lg:w-[70vh] lg:h-[55vh] rounded-xl overflow-hidden ring-2 ring-white/20">
+        <div className="col-span-1 flex justify-center lg:justify-start ">
+          <div className="w-80 h-64 lg:w-[70vh] lg:h-[55vh] rounded-xl overflow-hidden ring-2 ring-white/20 ">
             <Image
               src={data.image}
               alt={data.title}
@@ -117,7 +117,7 @@ export default function WebinarComponent({ data = DEFAULT_DATA }) {
 
           {/* CTA */}
           
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 items-center sm:items-center">
             <a href="/contact" className="flex md:justify-start justify-center md:mr-16">
               <button className="px-4 py-2 bg-brownColor text-white  rounded-xl shadow-md hover:bg-blueColor flex items-center transition-all duration-300 ease-in-out group">
                Request a Demo Today

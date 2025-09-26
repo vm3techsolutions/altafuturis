@@ -172,7 +172,7 @@ We provide innovative spectrum of Applied Artificial Intelligence, Data Engineer
 
             <div className="flex flex-row justify- ml-5 items-start space-x-4 mt-4 ">
               <Link
-                href="https://facebook.com"
+                href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -180,7 +180,7 @@ We provide innovative spectrum of Applied Artificial Intelligence, Data Engineer
                 <FaXTwitter className="text-dark-900 text-xl transition duration-300" />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://linkdin.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
