@@ -95,6 +95,7 @@
 
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -174,12 +175,12 @@ const PortfolioSection = () => {
                     className="font-bold text-xl md:text-3xl pt-4 text-left"
                     dangerouslySetInnerHTML={{ __html: study.title }}
                   />
-                  <button
-                    onClick={() => router.push(`/case-studies/${study.slug}`)}
-                    className="text-purpleColor text-sm font-semibold block text-left hover:text-brownColor"
-                  >
-                    READ MORE &gt;&gt;
-                  </button>
+                 <Link
+                  href="/case-studies"
+                  className="text-purple-700 text-sm font-semibold"
+                >
+                  READ MORE →
+                </Link>
                 </>
               ) : (
                 <div className="flex items-center space-x-6">
@@ -197,12 +198,12 @@ const PortfolioSection = () => {
                       className="font-bold text-2xl md:text-3xl"
                       dangerouslySetInnerHTML={{ __html: study.title }}
                     />
-                    <button
-                      onClick={() => router.push(`/case-studies/${study.slug}`)}
-                      className="text-purpleColor text-sm font-semibold hover:text-brownColor"
-                    >
-                      READ MORE &gt;&gt;
-                    </button>
+                   <Link
+                  href="/case-studies"
+                  className="text-purple-700 text-sm font-semibold"
+                >
+                  READ MORE →
+                </Link>
                   </div>
                 </div>
               )}
