@@ -171,164 +171,164 @@
 
 // export default CaseStudyLayout;
 
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+// import { useEffect, useState } from "react";
+// import Link from "next/link";
+// import Image from "next/image";
 
-const CaseStudyLayout = () => {
-  const [caseStudies, setCaseStudies] = useState([]);
-  const [selectedStudy, setSelectedStudy] = useState(null);
-  const [categories, setCategories] = useState([]);
-  const [filteredCategory, setFilteredCategory] = useState(null);
+// const CaseStudyLayout = () => {
+//   const [caseStudies, setCaseStudies] = useState([]);
+//   const [selectedStudy, setSelectedStudy] = useState(null);
+//   const [categories, setCategories] = useState([]);
+//   const [filteredCategory, setFilteredCategory] = useState(null);
 
-  useEffect(() => {
-    const fetchCaseStudies = async () => {
-      try {
-        const res = await fetch("/CaseStudy.json");
-        const data = await res.json();
+//   useEffect(() => {
+//     const fetchCaseStudies = async () => {
+//       try {
+//         const res = await fetch("/CaseStudy.json");
+//         const data = await res.json();
 
-        const formatted = [];
+//         const formatted = [];
 
-        data.categories.forEach((cat) => {
-          cat.caseStudy.forEach((item) => {
-            formatted.push({
-              ...item,
-              slug: item.link.replace("/", ""), // clean slug
-              category_name: cat.category_name,
-              category_slug: cat.category_slug,
-            });
-          });
-        });
+//         data.categories.forEach((cat) => {
+//           cat.caseStudy.forEach((item) => {
+//             formatted.push({
+//               ...item,
+//               slug: item.link.replace("/", ""), // clean slug
+//               category_name: cat.category_name,
+//               category_slug: cat.category_slug,
+//             });
+//           });
+//         });
 
-        setCaseStudies(formatted);
-        setSelectedStudy(formatted[0]);
+//         setCaseStudies(formatted);
+//         setSelectedStudy(formatted[0]);
 
-        setCategories(
-          data.categories.map((cat) => ({
-            name: cat.category_name,
-            slug: cat.category_slug,
-          }))
-        );
-      } catch (err) {
-        console.error("Error fetching:", err);
-      }
-    };
+//         setCategories(
+//           data.categories.map((cat) => ({
+//             name: cat.category_name,
+//             slug: cat.category_slug,
+//           }))
+//         );
+//       } catch (err) {
+//         console.error("Error fetching:", err);
+//       }
+//     };
 
-    fetchCaseStudies();
-  }, []);
+//     fetchCaseStudies();
+//   }, []);
 
-  const handleCategoryFilter = (slug) => {
-    setFilteredCategory(slug);
-    const filtered = slug
-      ? caseStudies.filter((study) => study.category_slug === slug)
-      : caseStudies;
+//   const handleCategoryFilter = (slug) => {
+//     setFilteredCategory(slug);
+//     const filtered = slug
+//       ? caseStudies.filter((study) => study.category_slug === slug)
+//       : caseStudies;
 
-    setSelectedStudy(filtered[0]);
-  };
+//     setSelectedStudy(filtered[0]);
+//   };
 
-  const displayed = filteredCategory
-    ? caseStudies.filter((s) => s.category_slug === filteredCategory)
-    : caseStudies;
+//   const displayed = filteredCategory
+//     ? caseStudies.filter((s) => s.category_slug === filteredCategory)
+//     : caseStudies;
 
-  if (!caseStudies.length) return <p className="text-center mt-20">Loading…</p>;
+//   if (!caseStudies.length) return <p className="text-center mt-20">Loading…</p>;
 
-  return (
-    <div className="max-w-full mx-auto mt-12 p-4">
+//   return (
+//     <div className="max-w-full mx-auto mt-12 p-4">
 
-      {/* Category Filter */}
-      <div className="flex justify-center mb-6 gap-4 flex-wrap">
-        <button
-          onClick={() => handleCategoryFilter(null)}
-          className={`px-4 py-2 border rounded-xl ${
-            filteredCategory === null ? "bg-blueColor text-white" : ""
-          }`}
-        >
-          All Categories
-        </button>
+//       {/* Category Filter */}
+//       <div className="flex justify-center mb-6 gap-4 flex-wrap">
+//         <button
+//           onClick={() => handleCategoryFilter(null)}
+//           className={`px-4 py-2 border rounded-xl ${
+//             filteredCategory === null ? "bg-blueColor text-white" : ""
+//           }`}
+//         >
+//           All Categories
+//         </button>
 
-        {categories.map((cat) => (
-          <button
-            key={cat.slug}
-            onClick={() => handleCategoryFilter(cat.slug)}
-            className={`px-4 py-2 border rounded-xl ${
-              filteredCategory === cat.slug ? "bg-blueColor text-white" : ""
-            }`}
-          >
-            {cat.name}
-          </button>
-        ))}
-      </div>
+//         {categories.map((cat) => (
+//           <button
+//             key={cat.slug}
+//             onClick={() => handleCategoryFilter(cat.slug)}
+//             className={`px-4 py-2 border rounded-xl ${
+//               filteredCategory === cat.slug ? "bg-blueColor text-white" : ""
+//             }`}
+//           >
+//             {cat.name}
+//           </button>
+//         ))}
+//       </div>
 
-      {/* Main Layout */}
-      <div className="flex flex-wrap py-4">
+//       {/* Main Layout */}
+//       <div className="flex flex-wrap py-4">
         
-        {/* LEFT Selected Study */}
-        <div className="w-full md:w-3/5 p-4">
-          {selectedStudy && (
-            <>
-              <Image
-                src={selectedStudy.image}
-                width={700}
-                height={500}
-                alt={selectedStudy.title}
-                className="w-full h-80 object-cover rounded-lg"
-              />
+//         {/* LEFT Selected Study */}
+//         <div className="w-full md:w-3/5 p-4">
+//           {selectedStudy && (
+//             <>
+//               <Image
+//                 src={selectedStudy.image}
+//                 width={700}
+//                 height={500}
+//                 alt={selectedStudy.title}
+//                 className="w-full h-80 object-cover rounded-lg"
+//               />
 
-              <div className="p-4 border-l-2 border-yellow-500">
-                <p>📅 {selectedStudy.p}</p>
-                <h2 className="text-3xl font-semibold">{selectedStudy.title}</h2>
-                <p className="mt-3 text-gray-600">{selectedStudy.description}</p>
+//               <div className="p-4 border-l-2 border-yellow-500">
+//                 <p>📅 {selectedStudy.p}</p>
+//                 <h2 className="text-3xl font-semibold">{selectedStudy.title}</h2>
+//                 <p className="mt-3 text-gray-600">{selectedStudy.description}</p>
 
-                {/* <Link
-                  href={`/case-studies/${selectedStudy.slug}`}
-                  className="text-purple-700 font-semibold inline-block mt-3"
-                >
-                  READ MORE →
-                </Link> */}
-              </div>
-            </>
-          )}
-        </div>
+//                 {/* <Link
+//                   href={`/case-studies/${selectedStudy.slug}`}
+//                   className="text-purple-700 font-semibold inline-block mt-3"
+//                 >
+//                   READ MORE →
+//                 </Link> */}
+//               </div>
+//             </>
+//           )}
+//         </div>
 
-        {/* RIGHT List */}
-        <div className="w-full md:w-2/5 p-4 max-h-[700px] overflow-y-auto">
-          {displayed.map((study) => (
-            <div
-              key={study.id}
-              className="mb-4 cursor-pointer"
-              onClick={() => setSelectedStudy(study)}
-            >
-              <Image
-                src={study.image}
-                width={400}
-                height={250}
-                alt={study.title}
-                className="rounded-lg"
-              />
+//         {/* RIGHT List */}
+//         <div className="w-full md:w-2/5 p-4 max-h-[700px] overflow-y-auto">
+//           {displayed.map((study) => (
+//             <div
+//               key={study.id}
+//               className="mb-4 cursor-pointer"
+//               onClick={() => setSelectedStudy(study)}
+//             >
+//               <Image
+//                 src={study.image}
+//                 width={400}
+//                 height={250}
+//                 alt={study.title}
+//                 className="rounded-lg"
+//               />
 
-              <div className="p-4 border-l-2 border-yellow-500">
-                <p className="text-xs">📅 {study.p}</p>
-                <h3 className="font-semibold">{study.title}</h3>
-                <p className="text-gray-600 text-sm mt-1">
-                  {study.description.split(" ").slice(0, 15).join(" ")}…
-                </p>
+//               <div className="p-4 border-l-2 border-yellow-500">
+//                 <p className="text-xs">📅 {study.p}</p>
+//                 <h3 className="font-semibold">{study.title}</h3>
+//                 <p className="text-gray-600 text-sm mt-1">
+//                   {study.description.split(" ").slice(0, 15).join(" ")}…
+//                 </p>
 
-                {/* <Link
-                  href={`/case-studies/${study.slug}`}
-                  className="text-purple-700 text-sm font-semibold"
-                >
-                  READ MORE →
-                </Link> */}
-              </div>
-            </div>
-          ))}
-        </div>
+//                 {/* <Link
+//                   href={`/case-studies/${study.slug}`}
+//                   className="text-purple-700 text-sm font-semibold"
+//                 >
+//                   READ MORE →
+//                 </Link> */}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-      </div>
-    </div>
-  );
-};
+//       </div>
+//     </div>
+//   );
+// };
 
-export default CaseStudyLayout;
+// export default CaseStudyLayout;

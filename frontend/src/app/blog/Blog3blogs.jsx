@@ -179,153 +179,153 @@
 //   );
 // };
 
+// // export default BlogLayout;
+// "use client";
+
+// import { useEffect, useState } from "react";
+// import Link from "next/link";
+// import Image from "next/image";
+
+// const BlogLayout = () => {
+//   const [blogs, setBlogs] = useState([]);
+//   const [categories, setCategories] = useState([]);
+//   const [selectedBlog, setSelectedBlog] = useState(null);
+//   const [filteredCategory, setFilteredCategory] = useState(null);
+
+//   useEffect(() => {
+//     const fetchBlogJSON = async () => {
+//       try {
+//         const res = await fetch("/Blog.json"); // JSON in public folder
+//         const json = await res.json();
+
+//         // Flatten category-wise blogs
+//         const formatted = json.categories.flatMap((cat) =>
+//           cat.caseStudy.map((item) => ({
+//             ...item,
+//             category: cat.category_name,
+//             slug: item.title
+//               .toLowerCase()
+//               .replace(/[^a-z0-9]+/g, "-")
+//               .replace(/(^-|-$)/g, ""),
+//           }))
+//         );
+
+//         setBlogs(formatted);
+//         setSelectedBlog(formatted[0]);
+//         setCategories(json.categories.map((c) => c.category_name));
+//       } catch (err) {
+//         console.error("Error fetching JSON:", err);
+//       }
+//     };
+
+//     fetchBlogJSON();
+//   }, []);
+
+//   const handleCategoryFilter = (cat) => {
+//     setFilteredCategory(cat);
+//     const filtered = cat ? blogs.filter((b) => b.category === cat) : blogs;
+//     setSelectedBlog(filtered[0]);
+//   };
+
+//   const displayedBlogs = filteredCategory
+//     ? blogs.filter((b) => b.category === filteredCategory)
+//     : blogs;
+
+//   return (
+//     <div className="max-w-full mx-auto mt-12 p-4">
+//       {/* CATEGORY FILTER */}
+//       <div className="w-full flex justify-center mb-6">
+//         <div className="flex flex-wrap gap-3 p-2">
+//           <button
+//             className={`px-4 py-2 rounded-xl ${
+//               filteredCategory === null ? "bg-blue-600 text-white" : "border"
+//             }`}
+//             onClick={() => handleCategoryFilter(null)}
+//           >
+//             All
+//           </button>
+
+//           {categories.map((cat) => (
+//             <button
+//               key={cat}
+//               onClick={() => handleCategoryFilter(cat)}
+//               className={`px-4 py-2 rounded-xl ${
+//                 filteredCategory === cat ? "bg-blue-600 text-white" : "border"
+//               }`}
+//             >
+//               {cat}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* BLOG CONTENT */}
+//       <div className="flex flex-wrap py-4">
+//         {/* LEFT SIDE BIG BLOG */}
+//         <div className="w-full md:w-3/5 p-4">
+//           {selectedBlog && (
+//             <div>
+//               <Image
+//                 className="w-full h-80 object-cover rounded-lg"
+//                 src={selectedBlog.image}
+//                 width={700}
+//                 height={400}
+//                 alt={selectedBlog.title}
+//               />
+
+//               <div className="p-4 border-l-4 border-yellow-500">
+//                 <p className="text-xs">{selectedBlog.p}</p>
+//                 <h2 className="text-3xl font-semibold">{selectedBlog.title}</h2>
+//                 <p className="text-gray-600 mt-3">
+//                   {selectedBlog.description?.slice(0, 200)}...
+//                 </p>
+
+//                 {/* <Link
+//                   href={`/blog/${selectedBlog.slug}`}
+//                   className="text-purple-600 font-bold mt-4 block"
+//                 >
+//                   READ MORE →
+//                 </Link> */}
+//               </div>
+//             </div>
+//           )}
+//         </div>
+
+//         {/* RIGHT SIDE BLOG LIST */}
+//         <div className="w-full md:w-2/5 p-4 h-[800px] overflow-y-auto">
+//           {displayedBlogs
+//             .filter((b) => b.id !== selectedBlog?.id)
+//             .map((b) => (
+//               <div
+//                 key={b.id}
+//                 onClick={() => setSelectedBlog(b)}
+//                 className="mb-4 cursor-pointer"
+//               >
+//                 <Image
+//                   className="w-full h-48 object-cover rounded-lg"
+//                   src={b.image}
+//                   width={300}
+//                   height={200}
+//                   alt={b.title}
+//                 />
+
+//                 <div className="p-4 border-l-4 border-yellow-500">
+//                   <p className="text-xs">{b.p}</p>
+//                   <h3 className="text-lg font-semibold">{b.title}</h3>
+//                   <p className="text-gray-600 mt-1">
+//                     {b.description.slice(0, 50)}...
+//                   </p>
+
+//                   {/* <Link href={`/blog/${b.slug}`} className="text-purple-600 text-sm">
+//                     VIEW BLOG →
+//                   </Link> */}
+//                 </div>
+//               </div>
+//             ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
 // export default BlogLayout;
-"use client";
-
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-
-const BlogLayout = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [selectedBlog, setSelectedBlog] = useState(null);
-  const [filteredCategory, setFilteredCategory] = useState(null);
-
-  useEffect(() => {
-    const fetchBlogJSON = async () => {
-      try {
-        const res = await fetch("/Blog.json"); // JSON in public folder
-        const json = await res.json();
-
-        // Flatten category-wise blogs
-        const formatted = json.categories.flatMap((cat) =>
-          cat.caseStudy.map((item) => ({
-            ...item,
-            category: cat.category_name,
-            slug: item.title
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, "-")
-              .replace(/(^-|-$)/g, ""),
-          }))
-        );
-
-        setBlogs(formatted);
-        setSelectedBlog(formatted[0]);
-        setCategories(json.categories.map((c) => c.category_name));
-      } catch (err) {
-        console.error("Error fetching JSON:", err);
-      }
-    };
-
-    fetchBlogJSON();
-  }, []);
-
-  const handleCategoryFilter = (cat) => {
-    setFilteredCategory(cat);
-    const filtered = cat ? blogs.filter((b) => b.category === cat) : blogs;
-    setSelectedBlog(filtered[0]);
-  };
-
-  const displayedBlogs = filteredCategory
-    ? blogs.filter((b) => b.category === filteredCategory)
-    : blogs;
-
-  return (
-    <div className="max-w-full mx-auto mt-12 p-4">
-      {/* CATEGORY FILTER */}
-      <div className="w-full flex justify-center mb-6">
-        <div className="flex flex-wrap gap-3 p-2">
-          <button
-            className={`px-4 py-2 rounded-xl ${
-              filteredCategory === null ? "bg-blue-600 text-white" : "border"
-            }`}
-            onClick={() => handleCategoryFilter(null)}
-          >
-            All
-          </button>
-
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => handleCategoryFilter(cat)}
-              className={`px-4 py-2 rounded-xl ${
-                filteredCategory === cat ? "bg-blue-600 text-white" : "border"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* BLOG CONTENT */}
-      <div className="flex flex-wrap py-4">
-        {/* LEFT SIDE BIG BLOG */}
-        <div className="w-full md:w-3/5 p-4">
-          {selectedBlog && (
-            <div>
-              <Image
-                className="w-full h-80 object-cover rounded-lg"
-                src={selectedBlog.image}
-                width={700}
-                height={400}
-                alt={selectedBlog.title}
-              />
-
-              <div className="p-4 border-l-4 border-yellow-500">
-                <p className="text-xs">{selectedBlog.p}</p>
-                <h2 className="text-3xl font-semibold">{selectedBlog.title}</h2>
-                <p className="text-gray-600 mt-3">
-                  {selectedBlog.description?.slice(0, 200)}...
-                </p>
-
-                {/* <Link
-                  href={`/blog/${selectedBlog.slug}`}
-                  className="text-purple-600 font-bold mt-4 block"
-                >
-                  READ MORE →
-                </Link> */}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* RIGHT SIDE BLOG LIST */}
-        <div className="w-full md:w-2/5 p-4 h-[800px] overflow-y-auto">
-          {displayedBlogs
-            .filter((b) => b.id !== selectedBlog?.id)
-            .map((b) => (
-              <div
-                key={b.id}
-                onClick={() => setSelectedBlog(b)}
-                className="mb-4 cursor-pointer"
-              >
-                <Image
-                  className="w-full h-48 object-cover rounded-lg"
-                  src={b.image}
-                  width={300}
-                  height={200}
-                  alt={b.title}
-                />
-
-                <div className="p-4 border-l-4 border-yellow-500">
-                  <p className="text-xs">{b.p}</p>
-                  <h3 className="text-lg font-semibold">{b.title}</h3>
-                  <p className="text-gray-600 mt-1">
-                    {b.description.slice(0, 50)}...
-                  </p>
-
-                  {/* <Link href={`/blog/${b.slug}`} className="text-purple-600 text-sm">
-                    VIEW BLOG →
-                  </Link> */}
-                </div>
-              </div>
-            ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default BlogLayout;
