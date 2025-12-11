@@ -26,7 +26,7 @@ export default function Home() {
   <ClientLogo/>
   <OurTeam/>
   <Testimonials/>
-  <CaseStudiesbtn/>
+  {/* <CaseStudiesbtn/> */}
   {/* <CaseStudies/> */}
   <Requirements/>
 
