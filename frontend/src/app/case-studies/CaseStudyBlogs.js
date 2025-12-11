@@ -171,7 +171,6 @@
 
 // export default CaseStudyLayout;
 
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -196,7 +195,7 @@ const CaseStudyLayout = () => {
           cat.caseStudy.forEach((item) => {
             formatted.push({
               ...item,
-              slug: item.link.replace("/", ""), // FINAL SLUG
+              slug: item.link.replace("/", ""), // clean slug
               category_name: cat.category_name,
               category_slug: cat.category_slug,
             });
@@ -206,13 +205,14 @@ const CaseStudyLayout = () => {
         setCaseStudies(formatted);
         setSelectedStudy(formatted[0]);
 
-        const uniqueCategories = data.categories.map((cat) => ({
-          name: cat.category_name,
-          slug: cat.category_slug,
-        }));
-        setCategories(uniqueCategories);
-      } catch (error) {
-        console.error("Error loading case studies:", error);
+        setCategories(
+          data.categories.map((cat) => ({
+            name: cat.category_name,
+            slug: cat.category_slug,
+          }))
+        );
+      } catch (err) {
+        console.error("Error fetching:", err);
       }
     };
 
@@ -221,7 +221,6 @@ const CaseStudyLayout = () => {
 
   const handleCategoryFilter = (slug) => {
     setFilteredCategory(slug);
-
     const filtered = slug
       ? caseStudies.filter((study) => study.category_slug === slug)
       : caseStudies;
@@ -229,23 +228,21 @@ const CaseStudyLayout = () => {
     setSelectedStudy(filtered[0]);
   };
 
-  const displayedCaseStudies = filteredCategory
-    ? caseStudies.filter((study) => study.category_slug === filteredCategory)
+  const displayed = filteredCategory
+    ? caseStudies.filter((s) => s.category_slug === filteredCategory)
     : caseStudies;
 
-  if (!caseStudies.length) return <p className="mt-20 text-center">Loading...</p>;
+  if (!caseStudies.length) return <p className="text-center mt-20">Loading…</p>;
 
   return (
     <div className="max-w-full mx-auto mt-12 p-4">
 
-      {/* Category Buttons */}
+      {/* Category Filter */}
       <div className="flex justify-center mb-6 gap-4 flex-wrap">
         <button
           onClick={() => handleCategoryFilter(null)}
           className={`px-4 py-2 border rounded-xl ${
-            filteredCategory === null
-              ? "bg-blueColor text-white"
-              : "border-gray-300"
+            filteredCategory === null ? "bg-blueColor text-white" : ""
           }`}
         >
           All Categories
@@ -256,9 +253,7 @@ const CaseStudyLayout = () => {
             key={cat.slug}
             onClick={() => handleCategoryFilter(cat.slug)}
             className={`px-4 py-2 border rounded-xl ${
-              filteredCategory === cat.slug
-                ? "bg-blueColor text-white"
-                : "border-gray-300"
+              filteredCategory === cat.slug ? "bg-blueColor text-white" : ""
             }`}
           >
             {cat.name}
@@ -266,21 +261,23 @@ const CaseStudyLayout = () => {
         ))}
       </div>
 
-      {/* Main Content */}
+      {/* Main Layout */}
       <div className="flex flex-wrap py-4">
+        
         {/* LEFT Selected Study */}
         <div className="w-full md:w-3/5 p-4">
           {selectedStudy && (
-            <div>
+            <>
               <Image
-                className="w-full h-80 object-cover rounded-lg"
                 src={selectedStudy.image}
-                alt={selectedStudy.title}
                 width={700}
                 height={500}
+                alt={selectedStudy.title}
+                className="w-full h-80 object-cover rounded-lg"
               />
+
               <div className="p-4 border-l-2 border-yellow-500">
-                <p className="text-gray-500">📅 {selectedStudy.p}</p>
+                <p>📅 {selectedStudy.p}</p>
                 <h2 className="text-3xl font-semibold">{selectedStudy.title}</h2>
                 <p className="mt-3 text-gray-600">{selectedStudy.description}</p>
 
@@ -291,45 +288,45 @@ const CaseStudyLayout = () => {
                   READ MORE →
                 </Link>
               </div>
-            </div>
+            </>
           )}
         </div>
 
-        {/* RIGHT Other Studies */}
+        {/* RIGHT List */}
         <div className="w-full md:w-2/5 p-4 max-h-[700px] overflow-y-auto">
-          {displayedCaseStudies.map((study) => (
+          {displayed.map((study) => (
             <div
               key={study.id}
               className="mb-4 cursor-pointer"
               onClick={() => setSelectedStudy(study)}
             >
               <Image
-                className="rounded-lg"
                 src={study.image}
-                alt={study.title}
                 width={400}
                 height={250}
+                alt={study.title}
+                className="rounded-lg"
               />
 
               <div className="p-4 border-l-2 border-yellow-500">
                 <p className="text-xs">📅 {study.p}</p>
-                <h3 className="text-md font-semibold">{study.title}</h3>
+                <h3 className="font-semibold">{study.title}</h3>
                 <p className="text-gray-600 text-sm mt-1">
-                  {study.description.split(" ").slice(0, 15).join(" ") + "..."}
+                  {study.description.split(" ").slice(0, 15).join(" ")}…
                 </p>
 
-                {/* <Link
+                <Link
                   href={`/case-studies/${study.slug}`}
                   className="text-purple-700 text-sm font-semibold"
                 >
                   READ MORE →
-                </Link> */}
+                </Link>
               </div>
             </div>
           ))}
         </div>
-      </div>
 
+      </div>
     </div>
   );
 };

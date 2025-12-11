@@ -182,3 +182,87 @@
 // };
 
 // export default CaseStudyDetails;
+import Image from "next/image";
+import { promises as fs } from "fs";
+import path from "path";
+
+async function getCaseStudies() {
+  const filePath = path.join(process.cwd(), "public", "CaseStudy.json");
+  const jsonData = await fs.readFile(filePath, "utf-8");
+  return JSON.parse(jsonData);
+}
+
+export async function generateStaticParams() {
+  const data = await getCaseStudies();
+
+  const slugs = [];
+
+  data.categories.forEach((cat) =>
+    cat.caseStudy.forEach((item) => {
+      const clean = item.link.replace("/", "").trim();
+      slugs.push({ slug: clean });
+    })
+  );
+
+  return slugs;
+}
+
+export default async function CaseStudyDetails({ params }) {
+  const { slug } = params;
+
+  const data = await getCaseStudies();
+
+  let selectedStudy = null;
+
+  data.categories.forEach((cat) => {
+    cat.caseStudy.forEach((item) => {
+      const clean = item.link.replace("/", "").trim();
+
+      if (clean === slug) {
+        selectedStudy = { ...item, category_name: cat.category_name };
+      }
+    });
+  });
+
+  if (!selectedStudy) {
+    return (
+      <p className="mt-16 text-center text-red-600 text-xl">
+        ❌ Case Study Not Found
+      </p>
+    );
+  }
+
+  return (
+    <div className="mt-20">
+      <div className="relative w-full h-[70vh]">
+        <Image
+          src={selectedStudy.image}
+          alt={selectedStudy.title}
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="px-10 py-8">
+        <p className="text-gray-500">📅 {selectedStudy.p}</p>
+
+        <span className="px-4 py-1 bg-gray-200 rounded-md inline-block mt-2">
+          {selectedStudy.category_name}
+        </span>
+
+        <h1 className="text-4xl font-bold mt-4">{selectedStudy.title}</h1>
+
+        <p className="mt-6 text-lg leading-relaxed text-gray-700">
+          {selectedStudy.description}
+        </p>
+
+        <a
+          href="/case-studies"
+          className="inline-block mt-10 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+        >
+          Back to Case Studies
+        </a>
+      </div>
+    </div>
+  );
+}
