@@ -157,9 +157,9 @@ export default function JobListings() {
                 <p>Location: {job.location}</p>
               </div>
 
-              <Link href={job.applyLink} className="text-[#6328A6] font-bold">
+              {/* <Link href={job.applyLink} className="text-[#6328A6] font-bold">
                 Read More &gt;&gt;
-              </Link>
+              </Link> */}
             </div>
           )}
         </div>
