@@ -12,7 +12,7 @@ export default function Home() {
   <div className="bg-white"> 
   
     <BlogBanner/>
-    <Blog3blogs/>
+    {/* <Blog3blogs/> */}
     <BlogDiscuss/>
     
   
