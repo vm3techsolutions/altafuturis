@@ -13,7 +13,7 @@ export default function Home() {
   <div className="bg-white"> 
   
     <CareerBanner/>
-    <CareerDesignation/>
+    {/* <CareerDesignation/> */}
     <CareerFooter/>
     
   
