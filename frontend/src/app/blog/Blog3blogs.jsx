@@ -317,9 +317,9 @@ const BlogLayout = () => {
                     {b.description.slice(0, 50)}...
                   </p>
 
-                  <Link href={`/blog/${b.slug}`} className="text-purple-600 text-sm">
+                  {/* <Link href={`/blog/${b.slug}`} className="text-purple-600 text-sm">
                     VIEW BLOG →
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             ))}

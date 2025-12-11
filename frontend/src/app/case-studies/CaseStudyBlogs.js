@@ -318,12 +318,12 @@ const CaseStudyLayout = () => {
                   {study.description.split(" ").slice(0, 15).join(" ") + "..."}
                 </p>
 
-                <Link
+                {/* <Link
                   href={`/case-studies/${study.slug}`}
                   className="text-purple-700 text-sm font-semibold"
                 >
                   READ MORE →
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}
