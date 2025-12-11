@@ -180,44 +180,41 @@
 //     return <p className="text-center mt-10 text-red-500">Error loading case study.</p>;
 //   }
 // };
-
-// export default CaseStudyDetails;
 import Image from "next/image";
 import { promises as fs } from "fs";
 import path from "path";
 
+// 🔹 Read JSON from public folder
 async function getCaseStudies() {
   const filePath = path.join(process.cwd(), "public", "CaseStudy.json");
   const jsonData = await fs.readFile(filePath, "utf-8");
   return JSON.parse(jsonData);
 }
 
+// 🔹 Generate static params for SSG
 export async function generateStaticParams() {
   const data = await getCaseStudies();
 
-  const slugs = [];
-
-  data.categories.forEach((cat) =>
-    cat.caseStudy.forEach((item) => {
-      const clean = item.link.replace("/", "").trim();
-      slugs.push({ slug: clean });
-    })
+  const slugs = data.categories.flatMap((cat) =>
+    cat.caseStudy.map((item) => ({
+      slug: item.link.replace("/", "").trim(),
+    }))
   );
 
   return slugs;
 }
 
+// 🔹 Dynamic Case Study Page
 export default async function CaseStudyDetails({ params }) {
   const { slug } = params;
-
   const data = await getCaseStudies();
 
+  // Find selected case study
   let selectedStudy = null;
 
   data.categories.forEach((cat) => {
     cat.caseStudy.forEach((item) => {
       const clean = item.link.replace("/", "").trim();
-
       if (clean === slug) {
         selectedStudy = { ...item, category_name: cat.category_name };
       }
@@ -234,6 +231,7 @@ export default async function CaseStudyDetails({ params }) {
 
   return (
     <div className="mt-20">
+      {/* Banner */}
       <div className="relative w-full h-[70vh]">
         <Image
           src={selectedStudy.image}
@@ -243,6 +241,7 @@ export default async function CaseStudyDetails({ params }) {
         />
       </div>
 
+      {/* Content */}
       <div className="px-10 py-8">
         <p className="text-gray-500">📅 {selectedStudy.p}</p>
 

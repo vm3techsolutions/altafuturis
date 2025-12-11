@@ -180,18 +180,19 @@
 //     return <p className="text-center mt-10 text-red-500">Error loading blog post.</p>;
 //   }
 // };
-
 import Image from "next/image";
 import Link from "next/link";
 import { promises as fs } from "fs";
 import path from "path";
 
+// 🔹 Read Blog JSON directly from public folder
 async function getBlogs() {
   const filePath = path.join(process.cwd(), "public", "Blog.json");
   const jsonData = await fs.readFile(filePath, "utf-8");
   return JSON.parse(jsonData);
 }
 
+// 🔹 Generate all slugs for static paths
 export async function generateStaticParams() {
   const data = await getBlogs();
 
@@ -207,10 +208,12 @@ export async function generateStaticParams() {
   return slugs;
 }
 
+// 🔹 Dynamic Blog Page Component
 export default async function BlogPage({ params }) {
   const { slug } = params;
   const data = await getBlogs();
 
+  // Flatten all blogs and attach category
   const allBlogs = data.categories.flatMap((cat) =>
     cat.caseStudy.map((item) => ({
       ...item,
@@ -222,15 +225,22 @@ export default async function BlogPage({ params }) {
     }))
   );
 
+  // Find current blog
   const blog = allBlogs.find((b) => b.slug === slug);
 
   if (!blog)
-    return <p className="text-center text-red-600 mt-10">Blog Not Found</p>;
+    return (
+      <p className="mt-16 text-center text-red-600 text-xl">
+        ❌ Blog Not Found
+      </p>
+    );
 
+  // Related posts (first 2 others)
   const related = allBlogs.filter((b) => b.slug !== slug).slice(0, 2);
 
   return (
     <div className="mt-20 p-6 max-w-5xl mx-auto">
+      {/* Banner */}
       <div className="w-full h-[300px] relative mb-6">
         <Image
           src={blog.image}
@@ -264,6 +274,7 @@ export default async function BlogPage({ params }) {
         </Link>
       </div>
 
+      {/* Related Posts */}
       <h2 className="text-2xl font-semibold mt-10">Related Posts</h2>
       <div className="grid md:grid-cols-2 gap-6 mt-4">
         {related.map((r) => (
