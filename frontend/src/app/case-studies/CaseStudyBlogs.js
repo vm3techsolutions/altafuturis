@@ -281,12 +281,12 @@ const CaseStudyLayout = () => {
                 <h2 className="text-3xl font-semibold">{selectedStudy.title}</h2>
                 <p className="mt-3 text-gray-600">{selectedStudy.description}</p>
 
-                <Link
+                {/* <Link
                   href={`/case-studies/${selectedStudy.slug}`}
                   className="text-purple-700 font-semibold inline-block mt-3"
                 >
                   READ MORE →
-                </Link>
+                </Link> */}
               </div>
             </>
           )}
@@ -315,12 +315,12 @@ const CaseStudyLayout = () => {
                   {study.description.split(" ").slice(0, 15).join(" ")}…
                 </p>
 
-                <Link
+                {/* <Link
                   href={`/case-studies/${study.slug}`}
                   className="text-purple-700 text-sm font-semibold"
                 >
                   READ MORE →
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}

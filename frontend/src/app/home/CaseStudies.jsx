@@ -176,7 +176,7 @@ const PortfolioSection = () => {
                     dangerouslySetInnerHTML={{ __html: study.title }}
                   />
                  <Link
-                  href="/case-studies"
+                  href=""
                   className="text-purple-700 text-sm font-semibold"
                 >
                   READ MORE →

@@ -280,12 +280,12 @@ const BlogLayout = () => {
                   {selectedBlog.description?.slice(0, 200)}...
                 </p>
 
-                <Link
+                {/* <Link
                   href={`/blog/${selectedBlog.slug}`}
                   className="text-purple-600 font-bold mt-4 block"
                 >
                   READ MORE →
-                </Link>
+                </Link> */}
               </div>
             </div>
           )}

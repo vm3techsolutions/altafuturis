@@ -180,88 +180,70 @@
 //     return <p className="text-center mt-10 text-red-500">Error loading case study.</p>;
 //   }
 // };
-import Image from "next/image";
-import { promises as fs } from "fs";
-import path from "path";
 
-// 🔹 Read JSON from public folder
-async function getCaseStudies() {
-  const filePath = path.join(process.cwd(), "public", "CaseStudy.json");
-  const jsonData = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(jsonData);
-}
+// import Link from "next/link";
+// import Image from "next/image";
+// import { ArrowLeft } from "lucide-react";
+// import caseStudies from "../../../../public/CaseStudy.json"; // 🔹 Import JSON like blogs
 
-// 🔹 Generate static params for SSG
-export async function generateStaticParams() {
-  const data = await getCaseStudies();
+// export default async function CaseStudyDetails({ params }) {
+//   const { slug } = params;
 
-  const slugs = data.categories.flatMap((cat) =>
-    cat.caseStudy.map((item) => ({
-      slug: item.link.replace("/", "").trim(),
-    }))
-  );
+//   // 🔹 Find the selected case study
+//   let selectedStudy = null;
 
-  return slugs;
-}
+//   caseStudies.categories.forEach((cat) => {
+//     cat.caseStudy.forEach((item) => {
+//       const clean = item.link.replace("/", "").trim();
+//       if (clean === slug) {
+//         selectedStudy = { ...item, category_name: cat.category_name };
+//       }
+//     });
+//   });
 
-// 🔹 Dynamic Case Study Page
-export default async function CaseStudyDetails({ params }) {
-  const { slug } = params;
-  const data = await getCaseStudies();
+//   if (!selectedStudy) {
+//     return (
+//       <p className="mt-16 text-center text-red-600 text-xl">
+//         ❌ Case Study Not Found
+//       </p>
+//     );
+//   }
 
-  // Find selected case study
-  let selectedStudy = null;
+//   return (
+//     <section className="common-section px-4 lg:px-0 lg:mx-[100px] mt-20">
+//       {/* Banner */}
+//       <div className="relative w-full h-[70vh] mb-10">
+//         <Image
+//           src={selectedStudy.image}
+//           alt={selectedStudy.title}
+//           fill
+//           className="object-cover rounded-lg"
+//         />
+//       </div>
 
-  data.categories.forEach((cat) => {
-    cat.caseStudy.forEach((item) => {
-      const clean = item.link.replace("/", "").trim();
-      if (clean === slug) {
-        selectedStudy = { ...item, category_name: cat.category_name };
-      }
-    });
-  });
+//       {/* Content */}
+//       <div className="px-4 lg:px-10 py-8">
+//         <p className="text-gray-500">📅 {selectedStudy.p}</p>
 
-  if (!selectedStudy) {
-    return (
-      <p className="mt-16 text-center text-red-600 text-xl">
-        ❌ Case Study Not Found
-      </p>
-    );
-  }
+//         <span className="px-4 py-1 bg-gray-200 rounded-md inline-block mt-2">
+//           {selectedStudy.category_name}
+//         </span>
 
-  return (
-    <div className="mt-20">
-      {/* Banner */}
-      <div className="relative w-full h-[70vh]">
-        <Image
-          src={selectedStudy.image}
-          alt={selectedStudy.title}
-          fill
-          className="object-cover"
-        />
-      </div>
+//         <h1 className="text-4xl font-bold mt-4">{selectedStudy.title}</h1>
 
-      {/* Content */}
-      <div className="px-10 py-8">
-        <p className="text-gray-500">📅 {selectedStudy.p}</p>
+//         <p className="mt-6 text-lg leading-relaxed text-gray-700">
+//           {selectedStudy.description}
+//         </p>
 
-        <span className="px-4 py-1 bg-gray-200 rounded-md inline-block mt-2">
-          {selectedStudy.category_name}
-        </span>
-
-        <h1 className="text-4xl font-bold mt-4">{selectedStudy.title}</h1>
-
-        <p className="mt-6 text-lg leading-relaxed text-gray-700">
-          {selectedStudy.description}
-        </p>
-
-        <a
-          href="/case-studies"
-          className="inline-block mt-10 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
-        >
-          Back to Case Studies
-        </a>
-      </div>
-    </div>
-  );
-}
+//         <div className="mt-10">
+//           <Link href="/case-studies">
+//             <button className="button flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+//               <ArrowLeft size={20} className="mr-2" />
+//               Back to Case Studies
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }

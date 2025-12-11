@@ -180,120 +180,102 @@
 //     return <p className="text-center mt-10 text-red-500">Error loading blog post.</p>;
 //   }
 // };
-import Image from "next/image";
-import Link from "next/link";
-import { promises as fs } from "fs";
-import path from "path";
 
-// 🔹 Read Blog JSON directly from public folder
-async function getBlogs() {
-  const filePath = path.join(process.cwd(), "public", "Blog.json");
-  const jsonData = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(jsonData);
-}
 
-// 🔹 Generate all slugs for static paths
-export async function generateStaticParams() {
-  const data = await getBlogs();
+// import Image from "next/image";
+// import Link from "next/link";
 
-  const slugs = data.categories.flatMap((cat) =>
-    cat.caseStudy.map((item) => ({
-      slug: item.title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, ""),
-    }))
-  );
+// export default async function BlogPage({ params }) {
+//   const { slug } = params;
 
-  return slugs;
-}
+//   // ✅ Dynamically import JSON to get correct array
+//   const blogsModule = await import("../../../../public/Blog.json");
+//   const blogsData = blogsModule.default;
 
-// 🔹 Dynamic Blog Page Component
-export default async function BlogPage({ params }) {
-  const { slug } = params;
-  const data = await getBlogs();
+//   // 🔹 Make sure blogsData is an array
+//   const blogs = Array.isArray(blogsData) ? blogsData : [];
 
-  // Flatten all blogs and attach category
-  const allBlogs = data.categories.flatMap((cat) =>
-    cat.caseStudy.map((item) => ({
-      ...item,
-      category: cat.category_name,
-      slug: item.title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, ""),
-    }))
-  );
+//   // Flatten all blogs and attach category
+//   const allBlogs = blogs.flatMap((cat) =>
+//     (cat.caseStudy || []).map((item) => ({
+//       ...item,
+//       category: cat.category_name,
+//       slug: item.title
+//         .toLowerCase()
+//         .replace(/[^a-z0-9]+/g, "-")
+//         .replace(/(^-|-$)/g, ""),
+//     }))
+//   );
 
-  // Find current blog
-  const blog = allBlogs.find((b) => b.slug === slug);
+//   // Find current blog
+//   const blog = allBlogs.find((b) => b.slug === slug);
 
-  if (!blog)
-    return (
-      <p className="mt-16 text-center text-red-600 text-xl">
-        ❌ Blog Not Found
-      </p>
-    );
+//   if (!blog)
+//     return (
+//       <p className="mt-16 text-center text-red-600 text-xl">
+//         ❌ Blog Not Found
+//       </p>
+//     );
 
-  // Related posts (first 2 others)
-  const related = allBlogs.filter((b) => b.slug !== slug).slice(0, 2);
+//   // Related posts (first 2 others)
+//   const related = allBlogs.filter((b) => b.slug !== slug).slice(0, 2);
 
-  return (
-    <div className="mt-20 p-6 max-w-5xl mx-auto">
-      {/* Banner */}
-      <div className="w-full h-[300px] relative mb-6">
-        <Image
-          src={blog.image}
-          fill
-          className="object-cover rounded-lg"
-          alt={blog.title}
-        />
-      </div>
+//   return (
+//     <div className="mt-20 p-6 max-w-5xl mx-auto">
+//       {/* Banner */}
+//       <div className="w-full h-[300px] relative mb-6">
+//         <Image
+//           src={blog.image}
+//           fill
+//           className="object-cover rounded-lg"
+//           alt={blog.title}
+//         />
+//       </div>
 
-      <h1 className="text-4xl font-bold">{blog.title}</h1>
-      <p className="text-gray-500 mt-2">{blog.p}</p>
+//       <h1 className="text-4xl font-bold">{blog.title}</h1>
+//       <p className="text-gray-500 mt-2">{blog.p}</p>
 
-      <p className="mt-5 text-lg text-gray-700">{blog.topic}</p>
-      <p className="mt-3 text-gray-700">{blog.description}</p>
+//       <p className="mt-5 text-lg text-gray-700">{blog.topic}</p>
+//       <p className="mt-3 text-gray-700">{blog.description}</p>
 
-      {blog.topic2 && (
-        <>
-          <h2 className="text-2xl font-semibold mt-6">{blog.topic2}</h2>
-          {blog.p1 && <p className="mt-2 text-gray-700">{blog.p1}</p>}
-          {blog.p2 && <p className="mt-2 text-gray-700">{blog.p2}</p>}
-          {blog.p3 && <p className="mt-2 text-gray-700">{blog.p3}</p>}
-        </>
-      )}
+//       {blog.topic2 && (
+//         <>
+//           <h2 className="text-2xl font-semibold mt-6">{blog.topic2}</h2>
+//           {blog.p1 && <p className="mt-2 text-gray-700">{blog.p1}</p>}
+//           {blog.p2 && <p className="mt-2 text-gray-700">{blog.p2}</p>}
+//           {blog.p3 && <p className="mt-2 text-gray-700">{blog.p3}</p>}
+//         </>
+//       )}
 
-      <div className="mt-6 text-center">
-        <Link
-          href="/blog"
-          className="px-6 py-3 bg-purple-600 text-white rounded-lg font-bold"
-        >
-          Back to Blog
-        </Link>
-      </div>
+//       <div className="mt-6 text-center">
+//         <Link
+//           href="/blog"
+//           className="px-6 py-3 bg-purple-600 text-white rounded-lg font-bold"
+//         >
+//           Back to Blog
+//         </Link>
+//       </div>
 
-      {/* Related Posts */}
-      <h2 className="text-2xl font-semibold mt-10">Related Posts</h2>
-      <div className="grid md:grid-cols-2 gap-6 mt-4">
-        {related.map((r) => (
-          <Link
-            key={r.id}
-            href={`/blog/${r.slug}`}
-            className="block border p-4 rounded-lg"
-          >
-            <Image
-              src={r.image}
-              width={500}
-              height={300}
-              className="rounded-lg"
-              alt={r.title}
-            />
-            <h3 className="text-lg font-semibold mt-2">{r.title}</h3>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
+//       {/* Related Posts */}
+//       <h2 className="text-2xl font-semibold mt-10">Related Posts</h2>
+//       <div className="grid md:grid-cols-2 gap-6 mt-4">
+//         {related.map((r) => (
+//           <Link
+//             key={r.id}
+//             href={`/blog/${r.slug}`}
+//             className="block border p-4 rounded-lg"
+//           >
+//             <Image
+//               src={r.image}
+//               width={500}
+//               height={300}
+//               className="rounded-lg"
+//               alt={r.title}
+//             />
+//             <h3 className="text-lg font-semibold mt-2">{r.title}</h3>
+//           </Link>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
