@@ -184,7 +184,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  const res = await fetch(`/Blog.json`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/Blog.json`);
   const json = await res.json();
 
   const allBlogs = json.categories.flatMap((cat) =>
@@ -202,7 +202,7 @@ export async function generateStaticParams() {
 const BlogPage = async ({ params }) => {
   const { slug } = params;
 
-  const res = await fetch(`/Blog.json`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/Blog.json`);
   const json = await res.json();
 
   const allBlogs = json.categories.flatMap((cat) =>

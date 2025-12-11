@@ -182,10 +182,11 @@
 // };
 
 // export default CaseStudyDetails;
+
 import Image from "next/image";
 
-// Correct public JSON path
-const JSON_URL = "/CaseStudy.json";
+// ⚡ MUST: JSON from public folder
+const JSON_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/CaseStudy.json`;
 
 export async function generateStaticParams() {
   const res = await fetch(JSON_URL);
