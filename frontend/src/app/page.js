@@ -12,7 +12,7 @@ import Testimonials from "./home/Testimonials";
 
 export const metadata = {
   title: "Altafuturis",
-  description: "Based in Texus, Serving globally!"
+  description: "Based in Texas, Serving globally!"
 }
 
 export default function Home() {
