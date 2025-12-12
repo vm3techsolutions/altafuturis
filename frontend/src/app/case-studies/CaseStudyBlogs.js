@@ -171,68 +171,60 @@
 
 // export default CaseStudyLayout;
 
+
 // "use client";
 
 // import { useEffect, useState } from "react";
-// import Link from "next/link";
 // import Image from "next/image";
+// import Link from "next/link";
 
-// const CaseStudyLayout = () => {
-//   const [caseStudies, setCaseStudies] = useState([]);
-//   const [selectedStudy, setSelectedStudy] = useState(null);
+// export default function BlogListingPage() {
+//   const [data, setData] = useState([]);
 //   const [categories, setCategories] = useState([]);
 //   const [filteredCategory, setFilteredCategory] = useState(null);
+//   const [selectedStudy, setSelectedStudy] = useState(null);
+//   const [displayed, setDisplayed] = useState([]);
 
 //   useEffect(() => {
-//     const fetchCaseStudies = async () => {
-//       try {
-//         const res = await fetch("/CaseStudy.json");
-//         const data = await res.json();
-
-//         const formatted = [];
-
-//         data.categories.forEach((cat) => {
-//           cat.caseStudy.forEach((item) => {
-//             formatted.push({
-//               ...item,
-//               slug: item.link.replace("/", ""), // clean slug
-//               category_name: cat.category_name,
-//               category_slug: cat.category_slug,
-//             });
-//           });
-//         });
-
-//         setCaseStudies(formatted);
-//         setSelectedStudy(formatted[0]);
-
-//         setCategories(
-//           data.categories.map((cat) => ({
-//             name: cat.category_name,
-//             slug: cat.category_slug,
+//     fetch("/data/case-study.json")
+//       .then((res) => res.json())
+//       .then((json) => {
+//         const allStudies = json.categories.flatMap((cat) =>
+//           cat.caseStudy.map((cs) => ({
+//             ...cs,
+//             categoryId: cat.category_slug,
+//             categoryName: cat.category_name,
+//             slug: cs.link
+//               .replace(/^\//, "") // FIX: remove starting slash
+//               .trim()
+//               .toLowerCase()
 //           }))
 //         );
-//       } catch (err) {
-//         console.error("Error fetching:", err);
-//       }
-//     };
 
-//     fetchCaseStudies();
+//         setData(allStudies);
+//         setDisplayed(allStudies);
+//         setSelectedStudy(allStudies[0]);
+
+//         setCategories(
+//           json.categories.map((cat) => ({
+//             name: cat.category_name,
+//             slug: cat.category_slug
+//           }))
+//         );
+//       });
 //   }, []);
 
 //   const handleCategoryFilter = (slug) => {
 //     setFilteredCategory(slug);
-//     const filtered = slug
-//       ? caseStudies.filter((study) => study.category_slug === slug)
-//       : caseStudies;
-
-//     setSelectedStudy(filtered[0]);
+//     if (!slug) {
+//       setDisplayed(data);
+//       setSelectedStudy(data[0]);
+//     } else {
+//       const filtered = data.filter((s) => s.categoryId === slug);
+//       setDisplayed(filtered);
+//       setSelectedStudy(filtered[0]);
+//     }
 //   };
-
-//   const displayed = filteredCategory
-//     ? caseStudies.filter((s) => s.category_slug === filteredCategory)
-//     : caseStudies;
-
-//   if (!caseStudies.length) return <p className="text-center mt-20">Loading…</p>;
 
 //   return (
 //     <div className="max-w-full mx-auto mt-12 p-4">
@@ -263,7 +255,7 @@
 
 //       {/* Main Layout */}
 //       <div className="flex flex-wrap py-4">
-        
+
 //         {/* LEFT Selected Study */}
 //         <div className="w-full md:w-3/5 p-4">
 //           {selectedStudy && (
@@ -281,12 +273,11 @@
 //                 <h2 className="text-3xl font-semibold">{selectedStudy.title}</h2>
 //                 <p className="mt-3 text-gray-600">{selectedStudy.description}</p>
 
-//                 {/* <Link
-//                   href={`/case-studies/${selectedStudy.slug}`}
-//                   className="text-purple-700 font-semibold inline-block mt-3"
-//                 >
-//                   READ MORE →
-//                 </Link> */}
+//                 <Link href={`/blog/${selectedStudy.slug}`}>
+//                   <button className="bg-blue-600 text-white px-3 py-2 rounded mt-3">
+//                     Read More →
+//                   </button>
+//                 </Link>
 //               </div>
 //             </>
 //           )}
@@ -311,16 +302,16 @@
 //               <div className="p-4 border-l-2 border-yellow-500">
 //                 <p className="text-xs">📅 {study.p}</p>
 //                 <h3 className="font-semibold">{study.title}</h3>
+
 //                 <p className="text-gray-600 text-sm mt-1">
 //                   {study.description.split(" ").slice(0, 15).join(" ")}…
 //                 </p>
 
-//                 {/* <Link
-//                   href={`/case-studies/${study.slug}`}
-//                   className="text-purple-700 text-sm font-semibold"
-//                 >
-//                   READ MORE →
-//                 </Link> */}
+//                 <Link href={`/blog/${study.slug}`}>
+//                   <button className="bg-blue-600 text-white px-3 py-2 rounded mt-1">
+//                     Read More →
+//                   </button>
+//                 </Link>
 //               </div>
 //             </div>
 //           ))}
@@ -329,6 +320,161 @@
 //       </div>
 //     </div>
 //   );
-// };
+// }
 
-// export default CaseStudyLayout;
+
+
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function CaseStudyPage() {
+  const [data, setData] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [filteredCategory, setFilteredCategory] = useState(null);
+  const [selectedStudy, setSelectedStudy] = useState(null);
+  const [displayed, setDisplayed] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/case-study.json")
+      .then((res) => res.json())
+      .then((json) => {
+        const allStudies = json.categories.flatMap((cat) =>
+          cat.caseStudy.map((item) => ({
+            ...item,
+            categoryId: cat.category_slug,
+            categoryName: cat.category_name,
+            // slug: item.title
+            //   .toLowerCase()
+            //   .replace(/ /g, "-")
+            //   .replace(/[^a-zA-Z0-9-]/g, "")
+
+            slug: item.link.replace("/", "") // link se direct slug
+
+          }))
+        );
+
+        setData(allStudies);
+        setDisplayed(allStudies);
+        setSelectedStudy(allStudies[0]);
+
+        setCategories(
+          json.categories.map((cat) => ({
+            name: cat.category_name,
+            slug: cat.category_slug,
+          }))
+        );
+      });
+  }, []);
+
+  const handleCategoryFilter = (catSlug) => {
+    setFilteredCategory(catSlug);
+
+    if (catSlug === null) {
+      setDisplayed(data);
+      setSelectedStudy(data[0]);
+    } else {
+      const filtered = data.filter((b) => b.categoryId === catSlug);
+      setDisplayed(filtered);
+      setSelectedStudy(filtered[0]);
+    }
+  };
+
+  return (
+    <div className="max-w-full mx-auto mt-12 p-4">
+
+      {/* CATEGORY FILTER */}
+      <div className="flex justify-center mb-6 gap-4 flex-wrap">
+        <button
+          onClick={() => handleCategoryFilter(null)}
+          className={`px-4 py-2 border rounded-xl ${
+            filteredCategory === null ? "bg-blueColor text-white" : ""
+          }`}
+        >
+          All Categories
+        </button>
+
+        {categories.map((cat) => (
+          <button
+            key={cat.slug}
+            onClick={() => handleCategoryFilter(cat.slug)}
+            className={`px-4 py-2 border rounded-xl ${
+              filteredCategory === cat.slug ? "bg-blueColor text-white" : ""
+            }`}
+          >
+            {cat.name}
+          </button>
+        ))}
+      </div>
+
+      {/* MAIN LAYOUT */}
+      <div className="flex flex-wrap py-4">
+
+        {/* LEFT Selected Study */}
+        <div className="w-full md:w-3/5 p-4">
+          {selectedStudy && (
+            <>
+              <Image
+                src={selectedStudy.image}
+                width={700}
+                height={500}
+                alt={selectedStudy.title}
+                className="w-full h-80 object-cover rounded-lg"
+              />
+
+              <div className="p-4 border-l-2 border-yellow-500">
+                <p>📅 {selectedStudy.p}</p>
+                <h2 className="text-3xl font-semibold">{selectedStudy.title}</h2>
+                <p className="mt-3 text-gray-600">{selectedStudy.description}</p>
+
+                <Link href={`/case-studies/${selectedStudy.slug}`}>
+                  <button className="bg-blueColor text-white px-3 py-2 rounded mt-3">
+                    Read More 
+                  </button>
+                </Link>
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* RIGHT LIST */}
+        <div className="w-full md:w-2/5 p-4 max-h-[700px] overflow-y-auto">
+          {displayed
+            .filter((study) => study.id !== selectedStudy?.id)
+            .map((study) => (
+              <div
+                key={study.id}
+                className="mb-4 cursor-pointer"
+                onClick={() => setSelectedStudy(study)}
+              >
+                <Image
+                  src={study.image}
+                  width={400}
+                  height={250}
+                  alt={study.title}
+                  className="rounded-lg"
+                />
+
+                <div className="p-4 border-l-2 border-yellow-500">
+                  <p className="text-xs">📅 {study.p}</p>
+                  <h3 className="font-semibold">{study.title}</h3>
+
+                  <p className="text-gray-600 text-sm mt-1">
+                    {study.description.split(" ").slice(0, 15).join(" ")}…
+                  </p>
+
+                  <Link href={`/case-studies/${study.slug}`}>
+                    <button className="bg-blueColor text-white px-3 py-2 rounded mt-1">
+                      Read More 
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+}

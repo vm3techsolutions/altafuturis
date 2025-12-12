@@ -1,0 +1,57 @@
+  {
+    "categories": [
+      {
+        "category_name": "Artificial Intelligence",
+        "category_slug": "artificial-intelligence",
+        "caseStudy": [
+          {
+            "id": 1,
+            "title": "Research on Clustering of Devnagari Script Based Documents Containing Img",
+            "image": "/assets/Case study2.png",
+            "p": "May 23, 2023",
+            "description": "USA-based client with an India captive center has a proprietary OCR-based AI platform where they receive a large number of transactional documents from various clients...",
+            "link": "/case-study-Research"
+          
+          },
+          {
+            "id": 2,
+            "title": "POC: Agri-Tech: Plant Disease Identification",
+            "image": "/assets/Case study 4.jpg",
+            "p": "May 23, 2023",
+            "description": "In agriculture, the most common issue is to identify diseases and protect ants from the diseases. Traditionally, diseases were identified manually and based on experience.",
+            "link": "/case-study-POC"
+          },
+          {
+            "id": 3,
+            "title": "Dentistry: NLP (Natural Language Processing) and Deep Learning: New Product Development for client",
+            "image": "/assets/Case study 5.png",
+            "p": "May 23, 2023",
+            "description": "USA-based client is developing technology solutions for Dentistry. New product development with AI (Artificial Intelligence) using 2D and 3D images of dental structures of patients..",
+            "link": "case-study-Dentistry"
+          }
+        ]
+      },
+      {
+        "category_name": "Salesforce",
+        "category_slug": "salesforce",
+        "caseStudy": [
+          {
+            "id": 4,
+            "title": "CloudSense Implementation Consultancy for a Leading Media House in the USA",
+            "image": "/assets/Case study1.png",
+            "p": "May 23, 2023",
+            "description": "The end client is a large media house based in the USA and has outsourced their IT work...",
+            "link": "/caseStudyInner"
+          },
+          {
+            "id": 5,
+            "title": "Salesforce Development for a Leading K-12 School Chain in the USA",
+            "image": "/assets/Case study3.png",
+            "p": "May 23, 2023",
+            "description": "Client - The client focuses on preparing students for elementary, middle school, and high school education...",
+            "link": "/case-study-SalesForce"
+          }
+        ]
+      }
+    ]
+  }

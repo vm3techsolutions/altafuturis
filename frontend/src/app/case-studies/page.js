@@ -14,7 +14,7 @@ export default function Home() {
   
     <CasestudyBanner/>
     {/* <CaseStudy4btn/> */}
-    {/* <CaseStudyBlogs/> */}
+    <CaseStudyBlogs/>
     <DiscussRequirement/>
     
   

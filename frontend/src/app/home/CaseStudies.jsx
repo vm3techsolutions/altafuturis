@@ -93,6 +93,8 @@
 
 // export default PortfolioSection;
 
+
+
 // "use client";
 // import React, { useEffect, useState } from "react";
 // import Link from "next/link";
@@ -107,7 +109,7 @@
 //   useEffect(() => {
 //     const fetchCaseStudies = async () => {
 //       try {
-//         const res = await fetch("/CaseStudy.json"); // JSON in public folder
+//         const res = await fetch("/data/case-study.json"); // JSON in public folder
 //         const json = await res.json();
 
 //         // Flatten category-wise case studies into one array
@@ -221,3 +223,132 @@
 
 // export default PortfolioSection;
 
+
+
+"use client";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const PortfolioSection = () => {
+  const [caseStudies, setCaseStudies] = useState([]);
+
+  useEffect(() => {
+    const fetchCaseStudies = async () => {
+      try {
+        const res = await fetch("/data/case-study.json");
+        const json = await res.json();
+
+        // SAME LOGIC from case-study page
+        const allStudies = json.categories.flatMap((cat) =>
+          cat.caseStudy.map((item) => ({
+            ...item,
+            categoryId: cat.category_slug,
+            categoryName: cat.category_name,
+            slug: item.link.replace("/", ""), // SAME SLUG FIX
+          }))
+        );
+
+        setCaseStudies(allStudies.slice(0, 3)); // only first 3 items
+      } catch (err) {
+        console.error("Error fetching case studies:", err);
+      }
+    };
+
+    fetchCaseStudies();
+  }, []);
+
+  return (
+    <section className="flex flex-col md:flex-row items-center -mt-5">
+
+      <div className="md:w-1/3 lg:w-1/3 flex flex-col items-center md:items-start h-full relative">
+        <motion.div
+          className="absolute"
+          animate={{ y: [-600, 210], rotate: [0, 360] }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "linear",
+          }}
+        >
+          <Image
+            src="/assets/animateCicle.png"
+            width={420}
+            height={180}
+            alt="Circular Animation"
+            className="-ml-32"
+          />
+        </motion.div>
+      </div>
+
+      <div className="md:w-2/3 space-y-6 py-12 px-6">
+        <div className="space-y-4 md:-ml-32 2xl:-ml-5">
+
+          {caseStudies.map((study, index) => (
+            <div key={study.slug} className="pb-4">
+
+              {index === 0 ? (
+                <>
+                  <Image
+                    src={study.image}
+                    width={1000}
+                    height={120}
+                    alt="Case Study Image"
+                    className="rounded-lg"
+                  />
+
+                  <h3
+                    className="font-bold text-xl md:text-3xl pt-4 text-left"
+                    dangerouslySetInnerHTML={{ __html: study.title }}
+                  />
+
+                  <Link
+                    href={`/case-studies/${study.slug}`}
+                    className="text-purple-700 text-sm font-semibold"
+                  >
+                    READ MORE →
+                  </Link>
+                </>
+              ) : (
+                <div className="flex items-center space-x-6">
+
+                  <Image
+                    src={study.image}
+                    width={500}
+                    height={150}
+                    alt="Case Study Image"
+                    className="rounded-lg"
+                  />
+
+                  <div>
+                    <h3
+                      className="font-bold text-2xl md:text-3xl"
+                      dangerouslySetInnerHTML={{ __html: study.title }}
+                    />
+
+                    <Link
+                      href={`/case-studies/${study.slug}`}
+                      className="text-purple-700 text-sm font-semibold"
+                    >
+                      READ MORE →
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {index !== caseStudies.length - 1 && (
+                <hr className="border-[#D4B301] border mt-4" />
+              )}
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+    </section>
+  );
+};
+
+export default PortfolioSection;
