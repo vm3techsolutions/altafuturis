@@ -96,6 +96,8 @@ app.post('/submit', async (req, res) => {
 });
 
 // Handle Quote Section form submission
+
+
 app.post('/submit-quote', async (req, res) => {
   const { fullname, phone, email, requirement } = req.body;
   const formattedDate = formatDateToAMPM(new Date());
@@ -109,8 +111,8 @@ app.post('/submit-quote', async (req, res) => {
 
     await sheets.spreadsheets.values.append({
       auth: authClient,
-      spreadsheetId: SPREADSHEET_ID,
-      range: 'QuoteEnquiry!A:E', // Quote Section form data in Sheet2
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      range: `${process.env.SHEET_NAME}!A:E`, // 👉 Sheet1 from env
       valueInputOption: 'RAW',
       resource: {
         values: [
@@ -125,6 +127,7 @@ app.post('/submit-quote', async (req, res) => {
     res.status(500).send('Error adding data to Google Sheets');
   }
 });
+
 
 
 // Start server
