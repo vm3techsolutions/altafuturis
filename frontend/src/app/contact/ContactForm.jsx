@@ -206,7 +206,7 @@ export default function Form() {
             <button type="submit" className="px-10 bg-blueColor text-white font-semibold py-2  rounded-xl hover:bg-brownColor">Submit</button>
           </div>
 
-    {responseMessage && <p className="text-center text-green-600 mt-2">{responseMessage}</p>}
+    {responseMessage && <p className="text-center text-xl text-green-600 mt-2">{responseMessage}</p>}
   </form>
 </div>
 

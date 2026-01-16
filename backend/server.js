@@ -197,14 +197,13 @@ app.post('/submit', async (req, res) => {
     fullname,
     companyName,
     email,
-    phone,
-    
+    phone,    
     companyRevenue,
     role,
     relationship,
     services,
-       about,
-        message
+    about,
+    message
   } = req.body;
 
   if (!fullname || !email || !phone || !companyName) {
@@ -237,7 +236,7 @@ app.post('/submit', async (req, res) => {
       },
     });
 
-    res.json({ message: "Contact form submitted successfully" });
+    res.json({ message: "Contact form submitted successfully!" });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error adding data to Google Sheets');
@@ -274,7 +273,7 @@ app.post('/submit-quote', async (req, res) => {
       },
     });
 
-    res.json({ message: "Quote request submitted successfully" });
+    res.json({ message: "Form submitted successfully!" });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error adding data to Google Sheets');
